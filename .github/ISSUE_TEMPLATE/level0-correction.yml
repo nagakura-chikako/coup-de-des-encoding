@@ -1,0 +1,107 @@
+name: level-0 correction
+description: Report something the record states that the printed object does not.
+labels: ["level-0", "correction"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This form is for level-0 only — the record of what is physically
+        printed on the base object.
+
+        For a reading, an interpretation, or anything in a later layer,
+        please open a blank issue instead. For something you suspect but
+        cannot yet show, a blank issue is also the right place: open
+        questions belong in the record.
+
+  - type: input
+    id: identifier
+    attributes:
+      label: Identifier
+      description: The text unit or spread this concerns, e.g. tu_f10_crispee or f10-f11. Wording alone is ambiguous across printings.
+      placeholder: tu_f10_crispee
+    validations:
+      required: true
+
+  - type: input
+    id: field
+    attributes:
+      label: Field
+      description: Which field of the record is wrong.
+      placeholder: type_class
+    validations:
+      required: true
+
+  - type: input
+    id: current
+    attributes:
+      label: What the record currently says
+    validations:
+      required: true
+
+  - type: input
+    id: proposed
+    attributes:
+      label: What you believe it should say
+    validations:
+      required: true
+
+  - type: input
+    id: observation_date
+    attributes:
+      label: Date examined
+      description: When you inspected or measured the source — not the date you open this issue. Use YYYY-MM-DD if you know it; an approximation is better than nothing.
+      placeholder: "2026-08-02"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: examined
+    attributes:
+      label: What you examined
+      description: This is recorded with the correction. It is not a test — a correction from a photograph is welcome and will be recorded as such.
+      options:
+        - A physical copy of the base object (Ronat–Papp 1980)
+        - A photograph or scan of the base object
+        - A different printing of the poem
+        - A facsimile or reproduction
+        - The JSON records only
+        - Something else (say what, under Evidence)
+    validations:
+      required: true
+
+  - type: input
+    id: copy
+    attributes:
+      label: If you examined a physical copy, which one?
+      description: Not every copy carries a serial number. Use whatever identifies yours — a holding institution and shelfmark, a bookseller's label, a purchase record, an ownership stamp, a pencilled annotation.
+    validations:
+      required: false
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: What you did, and what you found. If you measured, give the measurement and how you took it. "The 1914 printing reads otherwise" is a comparison, not evidence about the base object.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: agent
+    attributes:
+      label: Who produced this reading
+      description: If a language model, an OCR pass, or a script produced it, please say so. This does not count against the report — it is part of what a later reader needs in order to weigh it.
+      options:
+        - A person, directly
+        - A person, assisted by software
+        - A language model or other automated tool
+    validations:
+      required: true
+
+  - type: input
+    id: agent_details
+    attributes:
+      label: Person or tool
+      description: Name the person, model, OCR system, or script that produced the reading, with a version where you know it. If more than one was involved, list each and say briefly what it did. A GitHub username is fine if you would rather not give a name.
+      placeholder: "e.g. photographed by @username; type size estimated by a language model; measured on paper by @username"
+    validations:
+      required: true
