@@ -1,0 +1,159 @@
+{
+  "file": "f12-f13_level0.json",
+  "schema_version": "0.3",
+  "schema_ref": "level0_schema.json (approved 2026-07-18)",
+  "spread_id": "f12-f13",
+  "record_depth": "level-0",
+  "base_state": "Ronat_1980",
+  "recorded": "2026-07-19",
+  "recorded_by": "N",
+  "status": "collated_with_original",
+  "transcription_source": {
+    "ja": "転記の底本は N 提供の Ronat_1980 見開き撮影画像（2026-07-19）。NRF 系コピー撮影画像は判読補助（同系統の行構成確認）としてのみ参照し、Cosmopolis 版コピー撮影画像は異同層向け資料として保管（level-0 転記には不使用）。同日 N が原本と照合：逐語テクストは忠実（訂正なし）。中溝を跨ぐ4行の同一行性は、写真のピクセル行解析・1987 手巻物統語図に加え、製本構造（Ronat 版は綴じられていない6枚の紙を折った構成で、本見開きはその中央にあたり単一紙面に印刷される）により物理的に確定。type_class は当初の写真比高推定（COMME SI=class 2／本文=class 4）を N の census 照合により全ユニット class 3（4mm）へ訂正——承認済み census は写真推定に優先する。",
+    "en": "Transcription rests on N’s photograph of the Ronat_1980 spread (2026-07-19). An NRF-line photocopy image was consulted only as a legibility aid; the Cosmopolis photocopy is retained as variant-layer material, unused for the level-0 text. Collated the same day by N against the physical copy: the verbatim text is faithful (no corrections). The single-line status of the four gutter-spanning lines is physically settled by the binding structure — the Ronat edition consists of six unbound folded sheets, and this spread, at the exact centre, is printed on a single sheet — in addition to pixel-row analysis and the 1987 handscroll. type_class was corrected from the initial photo-ratio estimate (COMME SI=2 / body=4) to class 3 (4 mm) for all units per N’s census check: the approved census takes precedence over photographic estimation."
+  },
+  "unit_count": 13,
+  "revision_history": [],
+  "deprecated_ids": [],
+  "units": [
+    {
+      "id": "tu_f12_comme_si",
+      "face": "f12",
+      "seq": 10,
+      "text": "COMME SI",
+      "type_class": 3,
+      "style": "italique",
+      "note": "イタリック大文字。本見開きに2回現れる COMME SI の第1（f12 上部左寄り）。第2は tu_f13_comme_si。type_class 3（4mm）：N の census 照合（2026-07-19）により確定——本見開きは Ronat・NRF とも全ユニット 4mm 層で、3mm 層（class 4）の出現は f18-f19 のみ。当初の写真比高による class 2（5mm）推定は誤りで、census 優先の原則により訂正。"
+    },
+    {
+      "id": "tu_f12_une_insinuation_simple",
+      "face": "f12",
+      "seq": 20,
+      "text": "Une insinuation simple",
+      "type_class": 3,
+      "style": "italique",
+      "note": "中溝を跨ぐ一行（f12 側「Une insinuation」／f13 側「simple」）。face は開始面 f12。同一行性は製本構造により物理的に確定（原本照合 2026-07-19、transcription_source 参照）。"
+    },
+    {
+      "id": "tu_f12_au_silence_enroulee",
+      "face": "f12",
+      "seq": 30,
+      "text": "au silence enroulée avec ironie",
+      "type_class": 3,
+      "style": "italique",
+      "note": "中溝を跨ぐ一行（f12 側「au silence」／f13 側「enroulée avec ironie」）。face は開始面 f12。同一行性は製本構造により物理的に確定（原本照合 2026-07-19）。"
+    },
+    {
+      "id": "tu_f13_ou",
+      "face": "f13",
+      "seq": 40,
+      "text": "ou",
+      "type_class": 3,
+      "style": "italique",
+      "note": null
+    },
+    {
+      "id": "tu_f13_le_mystere",
+      "face": "f13",
+      "seq": 50,
+      "text": "le mystère",
+      "type_class": 3,
+      "style": "italique",
+      "note": null
+    },
+    {
+      "id": "tu_f13_precipite",
+      "face": "f13",
+      "seq": 60,
+      "text": "précipité",
+      "type_class": 3,
+      "style": "italique",
+      "note": null
+    },
+    {
+      "id": "tu_f13_hurle",
+      "face": "f13",
+      "seq": 70,
+      "text": "hurlé",
+      "type_class": 3,
+      "style": "italique",
+      "note": null
+    },
+    {
+      "id": "tu_f12_dans_quelque_proche_tourbillon",
+      "face": "f12",
+      "seq": 80,
+      "text": "dans quelque proche tourbillon d’hilarité et d’horreur",
+      "type_class": 3,
+      "style": "italique",
+      "note": "中溝を跨ぐ一行（f12 側「dans quelque proche」／f13 側「tourbillon d’hilarité et d’horreur」）。face は開始面 f12。同一行性は製本構造により物理的に確定（原本照合 2026-07-19）。"
+    },
+    {
+      "id": "tu_f12_voltige_autour_du_gouffre",
+      "face": "f12",
+      "seq": 90,
+      "text": "voltige autour du gouffre",
+      "type_class": 3,
+      "style": "italique",
+      "note": "中溝を跨ぐ一行（f12 右端に「voltige」のみ／f13 側「autour du gouffre」）。face は開始面 f12。同一行性は、写真ピクセル行解析・1987 手巻物統語図（骰子一擲５、一行扱い）・製本構造（中央見開き＝単一紙面）の三証拠により確定（原本照合 2026-07-19）。"
+    },
+    {
+      "id": "tu_f13_sans_le_joncher",
+      "face": "f13",
+      "seq": 100,
+      "text": "sans le joncher",
+      "type_class": 3,
+      "style": "italique",
+      "note": null
+    },
+    {
+      "id": "tu_f13_ni_fuir",
+      "face": "f13",
+      "seq": 110,
+      "text": "ni fuir",
+      "type_class": 3,
+      "style": "italique",
+      "note": null
+    },
+    {
+      "id": "tu_f13_et_en_berce_le_vierge_indice",
+      "face": "f13",
+      "seq": 120,
+      "text": "et en berce le vierge indice",
+      "type_class": 3,
+      "style": "italique",
+      "note": null
+    },
+    {
+      "id": "tu_f13_comme_si",
+      "face": "f13",
+      "seq": 130,
+      "text": "COMME SI",
+      "type_class": 3,
+      "style": "italique",
+      "note": "イタリック大文字。COMME SI の第2（f13 下部右寄り）。type_class 3（4mm）：tu_f12_comme_si と同じく census 照合により確定（当初の class 2 推定を訂正）。"
+    }
+  ],
+  "open_issues": [],
+  "segmentation_check": {
+    "source": "1987 年修士論文附録・十見開き手巻物統語図「骰子一擲５」（f12/f13 葉）",
+    "checked": "2026-07-19",
+    "result": {
+      "ja": "全13単位で手巻物の区切りとタイポグラフィ行が一致（13/13）。特に「voltige autour du gouffre」を手巻物が一行として扱う点は、写真解析による中溝跨ぎ一行の判定を裏書きする。手巻物余白の Cosmopolis 版異読（Une simple insinuation d’ironie enroulée à tout le silence... の語順・統合形）は異同層向けに保存し、level-0 には持ち込まない。手巻物の格文法注（COMME SI の M・D 読解、voltige の格枠、berce の en の指示対象をめぐる D との相違等）は syntax／readings 層の先行分析として保存。",
+      "en": "All 13 units match the handscroll divisions (13/13). In particular the handscroll’s treatment of “voltige autour du gouffre” as a single line corroborates the gutter-spanning one-line reading from pixel analysis. The Cosmopolis readings noted in the handscroll margins are reserved for the variant layer; its case-grammar annotations (M/D on COMME SI, the case frame of voltige, the referent of en with berce) are preserved as prior analysis for the syntax/readings layers."
+    }
+  },
+  "collation_resolutions": {
+    "resolved_by": "N",
+    "resolved_on": "2026-07-19",
+    "items": [
+      {
+        "id": "oq_l0_f12f13_collation",
+        "status": "closed",
+        "ruling": {
+          "ja": "①跨ぎ4行（seq 20・30・80・90）：完全に同一行。Ronat 版は綴じられていない6枚の折り紙構成で、本見開きは中央＝単一紙面印刷のため、物理的に上下ずれは起こり得ない。写真解析・手巻物と合わせ三証拠で確定。②type_class：census により本見開きは全ユニット class 3（4mm）。4mm の「平原」は本頁から続き、3mm（class 4）の出現は f18-f19 のみ（Ronat・NRF 共通）。当初の class 2／class 4 推定は Cosmopolis 版の比率（COMME SI=4mm／小文字=3mm）に相当するものを写真から投影した誤りとして訂正。教訓：type_class は承認済み typography census を優先し、写真からの相対比推定は census 未確定の場合のみ用いる。③逐語照合：語順（Une insinuation simple）・アクセント・綴りとも原本に忠実、訂正なし。アポストロフは規約どおり U+2019。"
+        }
+      }
+    ]
+  }
+}

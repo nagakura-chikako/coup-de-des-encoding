@@ -1,0 +1,316 @@
+{
+  "file": "f22-f23_level0.json",
+  "schema_version": "0.3",
+  "schema_ref": "level0_schema.json (approved 2026-07-18)",
+  "spread_id": "f22-f23",
+  "record_depth": "level-0",
+  "base_state": "Ronat_1980",
+  "recorded": "2026-07-23",
+  "recorded_by": "Claude (draft 2026-07-23) / N (実測 2026-07-23・逐語照合 2026-07-23)",
+  "status": "collated_with_original",
+  "unit_count": 28,
+  "revision_history": [],
+  "deprecated_ids": [],
+  "transcription_source": {
+    "witnesses": [
+      {
+        "id": "Ronat22-23.heic",
+        "witness": "Ronat_1980",
+        "role": "base — 転記の唯一の底本",
+        "note": "見開き全体の撮影。全28行（f22: 4行／f23: 24行）を判読。アクセント確認済み：EXCEPTÉ・PEUT-ÊTRE（曲折）・à l’altitude・au delà・l’intérêt（曲折）・signalé・général・obliquité・déclivité・désuétude・n’énumère（é／è）・supérieure・sidéralement・méditant・s’arrêter（曲折）・Pensée・émet・Dés。au delà は2語分かち書き（ハイフンなし）で photo 確認。"
+      },
+      {
+        "id": "NRF22-23.heic",
+        "witness": "NRF系（コピー）",
+        "role": "判読補助・レイアウト照合",
+        "note": "行構成（f22: 4行／f23: 24行）・面帰属・跨ぎ行なし・endroit／fusionne の頁分割、いずれも Ronat と一致。活字サイズも同様（N 報告 2026-07-23）。"
+      },
+      {
+        "id": "Cos22-23.HEIC",
+        "witness": "Cosmopolis 1897（コピー）",
+        "role": "異同層向け保管（転記には不使用）",
+        "note": "異同2点：① aussi loin qu’un endroit fusionne avec au delà が単一行（endroit と fusionne が同一行に共存——f20-f21 の l’évènement／accompli と同型）② à quelque point dernier qui le sacre と Toute Pensée émet un Coup de Dés の間にティレ（手巻物注が明記、画像で照合）。深追いせず variant 層へ。"
+      },
+      {
+        "id": "骰子一擲１０f22-f23.jpg",
+        "witness": "1987 手巻物統辞図（骰子一擲１０）",
+        "role": "分割粒度の照合権威（id_assignment_rules 第4項）",
+        "note": "区切り照合 27/28（唯一の差異は endroit＋fusionne 系列の結合、下記 handscroll_collation 参照）。格文法注・多読解注（D/M）は syntax／readings 層の先行分析として保存。"
+      }
+    ],
+    "collation_note": "N による原本逐語照合完了（2026-07-23）：全28ユニット、Ronat 原本と逐語一致——text・face・style とも訂正0件（revision_history は空のまま）。実測（2026-07-23 報告）反映済み：① aussi loin qu’un endroit（f22）と fusionne avec au delà（f23）は同じ高さ ② 本見開きの活字は大文字を含め全て 4mm（class 3）、NRF も同様。"
+  },
+  "units": [
+    {
+      "id": "tu_f22_excepte",
+      "face": "f22",
+      "seq": 10,
+      "text": "EXCEPTÉ",
+      "type_class": 3,
+      "style": "romain",
+      "note": "ローマン大文字。N 実測（2026-07-23）で本見開きは大文字含め全て 4mm＝class 3。第2の中心文 RIEN … N’AURA EU LIEU … QUE LE LIEU（… EXCEPTÉ PEUT-ÊTRE UNE CONSTELLATION、f20–f23 横断）の成分候補——global clause 登録は N 裁定待ち（syntax 層向け観察）。"
+    },
+    {
+      "id": "tu_f22_a_l_altitude",
+      "face": "f22",
+      "seq": 20,
+      "text": "à l’altitude",
+      "type_class": 3,
+      "style": "romain",
+      "note": null
+    },
+    {
+      "id": "tu_f22_peut_etre",
+      "face": "f22",
+      "seq": 30,
+      "text": "PEUT-ÊTRE",
+      "type_class": 3,
+      "style": "romain",
+      "note": "ローマン大文字、4mm（N 実測）。Ê の曲折・ティレ（PEUT-ÊTRE の連結符）を photo 上で確認。第2の中心文の成分候補（syntax 層向け）。手巻物・骰子一擲９本文の PEUT-ÊTRR は手巻物側の誤植として記録済（f20-f21 レコード参照）。"
+    },
+    {
+      "id": "tu_f22_aussi_loin_qu_un_endroit",
+      "face": "f22",
+      "seq": 40,
+      "text": "aussi loin qu’un endroit",
+      "type_class": 3,
+      "style": "romain",
+      "note": "f22 最終行。N 実測（2026-07-23）で f23 冒頭の fusionne avec au delà と同じ高さ——統語単位 aussi loin qu’un endroit fusionne avec au delà は同一視覚水準のままページ境界で分断される（物理的な中溝跨ぎ印字はなし。f20-f21 の l’évènement｜accompli、f14-f15 の sauf｜que la rencontre と同型、物理／統語の区別を維持）。手巻物は fusionne 系列と結合して1単位（handscroll_collation 参照）。Cos 版では同一行（異同層向け）。"
+    },
+    {
+      "id": "tu_f23_fusionne_avec_au_dela",
+      "face": "f23",
+      "seq": 50,
+      "text": "fusionne avec au delà",
+      "type_class": 3,
+      "style": "romain",
+      "note": "f23 冒頭行。aussi loin qu’un endroit（f22）と同じ高さ（N 実測 2026-07-23）で、ページ境界を挟んで統語的に連続。au delà は2語分かち書き（ハイフンなし）——photo・手巻物とも同綴。Cos 版では endroit 行に結合された単一行（異同層向け）。"
+    },
+    {
+      "id": "tu_f23_hors_l_interet",
+      "face": "f23",
+      "seq": 60,
+      "text": "hors l’intérêt",
+      "type_class": 3,
+      "style": "romain",
+      "note": "intérêt の曲折アクセントを photo 上で確認。"
+    },
+    {
+      "id": "tu_f23_quant_a_lui_signale",
+      "face": "f23",
+      "seq": 70,
+      "text": "quant à lui signalé",
+      "type_class": 3,
+      "style": "romain",
+      "note": null
+    },
+    {
+      "id": "tu_f23_en_general",
+      "face": "f23",
+      "seq": 80,
+      "text": "en général",
+      "type_class": 3,
+      "style": "romain",
+      "note": null
+    },
+    {
+      "id": "tu_f23_selon_telle_obliquite",
+      "face": "f23",
+      "seq": 90,
+      "text": "selon telle obliquité par telle déclivité",
+      "type_class": 3,
+      "style": "romain",
+      "note": null
+    },
+    {
+      "id": "tu_f23_de_feux",
+      "face": "f23",
+      "seq": 100,
+      "text": "de feux",
+      "type_class": 3,
+      "style": "romain",
+      "note": null
+    },
+    {
+      "id": "tu_f23_vers",
+      "face": "f23",
+      "seq": 110,
+      "text": "vers",
+      "type_class": 3,
+      "style": "romain",
+      "note": null
+    },
+    {
+      "id": "tu_f23_ce_doit_etre",
+      "face": "f23",
+      "seq": 120,
+      "text": "ce doit être",
+      "type_class": 3,
+      "style": "romain",
+      "note": null
+    },
+    {
+      "id": "tu_f23_le_septentrion_aussi_nord",
+      "face": "f23",
+      "seq": 130,
+      "text": "le Septentrion aussi Nord",
+      "type_class": 3,
+      "style": "romain",
+      "note": "Septentrion・Nord の語頭大文字を photo 上で確認。"
+    },
+    {
+      "id": "tu_f23_une_constellation",
+      "face": "f23",
+      "seq": 140,
+      "text": "UNE CONSTELLATION",
+      "type_class": 3,
+      "style": "romain",
+      "note": "ローマン大文字、4mm（N 実測）。第2の中心文の最終成分候補（syntax 層向け）。"
+    },
+    {
+      "id": "tu_f23_froide_d_oubli",
+      "face": "f23",
+      "seq": 150,
+      "text": "froide d’oubli et de désuétude",
+      "type_class": 3,
+      "style": "romain",
+      "note": null
+    },
+    {
+      "id": "tu_f23_pas_tant",
+      "face": "f23",
+      "seq": 160,
+      "text": "pas tant",
+      "type_class": 3,
+      "style": "romain",
+      "note": null
+    },
+    {
+      "id": "tu_f23_qu_elle_n_enumere",
+      "face": "f23",
+      "seq": 170,
+      "text": "qu’elle n’énumère",
+      "type_class": 3,
+      "style": "romain",
+      "note": "énumère の é／è を photo 上で確認。"
+    },
+    {
+      "id": "tu_f23_sur_quelque_surface",
+      "face": "f23",
+      "seq": 180,
+      "text": "sur quelque surface vacante et supérieure",
+      "type_class": 3,
+      "style": "romain",
+      "note": null
+    },
+    {
+      "id": "tu_f23_le_heurt_successif",
+      "face": "f23",
+      "seq": 190,
+      "text": "le heurt successif",
+      "type_class": 3,
+      "style": "romain",
+      "note": null
+    },
+    {
+      "id": "tu_f23_sideralement",
+      "face": "f23",
+      "seq": 200,
+      "text": "sidéralement",
+      "type_class": 3,
+      "style": "romain",
+      "note": null
+    },
+    {
+      "id": "tu_f23_d_un_compte_total_en_formation",
+      "face": "f23",
+      "seq": 210,
+      "text": "d’un compte total en formation",
+      "type_class": 3,
+      "style": "romain",
+      "note": null
+    },
+    {
+      "id": "tu_f23_veillant",
+      "face": "f23",
+      "seq": 220,
+      "text": "veillant",
+      "type_class": 3,
+      "style": "romain",
+      "note": null
+    },
+    {
+      "id": "tu_f23_doutant",
+      "face": "f23",
+      "seq": 230,
+      "text": "doutant",
+      "type_class": 3,
+      "style": "romain",
+      "note": null
+    },
+    {
+      "id": "tu_f23_roulant",
+      "face": "f23",
+      "seq": 240,
+      "text": "roulant",
+      "type_class": 3,
+      "style": "romain",
+      "note": null
+    },
+    {
+      "id": "tu_f23_brillant_et_meditant",
+      "face": "f23",
+      "seq": 250,
+      "text": "brillant et méditant",
+      "type_class": 3,
+      "style": "romain",
+      "note": null
+    },
+    {
+      "id": "tu_f23_avant_de_s_arreter",
+      "face": "f23",
+      "seq": 260,
+      "text": "avant de s’arrêter",
+      "type_class": 3,
+      "style": "romain",
+      "note": "s’arrêter の曲折アクセントを photo 上で確認。"
+    },
+    {
+      "id": "tu_f23_a_quelque_point_dernier",
+      "face": "f23",
+      "seq": 270,
+      "text": "à quelque point dernier qui le sacre",
+      "type_class": 3,
+      "style": "romain",
+      "note": "Cos 版では本行と次行 Toute Pensée … の間にティレ（異同層向け、手巻物注に明記・画像照合）。"
+    },
+    {
+      "id": "tu_f23_toute_pensee_emet_un_coup_de_des",
+      "face": "f23",
+      "seq": 280,
+      "text": "Toute Pensée émet un Coup de Dés",
+      "type_class": 3,
+      "style": "romain",
+      "note": "f23 最終行＝作品最終行。Pensée の P・Coup の C・Dés の D の語頭大文字を photo 上で確認（手巻物の図中は pensée と小文字に見えるが、同葉の解説本文は Pensée——手巻物側の内部不一致として記録、転記は photo に従う）。直前行との間に本見開き最大の空白（写真計測 ≈126px ≈ 18mm 相当、layout 層向け）。手巻物注：独立節、第1の中心文 UN COUP DE DÉS JAMAIS N’ABOLIRA LE HASARD と呼応（syntax／readings 層向け）。"
+    }
+  ],
+  "seq_doctrine_application": {
+    "ja": "seq は上→下・左面→右面のベースライン順そのまま。視覚的連続条項の適用箇所なし（f23 の24行はベースライン単調降下：y≈453→1957、交錯なし）。なお aussi loin qu’un endroit（f22 末尾）→ fusionne avec au delà（f23 冒頭）は N 実測により同じ高さの連続だが、左面→右面の既定順と一致するため特則を要しない（f20-f21 の l’évènement → accompli と同型）。",
+    "en": "seq follows plain baseline order (top→bottom, left page→right page). No application of the visual-continuity clause: the twenty-four f23 lines descend monotonically. The endroit → fusionne continuation coincides with the default page order and needs no special provision (same pattern as l’évènement → accompli on f20-f21)."
+  },
+  "physical_observations": {
+    "ja": "中溝は縦方向暗部検出で x≈1838（Ronat 写真座標）。中溝跨ぎ行なし——f22 側インクの最大 x≈1588、f23 側の最小 x≈1930 で、両面のインクは中溝から離れる（f14-f15 以降と同様、別々の2紙面にまたがる見開きと整合）。N 実測（2026-07-23 報告、Ronat 現物・定規）：① aussi loin qu’un endroit（f22 最終行）と fusionne avec au delà（f23 冒頭行）は同じ高さ ② 本見開きの活字は大文字（EXCEPTÉ／PEUT-ÊTRE／UNE CONSTELLATION）を含め全て 4mm＝class 3。NRF も同様。写真側の補足：面内ではベースラインは水平（selon telle obliquité 行の左右端で傾き 0px）だが、中溝を挟んだ endroit／fusionne のベースラインは写真上 ≈33px（≈7px/mm 換算で 4–5mm）の見かけの段差を示す——見開き上部の紙面湾曲・撮影パースに帰しうるもので、現物定規実測（同じ高さ）を優位とし、写真は f20-f21 の精度（≈5px 以内）では追認できない旨の記録に留める（矛盾の主張ではない）。キャップハイトは EXCEPTÉ・UNE CONSTELLATION とも写真バンド ≈28px ≈ 4mm 相当で、class 3 単一層と整合。census との整合：class 1（14mm）は表題文成分のみで本見開きに不在、class 2（5mm）不在、3mm（class 4）の出現は f18-f19 のみ、の census 言明とも整合——class 3 のみの単一層見開き。イタリック不在——f20-f21 で始まった最終挿入節のローマン展開が本見開きで完結し、書体の平原は romain のまま作品を閉じる。最終行 Toute Pensée … は直前行から ≈126px（≈18mm）の本見開き最大の空白で隔てられる（layout 層向け）。",
+    "en": "Gutter at x≈1838 by dark-band detection; no crossing lines (f22 ink ends at x≈1588, f23 ink begins at x≈1930), consistent with a spread lying across two separate sheets as from f14-f15 onward. N’s ruler measurements on the physical Ronat copy (reported 2026-07-23): (1) aussi loin qu’un endroit (last line of f22) and fusionne avec au delà (first line of f23) share the same height; (2) all type on this spread, capitals included, is 4 mm = class 3; NRF concurs. Photo-side caveat: within each page baselines are level (zero slope across the obliquité line), but across the gutter the photo shows an apparent ≈33 px (≈4–5 mm at ≈7 px/mm) baseline offset between endroit and fusionne — attributable to page curvature/perspective near the top of the spread. The physical ruler measurement is authoritative; the photo cannot corroborate at f20-f21 precision (≈5 px), and no contradiction is asserted. Cap-height bands for EXCEPTÉ and UNE CONSTELLATION are ≈28 px ≈ 4 mm, consistent with a single class 3 tier. Census conformity: no class 1, 2, or 4 on this spread (3 mm occurring only on f18-f19) — a single-tier spread. No italics: the roman unfolding of the final insertion, begun at f20-f21, completes here, and the typographic plain closes the poem in roman. The final line Toute Pensée … is set off by the spread’s largest vertical blank (≈126 px ≈ 18 mm; for the layout layer)."
+  },
+  "handscroll_collation": {
+    "leaf": "骰子一擲１０（f22／f23 葉）",
+    "result": {
+      "ja": "区切り照合 27/28（f22: 4／f23: 24 に対し手巻物は27単位）。唯一の差異：手巻物は aussi loin qu’un endroit fusionne avec au delà を単一単位として図示（頁境界を越える統語句のまとまり。level-0 は面帰属の相違により f22／f23 で2分割——id_assignment_rules と f20-f21 の l’évènement｜accompli 前例に従う）。差異は本 note に記録し、手巻物の区切りは将来 syntax 層の先行分析として保存（oq_l0_segmentation_authority 裁定どおり）。手巻物の統辞・読解注（syntax／readings 層向け）：① EXCEPTÉ UNE CONSTELLATION froide d’oubli et de désuétude は f20 の RIEN に対する除外を示す格。次の大きな単位（à l’altitude PEUT-ÊTRE aussi loin qu’un endroit fusionne avec au delà＝存在の場所）に修飾される ② hors l’intérêt … de feux——D）直接 CONSTELLATION について／M）à l’altitude について出所を表す抽象的な場所。lui＝l’endroit ③ vers ce doit être le Septentrion aussi Nord は方向を示す場所格。D によれば ce doit être は peut-être の意味の挿入節 ④ pas tant qu’elle … qui le sacre は froide について結果を示す従属節。D にならい縮約要素を補うと La constellation n’est pas si froide qu’elle n’énumère le heurt d’un compte …。énumère は無生物主体 elle＝UNE CONSTELLATION、対象格補語 le heurt successif、場所格 sur quelque surface vacante et supérieure、様態格 sidéralement。d’un compte total en formation は le heurt の属格で、5つの現在分詞 veillant doutant roulant brillant et méditant の無生物主体／対象格主語。avant de s’arrêter は5現在分詞についての時の格。point dernier は s’arrêter の対象格間接補語で qui の先行詞。le＝le compte ⑤ Toute Pensée émet un Coup de Dés は独立節。第1の中心文 UN COUP DE DÉS JAMAIS N’ABOLIRA LE HASARD と呼応して作品の骨格を形成する ⑥ 図中の赤字記法（qu’elle n’énumère への S／V、le heurt successif への O、独立文の朱記等）は格文法・従属節役割の先行分析として保存 ⑦ 異同注：Cos 版では qui le sacre と Toute Pensée émet un Coup de Dés の間にティレ（異同層向け）。N 確認（2026-07-23）：区切り照合 27/28 と、統語的結合（手巻物）／物理分割（level-0）の役割分担を本記録の扱いのまま承認。",
+      "en": "Segmentation 27/28: the handscroll’s sole divergence is drawing aussi loin qu’un endroit fusionne avec au delà as one unit across the page boundary; level-0 splits it at the face boundary per the l’évènement | accompli precedent. The scroll’s case-grammar and reader annotations (the exception case of EXCEPTÉ … against f20’s RIEN; D and M on hors l’intérêt … de feux with lui = l’endroit; ce doit être as a parenthetical meaning peut-être per D; D’s expansion of the result clause pas tant qu’elle … with the case frame of énumère and the five present participles governed by d’un compte total en formation; the final independent clause answering the first capital sentence; the red S/V/O sigla) are preserved for the syntax/readings layers, along with the Cosmopolis tiret variant before the final line. N confirmed (2026-07-23) both the 27/28 collation and the division of labour — syntactic union in the handscroll, physical split in level-0 — as recorded here."
+    }
+  },
+  "observations_for_other_files": {
+    "ja": "① global_clauses.json：第2の中心文 RIEN … N’AURA EU LIEU … QUE LE LIEU … EXCEPTÉ PEUT-ÊTRE UNE CONSTELLATION（f20–f23 横断）の全成分候補が本記録で実レコード化——tu_f20_rien／tu_f21_n_aura_eu_lieu／tu_f21_que_le_lieu（f20-f21）＋ tu_f22_excepte／tu_f22_peut_etre／tu_f23_une_constellation（本記録）。clause 登録・components の構成（EXCEPTÉ 以下を成分に含めるか従属部とするか）は level-0 の範囲外につき N 裁定待ち。② typography_scale.json：typography_scale_update_2026-07-22b.json の C 節が予告した「EXCEPTÉ 以下（f22-f23）の実測による全文確認」が本作業で完結——f22-f23 も全ユニット class 3・romain の単一層見開き（大文字 4mm、N 実測 2026-07-23、NRF 同様）。第2の中心文は f20–f23 の全域にわたり class 3 の内部で実現されることが確定し、2つの中心文の階層がサイズ層（14mm／4mm）そのものによって実現されるという構造的注記は文全体の実測で裏づけられた。measurement_log 追記案は次回統合時に 2026-07-23 分として起草可。③ variants 層：Cos 異同2点（endroit＋fusionne 単一行／qui le sacre と Toute Pensée … の間のティレ）を保管。④ syntax／readings 層：最終行 Toute Pensée émet un Coup de Dés は本見開き最大の空白によって隔てられた独立節であり、手巻物は第1の中心文との呼応を記す。N 承認（2026-07-23）：修士論文本文（1987、第2章）の当初構想どおり、作品を〈第1の中心文 UN COUP DE DÉS JAMAIS N’ABOLIRA LE HASARD／第2の中心文 RIEN N’AURA EU LIEU QUE LE LIEU EXCEPTÉ PEUT-ÊTRE UNE CONSTELLATION／最終独立節 Toute Pensée émet un Coup de Dés〉の三層構造として理解する構造認識を、第2の中心文の全構成要素が level-0 実レコードとして揃ったことの確認をもって承認。ただし本承認は syntax／readings 層の構造認識に対するものであり、level-0 自体は従来どおり物理記録に留める。⑤ 予約メモ（N 指示 2026-07-23、実装せず記録のみ）：次作業 f24=0 において作品全体の循環構造を実装予定であるため、最終独立節 Toute Pensée émet un Coup de Dés（tu_f23_toute_pensee_emet_un_coup_de_des）は巡回開始点との接続候補となる。本記録では巡回構造（最終行→冒頭）を実装しない。⑥ 本見開きは『骰子一擲』最終見開きであり、f22-f23 の level-0 完成により手巻物十葉のうち第十葉までの照合が到達した。",
+    "en": "(1) All components of the second capital sentence now resolve to real records across f20–f23; clause registration and component structure await N’s ruling. (2) The full-sentence confirmation of the EXCEPTÉ segment announced in typography_scale_update_2026-07-22b.json §C is complete: f22-f23 is likewise a single-tier, all-roman class 3 spread (capitals 4 mm, N 2026-07-23; NRF concurs), so the hierarchy of the two central sentences realized by the size tiers themselves is now grounded in measurements over the sentence’s entire span. (3) Two Cosmopolis variants stored. (4) For syntax/readings: the final independent clause, set off by the spread’s largest blank, answers the first capital sentence per the handscroll. N’s approval (2026-07-23): the three-layer structural recognition from chapter 2 of the 1987 master’s thesis — first capital sentence / second capital sentence / final independent clause — is approved, now that every component of the second capital sentence resolves to a level-0 record; the approval concerns the syntax/readings layers only, and level-0 itself remains a physical record. (5) Reservation memo (N’s instruction 2026-07-23, record only — not implemented): the next session, f24=0, will implement the poem’s overall cyclic structure, so the final independent clause (tu_f23_toute_pensee_emet_un_coup_de_des) is a connection candidate for the cycle’s starting point; no final-line-to-opening loop is implemented in this record. (6) This is the poem’s final spread: with f22-f23 at level-0, collation has reached the tenth and last leaf of the handscroll."
+  }
+}

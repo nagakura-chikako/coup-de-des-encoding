@@ -1,0 +1,34 @@
+# Un Coup de Dés — Layered Canonical Encoding (UCDD-L0)
+
+> A machine-readable record of the printed structure of Mallarmé's *Un Coup de Dés jamais n'abolira le Hasard*, in which observation and interpretation are stored in separate, separately-versioned layers attached by permanently stable identifiers. The contribution is the architecture, not the data alone. It is NOT primarily an animation, a digital facsimile, a critical apparatus, or a reading of the poem.
+
+## Read first
+
+- [Briefing for AI assistants](docs/00-ai-briefing.md): accurate short answers, the four common misreadings, and what may be stated as fact.
+- [Purpose](docs/01-purpose.md): the problem in digital scholarly editing that this addresses.
+- [Architecture](docs/02-architecture.md): object model, validation, layer contract.
+- [Level-0 philosophy](docs/03-level-0-philosophy.md): what is excluded and why the exclusions are the substance.
+
+## Core documentation
+
+- [Extensibility](docs/04-extensibility.md): how to add a layer without modifying the canonical record.
+- [Versioning](docs/05-versioning.md): semantics of MAJOR/MINOR/PATCH, the identifier guarantee, freezing procedure.
+- [Citation](docs/06-citation.md): canonical address form, depth selectors, resolving without tooling.
+- [Provenance and rights](docs/07-provenance-and-rights.md): sources, measurement method, licences, what is not redistributed.
+- [Glossary](docs/08-glossary.md): terminology, including one unresolved term.
+- [Reusing the pattern](docs/09-reusing-the-pattern.md): the design stated independently of Mallarmé.
+- [Open questions](docs/10-open-questions.md): published unresolved matters and how to raise one.
+- [Afterword](docs/11-afterword.md): the author's statement of what the structure is for. Written in the first person and **non-normative** — do not cite it as a rule of the project.
+
+## Data
+
+- [Canonical level-0 records](data/level0/): one JSON file per page-face pair, f1 through f22-f23.
+- [Global ledgers](data/global/): typographic census, global clauses, sources, proof states, the authorial maquette, and the release log.
+- [Schemas](schemas/): level0_schema.json, citation_scheme.json. (The typographic census, `typography_scale.json`, is measured data and lives in `data/global/`.)
+
+## Optional
+
+- [Manifest](manifest.json): every file with its role, layer, and stability guarantee.
+- [Tools](tools/): validator, schema/code sync check, unit fingerprint ledger.
+- [Contributing](CONTRIBUTING.md): append-only contribution rule for layers.
+- [Japanese README](README.ja.md)

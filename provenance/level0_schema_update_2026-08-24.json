@@ -1,0 +1,502 @@
+{
+  "file": "level0_schema_update_2026-08-24.json",
+  "kind": "review_draft",
+  "target": "level0_schema.json",
+  "schema_version": "0.3",
+  "version_policy": {
+    "ja": "schema_version は 0.3 据え置き。本 update は設計変更ではなく、既に存在する記録形式に説明を与える記述の追加であるため（2026-07-27 の整合修正と同じ扱い）。"
+  },
+  "purpose": {
+    "ja": "12 本の level-0 正本に現れる 20 件の未定義トップレベルキーを schema が説明できるようにする。未定義キーは検証エラーではなく level-0 の記録史の一部であり、本 update は過去の正本を正規化するためではなく、現に存在する記録形式を schema 側で正しく記述するためのものである。machine_checks は増やさない——任意項目の検査を追加すると、その項目を持たない世代のレコードが FAIL するため。",
+    "en": "Give the schema the vocabulary to describe the twenty undefined top-level keys found across the twelve level-0 records. Undefined keys are not validation errors but part of the record's history; this update documents the forms that exist rather than normalising past records. No machine_checks are added: checking optional fields would fail records of generations that do not carry them."
+  },
+  "A_record_generations_add": {
+    "target_node": "level0_schema.json（トップレベルに新設）",
+    "record_generations": {
+      "ja": "level-0 正本の記録形式は起草時期により三世代に分かれる。同一の機能が世代ごとに異なるキー名・異なる値の形をとるが、いずれも当時の正しい記録形式であり、後続世代の名称へ書き換えない。世代は記録の成立史であって品質の序列ではない。",
+      "en": "The level-0 records fall into three generations by drafting period. The same function appears under different key names and value shapes in each; all are correct for their time and are not rewritten to later names. Generations record history, not a ranking of quality.",
+      "generations": [
+        {
+          "id": "A",
+          "period": "2026-07-18 〜 2026-07-20",
+          "spreads": [
+            "f10-f11",
+            "f12-f13",
+            "f14-f15"
+          ],
+          "characteristic_keys": [
+            "transcription_source（{ja, en} の散文型）",
+            "segmentation_check",
+            "open_issues",
+            "collation_resolutions"
+          ],
+          "ja": "資料と照合の記述を transcription_source の散文に集約し、未決事項の提起（open_issues）と裁定（collation_resolutions）を別の節に置く形。"
+        },
+        {
+          "id": "B",
+          "period": "2026-07-20 〜 2026-07-23",
+          "spreads": [
+            "f16-f17",
+            "f18-f19",
+            "f20-f21",
+            "f22-f23"
+          ],
+          "characteristic_keys": [
+            "transcription_source（{witnesses, collation_note, method_note} の構造型）",
+            "handscroll_collation",
+            "seq_note / seq_doctrine_application",
+            "physical_observations（{ja, en} 型）",
+            "observations_for_other_files"
+          ],
+          "ja": "transcription_source が構造化され、資料一覧が witnesses として独立。照合記録は transcription_source.collation_note に入れ子で置かれる。他ファイルへの申し送りを observations_for_other_files として分離した最初の世代。"
+        },
+        {
+          "id": "C",
+          "period": "2026-07-24 〜 2026-07-27",
+          "spreads": [
+            "f1",
+            "f2-f3",
+            "f4-f5",
+            "f6-f7",
+            "f8-f9"
+          ],
+          "characteristic_keys": [
+            "evidence",
+            "collation_with_handscroll",
+            "open_questions",
+            "provenance_note",
+            "scope_note",
+            "notes",
+            "collation_note（トップレベル）",
+            "physical_observations（list[{id, ja}] 型）"
+          ],
+          "ja": "資料一覧が evidence として独立し、照合記録がトップレベル collation_note に昇格。未決事項は open_questions に一本化され、二区分運用（status: open ／ category: pending_verbatim_collation）が確立した世代。"
+        }
+      ],
+      "cross_generation_notes": [
+        {
+          "id": "gen_note_f14f15_collation_note",
+          "ja": "f14-f15（世代A）は 2026-08-24 の現物照合完了にともない、世代C の形式である トップレベル collation_note を追加した。世代Aのレコードに世代Cの任意項目が1件混在する唯一の例であり、混乱ではなく照合完了日の記録として意図されたもの。"
+        },
+        {
+          "id": "gen_note_status_normalisation",
+          "ja": "2026-08-24 の公開前正規化により、世代A・B の 7 本はトップレベル status を獲得し、transcription_source.status は削除された（status の唯一の正はトップレベル）。同時に世代B の 4 本は schema キーを file / schema_version / schema_ref に分解した。いずれも units には触れていない。"
+        },
+        {
+          "id": "gen_note_no_generation_field",
+          "ja": "レコード側に generation フィールドは持たせない。世代は spreads の一覧により本節から一意に決まるため、正本の変更を要しない。"
+        }
+      ]
+    }
+  },
+  "B_optional_fields_add": {
+    "target_node": "level0_schema.json（トップレベルに新設。field_definitions は record_template 対応の必須項目の定義として現状のまま保つ）",
+    "optional_fields": {
+      "doctrine": {
+        "ja": "本節に列挙されないトップレベルキーが現れても検証エラーとしない。status は次の三値をとる——canonical_optional＝現行 schema が正式に認識する任意フィールド／legacy＝過去世代の名称・配置であり、alias_of の指す正典名へ書き換えずそのまま保持する／spread_local＝特定見開き固有の記録であり一般フィールド化しない。status は正典性の区分であって時間的な新旧の区分ではない。",
+        "en": "Top-level keys not listed here are not validation errors. status takes three values: canonical_optional (an optional field the current schema formally recognises), legacy (a name or placement from an earlier generation, preserved as-is rather than rewritten to the name given in alias_of), and spread_local (a record specific to one spread, not to be generalised). status marks canonicity, not recency."
+      },
+      "spread_local_naming_rule": {
+        "ja": "キー名が oq_ を接頭辞とするトップレベルキーは、特定の open question の適用記録として status: spread_local と同等に扱い、本節への個別登録を要しない。",
+        "en": "Any top-level key prefixed oq_ is treated as a spread-local record of a specific open question's application and需 not be registered individually here."
+      },
+      "fields": {
+        "recorded": {
+          "status": "canonical_optional",
+          "shape": "string (ISO date)",
+          "generations": [
+            "A",
+            "B",
+            "C"
+          ],
+          "spreads": [
+            "f1",
+            "f2-f3",
+            "f4-f5",
+            "f6-f7",
+            "f8-f9",
+            "f10-f11",
+            "f12-f13",
+            "f14-f15",
+            "f16-f17",
+            "f18-f19",
+            "f20-f21",
+            "f22-f23"
+          ],
+          "ja": "起草日。原本照合日ではない（照合日は collation_note.date）。"
+        },
+        "recorded_by": {
+          "status": "canonical_optional",
+          "shape": "string",
+          "generations": [
+            "A",
+            "B",
+            "C"
+          ],
+          "spreads": [
+            "f1",
+            "f2-f3",
+            "f4-f5",
+            "f6-f7",
+            "f8-f9",
+            "f10-f11",
+            "f12-f13",
+            "f14-f15",
+            "f16-f17",
+            "f18-f19",
+            "f20-f21",
+            "f22-f23"
+          ],
+          "ja": "起草者と照合者の内訳。慣行として 'Claude (draft) / N (…)' の形をとり、括弧内に実測日・照合日・訂正件数を記す。誰が何をしたかを分離して記録することは本データセットの検証可能性の要件であり、自由記述だが省略しない。"
+        },
+        "evidence": {
+          "status": "canonical_optional",
+          "shape": "list[{label, witness, desc}]",
+          "generations": [
+            "C"
+          ],
+          "spreads": [
+            "f1",
+            "f2-f3",
+            "f4-f5",
+            "f6-f7",
+            "f8-f9"
+          ],
+          "related": [
+            "transcription_source.witnesses"
+          ],
+          "witness_vocabulary": [
+            "Ronat_1980",
+            "NRF_1914",
+            "Cosmopolis_1897",
+            "handscroll_1987"
+          ],
+          "ja": "転記に用いた資料の一覧。Ronat_1980 を唯一の底本とし、他は参照証人。N の定規実測報告も1エントリとして記録する（label に測定日を含める慣行）。"
+        },
+        "collation_with_handscroll": {
+          "status": "canonical_optional",
+          "shape": "{leaf, result, ja, annotation_location_note?}",
+          "generations": [
+            "C"
+          ],
+          "spreads": [
+            "f1",
+            "f2-f3",
+            "f4-f5",
+            "f6-f7",
+            "f8-f9"
+          ],
+          "alias_seen_as": [
+            "handscroll_collation",
+            "segmentation_check"
+          ],
+          "result_format": "match_<N>_of_<M>（世代C）。世代A・B は {ja, en} の散文。",
+          "ja": "1987 年修士論文附録の手巻物統辞図十葉との区切り照合。手巻物の分割と level-0 のユニット分割が一致した数を result に記録し、差異は当該ユニットの note か本節の散文に保存する。1987 年の分析と現行データセットの接続点。"
+        },
+        "collation_note": {
+          "status": "canonical_optional",
+          "shape": "{date, by, ja}",
+          "generations": [
+            "A（f14-f15 のみ、2026-08-24 追加）",
+            "C"
+          ],
+          "spreads": [
+            "f1",
+            "f2-f3",
+            "f4-f5",
+            "f6-f7",
+            "f8-f9",
+            "f14-f15"
+          ],
+          "canonical_placement": "トップレベル",
+          "legacy_placement": "transcription_source.collation_note（世代B・string 型）",
+          "ja": "原本照合の完了記録。status: collated_with_original の根拠となる証跡であり、照合日・照合者・訂正件数を必ず含む。"
+        },
+        "open_questions": {
+          "status": "canonical_optional",
+          "shape": "list[{id, status, category?, ja, resolution?}]",
+          "generations": [
+            "C"
+          ],
+          "spreads": [
+            "f1",
+            "f2-f3",
+            "f4-f5",
+            "f6-f7",
+            "f8-f9"
+          ],
+          "alias_seen_as": [
+            "open_issues"
+          ],
+          "item_status_enum": [
+            "open",
+            "resolved",
+            "closed"
+          ],
+          "item_category_enum": [
+            "pending_verbatim_collation"
+          ],
+          "resolution_shape": "{date, by, ja, en?}",
+          "ja": "未決事項の二区分運用。status: open＝設計判断を要する事項、category: pending_verbatim_collation＝逐語照合により自動的に確定する確認事項（GPT 提案・N 承認、2026-07-25）。machine_checks 第19項が本フィールドを検査するため、schema 側の定義は必須。"
+        },
+        "physical_observations": {
+          "status": "canonical_optional",
+          "shape": [
+            "list[{id, ja}]（世代C）",
+            "{ja, en}（世代B）"
+          ],
+          "generations": [
+            "B",
+            "C"
+          ],
+          "spreads": [
+            "f1",
+            "f2-f3",
+            "f4-f5",
+            "f6-f7",
+            "f8-f9",
+            "f16-f17",
+            "f18-f19",
+            "f20-f21",
+            "f22-f23"
+          ],
+          "shape_note": {
+            "ja": "型が二つある。id 付きリスト形式は後続層から個別の観察を参照できる利点があり新規起草での推奨形だが、これは既存の {ja, en} 型4本を書き換える理由にはならない。両形とも適合とする。"
+          },
+          "ja": "紙面構造・中溝位置・ベースライン連続・白紙面など、原本の物理的観察。位置・余白の実測は layout 層に送り、level-0 では位置を確定させない。"
+        },
+        "variant_notes": {
+          "status": "canonical_optional",
+          "shape": "list[{id, witness, ja}]",
+          "generations": [
+            "C"
+          ],
+          "spreads": [
+            "f1",
+            "f2-f3",
+            "f4-f5",
+            "f6-f7",
+            "f8-f9"
+          ],
+          "ja": "他証人との異同の所在記録。異同そのものは level-0 に取り込まず、後続の variants 層への申し送りとして保存する。level-0 が『最小の揺れしか含まない』ことを保つための受け皿。"
+        },
+        "provenance_note": {
+          "status": "canonical_optional",
+          "shape": "{ja}",
+          "generations": [
+            "C"
+          ],
+          "spreads": [
+            "f1",
+            "f2-f3",
+            "f4-f5",
+            "f6-f7",
+            "f8-f9"
+          ],
+          "ja": "成立経緯。正本化前の起草段階の誤りと訂正はここに簡潔に記し、正本レコードの units にも revision_history にも残さないという運用原則（2026-07-25 確立）の実装先。revision_history は正本化後の text・face 訂正のみを扱う。"
+        },
+        "scope_note": {
+          "status": "canonical_optional",
+          "shape": "{ja}",
+          "generations": [
+            "C"
+          ],
+          "spreads": [
+            "f1",
+            "f2-f3",
+            "f4-f5",
+            "f6-f7",
+            "f8-f9"
+          ],
+          "ja": "当該記録の対象範囲の限定と、その裁定日。例：外側紙ケースの表記は level-0 の対象外（N 裁定 2026-07-24）、白紙面の扱い。"
+        },
+        "notes": {
+          "status": "canonical_optional",
+          "shape": "{ja}",
+          "generations": [
+            "C"
+          ],
+          "spreads": [
+            "f1",
+            "f2-f3",
+            "f4-f5",
+            "f6-f7",
+            "f8-f9"
+          ],
+          "ja": "層の役割分担の総括。level-0 の範囲、台帳を変更しない方針、当該記録で確立した運用原則などを記す。"
+        },
+        "observations_for_other_files": {
+          "status": "canonical_optional",
+          "shape": "{ja, en}",
+          "generations": [
+            "A",
+            "B"
+          ],
+          "spreads": [
+            "f14-f15",
+            "f16-f17",
+            "f18-f19",
+            "f20-f21",
+            "f22-f23"
+          ],
+          "ja": "global_clauses.json・typography_scale.json など台帳ファイルへの申し送り。正本の起草は台帳を書き換えないという規律を守りつつ、照合で得られた気づきを失わないための分離。『台帳ファイルは未変更』と明記する慣行を伴う。",
+          "en": "Forwarding notes to registry files. Records what the collation established for those files while leaving them untouched — the division of labour that keeps a spread record from silently editing the registries."
+        },
+        "transcription_source": {
+          "status": "legacy",
+          "alias_of": [
+            "evidence",
+            "collation_note"
+          ],
+          "shape": [
+            "{ja, en}（世代A・散文型）",
+            "{witnesses, collation_note, method_note}（世代B・構造型）"
+          ],
+          "generations": [
+            "A",
+            "B"
+          ],
+          "spreads": [
+            "f10-f11",
+            "f12-f13",
+            "f14-f15",
+            "f16-f17",
+            "f18-f19",
+            "f20-f21",
+            "f22-f23"
+          ],
+          "correspondence": {
+            "witnesses[] {id, witness, role, note}": "evidence[] {label, witness, desc} の前身。role に 'base — 転記の唯一の底本' の形で底本指定を持つ",
+            "collation_note (string)": "トップレベル collation_note {date, by, ja} の入れ子版",
+            "method_note": "作業手順の記述（世代C では notes ないし physical_observations に分散）"
+          },
+          "ja": "転記の底本と手順の記述。世代A では照合の事実も散文中に含まれる（f10-f11・f12-f13 は独立の collation_note を持たない）。2026-08-24 の正規化で status サブキーのみ削除済み。"
+        },
+        "handscroll_collation": {
+          "status": "legacy",
+          "alias_of": "collation_with_handscroll",
+          "shape": "{leaf, result{ja, en}}",
+          "generations": [
+            "B"
+          ],
+          "spreads": [
+            "f16-f17",
+            "f18-f19",
+            "f20-f21",
+            "f22-f23"
+          ],
+          "ja": "手巻物照合の世代B名。result が {ja, en} の散文である点が世代C（match_N_of_M の文字列）と異なる。照合率は散文中に記載されており、機械可読な形式に書き換えない。"
+        },
+        "segmentation_check": {
+          "status": "legacy",
+          "alias_of": "collation_with_handscroll",
+          "shape": "{source, checked, result{ja, en}}",
+          "generations": [
+            "A"
+          ],
+          "spreads": [
+            "f10-f11",
+            "f12-f13",
+            "f14-f15"
+          ],
+          "ja": "手巻物照合の世代A名。source に手巻物の葉名、checked に照合日を持ち、世代B・C にはないこの2キーの分離を保存する。"
+        },
+        "open_issues": {
+          "status": "legacy",
+          "alias_of": "open_questions",
+          "shape": "list[{id, status, question, resolution?}]",
+          "generations": [
+            "A"
+          ],
+          "spreads": [
+            "f10-f11",
+            "f12-f13",
+            "f14-f15"
+          ],
+          "correspondence": {
+            "question": "open_questions[].ja"
+          },
+          "ja": "未決事項の世代A名。要素キーは question（世代C の ja に対応）。f10-f11・f12-f13 では空配列。裁定は本節ではなく collation_resolutions に置かれる世代であり、二区分運用（category）は未導入。"
+        },
+        "seq_doctrine_application": {
+          "status": "canonical_optional",
+          "shape": "{ja, en}",
+          "generations": [
+            "B"
+          ],
+          "spreads": [
+            "f20-f21",
+            "f22-f23"
+          ],
+          "alias_seen_as": [
+            "seq_note"
+          ],
+          "ja": "seq_doctrine の当該見開きへの適用記録。seq は上→下・左面→右面のベースライン順による暫定線状化であり canonical アドレスには入らないこと、統語上の読み順との乖離は readings 層のオブジェクトとして表現し seq には反映しないことを記す。",
+          "canonical_name_ruling": {
+            "date": "2026-08-24",
+            "by": "N",
+            "ja": "本キーを正典名とする。裁定の根拠は成立順ではなく、名称が担う概念構造の精度である——seq_note は『seq についての注記』以上を伝えないが、本フィールドが記述しているのは注記ではなく、seq_doctrine（seq は紙面を暫定的に線状化する順序であって canonical アドレスではない／統語上の読み順との食い違いは seq を書き換えず別層で扱う）という一般原則を当該スプレッドへ適用した記録である。seq_doctrine＝一般原則、seq_doctrine_application＝各スプレッドへの適用記録という関係が名称だけで読める点を採る。",
+            "en": "Adopted as the canonical name — not because it is the later of the two, but for the precision of what the name carries. seq_note conveys no more than 'a note about seq', whereas this field records the application of a general principle (seq_doctrine) to one spread. The pair seq_doctrine / seq_doctrine_application makes the relation between principle and application legible from the names alone."
+          }
+        },
+        "seq_note": {
+          "status": "legacy",
+          "alias_of": "seq_doctrine_application",
+          "shape": "{ja, en}",
+          "generations": [
+            "B"
+          ],
+          "spreads": [
+            "f16-f17",
+            "f18-f19"
+          ],
+          "ja": "seq_doctrine_application の旧名（世代B前半）。f16-f17 では SI（seq 60）が挿入部（seq 70-210）に先行するという、seq と統語順の乖離が最も顕著な事例を記述している。N 裁定（2026-08-24）により正典名は seq_doctrine_application と確定し、本キーはその前身として legacy / alias_of で保持する——書き換えない。"
+        },
+        "collation_resolutions": {
+          "status": "canonical_optional",
+          "shape": "{resolved_by, resolved_on, items[{id, status, ruling{ja}}]}",
+          "generations": [
+            "A"
+          ],
+          "spreads": [
+            "f12-f13",
+            "f14-f15"
+          ],
+          "ja": "照合により確定した裁定の記録。世代A は未決事項の提起（open_issues）と裁定（本節）を別の節に置き、世代C は open_questions[].resolution に一本化した。",
+          "coexistence_with_open_questions_resolution": {
+            "date": "2026-08-24",
+            "by": "N",
+            "ja": "open_questions[].resolution へ統合せず独立節として維持する。両者は重複ではなく記録単位が異なる——collation_resolutions は『ある照合作業において、その日に、その裁定者が、複数の事項をまとめて確定した』というイベント単位の記録であり、open_questions[].resolution は『一つの問いについて問い→解決を追跡する』事項単位の記録である。前者を後者へばらすと、一回の照合という出来事で何が決まったかが辿れなくなる。冗長な重複ではなく、同じ決定へ異なる入口から到達できる二つの索引として併存させる。",
+            "en": "Kept as an independent section rather than folded into open_questions[].resolution. The two are not redundant but indexed differently: collation_resolutions records an event — what one collation session, on one date, by one adjudicator, settled across several matters — while open_questions[].resolution tracks a single question from statement to resolution. Dissolving the former into the latter would make it impossible to follow what a given session decided. Two entrances to the same decisions."
+          }
+        }
+      }
+    }
+  },
+  "C_validation_note_add": {
+    "target_node": "level0_schema.json > validation.note（既存の記述に追記）",
+    "add": {
+      "ja": [
+        "本 schema に定義のないトップレベルキーの存在は検証エラーではない。level-0 の記録形式は起草時期により三世代に分かれており、その差は record_generations と optional_fields が説明を負う。machine_checks はこれらの任意項目を検査しない——任意項目の検査を追加すると、当該項目を持たない世代のレコードが FAIL するため。",
+        "キー名が oq_ を接頭辞とするトップレベルキーは、特定の open question の適用記録として spread_local 相当に扱い、optional_fields への個別登録を要しない（現行の該当例：f18-f19 の oq_l0_f18f19_treatment_application）。",
+        "checker（check_level0.py）は open_questions と open_issues の双方を第19項の検査対象とする。この両対応の根拠は optional_fields の alias_of にある。"
+      ]
+    }
+  },
+  "D_unchanged": {
+    "ja": [
+      "field_definitions：変更しない（record_template 対応の必須項目の定義として現状のまま保つ）。",
+      "record_template：変更しない。新規起草の雛形は世代C の形式のままとする。",
+      "validation.machine_checks：変更しない（20 項目、check_level0.py の LABELS と一字一句同期）。",
+      "doctrine・resolutions・revisions：変更しない。",
+      "schema_version：0.3 据え置き。",
+      "正本 12 本：変更しない。本 update はレコードに一切の変更を要求しない。"
+    ]
+  },
+  "E_open_for_ruling": [],
+  "integration_status": "integrated_into_level0_schema_2026-08-24",
+  "rulings_applied": [
+    "oq_schema_seq_field_canonical_name: seq_doctrine_application を正典名とする（N、2026-08-24）",
+    "oq_schema_collation_resolutions_consolidation: collation_resolutions を独立維持（N、2026-08-24）"
+  ]
+}

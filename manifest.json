@@ -1,0 +1,544 @@
+{
+  "$comment": "This manifest describes release v1.1. It is not a rewrite of the skeleton manifest of 2026-07-30, which was a design system closed in its own right; what that file established and what still holds is carried forward here, marked by inherited_from.",
+  "project": {
+    "id": "UCDD-L0",
+    "title": "Un Coup de Dés — Layered Canonical Encoding",
+    "release": "v1.1",
+    "release_scheme": {
+      "form": "v<major>.<minor>",
+      "authority": "data/global/citation_scheme.json > grammar.components.release",
+      "ja": "リリース番号は citation_scheme.json（凍結、2026-07-17）が定める 2 部表記に従う。semver の 3 部表記は用いない（N 裁定 2026-08-26）。"
+    },
+    "summary": "Machine-readable record of the printed structure of Mallarmé's Un Coup de Dés, in which observation and interpretation are stored in separate, separately-versioned layers attached by permanently stable identifiers.",
+    "principal_contribution": "architecture",
+    "inherited_from": "skeleton manifest 2026-07-30 (summary, principal_contribution, not[])",
+    "not": [
+      "an animation of the poem",
+      "a digital facsimile or edition",
+      "a critical apparatus",
+      "a reading of the poem",
+      "a TEI corpus"
+    ],
+    "base_text": "Un coup de dés jamais n’abolira le hasard, éd. Mitsou Ronat, Change errant/d’atelier, 1980 (sole base text)",
+    "base_text_note": {
+      "ja": "編者名は Mitsou Ronat。sources.json の witnesses[Ronat_1980].label と一致させること（skeleton manifest の 'Michèle Ronat' は誤り。訂正の記録として本注記を残す）。",
+      "en": "The editor is Mitsou Ronat; the skeleton manifest gave 'Michèle Ronat' in error. Corrected here, with the correction recorded rather than silently applied."
+    },
+    "witnesses": {
+      "authority": "data/global/sources.json",
+      "ja": "witness の正典台帳は sources.json。本 manifest では列挙せず参照のみとする——重複記載は必ずずれるため。",
+      "registered": [
+        "Ronat_1980",
+        "NRF_1914",
+        "Cosmopolis_1897",
+        "Didot_proofs"
+      ]
+    },
+    "prior_analyses": {
+      "authority": "data/global/sources.json > prior_analyses",
+      "registered": [
+        "handscroll_1987"
+      ],
+      "ja": "1987 年手巻物統辞図は witness ではない——テクストが現れた資料でも他者による校訂でもなく、現在の編者自身による先行分析である（N 裁定 2026-08-25）。skeleton manifest はこれを project.witnesses に列挙していたが、その配置は guarantees.observation_boundary が守る観察と解釈の区別と矛盾するため踏襲しない。"
+    },
+    "language_of_object": "fr",
+    "language_of_documentation": [
+      "en",
+      "ja"
+    ],
+    "license": {
+      "data": "CC-BY-4.0",
+      "code": "MIT"
+    },
+    "doi_concept": null,
+    "repository_name": "coup-de-des-encoding",
+    "description_one_line": "A layered, additive encoding architecture: a thin, citable base record of one printed setting of Mallarmé's Un Coup de Dés, designed to stay stable while interpretation accumulates around it.",
+    "topics": [
+      "mallarme",
+      "textual-scholarship",
+      "digital-humanities",
+      "typography",
+      "json-schema",
+      "data-architecture",
+      "bibliography",
+      "french-literature"
+    ],
+    "author": "Chikako Nagakura",
+    "repository_url": "https://github.com/nagakura-chikako/coup-de-des-encoding",
+    "repository_release": "1.0.0",
+    "$comment_versions": "Three version numbers are kept distinct: citation scheme v1.0 (frozen 2026-07-17), dataset v1.1, repository release 1.0.0. They are not the same number and must not be merged."
+  },
+  "entry_points": {
+    "human": [
+      "README.md",
+      "README.ja.md"
+    ],
+    "machine": [
+      "llms.txt",
+      "manifest.json"
+    ],
+    "ai_assistant_briefing": "docs/00-ai-briefing.md",
+    "inherited_from": "skeleton manifest 2026-07-30"
+  },
+  "guarantees": [
+    {
+      "id": "id_immutability",
+      "statement": "A published level-0 identifier never comes to mean something different. Retirement occurs through deprecated_ids with superseded_by; reuse is forbidden.",
+      "enforced_by": "data/global/citation_scheme.json > id_immutability_rules (frozen); data/schemas/level0_schema.json > doctrine.upgrade_path; tools/check_level0.py (deprecated_ids entry keys); tools/verify_sync.py (unit fingerprint against tools/units_manifest.json)",
+      "inherited_from": "skeleton manifest 2026-07-30",
+      "note": {
+        "ja": "enforced_by を現行の実装に合わせた。skeleton は tools/check_id_immutability.py (CI) を挙げていたが、そのツールは存在しない。現行では ID の不変性は ①凍結された citation_scheme.json の規則 ②schema の upgrade_path ③正本 units の指紋照合（units_manifest.json）の 3 点で担保される。指紋が変われば verify_sync.py が NG を返す。"
+      }
+    },
+    {
+      "id": "layer_isolation",
+      "statement": "No interpretive layer modifies the canonical level-0 record. Layers reference level-0 by identifier only.",
+      "enforced_by": "layer contract in layers/_template/layer.json (may_modify_level0: false) and review",
+      "inherited_from": "skeleton manifest 2026-07-30",
+      "note": {
+        "ja": "本 v1.1 には解釈層を含めない。層契約の実物は未確認（pc_layers_template）。なお本原則は層に対してだけでなく正本間でも守られている——正本が他ファイルの不整合を発見した場合、当該ファイルを書き換えず observations_for_other_files に申し送る（level0_schema.json > optional_fields）。"
+      }
+    },
+    {
+      "id": "observation_boundary",
+      "statement": "Level-0 fields record observations only. Syntax, layout geometry, variant collation, readings, prosody and animation are excluded by design.",
+      "enforced_by": "data/schemas/level0_schema.json (scope clauses, machine_checks); docs/03-level-0-philosophy.md",
+      "inherited_from": "skeleton manifest 2026-07-30",
+      "note": {
+        "ja": "enforced_by のファイル名を現行に合わせた（skeleton は schemas/level0.schema.json）。"
+      }
+    },
+    {
+      "id": "documented_defaults",
+      "statement": "Status defaults fail toward under-claiming: a record not explicitly collated never asserts collation.",
+      "enforced_by": "data/schemas/level0_schema.json > record_template.status = draft_awaiting_collation; tools/check_level0.py (status enum)",
+      "inherited_from": "skeleton manifest 2026-07-30",
+      "note": {
+        "ja": "この保証は実地で働いた。record_template の既定値を draft_awaiting_collation とする裁定（N、2026-07-27）は『テンプレートは起草開始時に複製されるため、既定値が collated_with_original だと status に触れないまま作業した場合に未実施の主張を引き継いでしまう』ことを理由とする。2026-08-24 の点検で、f14-f15 が status: awaiting_collation のまま残っていることが検出され、現物照合の未了が正しく申告されていた。"
+      }
+    },
+    {
+      "id": "inclusion_boundary",
+      "statement": "Inclusion in a release is not a claim of settlement. A module ships with its own status; the release asserts the citability of identifiers, not the completeness or resolution of content.",
+      "relation": "documented_defaults at release scale: a record does not over-claim about itself, and a release does not over-claim about its modules.",
+      "enforced_by": "manifest.json > files[].status with status_source (documentary contract in v1.1; machine verification deferred — see open_questions); data/global/release_log.json > releases[].modules_included; the status field of each module is authoritative",
+      "new_in": "v1.1",
+      "note": {
+        "ja": "v1.1 は proof_states.json と maquette_typography.json を status: draft のまま収録する。決着していないものを、決着していないものとして指せることが本アーキテクチャの仕事であり、収録が確定を意味しないことを保証として明文化する。release_log.json 冒頭の『リリース番号が保証するのは内容の充足度ではなく学術的参照可能性である』と同一の主張である。",
+        "en": "v1.1 ships proof_states.json and maquette_typography.json as drafts. That an unsettled matter can be pointed at as unsettled is part of what this architecture is for; inclusion is therefore declared not to imply settlement."
+      }
+    }
+  ],
+  "status_vocabulary": {
+    "ja": "files[].status は各モジュール自身が宣言する値をそのまま写したものであり、正は当該ファイルにある。status_source はその値が当該ファイルのどこにあるかを示す JSON パスであり、写しが正しいかを後から検証できるようにするためのもの。v1.1 では文書的契約として持ち、機械検査は将来課題とする（N 裁定 2026-08-26。確定済みツール 3 点を公開直前に改変しないため）。",
+    "en": "files[].status copies the value declared by the module itself; the module is authoritative. status_source gives the JSON path at which that value lives, so the copy can be verified. In v1.1 this is a documentary contract; machine verification is deferred.",
+    "unspecified": "当該ファイルが status を宣言していないことを示す。推測による値は入れない。"
+  },
+  "files": [
+    {
+      "path": "docs/00-ai-briefing.md",
+      "role": "briefing for machine readers",
+      "stability": "stable",
+      "normative": true
+    },
+    {
+      "path": "docs/01-purpose.md",
+      "role": "purpose",
+      "stability": "stable",
+      "normative": true
+    },
+    {
+      "path": "docs/02-architecture.md",
+      "role": "architecture",
+      "stability": "stable",
+      "normative": true
+    },
+    {
+      "path": "docs/03-level-0-philosophy.md",
+      "role": "scope doctrine",
+      "stability": "stable",
+      "normative": true
+    },
+    {
+      "path": "docs/04-extensibility.md",
+      "role": "layer contract",
+      "stability": "stable",
+      "normative": true
+    },
+    {
+      "path": "docs/05-versioning.md",
+      "role": "versioning and release",
+      "stability": "stable",
+      "normative": true
+    },
+    {
+      "path": "docs/06-citation.md",
+      "role": "citation",
+      "stability": "stable",
+      "normative": true
+    },
+    {
+      "path": "docs/07-provenance-and-rights.md",
+      "role": "sources, method, rights",
+      "stability": "stable",
+      "normative": true
+    },
+    {
+      "path": "docs/08-glossary.md",
+      "role": "terminology",
+      "stability": "evolving",
+      "normative": true
+    },
+    {
+      "path": "docs/09-reusing-the-pattern.md",
+      "role": "transferable design pattern",
+      "stability": "stable",
+      "normative": true
+    },
+    {
+      "path": "docs/10-open-questions.md",
+      "role": "unresolved matters",
+      "stability": "evolving",
+      "normative": true
+    },
+    {
+      "path": "docs/11-afterword.md",
+      "role": "author's statement of purpose; first person, non-normative",
+      "stability": "stable",
+      "normative": false
+    },
+    {
+      "path": "docs/11-afterword.ja.md",
+      "role": "Japanese version of the afterword",
+      "stability": "stable",
+      "normative": false
+    },
+    {
+      "path": "docs/tooling-history.md",
+      "role": "history of the validation tools; the earlier per-spread checkers are described here and not shipped",
+      "stability": "stable",
+      "normative": false,
+      "new_in": "v1.1"
+    },
+    {
+      "path": "data/level0/",
+      "role": "canonical record, one file per spread (12 files)",
+      "layer": "level-0",
+      "stability": "frozen at release",
+      "filenames": [
+        "f1_level0.json",
+        "f2-f3_level0.json",
+        "f4-f5_level0.json",
+        "f6-f7_level0.json",
+        "f8-f9_level0.json",
+        "f10-f11_level0.json",
+        "f12-f13_level0.json",
+        "f14-f15_level0.json",
+        "f16-f17_level0.json",
+        "f18-f19_level0.json",
+        "f20-f21_level0.json",
+        "f22-f23_level0.json"
+      ],
+      "naming_note": {
+        "ja": "ファイル名は制作時のものをそのまま用いる。公開のための改名は行わない（N 裁定 2026-08-26）——正本そのものと manifest の指す名前の間に翻訳層を作らないため。skeleton manifest が例示した f08-f09.json 形式は採らない。"
+      },
+      "status": "collated_with_original (12/12)",
+      "status_source": "各ファイルの $.status",
+      "record_generations": {
+        "authority": "data/schemas/level0_schema.json > record_generations",
+        "ja": "記録形式は起草時期により三世代に分かれる。世代は成立史であって品質の序列ではなく、後続世代の名称へ書き換えない。"
+      }
+    },
+    {
+      "path": "data/global/global_clauses.json",
+      "role": "cross-spread syntactic structures (registry)",
+      "layer": "level-0",
+      "stability": "append-oriented",
+      "status": "unspecified",
+      "status_source": null,
+      "note": {
+        "ja": "ファイルレベルの status を宣言していない（pc_module_status_fields）。個々の clause は status: draft を持つ。"
+      }
+    },
+    {
+      "path": "data/global/typography_scale.json",
+      "role": "type-size census and anchors",
+      "layer": "level-0",
+      "stability": "append-oriented",
+      "status": "canonical_v0.3",
+      "status_source": "$.integration_status",
+      "note": {
+        "ja": "census_status: census_complete（詩本文 f3〜f23 の 4 層実測完了）。paratext_sizes は census 外の附属節。"
+      }
+    },
+    {
+      "path": "data/global/sources.json",
+      "role": "registry of witnesses, documentary sources, and prior analyses",
+      "layer": "level-0",
+      "stability": "append-oriented",
+      "status": "unspecified",
+      "status_source": null,
+      "note": {
+        "ja": "ファイルレベルの status を宣言していない（pc_module_status_fields）。"
+      }
+    },
+    {
+      "path": "data/global/proof_states.json",
+      "role": "textual states (ms, C, E1–E5) and key variants",
+      "stability": "evolving",
+      "status": "draft",
+      "status_source": "$.status",
+      "note": {
+        "ja": "転記突合段階。confidence の上限は transcribed_agreed で verified はゼロ。draft の根拠 4 件は当該ファイルの status_note.grounds に明記され、うち 1 件（Marchal の推定カレンダー）は permanently_open——未決であることが正しい記述である。"
+      }
+    },
+    {
+      "path": "data/global/maquette_typography.json",
+      "role": "authorial layer: the maquette's typographic instructions",
+      "stability": "evolving",
+      "status": "draft",
+      "status_source": "$.status",
+      "note": {
+        "ja": "未決 open_questions 3 件を含む（oq_jamais_surcharge_vs_title_order・oq_folio_renumbering が open、oq_thorey が open_meaning_only）。oq_title_sentence_two_sizes は Ronat 層について解決済・著者指示層について未決。"
+      }
+    },
+    {
+      "path": "schemas/citation_scheme.json",
+      "role": "citation grammar",
+      "stability": "frozen",
+      "status": "frozen",
+      "status_source": "$.status",
+      "note": {
+        "ja": "2026-07-17 凍結。以後の変更は selector 追加と container 追加のみ許され、grammar の form と既存要素の意味は不変。"
+      }
+    },
+    {
+      "path": "data/global/release_log.json",
+      "role": "release registry",
+      "stability": "append-only",
+      "status": "unspecified",
+      "status_source": null,
+      "note": {
+        "ja": "ファイルレベルの status を宣言していない（pc_module_status_fields）。各リリースの状態は releases[] の内部にある。"
+      }
+    },
+    {
+      "path": "schemas/level0_schema.json",
+      "role": "level-0 record schema",
+      "stability": "versioned independently",
+      "status": "approved",
+      "status_source": "$.status",
+      "note": {
+        "ja": "schema_version 0.3、承認 2026-07-18。depends_on: citation_scheme.json (frozen)・typography_scale.json・release_log.json v1.0。"
+      }
+    },
+    {
+      "path": "provenance/",
+      "role": "integration proposals, frozen at the moment they were proposed; published because canonical records cite them by filename",
+      "stability": "frozen",
+      "normative": false,
+      "new_in": "v1.1",
+      "note": {
+        "ja": "収録は 8 点（typography_scale_update の -07-16／-07-20／-07-22／-07-22b／-07-25、level0_schema_update_2026-08-24、sources_update_2026-08-25、proof_states_update_2026-08-25、typography_scale_update_2026-08-25）に加え、番号体系が置き換わる前の設計として -07-12c／-07-12d。これらのファイル内の記述は提案時点のものであり現在形に書き換えない——現在の状態は各正典ファイルを正とする。詳細は provenance/README.md。"
+      },
+      "count_note": {
+        "ja": "上記の列挙は 10 点。最終的な収録点数は工程 4（実配置）で確定する。"
+      }
+    },
+    {
+      "path": "layers/",
+      "role": "interpretive layers",
+      "layer": ">=1",
+      "stability": "additive",
+      "note": {
+        "ja": "v1.1 には解釈層を含めない。glyph_ink.json・インク量計測一式（compute_ink.py・f8-f9_ink.json 等）は将来の ink 層の素材であり、v1.0 の modules_included にも含まれない。層として成立した時点で追加する。 v1.1 には _template/ のみを収録する——README.md（層の位置づけ）、_template/README.md（層の規則と annotation の形）、_template/layer.json（層契約の雛形）の 3 点。_template/annotations/ は空のため配置しない。実際の annotation 作成時に作る（_template/README.md 参照）。"
+      }
+    },
+    {
+      "path": "layers/_template/layer.json",
+      "role": "the layer contract template (may_modify_level0: false)",
+      "stability": "stable",
+      "normative": true
+    },
+    {
+      "path": "layers/_template/README.md",
+      "role": "the rules a layer follows, and the shape of an annotation entry",
+      "stability": "stable",
+      "normative": true
+    },
+    {
+      "path": "layers/README.md",
+      "role": "what a layer is, and that none is required for the repository to be complete",
+      "stability": "stable",
+      "normative": true
+    },
+    {
+      "path": "tools/check_level0.py",
+      "role": "validator: one record or all against the schema's machine_checks",
+      "stability": "MIT, replaceable",
+      "new_in": "v1.1"
+    },
+    {
+      "path": "tools/verify_sync.py",
+      "role": "validator: schema ⇔ records ⇔ checker, and the unit fingerprint ledger",
+      "stability": "MIT, replaceable",
+      "new_in": "v1.1"
+    },
+    {
+      "path": "tools/units_manifest.json",
+      "role": "fingerprint ledger of the immutable unit fields (12 records, 217 units)",
+      "stability": "updated only with a deliberate revision",
+      "new_in": "v1.1"
+    },
+    {
+      "path": "README.md",
+      "role": "entry point for human readers",
+      "stability": "stable",
+      "normative": true
+    },
+    {
+      "path": "README.ja.md",
+      "role": "Japanese version of the README",
+      "stability": "stable",
+      "normative": true
+    },
+    {
+      "path": "docs/README.md",
+      "role": "index of the numbered documentation set",
+      "stability": "stable",
+      "normative": false
+    },
+    {
+      "path": "RIGHTS.md",
+      "role": "rights at a glance",
+      "stability": "stable",
+      "normative": true
+    },
+    {
+      "path": "LICENSING.md",
+      "role": "scope of the licences and what they do not cover",
+      "stability": "stable",
+      "normative": true
+    },
+    {
+      "path": "LICENSING.ja.md",
+      "role": "Japanese version of LICENSING.md",
+      "stability": "stable",
+      "normative": true
+    },
+    {
+      "path": "CHANGELOG.md",
+      "role": "human-readable history of the repository",
+      "stability": "evolving",
+      "normative": false
+    },
+    {
+      "path": "CITATION.cff",
+      "role": "machine-readable citation metadata",
+      "stability": "stable",
+      "normative": true
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "role": "how additions and corrections are accepted",
+      "stability": "stable",
+      "normative": true
+    },
+    {
+      "path": "CONTRIBUTING.ja.md",
+      "role": "Japanese version of CONTRIBUTING.md",
+      "stability": "stable",
+      "normative": true
+    },
+    {
+      "path": "llms.txt",
+      "role": "ordered index for machine readers",
+      "stability": "stable",
+      "normative": false
+    },
+    {
+      "path": "LICENSE",
+      "role": "CC BY 4.0 legal code (data, docs, prose)",
+      "stability": "frozen",
+      "normative": true
+    },
+    {
+      "path": "LICENSE-CODE",
+      "role": "MIT licence (tools), © 2026 Chikako Nagakura",
+      "stability": "frozen",
+      "normative": true
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/level0-correction.yml",
+      "role": "issue form for level-0 corrections",
+      "stability": "stable",
+      "normative": false
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/config.yml",
+      "role": "issue template configuration",
+      "stability": "stable",
+      "normative": false
+    }
+  ],
+  "validation": {
+    "outcomes": [
+      "PASS",
+      "FAIL",
+      "SKIP"
+    ],
+    "skip_semantics": "A check with no applicable target, or whose optional dependency file is absent, reports SKIP and is excluded from the pass/fail denominator.",
+    "inherited_from": "skeleton manifest 2026-07-30 (outcomes, skip_semantics)",
+    "skip_caveat": {
+      "ja": "SKIP は検査が通った証拠ではなく、検査が実行されなかった証拠である。その理由文は他の主張と同じく一つの主張であり、誤りうる（2026-08-24 に、錨照合が実際には登録されている錨を『登録されていない』として SKIP していた実例が検出された。docs/tooling-history.md 参照）。",
+      "en": "A SKIP is not evidence that a check passed but that it did not run; its stated reason is a claim like any other and can be wrong."
+    },
+    "commands": [
+      "python3 tools/check_level0.py --labels",
+      "python3 tools/check_level0.py --record data/level0/f8-f9_level0.json --refs data/global",
+      "python3 tools/check_level0.py --all data/level0 --refs data/global",
+      "python3 tools/verify_sync.py --all data/level0 --schema schemas/level0_schema.json --checker tools/check_level0.py --manifest tools/units_manifest.json"
+    ],
+    "label_synchronisation": {
+      "ja": "check_level0.py の LABELS は level0_schema.json > validation.machine_checks と一字一句同一であり、verify_sync.py 検査 A がこれを機械的に照合する。schema にあってコードにない検査、またはその逆は、それ自体が発見となる。"
+    }
+  },
+  "citation": {
+    "authority": "data/global/citation_scheme.json (frozen 2026-07-17)",
+    "ja": "本 manifest は独自の引用文法を定義しない。引用アドレスの形式・container・selector はすべて凍結済みの citation_scheme.json を正とする（N 裁定 2026-08-26）。skeleton manifest が定義していた UCDD-L0/<version>#<unit_id> 形式は、凍結された grammar の form と衝突するため踏襲しない。",
+    "form": "ucd[:<release>]://<address>[@<selectors>]",
+    "example": "ucd:v1.1://unit/tu_f8_le_maitre@depth=level-0",
+    "project_citation": "Nagakura, Chikako. Un Coup de Dés — Layered Canonical Encoding (UCDD-L0), release v1.1, 2026. DOI: (pending)",
+    "excluded_from_address": [
+      "seq",
+      "file path",
+      "round"
+    ],
+    "excluded_note": {
+      "ja": "seq は暫定的な線状化のための作業用足場であり canonical アドレスには決して入らない（level0_schema.json > seq_doctrine）。巡（round）は表示プリセットであり同様に含めない（citation_scheme.json）。ファイルパスも含めない——ID は全域一意であり配置に依存しない。",
+      "inherited_from": "skeleton manifest 2026-07-30 (seq, file path)"
+    }
+  },
+  "open_questions": [
+    {
+      "id": "oq_manifest_status_machine_check",
+      "status": "deferred_to_future_release",
+      "ja": "files[].status と各モジュールの status_source が指す実値との一致を、機械検査として verify_sync.py に追加するか。v1.1 では追加しない——確定済みツール 3 点を公開直前に改変すると、改変・再検証・docs/tooling-history.md の更新・schema の validation.note の点検という波及が生じるため（N 裁定 2026-08-26）。v1.1 公開前の照合は preflight 用ハーネス（crosscheck.py、公開 tools/ には含めない）で一度実行する。status_source を今から記載しておくことで、将来の機械化は manifest を変更せずに行える。"
+    },
+    {
+      "id": "oq_manifest_module_status_fields",
+      "status": "open",
+      "ja": "global_clauses.json・sources.json・release_log.json に status フィールドを新設するか、unspecified のまま公開するか（pc_module_status_fields）。新設すれば inclusion_boundary が全モジュールについて機械可読になるが、3 ファイルの変更を伴う。"
+    },
+    {
+      "id": "oq_manifest_crosscheck_shipping",
+      "status": "resolved",
+      "ja": "解決（N、2026-08-26）：横断参照検査ハーネス crosscheck.py は v1.1 の公開 tools/ に含めない。tools/ を 3 点に絞ったことの意味を保つため。preflight での実行結果は工程 3 の報告として残す。"
+    },
+    {
+      "id": "oq_manifest_rights_documents",
+      "status": "resolved",
+      "ja": "解決（N、2026-08-27）：権利文書は RIGHTS.md（一枚要約）、LICENSING.md／.ja.md（適用範囲と留保）、docs/07-provenance-and-rights.md（出典と方法）の三者が役割を分けて併存する。skeleton の RIGHTS.md と査読系統の LICENSING.md は名称の衝突ではなく、担うものが異なっていた。"
+    }
+  ]
+}

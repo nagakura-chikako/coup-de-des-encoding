@@ -1,0 +1,161 @@
+{
+  "file": "sources_update_2026-08-27.json",
+  "kind": "review_draft",
+  "target": "sources.json",
+  "schema_version": "0.3",
+  "drafted": "2026-08-27",
+  "drafted_by": "Claude（起草）／ N（裁定待ち）",
+  "scope_declaration": {
+    "ja": "Morel 2007 を documentary_sources に登録する。第2分冊（2026-08-26 登録）とは性格が異なる——第2分冊は『すでに根拠として使用している資料の登録漏れ』であったが、Morel は現在どの記録の根拠でもなく、README が『なぜこれが底本でないか』を説明するために名指している資料である。proof_states.json・typography_scale.json・正本 12 本には触れない。",
+    "en": "Registers Morel 2007 in documentary_sources. Unlike the second fascicle, this is not an omitted source already in use: no record rests on it. It is named in the README to explain why it is not the base object."
+  },
+  "A2_ruling": {
+    "question": "README r8 未確定事項 A2：Morel 2007 を README 本文で名指すか、docs/ へ送るか",
+    "ruling": {
+      "date": "2026-08-27",
+      "by": "N",
+      "decision": "README 本文に残す"
+    },
+    "ja": "根拠は、この配置が恣意的な選択ではないことにある。Ronat は第2分冊の解説 p.4 末尾で、収集家の手にある校正刷は各種の修正・移動・整列を指示するがそれらは « ne sont pas encore le poème » だと述べ、各校正刷組のファクシミリ複製は——一刻も早くなされるべきだが——精神においてまったく異なる考証的事業である、と書いている。Morel 2007 はまさにその『なされるべき』事業の実現である。したがって Ronat を level-0 に、Morel を後続層に置くことは、二つの版の編者が自分で引いた区分をそのまま採用していることになる（N、2026-07-31）。この説明は README の主張の中核である『One base object, named』の正当化そのものであり、docs/ へ送ると『なぜこれが底本か』への答えが README から消える。初読の研究者と AI が最初に持つ問いである。",
+    "readme_amendment_proposed": {
+      "ja": "r8 の現在の文『the later realization of the kind of documentary enterprise that the 1980 editor had distinguished from her own』は、Morel を性格づける判断の主体が誰か曖昧である。この区分が Ronat 自身のものであることを明示する一句を足すことを推奨する（method_accounts で内部からの記述と外部からの評価を分けたのと同じ理由）。README の改稿は r8 → 公開版の作業でまとめて扱う。"
+    }
+  },
+  "B_documentary_source_add": {
+    "target_node": "sources.json > documentary_sources（既存 2 件に追加）",
+    "entry": {
+      "id": "Morel_2007",
+      "type": "facsimile_edition",
+      "label": "Stéphane Mallarmé, Un coup de Dés jamais n’abolira le Hasard. Manuscrit et épreuves. Édition et Observations de Françoise Morel, Paris, La Table Ronde, 2007",
+      "label_status": "complete",
+      "access": "physical_copy",
+      "relation_to_level0": {
+        "ja": "level-0 の対象外。level-0 は一つの完成した印刷物（Ronat_1980 第1分冊）を記録する層であり、Morel が複製するのは完成へ向かう過程——草稿・校正刷・訂正指示——である。Morel は『別のテクスト』ではなく、生成過程という時間軸を持ち込む資料であり、後続層（variants／readings／layout）で扱う。",
+        "en": "Outside the scope of level-0, which records one finished printed object. What Morel reproduces is the process leading to it — drafts, proofs, corrections. Not another text but a source that introduces a temporal axis, belonging to the later layers."
+      },
+      "reproduces": {
+        "ja": "版自身の記載による収録内容（現物写真、2026-08-02）。",
+        "items": [
+          {
+            "n": "1°",
+            "ja": "Cosmopolis 誌（Armand Colin、1897 年 5 月 4 日）掲載形の二形態——マラルメが訂正した校正刷と、それに続く決定形。表紙 16×25 cm／草稿 15.5×20・15×20・15.5×20 cm／校正刷 15×25 cm／印刷本文 15×23 cm。"
+          },
+          {
+            "n": "2°",
+            "ja": "判読困難な草稿 4 頁、およびマラルメ自筆の「prière d’insérer と呼びうる」1 頁。同文は NRF 1914 の単行本初版に「Préface」として再録された。25×33 cm（見開き 50×33 cm）。"
+          },
+          {
+            "n": "3°",
+            "ja": "Ambroise Vollard の「幻の版」（Odilon Redon 挿絵予定、未刊）の印刷に用いられた手稿。22.5×35 cm。"
+          },
+          {
+            "n": "4°",
+            "ja": "同版の初校（マラルメ訂正入り）、および後続校正刷の第 1 頁（裏表紙に複製）。表紙 30×39 cm／校正刷 28.5×37 cm。"
+          },
+          {
+            "n": "5°",
+            "ja": "読者の便宜のため、本版のために組み直された『骰子一擲』本文。"
+          },
+          {
+            "n": "6°",
+            "ja": "Françoise Morel «Observations»。"
+          }
+        ],
+        "reduction_note": {
+          "ja": "版自身が「技術的理由により、手稿と校正刷の複製はわずかに縮小されている」と明記している。本データセットは実測を扱うため、Morel の複製から寸法を採らないことの根拠として記録する。"
+        },
+        "attribution_correction": {
+          "ja": "5° は「本版のために組み直された（recomposé pour cette présente édition）」ものであり、Ronat_1980 の本文ではない。中間の要約に「Ronat が組み直した本文」とする誤読があったため、原文の記載により訂正して記録する（2026-08-27）。"
+        }
+      },
+      "actual_consultation": {
+        "ja": "2026-08-02、N が所蔵現物の収録目録および Vollard 版校正刷 1 見開き（f8-f9 相当、LE MAÎTRE を含む面。赤インクによるマラルメ自筆の指示——hauteur、語との対応位置、行の上下移動、および『距離が指示なく変更された。前の校正刷どおりに戻すこと』の旨の欄外書き込みを含む）を撮影・提示した。2026-08-27 には表紙・見返しを撮影・提示し、書誌事項を現物から確定した。本データセットが Morel 現物に接触した記録はこの 2 回であり、そこから採った記述は本エントリの reproduces のみである。",
+        "date": [
+          "2026-08-02",
+          "2026-08-27"
+        ],
+        "confidence": "transcribed_agreed",
+        "confidence_basis": "N 所蔵現物の写真（収録目録 1 葉、校正刷見開き 1 葉、表紙 1 葉、見返し 1 葉）",
+        "confidence_note": {
+          "ja": "verified の適用範囲が未決であるため transcribed_agreed に留める（oq_src_confidence_vocabulary_scope、2026-08-26 の裁定に従う）。"
+        }
+      },
+      "not_a_source_for": {
+        "ja": "1987 年の修士論文および手巻物統辞図の根拠資料ではない——Morel 2007 は当時存在しない。prior_analyses[handscroll_1987] との時系列上の非接触を明示する。本データセットにおける Morel の位置づけは、2026 年の README 執筆および層設計の際に、所蔵現物を知ったうえで行われたものである（N、2026-07-31／2026-08-02）。",
+        "principle": "同一テクストの所在（source identity）と、実際に参照された資料（actual consultation）を分離するという原則（sources.json documentary_sources[Ronat_1980_fascicle2].contents_additional_note）の、時系列軸における適用。"
+      },
+      "potential_resolution_paths": {
+        "status": "not_established",
+        "ja": "本項は、既に存在する未決事項に対して Morel が解決経路となりうる可能性を記録するものであり、対応関係を主張するものではない。新たな問いを立ててもいない——下記はいずれも既存の open question である。照合を行うまで、いかなる同定も行わない。",
+        "candidates": [
+          {
+            "existing_question": "sources.json > witnesses[Didot_proofs].access_note ／ oq_sources_didot_access_upgrade",
+            "ja": "Didot_proofs の access は現在 indirect（本データセットへの参照は手巻物欄外注を経由する間接情報のみ）。Morel 4° が Vollard 版初校（マラルメ訂正入り）を複製している。ただし Morel の 4° が proof_states.json の E1 に当たるか、後続校正刷の第 1 頁がどの刷にあたるかは未照合。同定を行うまで access は indirect のまま維持する。"
+          },
+          {
+            "existing_question": "proof_states.json > status_note.grounds[ground_coquille_ou_ambiguity]",
+            "ja": "OC p.426 [400] の où → ou が confidence: uncertain として残る。当該 coquille の出所は Cosmopolis 校正刷（coll. Mme Rouart-Valéry）であり、Morel 1° は Cosmopolis の訂正入り校正刷を複製している。ただし Morel が複製する組と Rouart-Valéry 蔵の組が同一かは未確認。"
+          },
+          {
+            "existing_question": "proof_states.json > status_note.grounds[ground_title_capitalization_detail]",
+            "ja": "var_title_order における C の大文字法の細部（Cosmopolis 題名の Coup が大文字か）が要精査のまま。Morel 1° の Cosmopolis 決定形が参照しうるが、未照合。"
+          }
+        ],
+        "not_applicable": {
+          "ja": "typography_scale.json の実測との照合には用いない——Morel 自身が手稿・校正刷の複製をわずかに縮小したと明記しており、寸法の根拠にならない。また level-0 は Ronat_1980 の実現形を測る層であり、校正刷の寸法はその対象ではない。"
+        }
+      },
+      "imprint": {
+        "publisher": "La Table Ronde",
+        "place": "Paris",
+        "year": "2007",
+        "isbn": "978-2-7103-2990-9",
+        "copyright_statement": "© La Table Ronde, Paris, 2007, pour la présente édition",
+        "edition_statement": "Édition et Observations de Françoise Morel",
+        "subtitle": "Manuscrit et épreuves",
+        "ja": "表紙および見返しの現物確認による（N、2026-08-27）。副題 « Manuscrit et épreuves » は、本書が新版の詩集ではなく手稿と校正刷の複製を主とする資料集として自称していることを示し、type: facsimile_edition の判定と一致する。"
+      },
+      "print_run": {
+        "ja": "Voluprint（papeteries de la Gorge de Domène）に印刷、2,500 部の番号入り（I〜X および 11〜2500）。",
+        "copy_identification": "N 所蔵本は no 2091（見返しに番号印字）。"
+      }
+    }
+  },
+  "C_unchanged": {
+    "ja": [
+      "witnesses 4 件：変更しない。Didot_proofs の access も indirect のまま（同定未了のため）。",
+      "prior_analyses：変更しない。",
+      "documentary_sources[Pleiade_1998_Marchal]・[Ronat_1980_fascicle2]：変更しない。",
+      "validation_rules：変更しない。",
+      "proof_states.json：変更しない——潜在的な解決経路の記録は sources.json 側に置き、proof_states の grounds には触れない。照合が行われた時点で初めて grounds 側を更新する。",
+      "typography_scale.json・global_clauses.json・level0_schema.json・正本 12 本：変更しない。",
+      "schema_version：0.3 据え置き。"
+    ]
+  },
+  "D_open_for_ruling": [
+    {
+      "id": "oq_src_morel_imprint",
+      "status": "resolved",
+      "ja": "Morel 2007 の版元・叢書名・正確な刊年が未確認。label が incomplete のままである。扉または奥付の現物確認（写真 1 葉）を要する。二次資料や記憶による補完は行わない。",
+      "resolution": {
+        "date": "2026-08-27",
+        "by": "N",
+        "ja": "表紙と見返しの現物確認により版元・出版地・刊年・ISBN・刷部数を確定。label を完成させた。確認できた事項のみを記載する。"
+      }
+    },
+    {
+      "id": "oq_src_morel_proof_identification",
+      "status": "open",
+      "ja": "Morel が複製する校正刷（1° の Cosmopolis 校正刷、4° の Vollard 版初校と後続刷第 1 頁）が、proof_states.json の states（C／ms／E1–E5）および cosmopolis_proof_corrections の依拠する Rouart-Valéry 蔵の組と、それぞれどう対応するか。照合を行うまで同定しない。"
+    },
+    {
+      "id": "oq_src_morel_observations_use",
+      "status": "open",
+      "ja": "6° の Françoise Morel «Observations» を将来 provides に挙げるか。現在は本データセットの根拠として使用していないため、reproduces に所在を記録するのみとする。"
+    }
+  ],
+  "revised": "2026-08-27",
+  "revision_note": {
+    "ja": "Morel 2007 の表紙と見返しの現物確認（N、2026-08-27）により label を完成させ、oq_src_morel_imprint を resolved とした。確認できた事項のみを記載し、確認できない項目についての記述は行わない。"
+  }
+}

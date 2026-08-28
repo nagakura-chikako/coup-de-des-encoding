@@ -1,0 +1,78 @@
+{
+  "file": "typography_scale_update_2026-08-25.json",
+  "kind": "review_draft",
+  "target": "typography_scale.json",
+  "schema_version": "0.3",
+  "version_policy": {
+    "ja": "schema_version は 0.3 据え置き。錨の参照先文字列 1 箇所の訂正であり、census・実測値・層構造のいずれにも変更を加えない。正本 12 本は変更しない。"
+  },
+  "scope_declaration": {
+    "ja": "本 update が変更するのは class 3 錨 l’Abîme の anchor_location.text_unit ただ 1 箇所である。anchor_word・cap_height_mm・status・measurement・layer_id・measure_on は変更しない。proof_states.json が記録する E4 における l’abîme → l’Abîme の大文字化は、錨語がなぜ大文字 A を持つかの生成史的説明として関連するが、本 update が扱う ID の綴りの問題とは別である——両者を混同しない（N 指示、2026-08-25）。",
+    "en": "This update changes exactly one string: the anchor_location.text_unit of the class 3 anchor l’Abîme. The genetic history of the capitalization (E4) is related background but is a different question from the spelling of an identifier."
+  },
+
+  "A_anchor_text_unit_correction": {
+    "target_node": "typography_scale.json > size_classes[size_class=3] > anchors[anchor_word='l’Abîme'] > anchor_location.text_unit",
+    "change": {
+      "before": "tu_f6_labime",
+      "after": "tu_f6_l_abime"
+    },
+    "unchanged_in_same_anchor": [
+      "anchor_word: l’Abîme",
+      "anchor_location.spread: f6-f7",
+      "anchor_location.page: f6",
+      "style: romain",
+      "cap_height_mm: 4.0",
+      "tolerance_mm: 0.5",
+      "measurement（method: census_uniform／date: 2026-07-27／measured_by: N／method_note）",
+      "status: verified",
+      "layer_id: layer_body_roman",
+      "measure_on: 大文字 A"
+    ]
+  },
+
+  "B_grounds": {
+    "why_the_record_id_prevails": {
+      "ja": "①命名規則への適合——level0_schema.json の id_assignment_rules は『顕著語からのスラッグ（小文字 ASCII、ダイアクリティカル除去、空白はアンダースコア）』を定める。2026-08-25 に正本 12 本を全数走査したところ、アポストロフを含むユニットは 52 件あり、そのすべてでアポストロフはアンダースコアに変換されていた（tu_f6_d_aile ← d’aile、tu_f8_l_unique_nombre ← l’unique Nombre、tu_f20_l_evenement ← l’évènement、tu_f11_s_affalera ← s’affalera、tu_f18_c_etait ← C’ÉTAIT、tu_f11_n_abolira ← N’ABOLIRA 等）。連結形は 0 件。tu_f6_l_abime は 52 件の慣行どおりであり、tu_f6_labime は唯一の例外である。②照合の裏づけ——f6-f7 正本は 2026-07-27 に原本逐語照合を完了し訂正 0 件で確定している（当該ユニットは大文字 A および î の曲折アクセントまで原本確認済）。③台帳側の値の性格——下記 C 節参照。",
+      "en": "The record ID conforms to id_assignment_rules: a survey of all twelve records (2026-08-25) found 52 units containing an apostrophe, every one of which renders it as an underscore; there are no concatenated forms. tu_f6_labime is the sole exception, and it stands in the registry rather than in a record. The record itself was collated against the original on 2026-07-27 with no corrections."
+    },
+    "why_this_is_not_an_id_rename": {
+      "ja": "citation_scheme.json（frozen, 2026-07-17）の id_immutability_rules は、既存 ID の改名・削除・再割当を禁じ、誤設定 ID は deprecated として superseded_by で接続することを求める。本件はこれに該当しない——tu_f6_labime を ID として持つオブジェクトは一度も存在しなかった。台帳が実在しない ID を参照していたのであり、ID の変更ではなく壊れた参照の修復である。したがって deprecated_ids 処理は不要（N 裁定、2026-08-25）。同種の前例として oq_ts_f1_par_text_unit（2026-07-27 解決）があり、そこでも本体初版の tu_f1_author を正本 ID tu_f1_stephane_mallarme へ訂正する際に deprecated 処理を行っていない。また f1 正本の provenance_note が『旧試作 ID は正典未登録のため deprecated 処理不要』と述べたのと同じ論理である。",
+      "en": "The frozen citation scheme forbids renaming, deleting, or reassigning an existing ID. This is not such a case: no object ever bore the identifier tu_f6_labime. The registry held a reference to an identifier that never existed — a broken reference, not an identifier change. No deprecation entry is therefore required, following the precedent of oq_ts_f1_par_text_unit."
+    },
+    "how_the_divergence_arose": {
+      "ja": "当該錨の method_note が『本体初版の pending 錨』と記すとおり、この錨は f6-f7 正本が存在するより前に typography_scale.json 本体初版で作られた。そのとき anchor_location.text_unit に書かれたのは、まだ起草されていない正本の ID の予測値である（同時期の typography_scale_update_2026-07-12c／-12d が TODO_f10f11_record 等の明示的プレースホルダを用いたのに対し、こちらは実 ID 風の文字列を置いた）。のちに f6-f7 正本が起草された際、id_assignment_rules の適用により ID は tu_f6_l_abime となったが、台帳側の予測値は更新されなかった。すなわち本件は現行体系に対する単純な誤記ではなく、まだ存在しない正本を先行して指そうとした過去の痕跡である。",
+      "en": "The anchor was created in the first issue of typography_scale.json, before the f6-f7 record existed; its text_unit was a forecast of an identifier not yet assigned. When the record was drafted, the naming rules produced tu_f6_l_abime, and the forecast was never revised. The divergence is thus not a simple typo but the trace of a reference extended toward a record that did not yet exist."
+    },
+    "how_it_was_found": {
+      "ja": "2026-07-28、f8-f9 正本の起草時に、当該記録の observations_for_other_files が『別件の不整合：class 3 の錨 l’Abîme の anchor_location.text_unit が typography_scale.json では tu_f6_labime、f6-f7 正本では tu_f6_l_abime であり、文字列が一致しない。正本側 ID（tu_f6_l_abime）に合わせる訂正を提案する』と記録していた。正本が自らの管轄外に発見した不整合を、台帳を書き換えることなく申し送りとして場に残した事例である（optional_fields.fields.observations_for_other_files 参照）。この観察は当時解決されなかったが消えず、2026-08-25 の横断参照検査で再び検出され、裁定に至った。なお同日の調査により、check_f6f7.py の錨照合が size_class キー名の不一致によって誤って SKIP を返し続けていたことも判明しており、本不整合が長く検出されなかった一因を成す（docs/tooling-history.md 参照）。",
+      "en": "Recorded on 2026-07-28 in the observations_for_other_files of the f8-f9 record, which reported the mismatch and proposed adopting the record-side identifier, without altering the registry. The observation was not acted on then but was not lost; it resurfaced in the cross-reference check of 2026-08-25."
+    },
+    "relation_to_preflight": {
+      "ja": "2026-08-03 の公開前 preflight が検出した 6 件の阻害要因のうち、最後に残っていた 1 件『typography_scale.json の錨 ID 1 件が正本 ID と不一致』が本 update により閉じる。",
+      "en": "This closes the last of the six blocking findings raised by the pre-publication preflight of 2026-08-03."
+    }
+  },
+
+  "C_open_items_add": {
+    "target_node": "typography_scale.json > open_items（末尾に追加）",
+    "entry": {
+      "id": "oq_ts_f6_labime_text_unit",
+      "status": "resolved",
+      "ja": "解決（N、2026-08-25）：class 3 錨 l’Abîme の anchor_location.text_unit を tu_f6_labime から正本 ID tu_f6_l_abime へ訂正。正本 12 本は無変更。既存 ID の改名ではなく、正本成立前に台帳へ置かれた予測 ID による壊れた参照の修復であるため deprecated_ids 処理は行わない。発見は 2026-07-28 の f8-f9 正本 observations_for_other_files による申し送り、裁定は 2026-08-25 の横断参照検査を経て。根拠は typography_scale_update_2026-08-25.json B 節。本体初版の予測 ID を正本 ID へ訂正した前例は oq_ts_f1_par_text_unit（tu_f1_author → tu_f1_stephane_mallarme、2026-07-27）。"
+    }
+  },
+
+  "D_unchanged": {
+    "ja": [
+      "size_classes の 4 層（14／5／4／3mm）・cap_height_mm・tolerance_mm・faces_present：変更しない。",
+      "他のすべての錨（class 1 の 4 錨、class 2、class 3 の SOIT・EXISTÂT-IL、class 4、paratext_sizes）：変更しない。",
+      "measurement_log・structural_notes・superseded・validation_rules・integrated_updates：変更しない。",
+      "census_status・integration_status（canonical_v0.3）：変更しない。",
+      "open_items の既存 6 件（うち open 3 件：oq_ts_class1_measurement_dates／oq_ts_body_italic_representative／oq_ts_le_maitre_same_class）：変更しない。",
+      "proof_states.json・sources.json・global_clauses.json・level0_schema.json：変更しない。",
+      "正本 12 本：変更しない。",
+      "schema_version：0.3 据え置き。"
+    ]
+  }
+}

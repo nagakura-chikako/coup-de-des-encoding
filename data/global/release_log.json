@@ -1,0 +1,262 @@
+{
+  "file": "release_log.json",
+  "schema_version": "0.3",
+  "opened": "2026-07-17",
+  "description": {
+    "ja": "UCD データセットのリリース台帳。リリース番号が保証するのは内容の充足度ではなく学術的参照可能性である：ID体系が成立していること、引用文法が凍結されていること、スキーマに従って読めること、以後の変更履歴を追跡できること。各リリースの収録深度は coverage に機械可読で記録する。",
+    "en": "Release registry of the UCD dataset. A release number guarantees scholarly referenceability — an established ID system, a frozen citation grammar, schema-conformant readability, and traceable change history — not completeness of content. The encoding depth of each release is recorded machine-readably in coverage."
+  },
+  "founding_statement": {
+    "ja": "このリリースは完成を宣言するものではない。本構造が、自らの変容履歴を内包しながら生成を開始する最初の状態である。以後の版は、この構造の潜在性が顕在化した履歴として記録される。",
+    "en": "This release declares no completion. It is the first state in which this structure begins its generation while containing its own history of transformation. Subsequent releases will be recorded as the history in which the latent structure of what it contains becomes manifest.",
+    "adopted": "2026-07-17"
+  },
+  "founding_criteria": {
+    "ja": "本構造が『成立した』とみなされる条件（N、2026-07-17）：(1) 構造内の第1層の関係性が記述されていること。(2) 第1層と他の層との間に、十分に複雑かつ過去と未来にまたがる十分な拡張可能性を持つ関係性が示されていること。(3) 構造制作者が動作（変容）開始に適時と判断したこと。本構造がどこまで動作（変容）を続けるかは、内包される要素の潜在性（潜在的構造）による。",
+    "en": "Conditions under which this structure counts as constituted (N, 2026-07-17): (1) the relations of the first layer are described; (2) relations between the first layer and other layers are shown, of sufficient complexity and with sufficient extensibility spanning past and future; (3) the maker of the structure judges the moment right for the transformation to begin. How far the structure continues to transform depends on the latency (latent structure) of what it contains."
+  },
+  "releases": [
+    {
+      "release": "1.0",
+      "date": "2026-07-17",
+      "label": {
+        "ja": "引用可能な正典データ体系が初めて成立したリリース——最初に時間を獲得した版",
+        "en": "The first release in which a citable canonical data system is constituted — the first state to acquire time"
+      },
+      "citation_scheme": "frozen",
+      "coverage": {
+        "full_record": [
+          "f1",
+          "f2-f3",
+          "f4-f5",
+          "f6-f7",
+          "f8-f9"
+        ],
+        "level_0": [],
+        "not_yet_encoded": [
+          "f10-f11",
+          "f12-f13",
+          "f14-f15",
+          "f16-f17",
+          "f18-f19",
+          "f20-f21",
+          "f22-f23"
+        ],
+        "coverage_note": {
+          "ja": "full_record の一覧は N の確認により確定（2026-07-18、f1 表題頁の深度区分を含む）。typography_scale は全詩実測完了（2026-07-12／07-16）であり coverage とは独立に census_complete。",
+          "en": "The full_record list is confirmed by N (2026-07-18, including the depth classification of the f1 title-page record). The typography census is complete (2026-07-12/07-16), independently of spread-record coverage.",
+          "status": "confirmed"
+        }
+      },
+      "modules_included": [
+        "global_clauses.json (v0.3)",
+        "typography_scale.json（2026-07-12d および 2026-07-16 統合分を含む）",
+        "スプレッド記録 f1〜f8-f9",
+        "sources.json",
+        "maquette_typography.json",
+        "proof_states.json",
+        "citation_scheme.json (frozen)",
+        "release_log.json（本ファイル）"
+      ],
+      "summary": {
+        "ja": "ID体系・引用文法・witness/シグラ体系・authorial層（maquette）・校正刷系譜・実測4層の完結（class 1 全錨）をもって v1.0 とする。スプレッド記録の全面展開（level-0 通し）は v1.1 の課題。",
+        "en": "v1.0 comprises the ID system, frozen citation grammar, witness/sigla registry, the authorial maquette layer, the proof genealogy, and the completed four-tier size census (class 1 fully anchored). Level-0 encoding of all remaining spreads is deferred to v1.1."
+      }
+    },
+    {
+      "release": "1.1",
+      "date": "2026-08-28",
+      "date_note": {
+        "ja": "最終 preflight 通過日。リポジトリの公開日（CITATION.cff の date-released、repository release 1.0.0）と同日だが別の出来事である——前者はリポジトリ version 1.0.0 の公開日、本項はデータセット v1.1 の最終 preflight 通過・確定日の記録（N、2026-08-28）。"
+      },
+      "label": {
+        "ja": "全域に引用可能性を獲得した版——詩の全 12 見開きが引用可能な ID 体系のもとに置かれた版",
+        "en": "The release in which citability is achieved across the whole poem — all twelve spreads brought under the citable identifier system"
+      },
+      "label_note": {
+        "ja": "v1.0 の label『最初に時間を獲得した版』と対をなす。level-0 が保証するのは内容の完全性（completeness）ではなく引用可能性（citability）であり、label はそれを言う。未決事項を含んだまま全域に到達したこと自体が本リリースの内容である——収録が確定を意味しないことは manifest.json の guarantees.inclusion_boundary が保証する。",
+        "en": "Paired with the label of v1.0. What level-0 guarantees is citability, not completeness; reaching the whole poem while unsettled matters remain is itself the content of this release."
+      },
+      "citation_scheme": "frozen",
+      "schema": "level0_schema.json v0.3 (approved 2026-07-18, descriptive additions 2026-07-27 / 2026-08-24)",
+      "coverage": {
+        "level_0": [
+          "f1",
+          "f2-f3",
+          "f4-f5",
+          "f6-f7",
+          "f8-f9",
+          "f10-f11",
+          "f12-f13",
+          "f14-f15",
+          "f16-f17",
+          "f18-f19",
+          "f20-f21",
+          "f22-f23"
+        ],
+        "full_record": [
+          "f1",
+          "f2-f3",
+          "f4-f5",
+          "f6-f7",
+          "f8-f9"
+        ],
+        "not_yet_encoded": [],
+        "coverage_note": {
+          "ja": "level_0 は全 12 見開き・217 ユニット。全 12 本が status: collated_with_original であり、N による Ronat_1980 現物との逐語照合を完了している（最後の 1 本 f14-f15 は 2026-08-24）。not_yet_encoded は空となり、v1.0 の planned に掲げた v1.1 の目標が達成された。full_record の 5 本は v1.0 の記載をそのまま維持する——下記 full_record_semantics を参照。",
+          "en": "Level-0 now covers all twelve spreads and 217 units, every record collated verbatim against the physical Ronat_1980. not_yet_encoded is empty, completing the target set for v1.1 in v1.0’s planned section. The five full_record entries are carried over from v1.0 unchanged; see full_record_semantics.",
+          "status": "confirmed"
+        },
+        "full_record_semantics": {
+          "ruling": {
+            "date": "2026-08-26",
+            "by": "N"
+          },
+          "ja": "coverage の語彙（full_record／level_0／not_yet_encoded）は収録深度ないし作業到達度を示すものであり、正典登録・公開済み ID・独立ファイルの存在とは別軸である。したがって v1.1 は full_record の 5 本を v1.0 のまま維持し、full_record ファイルの同梱を要件としない。根拠：①release_log.json 冒頭が『各リリースの収録深度は coverage に機械可読で記録する』と述べていること ②v1.0 の full_record 一覧に挙がる f1・f2-f3 には独立ファイルが存在せず、実体を持たない項目を含む一覧は登録済み記録の一覧たりえないこと ③level0_schema.json が status について『record_depth（記録の深度）とは独立の軸であり、混同しないこと』と定め、深度と他の軸の分離を既に原則としていること。",
+          "en": "The coverage vocabulary records the depth of encoding reached, not canonical registration, published identifiers, or the existence of standalone files. v1.1 therefore carries the five full_record entries over unchanged and does not require those files to be shipped.",
+          "trial_generation_note": {
+            "ja": "v1.0 期の記録（f4-f5／f6-f7／f8-f9 の trial 系、内部日付 2026-07-12）は syntax・layout・interpretations・variants を text_units と同一ファイルに載せていた。level-0 はこれを浅く置き換えたのではなく、一体だった記述空間から観察の層を抜き出したものである——関係は supersession ではなく設計の分化であり、superseded_by による接続は用いない。trial 世代の ID を deprecated_ids に登録する処理も行わない（f1・f2-f3 の provenance_note にある「旧試作 ID は正典未登録」という 2026-07-24〜25 の判断の追認。typography_scale.json の revisions 2026-08-26 に詳細）。"
+          },
+          "decomposition_note": {
+            "ja": "分化は v1.0 の時点で既に始まっていた——v1.0 の modules_included は maquette_typography.json と proof_states.json を独立モジュールとして挙げている。"
+          }
+        }
+      },
+      "modules_included": [
+        {
+          "module": "data/level0/（正本 12 本）",
+          "status": "collated_with_original (12/12)",
+          "status_source": "各ファイルの $.status",
+          "note": "217 ユニット。記録形式は三世代（level0_schema.json > record_generations）。unit 不変項目の指紋は tools/units_manifest.json に記録。"
+        },
+        {
+          "module": "data/schemas/level0_schema.json",
+          "status": "approved",
+          "status_source": "$.status",
+          "new_in": "1.1",
+          "note": "v0.3。v1.0 の planned が『level-0 スキーマの定義を含む』としていた項目。"
+        },
+        {
+          "module": "data/global/global_clauses.json",
+          "status": "unspecified",
+          "status_source": null,
+          "note": "ファイルレベルの status を宣言していない。個々の clause は status: draft。"
+        },
+        {
+          "module": "data/global/typography_scale.json",
+          "status": "canonical_v0.3",
+          "status_source": "$.integration_status",
+          "note": "census_complete（詩本文 4 層の実測完了）。2026-08-25 に錨 1 件の参照先を訂正（tu_f6_labime → tu_f6_l_abime）。"
+        },
+        {
+          "module": "data/global/sources.json",
+          "status": "unspecified",
+          "status_source": null,
+          "note": "2026-08-25 に witnesses 2 件追加（Cosmopolis_1897・Didot_proofs）、prior_analyses を第3カテゴリとして新設、世代B の自由記述に aliases を付与。"
+        },
+        {
+          "module": "data/global/proof_states.json",
+          "status": "draft",
+          "status_source": "$.status",
+          "note": "転記突合段階。draft の根拠 4 件は当該ファイルの status_note.grounds に明記。うち 1 件は permanently_open——未決であることが正しい記述である。"
+        },
+        {
+          "module": "data/global/maquette_typography.json",
+          "status": "draft",
+          "status_source": "$.status",
+          "note": "authorial 層。未決 open_questions 3 件を含む。"
+        },
+        {
+          "module": "data/global/citation_scheme.json",
+          "status": "frozen",
+          "status_source": "$.status",
+          "note": "2026-07-17 凍結。v1.1 でも変更しない——container・selector の追加も行っていない。"
+        },
+        {
+          "module": "data/global/release_log.json",
+          "status": "unspecified",
+          "status_source": null,
+          "note": "本ファイル。"
+        },
+        {
+          "module": "provenance/",
+          "status": "frozen",
+          "status_source": null,
+          "new_in": "1.1",
+          "note": "統合済みの提案文書。正典レコードが名指しで参照するため公開する。ファイル内の記述は提案時点のものであり現在形に書き換えない。点数は工程 4 で確定。"
+        },
+        {
+          "module": "tools/",
+          "status": "MIT",
+          "status_source": null,
+          "new_in": "1.1",
+          "note": "check_level0.py・verify_sync.py・units_manifest.json の 3 点。旧スプレッド専用 checker は含めず、docs/tooling-history.md に記述のみ残す。"
+        }
+      ],
+      "modules_included_format": {
+        "ja": "v1.1 以降、modules_included の要素は {module, status, status_source, note?} のオブジェクトとする。v1.0 の要素は文字列であり、これを書き換えない——文字列要素は {module: <その値>, status: 'unspecified', status_source: null} と等価に読む。この両形式受理は規則として記述するにとどめ、v1.1 では機械検査を実装しない（現時点で modules_included を読むコードは存在しない。2026-08-26 確認）。",
+        "en": "From v1.1 the elements of modules_included are objects; the string elements of v1.0 are not rewritten and are read as equivalent to an object with status 'unspecified'. This dual-form rule is stated, not enforced: no code currently reads this field.",
+        "rationale": {
+          "ja": "リリース番号が保証するのは内容の充足度ではなく学術的参照可能性である、という本台帳冒頭の宣言を機械可読にするための形式変更。各モジュールがどの状態で収録されているかを、リリース側が申告する。status の正は常に当該モジュール自身にあり、ここに書かれるのはその写しである（status_source がその所在を示す）。"
+        }
+      },
+      "summary": {
+        "ja": "v1.1 は、詩の全 12 見開きを level-0 で記録し、全 217 ユニットに永久不変 ID を与え、全記録の原本逐語照合を完了したリリースである。v1.0 で確立した ID 体系・凍結された引用文法・witness 体系・authorial 層・校正刷系譜・実測 4 層の上に、記録の全域展開と、それを検証する機械可読な規約（level-0 スキーマ v0.3 の machine_checks 20 項目、共通 checker、指紋台帳）が加わった。あわせて、記録形式が起草時期により三世代に分かれることを schema が記述できるようになり（record_generations／optional_fields）、過去の記録を後続世代の形式へ書き換えることなく全域を機械可読とした。未決事項は解消していない——proof_states.json と maquette_typography.json は draft のまま収録される。収録は確定を意味しない（manifest.json > guarantees.inclusion_boundary）。",
+        "en": "v1.1 records all twelve spreads at level-0, assigns permanent identifiers to all 217 units, and completes verbatim collation of every record against the original. On the foundations of v1.0 it adds full coverage and the machine-readable apparatus that verifies it, together with a schema able to describe the three generations of record format without rewriting the earlier ones. Unsettled matters are not resolved: proof_states.json and maquette_typography.json ship as drafts. Inclusion is not a claim of settlement."
+      },
+      "changes_since_1_0": [
+        {
+          "id": "level0_full_coverage",
+          "ja": "f10-f11〜f22-f23 の 7 見開きを level-0 で新規記録し、f1〜f8-f9 の 5 見開きを現行 level-0 スキーマで起草。全 12 本が原本逐語照合済（最後の f14-f15 は 2026-08-24）。"
+        },
+        {
+          "id": "schema_v03_apparatus",
+          "ja": "level0_schema.json に machine_checks 20 項目・status・deprecated_ids を明文化（2026-07-27）。record_generations と optional_fields を新設し、記録形式の三世代を書き換えずに記述可能とした（2026-08-24）。"
+        },
+        {
+          "id": "checker_consolidation",
+          "ja": "スプレッド専用 checker 5 本と旧 verify_sync を、共通の check_level0.py と汎用 verify_sync.py に統合（2026-08-24）。unit 不変項目の指紋台帳 units_manifest.json を新設。"
+        },
+        {
+          "id": "registry_completion",
+          "ja": "sources.json に prior_analyses を新設し、1987 年手巻物統辞図を witness ではなく先行分析として登録（2026-08-25）。Cosmopolis_1897・Didot_proofs を witnesses に追加。"
+        },
+        {
+          "id": "provenance_separation",
+          "ja": "統合済みの提案文書を provenance/ に分離し、正典レコードが名指しで参照するファイルの解決可能性を確保。旧 checker はコードを同梱せず docs/tooling-history.md に記述として残す。"
+        },
+        {
+          "id": "preflight_closure",
+          "ja": "2026-08-03 の公開前 preflight が検出した 6 件の阻害要因をすべて解消（最後の 1 件は typography_scale.json の錨参照の訂正、2026-08-25）。"
+        }
+      ],
+      "verification": {
+        "ja": "本リリースの検証は最終 preflight で実施し、結果を記録する。実行するもの：check_level0.py --all（正本 12 本）、verify_sync.py --all（schema ⇔ レコード ⇔ checker、および指紋 12 本）、横断参照検査（preflight 用ハーネス。公開 tools/ には含めない）。",
+        "results": {
+          "date": "2026-08-28",
+          "ja": "最終 preflight を実施し、全項目通過。①check_level0.py --all：正本 12 本、FAIL 0 ②verify_sync.py --all：schema ⇔ レコード ⇔ checker の相互整合 OK、unit 不変項目の指紋 12 本すべてが tools/units_manifest.json と一致 ③横断参照検査：witness 値の解決、台帳参照、錨 ID、provenance の被参照ファイルの同梱——いずれも未解決ゼロ ④manifest ⇔ 実配置：未記載・未配置ゼロ ⑤manifest の files[].status と各モジュールの status_source が指す実値：5 件すべて一致。2026-08-03 の公開前 preflight が検出した 6 件の阻害要因は、すべて解消済み。"
+        }
+      }
+    }
+  ],
+  "planned": [
+    {
+      "release": "1.1",
+      "target": {
+        "ja": "f10-f11〜f22-f23 の level-0 通し完了（not_yet_encoded を空にする）。level-0 スキーマの定義を含む。"
+      },
+      "achieved": "1.1",
+      "achieved_note": {
+        "ja": "2026 年 8 月に達成。releases[] の v1.1 エントリを参照。"
+      }
+    },
+    {
+      "release": "1.2",
+      "target": {
+        "ja": "未確定。候補：①解釈層（layers/）の最初の実装——glyph_ink・インク量計測を ink 層として成立させる ②proof_states.json の現物照合（confidence を verified へ昇格）③layout 層の設計 ④maquette_typography.json の未決 3 件のうち現物確認で解決しうるもの。いずれも v1.1 公開後に裁定する。",
+        "en": "To be determined after v1.1."
+      },
+      "status": "not_yet_planned"
+    }
+  ]
+}

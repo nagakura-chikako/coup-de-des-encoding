@@ -1,0 +1,309 @@
+{
+  "file": "f18-f19_level0.json",
+  "schema_version": "0.3",
+  "schema_ref": "level0_schema.json (approved 2026-07-18)",
+  "spread_id": "f18-f19",
+  "record_depth": "level-0",
+  "base_state": "Ronat_1980",
+  "recorded": "2026-07-21",
+  "recorded_by": "Claude (draft 2026-07-21) / N (collation 2026-07-22)",
+  "status": "collated_with_original",
+  "unit_count": 26,
+  "revision_history": [],
+  "deprecated_ids": [],
+  "oq_l0_f18f19_treatment_application": {
+    "ja": "条件付き裁定（2026-07-18）の初適用。本見開きの級数変化（class 1／2／3／4 の全4層が共存）はすべて印字行の境界と一致し、全26ユニットが単一 type_class を保持できる。よって裁定の第1分岐（級数変化地点での自然分割が可能）が成立し、level-0 のまま記録する。full_record の先行も type_class 配列の例外も不要。書体混在ユニットもなし（style='mixte' 不使用）。",
+    "en": "First application of the conditional ruling (2026-07-18). Every size change on this spread (all four census tiers co-occur) coincides with a line boundary, so all 26 units carry a single type_class. The first branch of the ruling (natural segmentation at size-change points) holds: the spread stays level-0. No full_record pre-emption, no type_class arrays, no style='mixte'."
+  },
+  "transcription_source": {
+    "witnesses": [
+      {
+        "id": "Ronat18-19.heic",
+        "witness": "Ronat_1980",
+        "role": "base — 転記の唯一の底本",
+        "note": "見開き全体の撮影。全26行を判読、アクセント・アポストロフ・セディーユ（COMMENÇÂT）まで photo 上で確認。"
+      },
+      {
+        "id": "NRF18-19.heic",
+        "witness": "NRF系（コピー）",
+        "role": "判読補助・レイアウト照合",
+        "note": "紙の歪みが大きい旨 N 申告。行構成・面帰属・跨ぎ行なしの3点すべて Ronat と一致することの確認に使用。"
+      },
+      {
+        "id": "NRF18.HEIC / NRF19.heic",
+        "witness": "NRF系（コピー、単ページ接写）",
+        "role": "参考映像 — 歪み対策として N が f18・f19 を別個に接写。キャップハイト比測定（type_class 推定）の主資料",
+        "note": "f19 接写は LE HASARD（census 実測 14mm）を錨として同一ページ内比測定が可能。f18 接写は C'ÉTAIT（N 実測で LE NOMBRE と同高＝class 2）を錨とした。"
+      },
+      {
+        "id": "Cos18-19.HEIC / Cos19-21.HEIC",
+        "witness": "Cosmopolis 1897（コピー、N朱筆校合入り）",
+        "role": "異同層向け保管（転記には不使用）",
+        "note": "手巻物注の3点——①issu stellaire と pire〜autant のローマン体化 ②Choit 節の（）括り ③la plume／rythmique での改ページ——を画像で確認可能な状態で保管。深追いせず variant 層へ。"
+      },
+      {
+        "id": "骰子一擲８.jpg",
+        "witness": "1987 手巻物統辞図（骰子一擲８）",
+        "role": "分割粒度の照合権威（id_assignment_rules 第4項）",
+        "note": "区切り照合 26/26 一致（差異なし）。格文法注・多読解注（D/C/M/G）は syntax／readings 層の先行分析として保存。"
+      }
+    ],
+    "collation_note": "N による原本逐語・現物照合完了（2026-07-22）。定規スポットチェック3点：EXISTÂT-IL 4.0mm／Choit 4.0mm／autrement 3.0mm——写真推定どおり class 3／3／4 で確定。照合による訂正は style のみ2件：① LE NOMBRE romain→italique ② Choit ブロック全8行 romain→italique。text・face の訂正はゼロ（revision_history は text・face 専用のため対象外、訂正の経緯は各ユニット note と本欄に記録）。C'ÉTAIT＝LE NOMBRE 同高は N 実測済（2026-07-21 報告）。LE HASARD は census class 1 錨（実測 14mm 済）。",
+    "method_note": "転記→ピクセル行解析（行帯・x クラスタ・中溝検出）→NRF 単ページ接写でのキャップハイト比測定（f19 は LE HASARD=14mm 錨、f18 は C'ÉTAIT=class 2 錨、連結成分ベースで傾き耐性化）→NRF 見開き照合。中溝は縦エッジ検出により x≈1820（Ronat 写真座標）。"
+  },
+  "units": [
+    {
+      "id": "tu_f18_c_etait",
+      "face": "f18",
+      "seq": 10,
+      "text": "C’ÉTAIT",
+      "type_class": 2,
+      "style": "italique",
+      "note": "イタリック大文字。N 実測（2026-07-21 報告）で LE NOMBRE と同高＝class 2（f17 SI と同じ 5mm 層）。統語的には cl_global_conditionnelle の C'ÉTAIT component 候補（spread: TODO の実証的解答——syntax 層向け観察）。M の COMME SI C'ÉTAIT 読み（f10 folie 接続）は手巻物注、readings 層へ。"
+    },
+    {
+      "id": "tu_f18_issu_stellaire",
+      "face": "f18",
+      "seq": 20,
+      "text": "issu stellaire",
+      "type_class": 4,
+      "style": "italique",
+      "note": "イタリック小文字がここで 4mm 平原（〜f17）から 3mm へ一段下がる（写真比高：アセンダー実質 ≈2.6–2.9mm、C'ÉTAIT 錨比。class 4 の実測錨は同見開き autrement 行の 3.0mm、2026-07-22）。Cos 版ではローマン体（手巻物注、異同層向け）。"
+    },
+    {
+      "id": "tu_f19_le_nombre",
+      "face": "f19",
+      "seq": 30,
+      "text": "LE NOMBRE",
+      "type_class": 2,
+      "style": "italique",
+      "note": "イタリック大文字（N 逐語照合 2026-07-22 で確定。写真では傾きが読み取りにくくドラフトは romain としていたが訂正）。N 実測で C'ÉTAIT と同高＝class 2。NRF 接写でも LE HASARD 錨比 5.0mm。これにより class 2 は3錨（C'ÉTAIT・LE NOMBRE・CE SERAIT）ともイタリックで統一——条件文がサイズでも書体でも一体を成し、ローマンの表題文 LE HASARD と対峙する（syntax／layout 層向け観察）。"
+    },
+    {
+      "id": "tu_f19_existat_il",
+      "face": "f19",
+      "seq": 40,
+      "text": "EXISTÂT-IL",
+      "type_class": 3,
+      "style": "romain",
+      "note": "ローマン大文字だが class 3——N 定規実測 4.0mm（2026-07-22）で確定（同ページの LE NOMBRE 5mm より明確に小）。接続法五節（EXISTÂT／COMMENÇÂT／CESSÂT／SE CHIFFRÂT／ILLUMINÂT、IL=LE NOMBRE）の第1——手巻物注、syntax 層へ。"
+    },
+    {
+      "id": "tu_f19_autrement_qu_hallucination",
+      "face": "f19",
+      "seq": 50,
+      "text": "autrement qu’hallucination éparse d’agonie",
+      "type_class": 4,
+      "style": "romain",
+      "note": "N 定規実測 3.0mm（2026-07-22）＝class 4 確定——本見開き class 4 の実測錨（census の「3mm の出現は f18-f19 のみ」の初の実測実例）。手巻物注：EXISTÂT の様態を示す（syntax 層へ）。"
+    },
+    {
+      "id": "tu_f19_commencat_il_et_cessat_il",
+      "face": "f19",
+      "seq": 60,
+      "text": "COMMENÇÂT-IL ET CESSÂT-IL",
+      "type_class": 3,
+      "style": "romain",
+      "note": null
+    },
+    {
+      "id": "tu_f19_sourdant_que_nie_et_clos",
+      "face": "f19",
+      "seq": 70,
+      "text": "sourdant que nié et clos quand apparu",
+      "type_class": 4,
+      "style": "romain",
+      "note": "手巻物注：sourdant の対象格主語は IL、que は譲歩（≒bien que／encore que）——syntax 層へ。"
+    },
+    {
+      "id": "tu_f19_enfin",
+      "face": "f19",
+      "seq": 80,
+      "text": "enfin",
+      "type_class": 4,
+      "style": "romain",
+      "note": null
+    },
+    {
+      "id": "tu_f19_par_quelque_profusion",
+      "face": "f19",
+      "seq": 90,
+      "text": "par quelque profusion répandue en rareté",
+      "type_class": 4,
+      "style": "romain",
+      "note": "手巻物注：SE CHIFFRÂT-IL について par が手段を示す（syntax 層へ）。"
+    },
+    {
+      "id": "tu_f19_se_chiffrat_il",
+      "face": "f19",
+      "seq": 100,
+      "text": "SE CHIFFRÂT-IL",
+      "type_class": 3,
+      "style": "romain",
+      "note": null
+    },
+    {
+      "id": "tu_f19_evidence_de_la_somme",
+      "face": "f19",
+      "seq": 110,
+      "text": "évidence de la somme pour peu qu’une",
+      "type_class": 4,
+      "style": "romain",
+      "note": "手巻物注：évidence は ILLUMINÂT-IL 内の IL（=LE NOMBRE）と同格（syntax 層へ）。"
+    },
+    {
+      "id": "tu_f19_illuminat_il",
+      "face": "f19",
+      "seq": 120,
+      "text": "ILLUMINÂT-IL",
+      "type_class": 3,
+      "style": "romain",
+      "note": null
+    },
+    {
+      "id": "tu_f18_ce_serait",
+      "face": "f18",
+      "seq": 130,
+      "text": "CE SERAIT",
+      "type_class": 2,
+      "style": "italique",
+      "note": "イタリック大文字 class 2（キャップ高は C'ÉTAIT と一致）。cl_global_conditionnelle の CE SERAIT component 候補（syntax 層向け観察）。手巻物注：対象格補語に LE HASARD、程度格として pire〜autant を取る。"
+    },
+    {
+      "id": "tu_f18_pire",
+      "face": "f18",
+      "seq": 140,
+      "text": "pire",
+      "type_class": 4,
+      "style": "italique",
+      "note": null
+    },
+    {
+      "id": "tu_f18_non",
+      "face": "f18",
+      "seq": 150,
+      "text": "non",
+      "type_class": 4,
+      "style": "italique",
+      "note": "N 実測（2026-07-21 報告）：non の上辺と LE HASARD の上辺が同高（layout 層向けの設計的整列、physical_observations 参照）。"
+    },
+    {
+      "id": "tu_f18_davantage_ni_moins",
+      "face": "f18",
+      "seq": 160,
+      "text": "davantage ni moins",
+      "type_class": 4,
+      "style": "italique",
+      "note": null
+    },
+    {
+      "id": "tu_f18_indifferemment_mais_autant",
+      "face": "f18",
+      "seq": 170,
+      "text": "indifféremment mais autant",
+      "type_class": 4,
+      "style": "italique",
+      "note": "N 実測：autant の下辺と LE HASARD の下辺が同高（physical_observations 参照）。Cos 版では pire〜autant がローマン体（異同層向け）。"
+    },
+    {
+      "id": "tu_f19_le_hasard",
+      "face": "f19",
+      "seq": 180,
+      "text": "LE HASARD",
+      "type_class": 1,
+      "style": "romain",
+      "note": "表題文第4成分。census class 1 錨（実測 14mm 済、typography_scale_update_2026-07-16 参照）。global_clauses（cl_global_phrase_capitale, order 4）の参照先 ID と一致させた。"
+    },
+    {
+      "id": "tu_f19_choit",
+      "face": "f19",
+      "seq": 190,
+      "text": "Choit",
+      "type_class": 3,
+      "style": "italique",
+      "note": "N 定規実測 4.0mm（2026-07-22）＝class 3 確定。書体は N 逐語照合（2026-07-22）でブロック全8行（Choit〜par la neutralité identique du gouffre）イタリックと確定——ドラフトの romain 判定を訂正。手巻物注：自動詞 choir 直説法現在、対象格主語 la plume は後置、結果の不定詞 s'ensevelir を取る。choisir 直説法現在と同形のための「錯視」効果注、および Cos 版の（）括り・改ページは variant／readings 層へ。"
+    },
+    {
+      "id": "tu_f19_la_plume",
+      "face": "f19",
+      "seq": 200,
+      "text": "la plume",
+      "type_class": 3,
+      "style": "italique",
+      "note": "Cos 版では la plume／rythmique で改ページ（手巻物注、異同層向け）。"
+    },
+    {
+      "id": "tu_f19_rythmique_suspens_du_sinistre",
+      "face": "f19",
+      "seq": 210,
+      "text": "rythmique suspens du sinistre",
+      "type_class": 3,
+      "style": "italique",
+      "note": "手巻物注：rythmique…sinistre は la plume を記述（syntax 層へ）。"
+    },
+    {
+      "id": "tu_f19_s_ensevelir",
+      "face": "f19",
+      "seq": 220,
+      "text": "s’ensevelir",
+      "type_class": 3,
+      "style": "italique",
+      "note": null
+    },
+    {
+      "id": "tu_f19_aux_ecumes_originelles",
+      "face": "f19",
+      "seq": 230,
+      "text": "aux écumes originelles",
+      "type_class": 3,
+      "style": "italique",
+      "note": null
+    },
+    {
+      "id": "tu_f19_nagueres_d_ou_sursauta",
+      "face": "f19",
+      "seq": 240,
+      "text": "naguères d’où sursauta son délire jusqu’à une cime",
+      "type_class": 3,
+      "style": "italique",
+      "note": "綴りは naguères（語末 s、grave）を photo で確認。手巻物注：sursauta と対象格主語 son délire の倒置、d'où＝des écumes（出所格）、son＝de la plume、jusqu'à＝程度格、naguère(s) 時格前置——syntax 層へ。"
+    },
+    {
+      "id": "tu_f19_fletrie",
+      "face": "f19",
+      "seq": 250,
+      "text": "flétrie",
+      "type_class": 3,
+      "style": "italique",
+      "note": "手巻物注：対象格 une cime、原因格 par la neutralité…du gouffre を取る（syntax 層へ）。"
+    },
+    {
+      "id": "tu_f19_par_la_neutralite_identique",
+      "face": "f19",
+      "seq": 260,
+      "text": "par la neutralité identique du gouffre",
+      "type_class": 3,
+      "style": "italique",
+      "note": "手巻物注：identique は à／avec を取らない。D 読解〈2つの可能な解決（投げる／投げない）が結局は同じ結果を与えることについての neutralité〉は readings 層へ。"
+    }
+  ],
+  "seq_note": {
+    "ja": "seq は seq_doctrine どおり上→下・左面→右面のベースライン順を基本とし、2箇所で「視覚的連続を優先する N の作業順」を適用した。① issu stellaire（f18、ベースライン y≈324）は LE NOMBRE（f19、y≈304）よりわずかに低いが、C'ÉTAIT 直下の同一視覚クラスタとして C'ÉTAIT→issu stellaire→LE NOMBRE の順（seq 10-20-30）とした。② f18 階段末尾（davantage ni moins／indifféremment mais autant）と f19 LE HASARD はベースラインが交錯するが、左面の階段を完結させてから LE HASARD へ渡る順（seq 140-170→180）とした。厳密ベースライン順やその他の対抗的線状化は将来 readings 層のオブジェクトとして表現し、seq には反映しない。",
+    "en": "seq follows the doctrine's baseline order with two applications of the visual-continuity clause: (1) issu stellaire (f18) reads immediately after C'ÉTAIT despite LE NOMBRE's marginally higher baseline across the gutter; (2) the f18 staircase completes before crossing to LE HASARD although their baselines interleave. Strict-baseline and other alternative linearisations are reserved as future readings-layer objects."
+  },
+  "physical_observations": {
+    "ja": "中溝は縦エッジ検出で x≈1820（Ronat 写真座標）。中溝跨ぎ行なし——f18 側インクの最大 x≈1571、f19 側の最小 x≈2298 で、両面のインクは中溝から十分に離れる（f14-f15・f16-f17 と同様、本見開きも6枚折り構成の別々の2紙面にまたがる）。N 実測（2026-07-21 報告、Ronat 現物）：① C'ÉTAIT と LE NOMBRE は同高（キャップ高一致） ② non の上辺と LE HASARD の上辺が同高 ③ autant の下辺と LE HASARD の下辺が同高——すなわち class 4 階段の non〜autant 3行が LE HASARD のキャップ高 14mm をちょうど垂直に挟み込む設計的整列。写真上も ③ は誤差 ≈1mm 以内で追認できる（② は紙面湾曲・視差により写真では 2–3mm のずれに見えるが、現物実測を優先する）。本見開きは census 全4層（14／5／4／3mm）が共存する詩中唯一の見開き。書体との交差は N 照合（2026-07-22）で確定：class 1＝romain（LE HASARD）、class 2＝italique 純層（C'ÉTAIT・LE NOMBRE・CE SERAIT）、class 3＝両書体（romain：接続法大文字群／italique：Choit ブロック8行）、class 4＝両書体（romain：f19 上部小活字／italique：issu stellaire と pire〜autant 階段）。すなわちサイズと書体は独立の設計軸であり、活字の「乱れ」は測定によって秩序として立ち上がる（N 総括 2026-07-22）。",
+    "en": "Gutter at x≈1820 by vertical-edge detection; no crossing lines (f18 ink ends at x≈1571, f19 ink begins at x≈2298; like f14–f15 and f16–f17 the spread lies across two separate sheets). N's physical measurements (reported 2026-07-21): C'ÉTAIT and LE NOMBRE share cap height; the top of non aligns with the top of LE HASARD and the bottom of autant with its bottom — the class-4 staircase vertically brackets LE HASARD's 14 mm exactly. The photo corroborates the autant alignment within ≈1 mm (the non alignment shows a 2–3 mm apparent offset attributable to page curvature/parallax; the physical measurement takes precedence). This is the poem's only spread where all four census tiers co-occur. The size×style cross-classification was settled by N's collation (2026-07-22): class 1 roman (LE HASARD); class 2 a pure italic tier (C'ÉTAIT, LE NOMBRE, CE SERAIT); class 3 both faces (roman subjunctive capitals / italic Choit block); class 4 both faces (roman small lines / italic staircase and issu stellaire). Size and face are thus independent design axes: measured, the apparent disorder of the types resolves into order (N's summation, 2026-07-22)."
+  },
+  "handscroll_collation": {
+    "leaf": "骰子一擲８（f18／f19 葉）",
+    "result": {
+      "ja": "区切り照合 26/26 一致（f18: 7／f19: 19）。手巻物の格文法注・多読解注は syntax／readings 層の先行分析として保存：C'ÉTAIT の対象格 LE NOMBRE と二重の条件文読解（SI C'ÉTAIT…／M の COMME SI C'ÉTAIT…＝f10 folie 説明）、接続法五節の仮定・譲歩構造（IL=LE NOMBRE）、issu≒issu des étoiles、autrement que＝EXISTÂT の様態、sourdant の対象格主語 IL と譲歩の que、par＝手段、évidence＝IL と同格、CE SERAIT の対象格補語 LE HASARD と程度格 pire〜autant、Choit＝choir 直説法現在の「錯視」効果、sursauta と son délire の倒置・d'où＝des écumes・son＝de la plume・jusqu'à＝程度格・naguère(s) 前置・flétrie の対象格 une cime と原因格、identique をめぐる D 読解。Cos 版注（issu stellaire と pire〜autant のローマン体化、Choit 節の（）括り、la plume／rythmique 改ページ）は variant 層向け。",
+      "en": "Segmentation agrees 26/26 (f18: 7, f19: 19). The handscroll's case-grammar and multi-reader annotations (double conditional reading of C'ÉTAIT incl. M's COMME SI link to f10 folie; the five subjunctive concessives with IL=LE NOMBRE; the Choit 'optical illusion' with choisir; the inversion of sursauta / son délire; D on identique) are preserved as prior analysis for the syntax/readings layers; the Cosmopolis notes (romanisation, parentheses, page break) go to the variant layer."
+    }
+  },
+  "observations_for_other_files": {
+    "ja": "① global_clauses.json の cl_global_conditionnelle：本記録により C'ÉTAIT component は {spread: f18, text_unit: tu_f18_c_etait}、CE SERAIT component は {spread: f18, text_unit: tu_f18_ce_serait} へ更新可能となった。SI component（現行 spread: f12, text_unit: TODO）は f16-f17 セッションの {spread: f17, text_unit: tu_f17_si} 案とあわせ、3成分すべてに実証候補が揃う（台帳ファイルは未変更、N 裁定待ち）。なお照合確定により3成分はいずれも class 2 italique で書体・サイズとも統一——台帳更新時に注記価値あり。② cl_global_phrase_capitale：第4成分の参照先 tu_f19_le_hasard が本記録で実在するようになり、表題文4成分すべて（f3・f5＝full_record 済、f11＝level-0 v1.1、f19＝本記録）が実レコードに解決可能となった。validation rule「components must resolve」を表題文について初めて全点満たす。なお interpretations に TODO（n_gcl_pc_01）が残るため status は draft のまま。③ typography_scale.json への統合は typography_scale_update_2026-07-22.json として起草済み：class 2 に錨3点（C'ÉTAIT・LE NOMBRE・CE SERAIT、全て italique——class 2 は純イタリック層のまま）、class 3 に初のローマン大文字錨（EXISTÂT-IL、定規 4.0mm）とイタリック錨 Choit（定規 4.0mm）、class 4 に初の実測錨（autrement 行、定規 3.0mm——census の「3mm は f18-f19 のみ」の実例化）。サイズ×書体の独立性についての構造的注記も同ファイルに記録。",
+    "en": "① cl_global_conditionnelle can now be updated: C'ÉTAIT → {f18, tu_f18_c_etait}, CE SERAIT → {f18, tu_f18_ce_serait}; with the pending SI → {f17, tu_f17_si} proposal, all three components have empirical candidates (registry untouched, awaiting N's ruling) — all three now confirmed class 2 italique, unified in both size and face. ② tu_f19_le_hasard now exists, so all four components of cl_global_phrase_capitale resolve to real records for the first time (status stays draft while TODO n_gcl_pc_01 remains). ③ Typography integration drafted as typography_scale_update_2026-07-22.json: three class-2 anchors (all italic — the tier stays purely italic), the first roman-capital anchor of class 3 (EXISTÂT-IL, 4.0 mm) plus the italic anchor Choit (4.0 mm), and the first measured anchor of class 4 (the autrement line, 3.0 mm, instantiating the census claim that 3 mm occurs only on f18–f19), with a structural note on the independence of size and face."
+  }
+}

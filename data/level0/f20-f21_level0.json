@@ -1,0 +1,217 @@
+{
+  "file": "f20-f21_level0.json",
+  "schema_version": "0.3",
+  "schema_ref": "level0_schema.json (approved 2026-07-18)",
+  "spread_id": "f20-f21",
+  "record_depth": "level-0",
+  "base_state": "Ronat_1980",
+  "recorded": "2026-07-22",
+  "recorded_by": "Claude (draft 2026-07-22) / N (実測 2026-07-22・逐語照合 2026-07-23)",
+  "status": "collated_with_original",
+  "unit_count": 17,
+  "revision_history": [],
+  "deprecated_ids": [],
+  "transcription_source": {
+    "witnesses": [
+      {
+        "id": "Ronat20-21.heic",
+        "witness": "Ronat_1980",
+        "role": "base — 転記の唯一の底本",
+        "note": "見開き全体の撮影。全17行を判読。アクセント確認済み：fût・eût の曲折、l’évènement の è（アクサン・グラーヴ）、élévation・inférieur・réalité・fondé・mémorable の各アクセント。"
+      },
+      {
+        "id": "NRF20-21.heic",
+        "witness": "NRF系（コピー）",
+        "role": "判読補助・レイアウト照合",
+        "note": "行構成（f20: 4行／f21: 13行）・面帰属・跨ぎ行なし・l’évènement／accompli の頁分割、いずれも Ronat と一致。活字サイズも同様（N 報告 2026-07-22）。"
+      },
+      {
+        "id": "Cos19-21.HEIC",
+        "witness": "Cosmopolis 1897（コピー）",
+        "role": "異同層向け保管（転記には不使用）",
+        "note": "画像で確認済みの異同2点：① ou se fut l’évènement accompli en vue de tout résultat nul が単一行（l’évènement と accompli が同一行に共存）② se fut——曲折アクセントなし（手巻物注の問い：直説法前過去の意図か単なる誤植か）。深追いせず variant 層へ。"
+      },
+      {
+        "id": "骰子一擲９.jpg",
+        "witness": "1987 手巻物統辞図（骰子一擲９）",
+        "role": "分割粒度の照合権威（id_assignment_rules 第4項）",
+        "note": "区切り照合 16/17（唯一の差異は l’évènement＋accompli 系列の結合、下記 handscroll_collation 参照）。格文法注・多読解注（C/D）は syntax／readings 層の先行分析として保存。"
+      }
+    ],
+    "collation_note": "N による原本逐語照合完了（2026-07-23）：テクストの転記ミスなし——text・face・style とも訂正0件（revision_history は空のまま）。実測（2026-07-22 報告）反映済み：① l’évènement（f20）と accompli（f21）は同じ高さ ② 本見開きの活字は大文字を含め全て 4mm（class 3）、NRF も同様。"
+  },
+  "units": [
+    {
+      "id": "tu_f20_rien",
+      "face": "f20",
+      "seq": 10,
+      "text": "RIEN",
+      "type_class": 3,
+      "style": "romain",
+      "note": "ローマン大文字。N 実測（2026-07-22）で本見開きは大文字含め全て 4mm＝class 3。第2の中心文 RIEN … N’AURA EU LIEU … QUE LE LIEU（… EXCEPTÉ PEUT-ÊTRE UNE CONSTELLATION、f20–f23 横断）の第1成分候補——global clause 登録は f22-f23 記録後、N 裁定待ち（syntax 層向け観察）。"
+    },
+    {
+      "id": "tu_f20_de_la_memorable_crise",
+      "face": "f20",
+      "seq": 20,
+      "text": "de la mémorable crise",
+      "type_class": 3,
+      "style": "romain",
+      "note": null
+    },
+    {
+      "id": "tu_f20_ou_se_fut",
+      "face": "f20",
+      "seq": 30,
+      "text": "ou se fût",
+      "type_class": 3,
+      "style": "romain",
+      "note": "fût の曲折アクセントを photo 上で確認（接続法大過去）。Cos 版は se fut（曲折なし——手巻物注の問い：直説法前過去の意図か誤植か。異同層向け）。"
+    },
+    {
+      "id": "tu_f20_l_evenement",
+      "face": "f20",
+      "seq": 40,
+      "text": "l’évènement",
+      "type_class": 3,
+      "style": "romain",
+      "note": "綴りは évènement（è）で photo 確認、手巻物・Cos とも同綴。f20 最終行。N 実測（2026-07-22）で f21 冒頭の accompli と同じ高さ——統語単位 l’évènement accompli … は同一視覚水準のままページ境界で分断される（物理的な中溝跨ぎ印字はなし。f14-f15 の sauf｜que la rencontre と同型、物理／統語の区別を維持）。手巻物は accompli 系列と結合して1単位（handscroll_collation 参照）。Cos 版では同一行（異同層向け）。"
+    },
+    {
+      "id": "tu_f21_accompli_en_vue",
+      "face": "f21",
+      "seq": 50,
+      "text": "accompli en vue de tout résultat nul",
+      "type_class": 3,
+      "style": "romain",
+      "note": "f21 冒頭行。l’évènement（f20）と同じ高さ（N 実測 2026-07-22）で、ページ境界を挟んで統語的に連続。Cos 版では ou se fût 行に結合された単一行（異同層向け）。"
+    },
+    {
+      "id": "tu_f21_humain",
+      "face": "f21",
+      "seq": 60,
+      "text": "humain",
+      "type_class": 3,
+      "style": "romain",
+      "note": null
+    },
+    {
+      "id": "tu_f21_n_aura_eu_lieu",
+      "face": "f21",
+      "seq": 70,
+      "text": "N’AURA EU LIEU",
+      "type_class": 3,
+      "style": "romain",
+      "note": "ローマン大文字、4mm（N 実測）。第2の中心文の動詞成分候補（syntax 層向け）。時制は前未来（N’AURA EU LIEU QUE）——表題文の N’ABOLIRA は単純未来であり、両者は役割を異にする（N 注記 2026-07-23。手巻物も両者を接続していない）。時制事実の記録に留め、読解は将来層へ。"
+    },
+    {
+      "id": "tu_f21_une_elevation_ordinaire",
+      "face": "f21",
+      "seq": 80,
+      "text": "une élévation ordinaire verse l’absence",
+      "type_class": 3,
+      "style": "romain",
+      "note": null
+    },
+    {
+      "id": "tu_f21_que_le_lieu",
+      "face": "f21",
+      "seq": 90,
+      "text": "QUE LE LIEU",
+      "type_class": 3,
+      "style": "romain",
+      "note": "ローマン大文字、4mm（N 実測）。第2の中心文の第3成分候補（syntax 層向け）。"
+    },
+    {
+      "id": "tu_f21_inferieur_clapotis",
+      "face": "f21",
+      "seq": 100,
+      "text": "inférieur clapotis quelconque comme pour disperser l’acte vide",
+      "type_class": 3,
+      "style": "romain",
+      "note": null
+    },
+    {
+      "id": "tu_f21_abruptement_qui_sinon",
+      "face": "f21",
+      "seq": 110,
+      "text": "abruptement qui sinon",
+      "type_class": 3,
+      "style": "romain",
+      "note": null
+    },
+    {
+      "id": "tu_f21_par_son_mensonge",
+      "face": "f21",
+      "seq": 120,
+      "text": "par son mensonge",
+      "type_class": 3,
+      "style": "romain",
+      "note": null
+    },
+    {
+      "id": "tu_f21_eut_fonde",
+      "face": "f21",
+      "seq": 130,
+      "text": "eût fondé",
+      "type_class": 3,
+      "style": "romain",
+      "note": "eût の曲折アクセントを photo 上で確認。"
+    },
+    {
+      "id": "tu_f21_la_perdition",
+      "face": "f21",
+      "seq": 140,
+      "text": "la perdition",
+      "type_class": 3,
+      "style": "romain",
+      "note": null
+    },
+    {
+      "id": "tu_f21_dans_ces_parages",
+      "face": "f21",
+      "seq": 150,
+      "text": "dans ces parages",
+      "type_class": 3,
+      "style": "romain",
+      "note": null
+    },
+    {
+      "id": "tu_f21_du_vague",
+      "face": "f21",
+      "seq": 160,
+      "text": "du vague",
+      "type_class": 3,
+      "style": "romain",
+      "note": null
+    },
+    {
+      "id": "tu_f21_en_quoi_toute_realite",
+      "face": "f21",
+      "seq": 170,
+      "text": "en quoi toute réalité se dissout",
+      "type_class": 3,
+      "style": "romain",
+      "note": "f21 最終行。"
+    }
+  ],
+  "seq_doctrine_application": {
+    "ja": "seq は上→下・左面→右面のベースライン順そのまま。視覚的連続条項の適用箇所なし（f21 の13行はベースライン単調降下：y≈1194→1892、交錯なし）。なお l’évènement（f20 末尾）→ accompli（f21 冒頭）は同一ベースラインの連続だが、左面→右面の既定順と一致するため特則を要しない。",
+    "en": "seq follows plain baseline order (top→bottom, left page→right page). No application of the visual-continuity clause: the thirteen f21 lines descend monotonically. The l’évènement → accompli continuation coincides with the default page order and needs no special provision."
+  },
+  "physical_observations": {
+    "ja": "中溝は縦エッジ検出で x≈1677（Ronat 写真座標）。中溝跨ぎ行なし——f20 側インクの最大 x≈1561、f21 側の最小 x≈1803 で、両面のインクは中溝から離れる（f14-f15 以降と同様、別々の2紙面にまたがる見開きと整合）。N 実測（2026-07-22 報告、Ronat 現物）：① l’évènement（f20 最終行）と accompli（f21 冒頭行）は同じ高さ——写真上もベースライン差 ≈5px（≈0.7mm）以内で追認 ② 本見開きの活字は大文字（RIEN／N’AURA EU LIEU／QUE LE LIEU）を含め全て 4mm＝class 3。NRF も同様。census との整合：class 1（14mm）は表題文成分のみで本見開きに不在、class 2（5mm）不在、class 3 のみの単一層見開き（3mm の出現は f18-f19 のみ、の census 言明とも整合）。イタリック不在——f12-f17 のイタリック挿入節系列は f18-f19 で終わり、本見開きから最終挿入節がローマンで展開する（書体の平原が italique から romain へ転じた最初の見開き）。",
+    "en": "Gutter at x≈1677 by vertical-edge detection; no crossing lines (f20 ink ends at x≈1561, f21 ink begins at x≈1803), consistent with a spread lying across two separate sheets as from f14-f15 onward. N’s physical measurements (reported 2026-07-22): (1) l’évènement (last line of f20) and accompli (first line of f21) share the same height — corroborated on the photo within ≈5 px (≈0.7 mm); (2) all type on this spread, capitals included, is 4 mm = class 3; NRF concurs. Census conformity: no class 1 or 2 on this spread, and no 3 mm (which occurs only on f18-f19) — a single-tier spread. No italics: the italic insertion series having ended at f18-f19, the final insertion unfolds here in roman — the first spread where the typographic plain shifts from italic to roman."
+  },
+  "handscroll_collation": {
+    "leaf": "骰子一擲９（f20／f21 葉）",
+    "result": {
+      "ja": "区切り照合 16/17（f20: 4／f21: 13 に対し手巻物は16単位）。唯一の差異：手巻物は l’évènement accompli en vue de tout résultat nul を単一単位として図示（頁境界を越える統語句のまとまり。level-0 は面帰属の相違により f20／f21 で2分割——id_assignment_rules と f14-f15 の sauf｜que la rencontre 前例に従う）。差異は本 note に記録し、手巻物の区切りは将来 syntax 層の先行分析として保存（oq_l0_segmentation_authority 裁定どおり）。手巻物の統辞・読解注（syntax／readings 層向け）：① f20 でイタリックによる一連の挿入節が終わり最後の挿入節が始まる。f20-23 の展開を支えるのは大文字法による第2の中心文 RIEN N’AURA EU LIEU QUE LE LIEU EXCEPTÉ PEUT-ÊTRE UNE CONSTELLATION（手巻物本文の PEUT-ÊTRR は手巻物側の誤植として記録）② RIEN de la mémorable crise N’AURA EU LIEU に、autrement もしくは sinon の意味の等位接続詞 ou に導かれた接続法大過去 ou se fût l’évènement accompli en vue de tout résultat nul が付く ③ se fût accompli の対象格主語 l’évènement は倒置 ④ une élévation ordinaire verse l’absence は RIEN N’AURA EU を説明する下位の挿入節。D：une élévation ordinaire＝現実の視線の上昇 ⑤ inférieur clapotis quelconque——D は se produit 等の動詞が省略された不完全な挿入節とし、comme pour disperser l’acte vide abruptement はその省略動詞についての比較・目的 ⑥ qui sinon … se dissout：sinon≒autrement。eût fondé は qui＝l’acte を原因格、la perdition を対象格、par son mensonge（son＝de l’acte vide）を手段格に取る。dans ces parages は C＝〈この波のあたりへの消失〉、en quoi＝dans le vague ⑦ 図中の赤字記法（V／C／V’／O’／S’’／V’’／O’’、挿入、場所の補語もしくは挿入、譲歩）は格文法・従属節役割の先行分析として保存。",
+      "en": "Segmentation 16/17: the handscroll’s sole divergence is drawing l’évènement accompli en vue de tout résultat nul as one unit across the page boundary; level-0 splits it at the face boundary per the sauf | que la rencontre precedent. The scroll’s case-grammar and reader annotations (ou as coordinating ‘autrement/sinon’ + subjunctive pluperfect; inverted object-case subject l’évènement; D on une élévation ordinaire and the elided verb of inférieur clapotis; the case frame of eût fondé; C on dans ces parages; en quoi = dans le vague; the second capital sentence spanning f20–f23) is preserved for the syntax/readings layers."
+    }
+  },
+  "observations_for_other_files": {
+    "ja": "① global_clauses.json：第2の中心文 RIEN … N’AURA EU LIEU … QUE LE LIEU（… EXCEPTÉ PEUT-ÊTRE UNE CONSTELLATION）の新規 clause 登録候補。本記録で3成分が実レコード化（tu_f20_rien／tu_f21_n_aura_eu_lieu／tu_f21_que_le_lieu）、残る EXCEPTÉ 以下は f22-f23 記録後に解決可能。登録は level-0 の範囲外につき N 裁定待ち（登録時は components に TODO を含む間 status は draft）。② typography_scale.json：本見開きは全ユニット class 3・romain の単一層見開き。第2の中心文が大文字のまま 4mm 層に置かれることで、f18-f19 で確定した「大文字性とサイズの独立」が文単位の規模で実例化——2つの中心文の階層（表題文 14mm／第2文 4mm）はサイズ層そのものによって実現される（構造的注記の候補）。N 実測の measurement_log 追記案は typography_scale_update_2026-07-22b.json として起草。③ variants 層：Cos 異同2点（se fut 曲折なし／l’évènement・accompli 同一行）を画像確認済みで保管。④ readings 層（N、2026-07-22）：Cos で同一行にあった l’évènement と accompli が、Ronat では同じ高さのままページを跨いで引き裂かれる——「完遂の断絶」。統語上の完遂（accompli）が物理的頁割りによって切断される事態そのものが本見開きの読解対象（N 読解メモとして保存）。⑤ N メモ（2026-07-23、将来の cross-work 層向け・記録のみ）：N’ABOLIRA（単純未来）と N’AURA EU LIEU QUE（前未来）は役割を異にする——手巻物も両者を接続していない。過去への推測の前未来（起こらなかっただろう）を用いて、起こったことを否定しつつ想起させる技法をマラルメが意識的に使ったのは、A la nue accablante tu（1892 制作・1894 初出）の aura noyé から。後日、盤面を白地に黒から黒地に白へ反転して他作品への地下水脈を記述する際に重要となるライン。地下水脈は他作品・散文・書簡・制作資料・実生活へ複数方向に分岐するため、level-0 note は中立を維持し、現段階では特定の読解ラインを固定しない（N 方針）。",
+    "en": "(1) A new global clause candidate for the second capital sentence, three of whose components now resolve to real records; registration awaits f22-f23 and N’s ruling. (2) A single-tier, all-roman class 3 spread: the second capital sentence sitting at 4 mm instantiates the capitalisation/size independence at sentence scale — the hierarchy of the two central sentences is realized by the size tiers themselves (14 mm vs 4 mm). Measurement-log draft in typography_scale_update_2026-07-22b.json. (3) Two Cosmopolis variants stored with image confirmation. (4) Readings-layer memo (N): what Cosmopolis held on one line — l’évènement accompli — Ronat tears across the page break while keeping it at one height: the severing of accomplishment itself becomes the object of reading. (5) N’s memo (2026-07-23, for a future cross-work layer, record only): N’ABOLIRA (simple future) and N’AURA EU LIEU QUE (futur antérieur) play different roles — the handscroll never connected them. Mallarmé’s conscious use of the conjectural futur antérieur — negating while evoking what took place — begins with aura noyé in A la nue accablante tu (composed 1892, first published 1894). This line will matter when the board is later inverted from black-on-white to white-on-black to chart the underground watercourses toward other works; those watercourses branch toward other poems, prose, letters, production materials, and life, so level-0 notes stay neutral and no reading line is fixed at this stage (N’s policy)."
+  }
+}

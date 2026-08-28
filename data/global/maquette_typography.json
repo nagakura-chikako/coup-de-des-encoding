@@ -1,0 +1,301 @@
+{
+  "file": "maquette_typography.json",
+  "schema_version": "0.3",
+  "created": "2026-07-16",
+  "source": "Pleiade_1998_Marchal",
+  "description": {
+    "ja": "決定版のためのマラルメ自筆マケット（方眼紙、私蔵）の物理記述と、見開きごとの鉛筆タイポグラフィ指示の台帳。authorial 層（著者指示）を記録するもので、Ronat_1980 における実現（typography_scale.json）とはレイヤーを分ける。両者の対応は correspondence_to_ronat_realization に置く。",
+    "en": "Registry of the physical description of Mallarmé’s autograph maquette (squared paper, private collection) and the per-spread pencil typographic instructions. This is the authorial layer, kept distinct from the Ronat_1980 realization (typography_scale.json); the mapping between the two lives in correspondence_to_ronat_realization."
+  },
+
+  "physical_description": {
+    "format": "grand cahier à feuilles quadrillées",
+    "page_size_cm": { "width": 25, "height": 33 },
+    "double_page_size_cm": { "width": 50, "height": 33 },
+    "grid_square_mm": 8,
+    "page_count": 24,
+    "margins_red_pencil": {
+      "ja": "赤鉛筆でタイポグラフィ領域を枠付け。見開き内に幅の等しい3つの余白ゾーン（各3cm）：左端／中央（折り目の左右）／右端。",
+      "en": "Typographic area framed in red pencil; three blank zones of equal width (3 cm each) per double page: left edge, centre (astride the fold), right edge.",
+      "note_final_plan": {
+        "ja": "OC I p.1321 注1：最終版では中央余白は 8cm（2×4cm）となる予定だった（BnF 蔵校正刷 Berès A の指示より）。",
+        "en": "OC I p.1321 n.1: in the definitive edition the central margin was to become 8 cm (2×4 cm), per instructions on proof Berès A (BnF)."
+      }
+    },
+    "page_grid_rule": {
+      "surface": "Chaque page / texte et blancs / est établie sur un chiffre de 40 lignes",
+      "ja": "各頁は本文と空白を合わせて40行の基準で設定される。",
+      "contradicts": "Ronat_1980 の「12」仮説（sources.json の caveat_ronat_editorial_theory を参照）",
+      "confidence": "transcribed_agreed"
+    },
+    "layout_agreement_with_print": {
+      "ja": "マケットの配置は、1箇所の例外を除き印刷テキストの配置と一致する。唯一の例外：« C’ÉTAIT / issu stellaire » はマケットでは18頁 [382] 最上部ではなく16頁最下部に置かれていた。",
+      "en": "The maquette layout agrees with the printed text except at one point: « C’ÉTAIT / issu stellaire » sat at the foot of maquette p.16, not the head of p.18 [382].",
+      "affects_spreads": ["f16-f17", "f18-f19"],
+      "confidence": "transcribed_agreed"
+    },
+    "collage_revisions": {
+      "ja": "貼り付け（collage）により旧配置の修正痕が追える：旧19頁は « Choit / la plume » で終了、旧20頁は Cosmopolis 初出と同配置（上部に rythmique suspens du sinistre […] par la neutralité identique du gouffre、下部3行に de la mémorable crise / ou se fût / l’événement）、この3行が21頁へ移動、旧22頁の « aussi loin qu’un endroit »、23頁上部へ « fusionne avec au-delà […] le Septentrion aussi Nord » が移動。",
+      "en": "Collage traces show earlier states: former p.19 ended at « Choit / la plume »; former p.20 matched the Cosmopolis layout; three lines (de la mémorable crise / ou se fût / l’événement) moved to p.21; « aussi loin qu’un endroit » on former p.22; « fusionne avec au-delà […] le Septentrion aussi Nord » moved to the top of p.23.",
+      "affects_spreads": ["f18-f19", "f20-f21", "f22-f23"],
+      "confidence": "transcribed_agreed",
+      "comment": "Cosmopolis（単頁単位）から決定版（見開き単位）への再配置プロセスの物理的痕跡。"
+    },
+    "confidence": "transcribed_agreed",
+    "verification_todo": "Pléiade 現物（OC I pp.1321–1322）との対照による verified への昇格"
+  },
+
+  "open_questions": [
+    {
+      "id": "oq_thorey",
+      "ja": "欄外指示に現れる語 'thorey'（POÈME: 22 thorey ／ STÉPHANE MALLARMÉ: 16 thorey ／ SOIT: 16 thorey ／ JAMAIS: … thorey）の正体が未詳。級数単位か、活字体・鋳造所・植字担当者等の固有名か。綴りの判読自体も要現物確認。",
+      "en": "The marginal term 'thorey' (22 thorey / 16 thorey etc.) is unidentified: a size unit, or a proper name (typeface, foundry, compositor)? The reading itself needs physical verification.",
+      "verification_2026_07_16": {
+        "by": "N",
+        "ja": "現物照合済：綴りは 'thorey' で正しい。文脈なし。小文字で印刷されており固有名詞とは考えにくい。N の推測：編者マルシャル自身も意味を同定できず、マケットの記載を逐語のまま転記したのではないか。",
+        "en": "Collated against the physical volume: the spelling 'thorey' is correct, without context, printed lowercase — hence unlikely a proper name. N conjectures that Marchal himself could not identify the term and transcribed the maquette verbatim.",
+        "spelling_confidence": "verified",
+        "meaning_status": "open"
+      },
+      "status": "open_meaning_only"
+    },
+    {
+      "id": "oq_surcharge_direction",
+      "ja": "重ね書きの方向。JAMAIS の「36 en surcharge 28」は 36 が 28 の上に書かれた（最終指示 36）と読むのが自然だが要確認。表題頁 POÈME の「22 と 20」は転記間で方向が曖昧。",
+      "en": "Direction of the overwrites: JAMAIS ‘36 en surcharge 28’ most naturally reads as 36 written over 28 (final: 36), to be confirmed; the direction of ‘22 / 20’ on the title page is ambiguous across transcriptions.",
+      "assessment_2026_07_16": {
+        "by": "N",
+        "ja": "N の判断：36 が上（最終指示 36）、22 が上（最終指示 22）と読むのが妥当。確定にはマケット実物の確認が望ましい。資料へのアクセスを持つ研究者（川瀬武夫、中畑寛之）への照会が選択肢として挙がっている。",
+        "en": "N’s assessment: 36 uppermost (final: 36) and 22 uppermost (final: 22) is the sound reading; inspection of the maquette itself would settle it. Consulting scholars with access to the materials (Kawase Takeo, Nakahata Hiroyuki) is a noted option."
+      },
+      "status": "provisionally_resolved__physical_inspection_desirable"
+    },
+    {
+      "id": "oq_title_sentence_two_sizes",
+      "ja": "表題文内部の級数指示が割れている：UN COUP DE DÉS＝36、JAMAIS＝28→36（重ね書き）、N’ABOLIRA＝28（＋esp. 2 p.）、LE HASARD＝数字指示なし。一方 Ronat_1980 実測では f11・f19 がともに 14mm。著者指示レベルでは二段階だった可能性があり、Ronat がこれを単一層として実現したのか、f3・f5 の実測（最優先 TODO）で検証する。",
+      "en": "The size instructions split within the capital sentence: UN COUP DE DÉS = 36, JAMAIS = 28→36 (overwritten), N’ABOLIRA = 28 (+ esp. 2 p.), LE HASARD = no figure. Ronat_1980 measures f11 and f19 both at 14 mm. The authorial layer may have held a two-step distinction that Ronat flattened; measuring f3 and f5 (top-priority TODO) will test this.",
+      "resolution_2026_07_16": {
+        "ja": "f3 UN COUP DE DÉS・f5 JAMAIS を実測、いずれも 14mm（N、2026-07-16）。よって Ronat_1980 は表題文を単一の14mm層として実現した——4錨全実測で確定（typography_scale_update_2026-07-16 を参照）。ただしこれは Ronat 層の事実であり、著者指示層の 36／28 の割れ（またはその痕跡）が何を意味したか、決定版で何に翻訳される予定だったかは、校正刷 E1–E5 の観察に持ち越される。",
+        "en": "f3 and f5 measured at 14 mm (N, 2026-07-16): Ronat_1980 realizes the capital sentence as a single 14 mm tier, now established by all four anchors. This is a fact of the Ronat layer; what the 36/28 split in the authorial layer meant, and what it was to become in the definitive edition, is deferred to observation of the proofs E1–E5."
+      },
+      "status": "resolved_for_ronat_layer__open_for_authorial_layer",
+      "linked_update": "typography_scale_update_2026-07-16"
+    },
+    {
+      "id": "oq_jamais_surcharge_vs_title_order",
+      "type": "hypothesis",
+      "proposed_by": "Fable",
+      "ja": "仮説（未検証）：JAMAIS の 28→36 修正は、題名語順の変異（ms・E1 では « Jamais un coup de dés n’abolira le hasard »、E2 で決定版語順）と時期的・構想的に関係する可能性。JAMAIS が題名の頭から本文第2成分へ位置づけを変える過程で、その活字上の重みが再調整されたという読み筋。N の評価待ち。",
+      "en": "Hypothesis (unverified): the 28→36 overwrite on JAMAIS may relate to the title-order variant (ms and E1 read « Jamais un coup de dés n’abolira le hasard »; the definitive order appears from E2). As JAMAIS shifted from title-initial position to second component of the distributed sentence, its typographic weight may have been readjusted. Awaiting N’s assessment.",
+      "status": "open"
+    },
+    {
+      "id": "oq_folio_renumbering",
+      "ja": "マケットの通し番号に修正痕：5→9、6→11、7→13、8→17 と書き換えられている。旧番号体系（連番）から見開き対応の奇数系へ？　番号付けの初期構想を示す可能性があり要検討。",
+      "en": "The maquette folio numbers show corrections (5→9, 6→11, 7→13, 8→17), possibly from an earlier consecutive scheme to an odd-number spread scheme — a trace of an earlier pagination concept. To be examined.",
+      "status": "open"
+    }
+  ],
+
+  "title_page_instructions": {
+    "maquette_page": 1,
+    "oc_page_ref": "[365]",
+    "items": [
+      {
+        "target": "titre",
+        "note": "元の記述は抹消され（biffé et corrigé）「POÈME」に修正",
+        "surface_instruction": "capitales",
+        "margin_note": "22（20 との重ね書き、方向は oq_surcharge_direction 参照） thorey",
+        "confidence": "uncertain"
+      },
+      {
+        "target": "Un coup de Dés jamais n’abolira le Hasard",
+        "surface_instruction": "italiques d’un corps supérieur à celui employé dans l’intérieur du Poème",
+        "ja": "本文内で使われるものより大きい級のイタリック",
+        "confidence": "transcribed_agreed"
+      },
+      {
+        "target": "par",
+        "surface_instruction": "romain bas de case",
+        "confidence": "transcribed_agreed"
+      },
+      {
+        "target": "STÉPHANE MALLARMÉ",
+        "surface_instruction": "capitales plus fortes que celles ci-dessus",
+        "margin_note": "16 thorey",
+        "confidence": "uncertain"
+      }
+    ],
+    "comment": "表題頁の活字は本文4層とは別系（typography_scale.json の既存注記と整合）。"
+  },
+
+  "spread_instructions": [
+    {
+      "maquette_page": "3",
+      "oc_page_ref": "[367]",
+      "dataset_spread": "f2-f3",
+      "items": [
+        { "unit": "UN COUP DE DÉS", "instruction": "très grandes capitales", "margin_note": "36", "confidence": "transcribed_agreed" }
+      ]
+    },
+    {
+      "maquette_page": "5",
+      "oc_page_ref": "[369]",
+      "dataset_spread": "f4-f5",
+      "maquette_folio_note": "数字 3 の書き込み（confidence: uncertain）",
+      "items": [
+        { "unit": "JAMAIS", "instruction": "très grandes capitales", "margin_note": "36 en surcharge 28 / thorey", "confidence": "transcribed_agreed", "see": "oq_surcharge_direction, oq_title_sentence_two_sizes" },
+        { "unit": "reste du texte", "instruction": "capitales romaines du corps", "confidence": "transcribed_agreed" }
+      ]
+    },
+    {
+      "maquette_page": "6-7",
+      "oc_page_ref": "[370-371]",
+      "maquette_folio_numbers": "4 5",
+      "dataset_spread": "f6-f7",
+      "items": [
+        { "unit": "SOIT", "instruction": "capit. romaines du corps", "margin_note": "16 thorey", "confidence": "uncertain", "see": "oq_thorey" },
+        { "unit": "reste du texte", "instruction": "romain bas de case du corps", "confidence": "transcribed_agreed" }
+      ]
+    },
+    {
+      "maquette_page": "8-9",
+      "oc_page_ref": "[372-373]",
+      "maquette_folio_numbers": "6 7",
+      "dataset_spread": "f8-f9",
+      "items": [
+        { "unit": "LE MAÎTRE", "instruction": "capit. romaines du corps", "confidence": "transcribed_agreed" },
+        { "unit": "reste du texte", "instruction": "même romain bas de case que les pages précédentes", "confidence": "transcribed_agreed" }
+      ]
+    },
+    {
+      "maquette_page": "10-11",
+      "oc_page_ref": "[374-375]",
+      "maquette_folio_numbers": "8 ／ 5 biffé et corrigé en 9",
+      "dataset_spread": "f10-f11",
+      "items": [
+        { "unit": "texte", "instruction": "même romain bas de case", "confidence": "transcribed_agreed" },
+        { "unit": "N’ABOLIRA", "instruction": "très grandes capitales", "margin_note": "28 th / esp. 2 p.", "margin_note_gloss": "esp. 2 p. ＝ 2ポイントの字間（espacement）と解する（要確認）", "confidence": "transcribed_agreed", "see": "oq_title_sentence_two_sizes" }
+      ]
+    },
+    {
+      "maquette_page": "12-13",
+      "oc_page_ref": "[376-377]",
+      "maquette_folio_numbers": "10 ／ 6 biffé et corrigé en 11",
+      "dataset_spread": "f12-f13",
+      "items": [
+        { "unit": "COMME SI", "instruction": "grandes capitales italiques", "occurrences": 2, "confidence": "transcribed_agreed" },
+        { "unit": "reste du texte", "instruction": "bas de case d’italiques du même corps que le romain des pages précédentes", "confidence": "transcribed_agreed" }
+      ],
+      "comment": "イタリック・モードへの移行点。"
+    },
+    {
+      "maquette_page": "14-15",
+      "oc_page_ref": "[378-379]",
+      "maquette_folio_numbers": "12 ／ 7 biffé et corrigé en 13",
+      "dataset_spread": "f14-f15",
+      "items": [
+        { "unit": "texte", "instruction": "continuer les italiques", "confidence": "transcribed_agreed" }
+      ]
+    },
+    {
+      "maquette_page": "16-17",
+      "oc_page_ref": "[380-381]",
+      "maquette_folio_numbers": "14 15",
+      "dataset_spread": "f16-f17",
+      "items": [
+        { "unit": "SI", "instruction": "ital. plus fortes", "confidence": "transcribed_agreed" },
+        { "unit": "reste du texte", "instruction": "continuer les italiques", "confidence": "transcribed_agreed" },
+        { "unit": "C’ÉTAIT", "instruction": "ital. plus fortes", "confidence": "transcribed_agreed", "comment": "配置上はマケットで16頁最下部（layout_agreement_with_print の例外を参照）" }
+      ]
+    },
+    {
+      "maquette_page": "18-19",
+      "oc_page_ref": "[382-383]",
+      "maquette_folio_numbers": "16 ／ 8 biffé et corrigé en 17",
+      "dataset_spread": "f18-f19",
+      "items": [
+        { "unit": "LE NOMBRE", "underline": "souligné d’un trait", "instruction": "ital. plus fortes", "confidence": "transcribed_agreed" },
+        { "unit": "EXISTÂT-IL, COMMENÇÂT-IL ET CESSÂT-IL, SE CHIFFRÂT-IL, ILLUMINÂT-IL", "underline": "soulignés de trois traits", "instruction": "capitales romaines du corps", "confidence": "transcribed_agreed" },
+        { "unit": "autrement […] d’agonie ／ sourdant […] rareté ／ évidence […] qu’une", "underline": "non soulignés", "instruction": "bas de case romain d’un petit caractère de notes", "confidence": "transcribed_agreed" },
+        { "unit": "CE SERAIT", "instruction": "ital. plus fortes", "confidence": "transcribed_agreed" },
+        { "unit": "pire […] mais autant", "instruction": "bas de case romain d’un petit caractère", "confidence": "transcribed_agreed" },
+        { "unit": "LE HASARD", "instruction": "très grandes capitales", "margin_note": null, "confidence": "transcribed_agreed", "see": "oq_title_sentence_two_sizes" },
+        { "unit": "Choit […] du gouffre", "instruction": "mêmes italiques", "confidence": "transcribed_agreed" }
+      ],
+      "comment": "著者指示の密度が最大の見開き。実測4層（3/4/5/14mm）の同時現前に、著者指示レベルでは下線階層（1本／3本／なし）がさらに重なる。"
+    },
+    {
+      "maquette_page": "20-21",
+      "oc_page_ref": "[384-385]",
+      "maquette_folio_numbers": "18 19",
+      "dataset_spread": "f20-f21",
+      "items": [
+        { "unit": "RIEN", "underline": "souligné d’un trait", "instruction": "capitales du corps", "confidence": "transcribed_agreed" },
+        { "unit": "N’AURA EU LIEU", "underline": "souligné d’un trait", "instruction": "capitales du corps", "confidence": "transcribed_agreed" },
+        { "unit": "QUE LE LIEU", "underline": "souligné d’un trait", "instruction": "capitales du corps", "confidence": "transcribed_agreed" },
+        { "unit": "reste du texte", "instruction": "romain bas de case des premières pages", "confidence": "transcribed_agreed" }
+      ]
+    },
+    {
+      "maquette_page": "22-23",
+      "oc_page_ref": "[386-387]",
+      "maquette_folio_numbers": "20 21",
+      "dataset_spread": "f22-f23",
+      "items": [
+        { "unit": "EXCEPTÉ", "instruction": "capitales du corps", "confidence": "transcribed_agreed" },
+        { "unit": "PEUT-ÊTRE", "instruction": "capitales du corps", "confidence": "transcribed_agreed" },
+        { "unit": "UNE CONSTELLATION", "instruction": "capitales du corps", "confidence": "transcribed_agreed" },
+        { "unit": "reste du texte", "instruction": "bas de case romain des premières pages", "confidence": "transcribed_agreed" }
+      ]
+    }
+  ],
+
+  "correspondence_to_ronat_realization": {
+    "description": {
+      "ja": "著者指示クラス（maquette）と Ronat_1980 実測層（typography_scale.json）の対応表。左＝著者指示、右＝実測層。",
+      "en": "Mapping between authorial instruction classes (maquette) and measured tiers in the Ronat_1980 realization."
+    },
+    "mappings": [
+      {
+        "authorial_class": "très grandes capitales（欄外数字 36／28）",
+        "ronat_tier": "class 1（14mm）",
+        "note": "4錨（f3・f5・f11・f19）全点実測14mmで対応確定（2026-07-16）。著者指示の36／28二段階は Ronat において単一層に統合されている。二段階の本来の含意は E1–E5 観察の課題として残る。",
+        "status": "verified_for_ronat_layer"
+      },
+      {
+        "authorial_class": "ital. plus fortes（SI, C’ÉTAIT, LE NOMBRE, CE SERAIT）",
+        "ronat_tier": "5mm_si（条件文層）",
+        "note": "著者指示の段階で条件文骨格が一つのクラスとして与えられていたことの裏付け。2026-07-12 の層名改訂（SI蝶番層→条件文層）と完全に整合。",
+        "status": "consistent"
+      },
+      {
+        "authorial_class": "capitales romaines du corps ／ romain bas de case du corps ／ italiques du même corps",
+        "ronat_tier": "4mm（本文平原）",
+        "note": "階層の大半が大文字法・イタリック・下線で産出されるという実測所見は、著者指示が「同一 corps 内のスタイル変化」を基調とすることと一致。",
+        "status": "consistent"
+      },
+      {
+        "authorial_class": "petit caractère de notes（bas de case romain）",
+        "ronat_tier": "3mm（縮小層）",
+        "note": "著者自身が「注釈用の小活字」と規定。f18-f19 の谷が著者指示の段階から存在した。ただし Ronat 実測では pire 以下のイタリックも3mmであり、著者指示の 'mêmes italiques'（Choit系＝4mm実測）との切り分けは要精査。",
+        "status": "consistent_with_remark"
+      }
+    ],
+    "structural_note": {
+      "ja": "下線指示（1本／3本）は Ronat_1980 の印刷にはサイズとしては現れない独立の強調軸である。決定版計画において下線が何に翻訳される予定だったか（級数か、字間か、別書体か）は E1–E5 の観察を要する未解決問題。variants モジュールの axis 候補。",
+      "en": "The underline instructions (single/triple) form an independent emphasis axis not realized as size in Ronat_1980. What the underlines were to become in the definitive edition (size, spacing, or face) is an open question requiring the proofs E1–E5 — a candidate axis for the variants module."
+    }
+  },
+
+  "status": "draft",
+  "verification_todos": [
+    "thorey の意味の同定（綴りは 2026-07-16 に verified。oq_thorey）。N が数字＋thorey／28 th 等の分布をプールして検討予定。'th'＝thorey の略記なら、数字とセットで現れる計量的な語である可能性が上がる",
+    "マケット実物または高精細図版による重ね書きの確認（oq_surcharge_direction は N の判断で暫定解決。川瀬武夫・中畑寛之両氏への照会が選択肢）",
+    "f6-f7 の '16 thorey' の帰属先——thorey の正体が未詳である以上、SOIT への指示か否かも判断保留（oq_thorey に従属）",
+    "将来課題：校正刷 E1–E5（Berès A の図版等が入手できれば）における 36／28 指示の実現形の観察"
+  ],
+  "changelog": [
+    { "date": "2026-07-16", "by": "Fable+N", "ja": "初版起草（転記突合）。同日、N の現物照合により thorey 綴り確定、f3・f5 実測により oq_title_sentence_two_sizes を Ronat 層について解決。重ね書き方向は N の判断で暫定解決（36上・22上）。" }
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "file": "f1_level0.json",
+  "schema_version": "0.3",
+  "schema_ref": "level0_schema.json (approved 2026-07-18)",
+  "spread_id": "f1",
+  "record_depth": "level-0",
+  "base_state": "Ronat_1980",
+  "recorded": "2026-07-24",
+  "recorded_by": "Claude (draft) / N (measurements 2026-07-24; verbatim collation 2026-07-25, no corrections)",
+  "status": "collated_with_original",
+  "unit_count": 4,
+  "revision_history": [],
+  "deprecated_ids": [],
+  "provenance_note": {
+    "ja": "過去の f1 試作（f1-f3 期）は試行錯誤中で正本未作成であり、本記録が現行 level-0 スキーマによる f1 の初の正本起草。旧試作 ID は正典未登録のため deprecated 処理不要。なお本セッション初回ドラフトは NRF 画像との混同により f1 を4行大文字題字と誤転記していたが、正本化前に N の指摘・原本実測報告（2026-07-24）にもとづき全面訂正した（正典レコードの text 訂正ではないため revision_history には記載しない）。"
+  },
+  "scope_note": {
+    "ja": "level-0 の対象は本文紙束のみ。外側紙ケースの表記（change errant / d’atelier 等）は対象外とする（N 裁定、2026-07-24）。"
+  },
+  "evidence": [
+    {
+      "label": "Ronat1",
+      "witness": "Ronat_1980",
+      "desc": "折り畳んだ状態での撮影（表紙相当＝f1 外面）"
+    },
+    {
+      "label": "Ronat0-1",
+      "witness": "Ronat_1980",
+      "desc": "開いて伏せた状態。左＝白ページ0、右＝f1。転記の主資料"
+    },
+    {
+      "label": "N_measurement_2026-07-24",
+      "witness": "Ronat_1980",
+      "desc": "N 原本定規実測：POÈME 8mm／タイトル行 5mm（全体で同一）／par 4mm／STÉPHANE MALLARMÉ 5mm。type_class 裁定の優先根拠"
+    },
+    {
+      "label": "NRF表紙",
+      "witness": "NRF_1914",
+      "desc": "冊子としての表紙（コピー）。異同層向け参考"
+    },
+    {
+      "label": "NRF0-1",
+      "witness": "NRF_1914",
+      "desc": "表紙後の見開き：左＝空白、右＝本扉。異同層向け参考"
+    },
+    {
+      "label": "Cos1-2序文付き",
+      "witness": "Cosmopolis_1897",
+      "desc": "f1〜f2 相当部に題字＋序文（Observation）が置かれる。異同層向け参考"
+    },
+    {
+      "label": "骰子一擲１",
+      "witness": "handscroll_1987",
+      "desc": "1987 手巻物統辞図 f1／f2／f5 葉。区切り照合用"
+    }
+  ],
+  "units": [
+    {
+      "id": "tu_f1_poeme",
+      "face": "f1",
+      "seq": 10,
+      "text": "POÈME",
+      "type_class": null,
+      "style": "romain",
+      "note": "N 実測 8mm（2026-07-24）。census 4層（14／5／4／3mm）のいずれにも該当しない f1 パラテクスト固有のサイズのため、N 裁定（2026-07-25、案 (a)）により type_class は null——typography_scale.json paratext 附属節の錨（typography_scale_update_2026-07-25.json 参照）。字間を広く取った大文字（字間は layout 層扱い）。"
+    },
+    {
+      "id": "tu_f1_title",
+      "face": "f1",
+      "seq": 20,
+      "text": "Un coup de Dés jamais n’abolira le Hasard",
+      "type_class": 2,
+      "style": "italique",
+      "note": "N 実測 5mm・タイトル全体で同一（2026-07-24）＝class 2。1行1ユニット（N 裁定 2026-07-24。手巻物 f1 葉の扱いとも一致）。ID は顕著語スラッグ規則の例外として機能名 title を採る：global_clauses.json の cl_global_phrase_capitale.relations_in（f1:tu_f1_title、「イタリック一行」注記）を無変更で解決し、f3 系の詩本文スラッグとの混同も避けるため（N 確認事項）。「coup」の頭文字は逐語照合により小文字で確定（N、2026-07-25）。"
+    },
+    {
+      "id": "tu_f1_par",
+      "face": "f1",
+      "seq": 30,
+      "text": "par",
+      "type_class": 3,
+      "style": "romain",
+      "note": "N 実測 4mm（2026-07-24）＝class 3。小文字。書体は逐語照合により romain で確定（N、2026-07-25）。"
+    },
+    {
+      "id": "tu_f1_stephane_mallarme",
+      "face": "f1",
+      "seq": 40,
+      "text": "STÉPHANE MALLARMÉ",
+      "type_class": 2,
+      "style": "romain",
+      "note": "N 実測 5mm（2026-07-24）＝class 2。字間を広く取った大文字（字間は layout 層扱い）。"
+    }
+  ],
+  "physical_observations": [
+    {
+      "id": "obs_f1_folded_structure",
+      "ja": "Ronat_1980 は綴じられていない折り紙構成であり、f1 は最外シートの外面＝表紙相当（証拠 Ronat1：折り畳み状態の撮影）。開いて伏せると左＝白ページ0（f 系フォリエーション外・完全白紙）、右＝f1（証拠 Ronat0-1）。本文紙束に扉以外の刊記は存在しない。"
+    },
+    {
+      "id": "obs_f1_no_gutter",
+      "ja": "単一面記録のため中溝跨ぎの検討対象なし。"
+    },
+    {
+      "id": "obs_f1_size_face_profile",
+      "ja": "実測にもとづく f1 の活字プロファイル：8mm romain（POÈME）／5mm italique（タイトル行）／4mm romain（par）／5mm romain（STÉPHANE MALLARMÉ）。5mm・4mm は本文 census の class 2・class 3 と同寸である一方、8mm は本文に存在しないサイズであり、N 裁定（2026-07-25、案 (a)）により typography_scale.json の paratext 附属節に錨として記録される（typography_scale_update_2026-07-25.json 参照）。"
+    }
+  ],
+  "collation_with_handscroll": {
+    "leaf": "骰子一擲１（f1 葉）",
+    "result": "match_4_of_4",
+    "ja": "手巻物 f1 葉は枠内に〈POÈME／Un coup de Dés jamais n’abolira le Hasard（イタリック一行）／par／STÉPHANE MALLARMÉ〉を再現しており、要素構成・順序・タイトル1行1ユニットの扱いとも本記録と完全一致（4/4）。手巻物 f1 葉の欄外注（Didot 校正刷に Jamais un coup de dés... の語順を持つ表題4種〔Mihram〕、Igitur の12、le Hasard＝le dé の語源等）は variants／readings 層向け素材であり level-0 には取り込まない。"
+  },
+  "variant_notes": [
+    {
+      "id": "vn_f1_nrf",
+      "witness": "NRF_1914",
+      "ja": "NRF は冊子体で、①表紙（枠飾り付き：STÉPHANE MALLARMÉ／UN COUP DE DÉS／JAMAIS／N’ABOLIRA／LE HASARD の4行大文字割り／POÈME／PARIS・LIBRAIRIE GALLIMARD・ÉDITIONS DE LA NOUVELLE REVUE FRANÇAISE・3, rue de Grenelle）と ②本扉（POÈME／題名／par／STÉPHANE MALLARMÉ、左隣は空白頁）の二重構造を持つ。表紙の題名4行大文字化・著者名最上部配置は Ronat 本文 f1 と異なる扉系異同。詳細は異同層へ。"
+    },
+    {
+      "id": "vn_f1_cos",
+      "witness": "Cosmopolis_1897",
+      "ja": "Cos には独立の扉頁がなく、誌面冒頭に OBSERVATION RELATIVE AU POÈME の見出しのもと題字〈Un Coup de Dés jamais n’abolira ／ le Hasard〉（イタリック2行割り・Coup 大文字）＋par＋STÉPHANE MALLARMÉ を置き、f1〜f2 相当の空白部分に序文（J’aimerais qu’on ne lût pas cette Note...）が続く。扉の不在・題字2行割り・序文の有無は異同層向け。序文本文の転記は本記録の範囲外。"
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "oq_l0_f1_poeme_8mm",
+      "status": "resolved",
+      "ja": "POÈME は N 実測 8mm で、全詩 census の4層（class 1=14mm／2=5mm／3=4mm／4=3mm）のいずれにも該当しない。f1 パラテクストは census の対象範囲（詩本文 f3〜f23）の外にあるため、N 裁定を要した：(a) typography_scale.json に paratext 附属節を設け 8mm 錨（POÈME, f1）を census 4層の外側に記録し、level-0 の type_class は census 内のみ・パラテクスト外サイズは null 許容とするスキーマ注記を追加、(b) サイズ層を5層に拡張。起草時ドラフトは (a) を仮置きして type_class を null とし、machine checks の type_class 検査はこの1点を既知の逸脱として不合格のまま保留していた（経緯）。2026-07-25 に案 (a) が正式採用され、検査規則を〈type_class ∈ {1,2,3,4} ∨ (null＋note＋paratext 附属節に錨あり)〉へ更新した現在は 12/12 全パス（附属節存在検査を含む最新 checker）。",
+      "resolution": {
+        "date": "2026-07-25",
+        "by": "N",
+        "ja": "案 (a) 採用：typography_scale.json に paratext 附属節を新設し 8mm 錨（POÈME, tu_f1_poeme）を census 4層の外側に記録。level-0 の type_class は census 内のみを表し、census 外パラテクスト実測サイズは null 許容（note と附属節参照を必須）。統合案は typography_scale_update_2026-07-25.json、level0_schema.json への注記案は同ファイル C 節参照。"
+      }
+    },
+    {
+      "id": "oq_l0_f1_verbatim_details",
+      "status": "resolved",
+      "ja": "逐語照合時の確認事項：①タイトル行「coup」の頭文字（c／C。Cos は Coup、手巻物再現も要参照）②par の書体（romain 判定の確認）。（注記：本項は POÈME 8mm のような設計判断ではなく逐語照合待ちの性格であり、以後この種の項目は category='pending_verbatim_collation' で区別する——GPT 提案・N 承認、2026-07-25）",
+      "category": "pending_verbatim_collation",
+      "resolution": {
+        "date": "2026-07-25",
+        "by": "N",
+        "ja": "逐語照合により確定：①coup は小文字 ②par は romain。訂正なし。"
+      }
+    }
+  ],
+  "notes": {
+    "ja": "本記録は level-0（引用可能性の保証）に限定する。variant・syntax・readings に属する事項はすべて note／variant_notes／open_questions に留め、global_clauses.json ほか台帳類は変更しない。tu_f1_title の実在により cl_global_phrase_capitale.relations_in の参照（f1:tu_f1_title）は本記録で解決する。 open_questions の運用注記：設計判断を要する未決事項（status: open）と、逐語照合で自動的に確定する確認事項（category: pending_verbatim_collation）を区別する。"
+  },
+  "collation_note": {
+    "date": "2026-07-25",
+    "by": "N",
+    "ja": "原本逐語照合完了・訂正0件。タイトル行の頭文字は小文字 coup、par の書体は romain で確定。revision_history は空のまま確定。"
+  }
+}

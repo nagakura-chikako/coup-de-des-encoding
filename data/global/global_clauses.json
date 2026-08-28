@@ -1,0 +1,174 @@
+{
+  "file": "global_clauses.json",
+  "schema_version": "0.3",
+  "witness": "Ronat_1980",
+  "description": {
+    "ja": "スプレッド横断の統辞構造（グローバル節）の台帳。各スプレッドのレコードは、ここに登録された ID のみを参照できる。",
+    "en": "Registry of cross-spread syntactic structures (global clauses). Spread-level records may only reference IDs registered here."
+  },
+  "conventions": {
+    "id_prefix": "cl_global_",
+    "apostrophe_normalization": {
+      "ja": "全ファイルでアポストロフはタイポグラフィ用 U+2019（’）に統一する。",
+      "en": "Apostrophes are normalized to typographic U+2019 (’) across all files."
+    },
+    "component_reference": {
+      "ja": "components の各要素は {spread, text_unit} でスプレッド側レコードを指す。未確定箇所は \"TODO\" とし、status を 'draft' に保つ。",
+      "en": "Each component points to a spread-level record via {spread, text_unit}. Unresolved slots are marked \"TODO\" and the clause status stays 'draft'."
+    },
+    "status_values": [
+      "draft",
+      "confirmed",
+      "disputed"
+    ],
+    "interpreter_sigla": {
+      "C": "Cohn",
+      "D": "Davies",
+      "M": "Marchal",
+      "K": "Kristeva",
+      "G": "Favre/Garnier",
+      "N": "Nagakura"
+    }
+  },
+  "clauses": [
+    {
+      "id": "cl_global_phrase_capitale",
+      "label": {
+        "ja": "表題文（最大活字で分散配置される主文）",
+        "en": "Capital sentence (main clause distributed in the largest type)"
+      },
+      "type": "main_sentence",
+      "surface_reconstruction": "UN COUP DE DÉS JAMAIS N’ABOLIRA LE HASARD",
+      "spread_span": {
+        "from": "f3",
+        "to": "f19"
+      },
+      "components": [
+        {
+          "order": 1,
+          "surface": "UN COUP DE DÉS",
+          "spread": "f3",
+          "text_unit": "tu_f3_un_coup_de_des"
+        },
+        {
+          "order": 2,
+          "surface": "JAMAIS",
+          "spread": "f5",
+          "text_unit": "tu_f5_jamais",
+          "witness_note": {
+            "ja": "右頁（recto）配置。Ronat_1980 は実物、NRF 系はコピーで照合し、両者一致を確認（2026-07-12、確認者 N）。左頁は白。",
+            "en": "Placed on the right-hand page (recto) with the left page blank. Verified in Ronat_1980 (physical copy) and an NRF-line edition (photocopy); both witnesses agree (2026-07-12, verified by N).",
+            "status": "verified"
+          }
+        },
+        {
+          "order": 3,
+          "surface": "N’ABOLIRA",
+          "spread": "f11",
+          "text_unit": "tu_f11_n_abolira"
+        },
+        {
+          "order": 4,
+          "surface": "LE HASARD",
+          "spread": "f19",
+          "text_unit": "tu_f19_le_hasard"
+        }
+      ],
+      "case_frame": {
+        "framework": "Fillmore",
+        "predicate": "abolir (nié par ne...jamais)",
+        "roles": {
+          "agent_or_instrument": "un coup de dés",
+          "object": "le hasard"
+        },
+        "comment": "主語の格役割（動作主か道具か）自体が解釈的争点になりうるため、確定させずに併記可とする。"
+      },
+      "relations_in": [
+        {
+          "from": "f1:tu_f1_title",
+          "type": "condensed_realization",
+          "comment": "タイトル・ページの題名（イタリック一行）は本文分散形の凝縮的先行提示。"
+        }
+      ],
+      "interpretations": {
+        "N": {
+          "source": "Nagakura",
+          "notes": [
+            {
+              "id": "n_gcl_pc_01",
+              "content": {
+                "ja": "TODO: 表題文の分散配置に関する N の総括的読解をここに。",
+                "en": "TODO: N’s overall reading of the distributed capital sentence."
+              },
+              "status": "current"
+            }
+          ]
+        }
+      },
+      "status": "draft"
+    },
+    {
+      "id": "cl_global_conditionnelle",
+      "label": {
+        "ja": "条件構造 SI C’ÉTAIT / CE SERAIT（f17–f18 横断）",
+        "en": "Conditional structure SI C’ÉTAIT / CE SERAIT (spanning f17–f18)"
+      },
+      "type": "conditional_structure",
+      "surface_reconstruction": "SI ... C’ÉTAIT ... CE SERAIT ...",
+      "spread_span": {
+        "from": "f17",
+        "to": "f18",
+        "comment": "当初仮説（from: f12、f12–f13 レコードとの整合を要確認としていた）は N 裁定（2026-07-22）により f17 起点へ改訂。SI は f16-f17 レコードの tu_f17_si（N 実測 5mm・italique、2026-07-20）。なお述語の展開はさらに右へ及ぶ：C’ÉTAIT の対象格 LE NOMBRE（f19, tu_f19_le_nombre）、CE SERAIT の対象格補語 LE HASARD（f19, tu_f19_le_hasard）——1987 手巻物統辞図による。components には条件標識3成分のみを保持する。"
+      },
+      "components": [
+        {
+          "order": 1,
+          "surface": "SI",
+          "spread": "f17",
+          "text_unit": "tu_f17_si"
+        },
+        {
+          "order": 2,
+          "surface": "C’ÉTAIT",
+          "spread": "f18",
+          "text_unit": "tu_f18_c_etait"
+        },
+        {
+          "order": 3,
+          "surface": "CE SERAIT",
+          "spread": "f18",
+          "text_unit": "tu_f18_ce_serait"
+        }
+      ],
+      "case_frame": {
+        "framework": "Fillmore",
+        "predicate": "être (irréel du présent)",
+        "roles": {},
+        "comment": "TODO: 帰結節の主語指示対象は多重解釈の焦点。ambiguity 層と連携。"
+      },
+      "relations_in": [],
+      "interpretations": {},
+      "status": "draft",
+      "resolution_note": {
+        "resolved_on": "2026-07-22",
+        "resolved_by": "N",
+        "ja": "3成分すべてが実レコードに解決（SI→tu_f17_si／C’ÉTAIT→tu_f18_c_etait／CE SERAIT→tu_f18_ce_serait）。かつ3成分は class 2（5mm）・italique で書体・サイズとも統一されることが実測・照合により確定した（SI：N 定規実測 2026-07-20。C’ÉTAIT・LE NOMBRE：N 同高実測 2026-07-21。書体：N 逐語照合 2026-07-22。typography_scale_update_2026-07-22.json 参照）。条件構造は Ronat_1980 において単一の活字層（class 2 italique）として実現され、romain 14mm の表題文（cl_global_phrase_capitale）と体系的に対峙する。status は case_frame に TODO が残るため draft のまま（validation rule 準拠）。",
+        "en": "All three components now resolve to real records and are confirmed unified in both size and face — class 2 (5 mm), italic (SI: ruler 2026-07-20; C’ÉTAIT = LE NOMBRE cap-height alignment 2026-07-21; faces settled by N’s collation 2026-07-22; see typography_scale_update_2026-07-22.json). In Ronat_1980 the conditional structure is realized as a single type tier (class 2 italic), standing systematically against the roman 14 mm capital sentence. Status stays ‘draft’ while the case_frame TODO remains, per the validation rules."
+      }
+    }
+  ],
+  "validation_rules": {
+    "ja": [
+      "スプレッド側 relations / clauses から参照される cl_global_* は本台帳に存在しなければならない。",
+      "components の {spread, text_unit} は該当スプレッドの text_units に実在しなければならない。",
+      "TODO を含む clause の status は 'draft' 以外にできない。",
+      "アポストロフは U+2019 に統一（U+0027 の混入は検証エラーとする）。"
+    ],
+    "en": [
+      "Any cl_global_* referenced from spread-level records must exist in this registry.",
+      "Every component {spread, text_unit} must resolve to an existing text_unit in the target spread record.",
+      "A clause containing TODO fields cannot have a status other than 'draft'.",
+      "Apostrophes must be U+2019; any U+0027 is a validation error."
+    ]
+  }
+}

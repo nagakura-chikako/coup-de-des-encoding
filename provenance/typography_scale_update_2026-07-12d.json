@@ -1,0 +1,77 @@
+{
+  "file": "typography_scale_update_2026-07-12d",
+  "description": {
+    "ja": "2026-07-12 の実測第2便（f18-f23）による typography_scale.json の最終統合。(A)(B) は既存クラスへの錨の追加、(C) は新規クラス、(D) は measurement_log 追記、(E) は全詩実測完了サマリー。これをもって Ronat_1980 本文の物理サイズ台帳は完結する（表題頁 f1 の活字は別系）。",
+    "en": "Final integration into typography_scale.json from the second measurement batch of 2026-07-12 (f18-f23). (A)(B) add anchors to existing classes, (C) is a new class, (D) appends to the measurement_log, (E) is the completion summary. With this, the physical size census of the Ronat_1980 body text is complete (title-page f1 types form a separate system)."
+  },
+
+  "A_class_1_additional_anchor": {
+    "size_class": "1",
+    "add_anchor": {
+      "anchor_word": "LE HASARD",
+      "anchor_location": { "spread": "f18-f19", "page": "f19", "text_unit": "TODO_f18f19_record" },
+      "cap_height_mm": 14.0,
+      "tolerance_mm": 0.5,
+      "measurement": { "method": "ruler_on_page", "date": "2026-07-12", "measured_by": "N" }
+    },
+    "note": {
+      "ja": "N'ABOLIRA (f11) と LE HASARD (f19) の 14mm 同級が実測で確定。表題文が単一のサイズ層を成すことの物理的裏付けが2点になった。残る UN COUP DE DÉS (f3)・JAMAIS (f5) の実測 TODO は継続。",
+      "en": "The 14 mm identity of N'ABOLIRA (f11) and LE HASARD (f19) is now measured, giving two physical anchors for the title sentence as a single size tier. Measurement of UN COUP DE DÉS (f3) and JAMAIS (f5) remains TODO."
+    },
+    "status": "verified"
+  },
+
+  "B_class_5mm_expanded": {
+    "size_class": "5mm_si",
+    "layer_label_revised": "条件文層（5mm 級：SI ... C'ÉTAIT ... LE NOMBRE ... CE SERAIT）",
+    "add_anchors": [
+      { "anchor_word": "C'ÉTAIT", "spread": "f18-f19", "cap_height_mm": 5.0 },
+      { "anchor_word": "LE NOMBRE", "spread": "f18-f19", "cap_height_mm": 5.0 },
+      { "anchor_word": "CE SERAIT", "spread": "f18-f19", "cap_height_mm": 5.0 }
+    ],
+    "measurement": { "method": "ruler_on_page", "date": "2026-07-12", "measured_by": "N" },
+    "revision_context": {
+      "ja": "当初 f17 の SI 単独クラスとして新設したが、実測により条件文の骨格 C'ÉTAIT・LE NOMBRE・CE SERAIT（f18-f19）が同じ 5mm 級と確定。よってこの層は SI の孤立例外ではなく、条件文 SI C'ÉTAIT LE NOMBRE ／ CE SERAIT の統辞骨格全体に与えられた固有サイズである。ただし帰結の最終語 LE HASARD のみが 14mm へ跳躍し、条件文の内部でサイズ層が破られる。層名を「SI 蝶番層」から「条件文層」に改訂（ID は 5mm_si を維持）。",
+      "en": "Initially created as an isolated class for SI (f17); measurement now establishes the conditional skeleton C'ÉTAIT, LE NOMBRE, CE SERAIT (f18-f19) at the same 5 mm. The tier is thus not an isolated exception but the proper size of the entire syntactic frame SI C'ÉTAIT LE NOMBRE / CE SERAIT — with the single exception of the apodosis-final LE HASARD, which leaps to 14 mm, breaking the size tier from within the conditional. Layer label revised from 'SI hinge tier' to 'conditional tier' (ID 5mm_si retained)."
+    },
+    "status": "verified"
+  },
+
+  "C_new_class_3mm": {
+    "size_class": "3mm",
+    "layer_label": "縮小層（3mm 級。全詩で唯一の本文以下のサイズ）",
+    "anchors": [
+      { "anchor_word": "issu", "spread": "f18-f19", "style": "roman" },
+      { "anchor_word": "autrement", "spread": "f18-f19", "style": "roman" },
+      { "anchor_word": "pire", "spread": "f18-f19", "style": "italic", "note": "pire 以下のイタリック系列" }
+    ],
+    "cap_height_mm": 3.0,
+    "tolerance_mm": 0.5,
+    "measurement": { "method": "ruler_on_page", "date": "2026-07-12", "measured_by": "N" },
+    "status": "verified",
+    "note": {
+      "ja": "全詩で唯一、本文 4mm を下回る層。ローマン体（issu, autrement 等）とイタリック（pire 以下）の双方を含む。f18-f19 にのみ出現。サイズの階梯が上（14mm）だけでなく下（3mm)へも延びるのはこの見開きだけであり、hallucination／par avance の縮小注釈的テクストが物理的にも「声を落とす」。",
+      "en": "The poem's only tier below the 4 mm body, comprising both roman (issu, autrement, etc.) and italic (pire onward) units, occurring solely on f18-f19. Only here does the size ladder extend downward (3 mm) as well as upward (14 mm): the diminished, gloss-like texts physically lower their voice."
+    }
+  },
+
+  "D_measurement_log_append": {
+    "measured_by": "N",
+    "method": "ruler_on_page",
+    "tolerance_mm": 0.5,
+    "witness": "Ronat_1980",
+    "date": "2026-07-12",
+    "results": [
+      { "scope": "f19 LE HASARD", "cap_height_mm": 14.0 },
+      { "scope": "f18-f19 C'ÉTAIT / LE NOMBRE / CE SERAIT", "cap_height_mm": 5.0 },
+      { "scope": "f18-f19 接続法群 EXISTÂT-IL / COMMENÇÂT-IL ET CESSÂT-IL / SE CHIFFRÂT-IL / ILLUMINÂT-IL、および Choit 以下のイタリック", "cap_height_mm": 4.0 },
+      { "scope": "f18-f19 issu / autrement 等のローマン体、pire 以下のイタリック", "cap_height_mm": 3.0 },
+      { "scope": "f20-f23 全ユニット", "cap_height_mm": 4.0 }
+    ]
+  },
+
+  "E_census_complete_summary": {
+    "ja": "全詩実測完了（2026-07-12、N測定）。Ronat_1980 の本文は 3・4・5・14mm の4層のみで構成される。基調は 4mm の平原（f6-f17 および f20-f23）で、階層の大半は大文字法・イタリック・字間が産出する。サイズのヴァリエーションが存在するのは f18-f19 の一見開きのみで、そこでは4層すべてが同時に現前する——詩全体のサイズ・スペクトルの総覧が、条件文が帰結へ達するまさにその場所に置かれている。14mm（表題文）は f11 と f19 の2点で平原を貫き、5mm（条件文層）は f17 の SI から f18-f19 の骨格へ持続し、3mm はこの見開きにだけ谷を穿つ。コーダの f20-f23 は再び 4mm の平原に還る。",
+    "en": "Full census complete (2026-07-12, by N). The Ronat_1980 body text uses exactly four tiers: 3, 4, 5, and 14 mm. The ground is a 4 mm plain (f6-f17, f20-f23), most hierarchy being produced by capitalization, italics, and letter-spacing. Size variation exists on one spread only, f18-f19, where all four tiers are simultaneously present — the poem's entire size spectrum displayed at the very point where the conditional reaches its apodosis. The 14 mm title tier pierces the plain at f11 and f19; the 5 mm conditional tier persists from SI (f17) into the f18-f19 skeleton; the 3 mm tier hollows its valley on this spread alone. The coda f20-f23 returns to the 4 mm plain."
+  }
+}

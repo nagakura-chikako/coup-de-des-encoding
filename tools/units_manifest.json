@@ -1,0 +1,62 @@
+{
+  "generated": "2026-08-24",
+  "records": {
+    "f1": {
+      "fingerprint": "1f4454d3aa2f508c",
+      "unit_count": 4
+    },
+    "f10-f11": {
+      "fingerprint": "b2e35761ad9514d1",
+      "unit_count": 28
+    },
+    "f12-f13": {
+      "fingerprint": "10b6e57e2eb222a7",
+      "unit_count": 13
+    },
+    "f14-f15": {
+      "fingerprint": "c8a20104d9c11ac4",
+      "unit_count": 17
+    },
+    "f16-f17": {
+      "fingerprint": "de6a92b2f72cd8e0",
+      "unit_count": 21
+    },
+    "f18-f19": {
+      "fingerprint": "1c8fa338534e3511",
+      "unit_count": 26
+    },
+    "f2-f3": {
+      "fingerprint": "56887c5abdabd7e8",
+      "unit_count": 1
+    },
+    "f20-f21": {
+      "fingerprint": "cba95239061d032a",
+      "unit_count": 17
+    },
+    "f22-f23": {
+      "fingerprint": "587cb0d00c5ac942",
+      "unit_count": 28
+    },
+    "f4-f5": {
+      "fingerprint": "41162dc7190d46fc",
+      "unit_count": 4
+    },
+    "f6-f7": {
+      "fingerprint": "65e25ac2e56105b8",
+      "unit_count": 21
+    },
+    "f8-f9": {
+      "fingerprint": "a5fbccc757b2fb6a",
+      "unit_count": 37
+    }
+  },
+  "schema_version": "0.3",
+  "unit_invariants": [
+    "id",
+    "face",
+    "seq",
+    "text",
+    "type_class",
+    "style"
+  ]
+}

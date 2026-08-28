@@ -1,0 +1,160 @@
+{
+  "file": "sources_update_2026-08-26.json",
+  "kind": "review_draft",
+  "target": "sources.json",
+  "schema_version": "0.3",
+  "drafted": "2026-08-26",
+  "drafted_by": "Claude（起草）／ N（裁定待ち）",
+  "scope_declaration": {
+    "ja": "本案が扱うのは①底本の責任表示を版元の語彙で完全形にすること ②第2分冊を documentary_source として登録すること ③版内部からの方法記述を、外部からの評価と出所を分けて記録すること、の 3 点である。Morel 2007 は本案に含めない——第2分冊が『すでに根拠として使用している資料の登録漏れ』であるのに対し、Morel は『README でどう扱うかが未決の資料』であり、状態が異なる（N 指示、2026-08-26）。typography_scale.json には一切触れない。",
+    "en": "Three matters only: completing the statement of responsibility in the edition's own terms; registering the second fascicle as a documentary source; and recording the realizer's own account of method separately from external assessment. Morel 2007 is deliberately excluded, being a matter still undecided rather than an omission."
+  },
+  "evidence_basis": {
+    "ja": "N 提供の現物写真（2026-08-26）：第2分冊の目次全頁、および Tibor Papp «Qui mentalement sépare» 全 4 頁（pp. 24–27）。confidence の判定根拠は N 自身の所蔵本の撮影であり、sources.json の confidence 語彙における 'verified'（現物照合）に相当すると判断した——ただしこの語彙は Pléiade 版との対照を念頭に定義されているため、適用の可否は N の裁定を要する。",
+    "photographs": [
+      "第2分冊 目次",
+      "Papp «Qui mentalement sépare» p.24–27（4 葉）"
+    ]
+  },
+  "A_witness_ronat_1980_amend": {
+    "target_node": "sources.json > witnesses[id=Ronat_1980]",
+    "label": {
+      "before": "Un coup de dés jamais n’abolira le hasard, éd. Mitsou Ronat, Change errant/d’atelier, 1980",
+      "after": "Un coup de dés jamais n’abolira le hasard, édition mise en œuvre et présentée par Mitsou Ronat, réalisée par Tibor Papp, Paris, Change errant / d’atelier, 1980",
+      "ja": "版元の責任表示に従い Tibor Papp を含む完全形とする。従来の label は Papp を含んでおらず、本データセットが測っている活字・紙面の実現者を書誌から落としていた。"
+    },
+    "responsibility_add": {
+      "mise_en_œuvre_et_présentation": "Mitsou Ronat",
+      "réalisation": "Tibor Papp",
+      "source_of_terms": "版元の責任表示（本版の記載）",
+      "ja": "現代の職能区分（editorial / design 等）へ翻訳しない。版自身が用いている語彙をそのまま保持する（N 裁定、2026-08-26）。理由：両者とも第2分冊に理論的論考を寄せており、いずれの仕事も単一の機能に還元されない。Papp は «Qui mentalement sépare» で支持体・空白・語の isolation・視線の運動を自ら理論化しており、『デザインの実作者』ではない。Ronat の提起（詩は正確な mise en page においてしか真に知りうるものにならない）に Papp が応答した関係が、同分冊の記述から読み取れる。過去の形式を現在のカテゴリへ書き換えないという本プロジェクトの原則の、書誌への適用でもある。",
+      "en": "The edition's own terms are kept rather than translated into modern job categories. Both parties contributed theoretical essays to the second fascicle; neither role reduces to a single function."
+    },
+    "physical_add": {
+      "ja": "2 分冊構成、四つ折り返しのケース入り。第1分冊＝詩（六つ折丁）。第2分冊＝« LE GENRE, QUE C’EN DEVIENNE UN… »（28 頁、批評論考集）。level-0 の対象は第1分冊の本文紙束のみであり、外側紙ケースの表記は対象外（f1 正本 scope_note、N 裁定 2026-07-24）。第2分冊は witness ではなく documentary_source として別に登録する（B 節）——同一の版でありながら、第1分冊は観測対象、第2分冊はその版を作った者たちによる言説であり、役割が異なる。",
+      "note": "編者所蔵本の同定情報（第2分冊を伴う完本、通し番号なし、外枠内側右上の鉛筆による書店書き入れ、1987 年以来使用）は docs/ 側の課題（README r8 の未確定事項 B4）であり、本案では扱わない。"
+    },
+    "method_accounts_add": {
+      "placement_note": {
+        "ja": "N の指示は『role に Papp の方法記述を加える』であったが、role は『本データセットにおける当該 witness の役割』を述べるフィールドであり、版の作られ方の記述はそこに収まらない。そこで witnesses[Ronat_1980] の直下に method_accounts を新設し、role・caveats と並置する案とした。role の内部に置く方がよければ移動する——配置のみの問題であり、内容は変わらない。"
+      },
+      "internal_account": {
+        "id": "acct_papp_realisation_method",
+        "source": "Ronat_1980_fascicle2 / Tibor Papp «Qui mentalement sépare», p.27",
+        "stance": "版内部からの記述（実現の当事者による）",
+        "ja": "Papp は、複数の校正刷に共通して現れる恒常項と、Mallarmé が要求したテクストおよび mise en page の訂正の双方を考慮して、Didot 活字でテクストを復元したと述べる。すなわち Ronat_1980 の実現は、校正刷 E1–E5（proof_states.json に登録）を根拠として行われたことが、実行者自身によって記述されている。",
+        "en": "Papp states that the text was re-established in Didot type, taking account both of the constants appearing across the different sets of proofs and of all the corrections of text and of mise en page requested by Mallarmé. The realization of Ronat_1980 thus rests, by its realizer's own account, on the proof states registered in proof_states.json.",
+        "confidence": "verified",
+        "confidence_basis": "N 所蔵現物の写真（2026-08-26）"
+      },
+      "external_assessment": {
+        "id": "caveat_ronat_editorial_theory",
+        "source": "Pleiade_1998_Marchal",
+        "stance": "版外部からの評価（第三者による）",
+        "pointer": "witnesses[Ronat_1980].caveats[caveat_ronat_editorial_theory]（既存。本案では変更しない）",
+        "ja": "同一の版について、外部からの留保（Marchal：Ronat の編集理論と Mallarmé 自身のマケット指示の矛盾）と、内部からの方法記述（Papp：校正刷の恒常項にもとづく復元）の二つが、それぞれ出所を明示して並存する。どちらも他方を無効化しない——同じ対象に、異なる入口から到達できる二つの記述である。"
+      }
+    }
+  },
+  "B_documentary_source_add": {
+    "target_node": "sources.json > documentary_sources（既存 1 件に追加）",
+    "entry": {
+      "id": "Ronat_1980_fascicle2",
+      "label": "« LE GENRE, QUE C’EN DEVIENNE UN… », second fascicule de l’édition Ronat / Papp, Change errant / d’atelier, 1980, 28 p.",
+      "relation_to_witness": {
+        "ja": "Ronat_1980 と同一の版の第2分冊。witness（観測対象）ではなく documentary_source（言説）として登録する。実測・目視の対象は第1分冊の本文紙束のみである。",
+        "witness_id": "Ronat_1980"
+      },
+      "access": "physical_copy",
+      "provides": [
+        {
+          "text": "Mitsou Ronat, « Cette architecture spontanée et magique », p.1",
+          "used_as": [
+            "底本の性格づけ（README：版の企図、校正刷にもとづく作業、版面寸法の導出、編者自身が新資料の発見を否定し further research の第一の基礎として提示したこと）",
+            "caveat_ronat_editorial_theory における Ronat の編集理論（『12』を軸とする構想）の出所",
+            "活字 corps の段階についての記述（README r3 解決欄が level-0 の 4 class との整合を述べる際の参照先）"
+          ],
+          "confidence": "transcribed_agreed",
+          "note": "本論考の逐語確認は未実施。README および caveat の記述が本論考のどの箇所に対応するかの照合は将来課題。"
+        },
+        {
+          "text": "Tibor Papp, « Qui mentalement sépare », p.24–27",
+          "used_as": [
+            "Ronat_1980 の実現の方法についての、版内部からの記述（A 節 method_accounts.internal_account の出所）"
+          ],
+          "confidence": "transcribed_agreed",
+          "confidence_basis": "N 所蔵現物の全 4 頁写真（2026-08-26）",
+          "material_for_later_layers": {
+            "ja": "本論考には、level-0 の対象外だが後続層に関わる記述が多く含まれる——所在のみを記録し、内容は取り込まない（1987 手巻物の欄外注と同じ扱い）。①isolation の原理：詩の主柱が四つに分割され別々の頁に孤立していること ②孤立語が意味の展開に生む停止＝結節点（nœud）③視線の fixation と、孤立語における語内部構造の分析（Mehler / Bever / Carey を援用）④SOIT を同音異義による多重読みの例として挙げること ⑤具体的参照：16 頁左上に孤立する soucieux、8–9 頁の « cadavre par le bras écarté du secret qu’il détient » が中央余白により二分されること ⑥判型と読書運動の関係、jonction と disjonction の境界が未詳であること。これらは syntax／layout／readings 各層向けの素材であり、level-0 には取り込まない。"
+          },
+          "corps_note": {
+            "status": "not_correlated",
+            "ja": "Papp は、Mallarmé が bas de casse romain の殻の内側に italique（bas de casse と CAPITALES）を組み合わせ、CAPITALES en romain に corps 16・24・60 を用いて活字種別ごとの自律した読みを設計した、と記述する。別頁では corps が 60 に及ぶとも述べる。本データセットは、この記述と typography_scale.json の実測 4 class（14／5／4／3mm）との対応づけを行わない（N 裁定、2026-08-26）。理由：①Papp が何をどの基準で区分・計数しているかが資料上定義されていない ②Mallarmé は校正の過程で複数回にわたり活字の変更を求めており、校正刷ごとに別の活字が用いられた可能性があるため、何を同一種として数えるかが定まらない ③romain と italique を別種と数えるか否かで種類数が変わる。定義が資料上与えられていないものについて、こちらで数え方を補って結論を出さない。対応関係の有無自体を現段階では判断せず、typography_scale.json の open_items にも立てない——open question として立てること自体が『解くべき対応関係が存在する』という仮説を先に置くことになるため。将来、Didot の corps の定義、校正刷ごとの書体変更、romain／italique の計数規則が資料から十分に立てられた時点で、初めて typography 側の問いとして起こす。",
+            "en": "Papp records that Mallarmé used roman capitals at corps 16, 24 and 60. This dataset does not correlate that description with the four measured classes of typography_scale.json: the criteria by which Papp distinguishes and counts are not defined in the source, type may have changed between proof pulls, and the count differs depending on whether roman and italic are counted separately. No open question is raised on the typography side either, since raising one would already assume that a correspondence exists to be solved."
+          },
+          "confidence_note": {
+            "ja": "N 所蔵現物の全 4 頁写真により全文を確認済みだが、confidence は transcribed_agreed に留める。現行 sources.json の verified は「N による Pléiade 本体との対照」を念頭に定義されており、その適用範囲が未決であるため（oq_src_confidence_vocabulary_scope）。内容への疑義ではなく、既存語彙の意味が確定する前にその適用範囲を拡張しないための措置（N 裁定、2026-08-26）。将来 verified を「指定された物理資料との N による現物照合」へ一般化する裁定が行われた場合に昇格しうる。"
+          }
+        }
+      ],
+      "contents": {
+        "ja": "収録 11 篇。上記 3 篇のほかに、Tibor Papp « Déville »（p.8）、Jacques Roubaud « N’abolira Lazare »（p.10）、Bruno Montels « Convoquer le peu »（p.13）、Jean Pierre Faye « L’entre croisement »（p.14）、Claude Minière « Le risque picaresque »（p.17）、Rodolfo Hinostroza « Le dieu de la page blanche »（p.18）、Philippe Dôme « ¿::? »（p.20）、Paul Nagy（p.22）。これら 8 篇は現時点で本データセットの根拠として使用していないため、収録の所在のみを記録し provides には挙げない。将来使用する場合は provides に移す。",
+        "note": "Papp «Qui mentalement sépare» は、Hinostroza が同分冊で論じる読書運動の軸に言及しており、8 篇のうち少なくとも 1 篇は相互参照の関係にある。"
+      },
+      "validation_note": {
+        "ja": "sources.json の validation_rules 第 2 項により、本 documentary_source 由来のデータは confidence フィールドを必須とする。上記 provides の各項目はこれに従う。"
+      },
+      "contents_additional_note": {
+        "id": "note_fascicle2_observation",
+        "ja": "第2分冊 p.28 に Stéphane Mallarmé «Observation relative au poème»（Cosmopolis 1897 序文）が再録されている。これは書誌的事実として記録するものであり、本データセットの根拠として使用したものではない——provides には挙げない。f1 正本 vn_f1_cos が Cos 序文について述べる際に実際に参照したのは、慶應義塾大学の立仙氏よりリプリントを許された Cosmopolis 1897 のコピーであり（同コピーは 1987 年修士論文本体の付録に収録）、第2分冊の再録ではない（N 確認、2026-08-26）。同一のテクストが複数の資料に存在することと、当該読解が実際にどの物理資料を経由して成立したかは別の事実であり、後者を provenance として記録する。",
+        "en": "The second fascicle reprints Mallarmé’s Cosmopolis preface at p.28. This is recorded as a bibliographic fact only: it is not a source this dataset drew on. The reading recorded in f1 rests on a reprint of the Cosmopolis 1897 printing obtained from Prof. Tatsusen of Keio University, included as an appendix to the 1987 master’s thesis — not on this reprint. That the same text exists in several materials, and which physical material a given reading actually passed through, are different facts.",
+        "principle": {
+          "ja": "同一テクストの所在（source identity）と、実際に参照された資料（actual consultation）を分離する。"
+        }
+      }
+    }
+  },
+  "C_unchanged": {
+    "ja": [
+      "witnesses[Ronat_1980] の role・caveats：変更しない（caveat_ronat_editorial_theory は既存のまま。A 節 method_accounts.external_assessment はそこへの参照であり、内容を複製しない）。",
+      "witnesses[NRF_1914]・witnesses[Cosmopolis_1897]・witnesses[Didot_proofs]：変更しない。",
+      "prior_analyses（handscroll_1987）：変更しない。",
+      "documentary_sources[Pleiade_1998_Marchal]：変更しない。",
+      "validation_rules・aliases・description：変更しない。",
+      "typography_scale.json：一切変更しない（corps の対応づけを行わないため、open_items も立てない）。",
+      "proof_states.json・global_clauses.json・level0_schema.json・正本 12 本：変更しない。",
+      "schema_version：0.3 据え置き。"
+    ]
+  },
+  "D_deferred": [
+    {
+      "id": "oq_src_morel_2007",
+      "status": "open",
+      "ja": "Françoise Morel 2007（写本・校正刷のファクシミリ版）の扱い。README r8 が本文で名指しているが sources.json に未登録。README 本文に残すか docs/ へ送るか（r8 未確定事項 A2）が未決であり、その裁定の後に登録の要否を判断する。本 update には含めない——第2分冊が『すでに使用中の資料の登録漏れ』であるのに対し、Morel は『扱いが未決の資料』であり状態が異なる（N 指示、2026-08-26）。"
+    },
+    {
+      "id": "oq_src_fascicle2_observation_provenance",
+      "status": "resolved",
+      "ja": "f1 正本 vn_f1_cos の Cos 序文についての記述が、Cosmopolis 現物（コピー）によるものか、第2分冊の再録によるものか。前者であれば « Observation relative au poème » を provides から contents へ移す。",
+      "resolution": {
+        "date": "2026-08-26",
+        "by": "N",
+        "ja": "f1 作成時に参照したのは Cosmopolis 1897 のコピー（立仙氏よりリプリント、修論本体の付録に収録）であり、第2分冊の再録ではないことが確認された。よって《Observation relative au poème》は provides から外し contents に所在のみ記録する。"
+      }
+    },
+    {
+      "id": "oq_src_ronat_essay_collation",
+      "status": "open",
+      "ja": "Ronat «Cette architecture spontanée et magique» の逐語確認が未実施。README と caveat_ronat_editorial_theory の記述が本論考のどの箇所に対応するかの照合により、confidence を verified へ昇格しうる。"
+    },
+    {
+      "id": "oq_src_confidence_vocabulary_scope",
+      "status": "open",
+      "ja": "confidence の 'verified' は sources.json において『N による Pléiade 本体との対照』を念頭に定義されている。N 所蔵の Ronat_1980 第2分冊の現物写真による確認にこれを適用してよいかは、語彙の適用範囲の問題として未決。本案では verified を用いず transcribed_agreed に留める（N 裁定、2026-08-26）。写真による確認の事実は confidence_basis に保持し、語彙の一般化が裁定された時点で昇格しうる。"
+    }
+  ],
+  "revised": "2026-08-26",
+  "revision_note": {
+    "ja": "N 裁定を反映——①《Observation relative au poème》は出所確認により provides から contents へ（f1 の根拠は Cosmopolis のコピーであり第2分冊の再録ではない、と確定）②Papp «Qui mentalement sépare» の confidence は transcribed_agreed へ（verified の適用範囲が未決のため）。①は事実確定による移動、②は語彙適用の保留であり、理由の性質が異なる。"
+  }
+}

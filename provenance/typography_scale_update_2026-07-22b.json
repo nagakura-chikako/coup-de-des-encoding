@@ -1,0 +1,47 @@
+{
+  "file": "typography_scale_update_2026-07-22b",
+  "description": {
+    "ja": "2026-07-22 の f20-f21 作業（N 実測）による typography_scale.json への統合案。(A) は class 3 への錨1点の追加——第2の中心文を代表するローマン大文字錨 N’AURA EU LIEU。f20-f21 は全ユニットが class 3・romain の単一層見開きであり、大文字（RIEN／N’AURA EU LIEU／QUE LE LIEU）も 4mm。(B) は measurement_log 追記。(C) は構造的注記——大文字性とサイズの独立が文単位の規模で実例化され、2つの中心文の階層がサイズ層（14mm／4mm）そのものによって実現されることの記録。",
+    "en": "Integration proposal from the f20-f21 work of 2026-07-22 (N’s measurements). (A) adds one class 3 anchor — the roman-capital N’AURA EU LIEU representing the second capital sentence; f20-f21 is a single-tier, all-roman class 3 spread with capitals at 4 mm. (B) appends to the measurement_log. (C) records the structural note: capitalisation/size independence instantiated at sentence scale, the hierarchy of the two central sentences being realized by the size tiers themselves."
+  },
+  "A_class_3_add_anchor": {
+    "size_class": "3",
+    "add_anchors": [
+      {
+        "anchor_word": "N’AURA EU LIEU",
+        "anchor_location": { "spread": "f20-f21", "page": "f21", "text_unit": "tu_f21_n_aura_eu_lieu" },
+        "style": "romain",
+        "cap_height_mm": 4.0,
+        "tolerance_mm": 0.5,
+        "measurement": {
+          "method": "ruler_on_page",
+          "date": "2026-07-22",
+          "measured_by": "N",
+          "method_note": "N 実測報告（2026-07-22）：f20-f21 の活字は大文字を含め全て 4mm。NRF も同様。本錨は第2の中心文（RIEN … N’AURA EU LIEU … QUE LE LIEU）を代表する。"
+        }
+      }
+    ],
+    "note": {
+      "ja": "class 3 の第2のローマン大文字錨（第1は f19 EXISTÂT-IL）。f20-f21 は census 上、全ユニットが class 3・romain の単一層見開き（class 1・2・4 とも不在、イタリック不在）。",
+      "en": "Second roman-capital anchor of class 3 (after EXISTÂT-IL). f20-f21 is a single-tier, all-roman class 3 spread — no class 1, 2, or 4, and no italics."
+    },
+    "status": "verified",
+    "verification_note": "N 逐語照合（2026-07-23）により本見開き全ユニットの style＝romain を含め訂正0件で確定。"
+  },
+  "B_measurement_log_append": {
+    "measured_by": "N",
+    "method": "ruler_on_page",
+    "tolerance_mm": 0.5,
+    "witness": "Ronat_1980",
+    "date": "2026-07-22",
+    "results": [
+      { "scope": "f20-f21 全ユニット（大文字 RIEN／N’AURA EU LIEU／QUE LE LIEU を含む）", "cap_height_mm": 4.0, "note": "NRF も同様（N 報告）。" },
+      { "scope": "f20 l’évènement ＝ f21 accompli（同じ高さ）", "method": "ruler_alignment", "note": "layout 層向け。ページ境界を跨ぐ統語単位の同一視覚水準（f20-f21_level0.json physical_observations 参照）。Cos 版では同一行（異同層向け）。" }
+    ]
+  },
+  "C_structural_note_second_capital_sentence": {
+    "ja": "第2の中心文 RIEN … N’AURA EU LIEU … QUE LE LIEU（… EXCEPTÉ PEUT-ÊTRE UNE CONSTELLATION、f20–f23）は大文字のまま class 3（4mm）に置かれる。f18-f19 の EXISTÂT-IL で点として実測された「大文字性とサイズの独立」が、ここでは文の規模で実例化される。すなわち表題文（class 1＝14mm・romain）と第2の中心文（class 3＝4mm・romain）の階層は、大文字法ではなくサイズ層そのものによって実現される——2つの中心文はどちらも大文字・ローマンであり、typography-scale モデルの内部で両者を区別する唯一の軸はサイズ層である——配置・余白等の他の活字論的属性は layout 層など別モデルの管轄とし、ここでは扱わない（N 実測にもとづく記録、2026-07-22）。EXCEPTÉ 以下（f22-f23）の実測による全文確認は次見開き作業で完結予定。",
+    "en": "The second capital sentence sits, capitals and all, in class 3 (4 mm). The independence of capitalisation and size — measured pointwise at EXISTÂT-IL — is here instantiated at sentence scale: both central sentences are roman capitals, and — within the typography-scale model — the only axis distinguishing them is size (14 mm vs 4 mm); placement, margins, and other typographic attributes belong to the layout layer and are not claimed here. Full-sentence confirmation of the EXCEPTÉ segment awaits the f22-f23 session.",
+    "status": "recorded"
+  }
+}

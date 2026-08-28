@@ -1,0 +1,876 @@
+{
+  "file": "typography_scale.json",
+  "schema_version": "0.3",
+  "witness": "Ronat_1980",
+  "census_status": "census_complete",
+  "integration_status": "canonical_v0.3",
+  "integrated_updates": [
+    "typography_scale_update_2026-07-16.json",
+    "typography_scale_update_2026-07-20.json",
+    "typography_scale_update_2026-07-22.json",
+    "typography_scale_update_2026-07-22b.json",
+    "typography_scale_update_2026-07-25.json"
+  ],
+  "pending_updates": [],
+  "description": {
+    "ja": "size_class（順序尺度）と実測キャップハイト（mm）の対照表。Ronat_1980 本文の活字は 14／5／4／3mm の4層のみからなり、各層につき代表語を実測して錨とする。本文の階層は大文字化・字間・書体でも作られるため、サイズ層はそれらと独立の軸である。",
+    "en": "Correspondence table between size_class (ordinal) and measured cap heights (mm). The body text of Ronat_1980 uses only four tiers (14/5/4/3 mm); each tier is anchored by measured representative words. Hierarchy in this poem is also produced by capitalisation, letter-spacing and face, so the size tier is an axis independent of those."
+  },
+  "method": {
+    "ja": "キャップハイト（大文字の上端〜下端）を物理定規で実測。測定者 N。公差 ±0.5mm。撮影経由の照合（写真比高）は census 未確定の場合にのみ用い、N の定規実測がある場合はつねにそれを優先する（f12-f13 の class 誤推定を機に確立した運用原則）。",
+    "en": "Cap height measured with a physical ruler by N; tolerance ±0.5 mm. Photographic ratio estimation is used only where the census is unsettled; N's ruler measurement always takes precedence (principle established after the f12-f13 mis-estimation).",
+    "measurement_methods": {
+      "ruler_on_page": "原本紙面に定規を当てた直接実測。",
+      "ruler_alignment_with_anchor": "定規による他錨との整列一致（数値は当該錨経由の間接値）。",
+      "photo_ratio_vs_class1_anchor": "写真上で class 1 錨（14mm）との比高から算出。",
+      "photo_ratio_vs_sibling_anchors": "写真上で同層錨との比高一致。",
+      "census_uniform": "当該見開き全域を N が一様サイズと実測報告した範囲に属することによる帰属（代表語個別の定規実測ではない）。"
+    },
+    "anchor_scope": {
+      "ja": "census 錨は詩本文（f3〜f23）の実測代表点に限る。パラテクスト面（f1 等）の要素は、census と同寸であれば level-0 で class を付与してよいが、size_classes[].anchors には登録しない（paratext_sizes 附属節を参照）。N 承認 2026-07-27。",
+      "en": "Census anchors are measured representatives drawn from the poem body (f3–f23) only. Paratext elements may carry a class in level-0 when they match a census size, but are never registered as census anchors (see the paratext_sizes annex). Approved by N, 2026-07-27."
+    }
+  },
+  "size_classes": [
+    {
+      "size_class": 1,
+      "cap_height_mm": 14.0,
+      "faces_present": [
+        "romain"
+      ],
+      "scope": {
+        "ja": "第1の中心文（表題文）UN COUP DE DÉS JAMAIS N’ABOLIRA LE HASARD の4成分のみ。詩中で最大。"
+      },
+      "status": "closed",
+      "closure_note": {
+        "ja": "4錨すべてが実測 14mm。Ronat_1980 において表題文が単一のサイズ層を成すことは仮説ではなく全点実測の事実である（update 2026-07-16 A）。",
+        "en": "All four anchors measure 14 mm; that the capital sentence forms a single tier is a fully measured fact, not a hypothesis."
+      },
+      "anchors": [
+        {
+          "anchor_word": "UN COUP DE DÉS",
+          "anchor_location": {
+            "spread": "f2-f3",
+            "page": "f3",
+            "text_unit": "tu_f3_un_coup_de_des"
+          },
+          "style": "romain",
+          "cap_height_mm": 14.0,
+          "tolerance_mm": 0.5,
+          "measurement": {
+            "method": "ruler_on_page",
+            "date": "2026-07-16",
+            "measured_by": "N",
+            "method_note": "初回実測 2026-07-12、update 2026-07-16 A で錯として確定。"
+          },
+          "status": "verified",
+          "layer_id": "layer_phrase_capitale"
+        },
+        {
+          "anchor_word": "JAMAIS",
+          "anchor_location": {
+            "spread": "f4-f5",
+            "page": "f5",
+            "text_unit": "tu_f5_jamais"
+          },
+          "style": "romain",
+          "cap_height_mm": 14.0,
+          "tolerance_mm": 0.5,
+          "measurement": {
+            "method": "ruler_on_page",
+            "date": "2026-07-16",
+            "measured_by": "N",
+            "method_note": "UN COUP DE DÉS との同級検証を兼ねた実測。両者一致。"
+          },
+          "status": "verified",
+          "layer_id": "layer_phrase_capitale"
+        },
+        {
+          "anchor_word": "N’ABOLIRA",
+          "anchor_location": {
+            "spread": "f10-f11",
+            "page": "f11",
+            "text_unit": "tu_f11_n_abolira"
+          },
+          "style": "romain",
+          "cap_height_mm": 14.0,
+          "tolerance_mm": 0.5,
+          "measurement": {
+            "method": "ruler_on_page",
+            "date": "unrecorded_in_source",
+            "measured_by": "N",
+            "method_note": "update 2026-07-16 A の note により実測 14mm で確定済み。ただし測定日付が提供済みファイル内に明記されていない。N による日付補完を要請。"
+          },
+          "status": "verified_date_unconfirmed",
+          "layer_id": "layer_phrase_capitale"
+        },
+        {
+          "anchor_word": "LE HASARD",
+          "anchor_location": {
+            "spread": "f18-f19",
+            "page": "f19",
+            "text_unit": "tu_f19_le_hasard"
+          },
+          "style": "romain",
+          "cap_height_mm": 14.0,
+          "tolerance_mm": 0.5,
+          "measurement": {
+            "method": "ruler_on_page",
+            "date": "unrecorded_in_source",
+            "measured_by": "N",
+            "method_note": "同上。class 2 錨 LE NOMBRE の写真比高算出の基準錨としても使用されている（update 2026-07-22 A）。"
+          },
+          "status": "verified_date_unconfirmed",
+          "layer_id": "layer_phrase_capitale"
+        }
+      ]
+    },
+    {
+      "size_class": 2,
+      "cap_height_mm": 5.0,
+      "faces_present": [
+        "romain",
+        "italique"
+      ],
+      "faces_note": {
+        "ja": "faces_present は当該 size_class を付与された全ユニットに現れる書体の集合であり、census 錨の書体集合とは別概念である（下記 anchors はすべて italique だが、f1 の STÉPHANE MALLARMÉ が romain・class 2 であるため romain を含む）。「class 2 は純イタリック層」の言明（update -22 A）の射程は f17 以降の詩本文に限定される——f17 SI 以降の class 2 錨（SI／C’ÉTAIT／CE SERAIT／LE NOMBRE）はすべて italique であり、条件構造がサイズと書体の両軸で統一されているという構造的言明はこの範囲で成立する。パラテクスト面 f1 を含めた全体では class 2 は純イタリック層ではない。",
+        "en": "faces_present is the set of faces occurring among all units assigned this class, which is not the same as the set of faces among the census anchors. The claim that class 2 is a purely italic tier (update -22 A) holds for the poem body from f17 onward; including the paratext face f1, class 2 is not purely italic."
+      },
+      "scope": {
+        "ja": "詩本文（f17 以降）では条件構造 cl_global_conditionnelle の3成分（SI／C’ÉTAIT／CE SERAIT）とその対象格 LE NOMBRE。パラテクスト面 f1 のタイトル行・著者名も 5mm＝class 2 相当だが、census の錨ではない。"
+      },
+      "status": "open",
+      "anchors": [
+        {
+          "anchor_word": "SI",
+          "anchor_location": {
+            "spread": "f16-f17",
+            "page": "f17",
+            "text_unit": "tu_f17_si"
+          },
+          "style": "italique",
+          "cap_height_mm": 5.0,
+          "tolerance_mm": 0.5,
+          "measurement": {
+            "method": "ruler_on_page",
+            "date": "2026-07-20",
+            "measured_by": "N",
+            "method_note": "f16-f17 レコードの写真比推定（暑定 class 2）は本実測により確定。"
+          },
+          "status": "verified",
+          "witness_note": {
+            "ja": "Ronat_1980・NRF 系コピーの両方で 5mmを確認、両者一致。周囲のイタリック小文字は 4mm（class 3）の平原で、f12-f13 以来の連続と整合。",
+            "en": "5 mm in both Ronat_1980 and the NRF-line copy; the surrounding italic lowercase remains the 4 mm plain, consistent since f12-f13."
+          }
+        },
+        {
+          "anchor_word": "C’ÉTAIT",
+          "anchor_location": {
+            "spread": "f18-f19",
+            "page": "f18",
+            "text_unit": "tu_f18_c_etait"
+          },
+          "style": "italique",
+          "cap_height_mm": 5.0,
+          "tolerance_mm": 0.5,
+          "measurement": {
+            "method": "ruler_alignment_with_anchor",
+            "date": "2026-07-21",
+            "measured_by": "N",
+            "method_note": "N 実測により LE NOMBRE とキャップ高一致。数値 5.0mm は LE NOMBRE を介した間接値。書体は N 逐語照合（2026-07-22）で italique 確定。"
+          },
+          "status": "verified"
+        },
+        {
+          "anchor_word": "LE NOMBRE",
+          "anchor_location": {
+            "spread": "f18-f19",
+            "page": "f19",
+            "text_unit": "tu_f19_le_nombre"
+          },
+          "style": "italique",
+          "cap_height_mm": 5.0,
+          "tolerance_mm": 0.5,
+          "measurement": {
+            "method": "photo_ratio_vs_class1_anchor",
+            "date": "2026-07-21",
+            "measured_by": "Claude (photo) / N (alignment + collation)",
+            "method_note": "NRF 単ページ接写における LE HASARD（class 1 錨、実測 14mm）比で 5.0mm。N 実測で C’ÉTAIT と同高。書体は N 逐語照合（2026-07-22）で italique 確定——写真上はローマンに見えたためドラフトで誤判定。定規による直接実測を行う場合は method を ruler_on_page へ更新のこと。"
+          },
+          "status": "verified"
+        },
+        {
+          "anchor_word": "CE SERAIT",
+          "anchor_location": {
+            "spread": "f18-f19",
+            "page": "f18",
+            "text_unit": "tu_f18_ce_serait"
+          },
+          "style": "italique",
+          "cap_height_mm": 5.0,
+          "tolerance_mm": 0.5,
+          "measurement": {
+            "method": "photo_ratio_vs_sibling_anchors",
+            "date": "2026-07-21",
+            "measured_by": "Claude (photo) / N (collation)",
+            "method_note": "写真比高で C’ÉTAIT と同キャップ高。書体は N 逐語照合（2026-07-22）で italique 確定。"
+          },
+          "status": "verified"
+        }
+      ],
+      "note": {
+        "ja": "f17 以降の class 2 錨（SI／C’ÉTAIT／CE SERAIT）と LE NOMBRE はすべて italique。条件構造がサイズ（5mm）と書体（イタリック）の両軸で統一され、ローマン 14mm の表題文と体系的に対峙することが全点確認された（update 2026-07-22 A）。この統一は f17 以降の詩本文についての言明であり、パラテクスト面 f1 の class 2 相当要素（タイトル行 italique／STÉPHANE MALLARMÉ romain）は射程外——update -25 A の原則により census の錨としては扱わない（paratext_sizes.census_equivalent_paratext 参照）。",
+        "en": "The conditional structure is unified on both axes (5 mm, italic), standing systematically against the roman 14 mm capital sentence."
+      }
+    },
+    {
+      "size_class": 3,
+      "cap_height_mm": 4.0,
+      "faces_present": [
+        "romain",
+        "italique"
+      ],
+      "scope": {
+        "ja": "詩の大半を覆う「平原」。f6-f17 と f20-f23 に及ぶ。この範囲の見かけの階層は大文字化・字間・書体で作られており、サイズ差ではない（2026-07-12 実測キャンペーンの結論）。第2の中心文 RIEN … N’AURA EU LIEU QUE LE LIEU … も大文字のままこの層に置かれる。"
+      },
+      "status": "open",
+      "anchors": [
+        {
+          "anchor_word": "QUAND BIEN MÊME",
+          "anchor_location": {
+            "spread": "f4-f5",
+            "page": "f5",
+            "text_unit": "tu_f5_quand_bien_meme"
+          },
+          "style": "romain",
+          "cap_height_mm": 4.0,
+          "tolerance_mm": 0.5,
+          "measurement": {
+            "method": "ruler_on_page",
+            "date": "2026-07-26",
+            "measured_by": "N",
+            "method_note": "本体の pending 錨。f4-f5 正本（2026-07-26 確定）の N 実測「QUAND 以下3行 4mm」により解消。"
+          },
+          "status": "verified",
+          "layer_id": "layer_quand_bien_meme"
+        },
+        {
+          "anchor_word": "SOIT",
+          "anchor_location": {
+            "spread": "f6-f7",
+            "page": "f6",
+            "text_unit": "tu_f6_soit"
+          },
+          "style": "romain",
+          "cap_height_mm": 4.0,
+          "tolerance_mm": 0.5,
+          "measurement": {
+            "method": "ruler_on_page",
+            "date": "2026-07-27",
+            "measured_by": "N",
+            "method_note": "本体初版の pending 錨。f6-f7 逐語照合（2026-07-27、訂正0件）に際し N が原本で 4mm を再確認。"
+          },
+          "status": "verified",
+          "layer_id": "layer_soit_maitre_caps"
+        },
+        {
+          "anchor_word": "l’Abîme",
+          "anchor_location": {
+            "spread": "f6-f7",
+            "page": "f6",
+            "text_unit": "tu_f6_l_abime"
+          },
+          "style": "romain",
+          "cap_height_mm": 4.0,
+          "tolerance_mm": 0.5,
+          "measurement": {
+            "method": "census_uniform",
+            "date": "2026-07-27",
+            "measured_by": "N",
+            "method_note": "本体初版の pending 錨。サイズは f6-f7 全域が N 実測 4mm 一様であることによる帰属（census_uniform）。錨語の綴りは 2026-07-27 の原本逐語照合で確認済み——大文字 A および î（アクサン・シルコンフレックス）まで原本確認。Cos 版では小文字始まり（異同層向け、曲折の有無はコピー解像度で判読不可）。"
+          },
+          "status": "verified",
+          "layer_id": "layer_body_roman",
+          "measure_on": "大文字 A"
+        },
+        {
+          "anchor_word": "Une insinuation simple",
+          "anchor_location": {
+            "spread": "f12-f13",
+            "page": "f12",
+            "text_unit": "tu_f12_une_insinuation_simple"
+          },
+          "style": "italique",
+          "cap_height_mm": 4.0,
+          "tolerance_mm": 0.5,
+          "measurement": {
+            "method": "census_uniform",
+            "date": "2026-07-19",
+            "measured_by": "N",
+            "method_note": "本体の pending 錨（代表語未定、「f12 以降のイタリック挿入節から選定」）への提案。f12-f13 は全ユニット italique・class 3 の見開きであり、イタリック平原の起点にあたる。代表語の確定と定規実測は N 裁定。"
+          },
+          "status": "proposed_representative",
+          "layer_id": "layer_body_italic"
+        },
+        {
+          "anchor_word": "EXISTÂT-IL",
+          "anchor_location": {
+            "spread": "f18-f19",
+            "page": "f19",
+            "text_unit": "tu_f19_existat_il"
+          },
+          "style": "romain",
+          "cap_height_mm": 4.0,
+          "tolerance_mm": 0.5,
+          "measurement": {
+            "method": "ruler_on_page",
+            "date": "2026-07-22",
+            "measured_by": "N",
+            "method_note": "class 3 初のローマン大文字錨。接続法五節（EXISTÂT／COMMENÇÂT／CESSÂT／SE CHIFFRÂT／ILLUMINÂT）を代表する。「大文字＝大サイズ」ではないことの実測例。"
+          },
+          "status": "verified"
+        },
+        {
+          "anchor_word": "Choit",
+          "anchor_location": {
+            "spread": "f18-f19",
+            "page": "f19",
+            "text_unit": "tu_f19_choit"
+          },
+          "style": "italique",
+          "cap_height_mm": 4.0,
+          "tolerance_mm": 0.5,
+          "measurement": {
+            "method": "ruler_on_page",
+            "date": "2026-07-22",
+            "measured_by": "N",
+            "method_note": "Choit ブロック8行を代表。書体は N 逐語照合（2026-07-22）で italique 確定。"
+          },
+          "status": "verified"
+        },
+        {
+          "anchor_word": "N’AURA EU LIEU",
+          "anchor_location": {
+            "spread": "f20-f21",
+            "page": "f21",
+            "text_unit": "tu_f21_n_aura_eu_lieu"
+          },
+          "style": "romain",
+          "cap_height_mm": 4.0,
+          "tolerance_mm": 0.5,
+          "measurement": {
+            "method": "ruler_on_page",
+            "date": "2026-07-22",
+            "measured_by": "N",
+            "method_note": "第2の中心文を代表する class 3 第2のローマン大文字錨。N 実測：f20-f21 の活字は大文字を含め全て 4mm、NRF も同様。N 逐語照合（2026-07-23）で全ユニット style＝romain を含め訂正 0 件で確定。"
+          },
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "size_class": 4,
+      "cap_height_mm": 3.0,
+      "faces_present": [
+        "romain",
+        "italique"
+      ],
+      "scope": {
+        "ja": "出現は f18-f19 のみ（census）。詩中でサイズ変化が起きる唯一の見開きの最小層。"
+      },
+      "status": "open",
+      "anchors": [
+        {
+          "anchor_word": "autrement qu’hallucination éparse d’agonie",
+          "anchor_location": {
+            "spread": "f18-f19",
+            "page": "f19",
+            "text_unit": "tu_f19_autrement_qu_hallucination"
+          },
+          "style": "romain",
+          "cap_height_mm": 3.0,
+          "tolerance_mm": 0.5,
+          "measurement": {
+            "method": "ruler_on_page",
+            "date": "2026-07-22",
+            "measured_by": "N",
+            "method_note": "class 4 初の定規実測錨。census の言明「3mm 層の出現は f18-f19 のみ」がこれで実測により実例化された。"
+          },
+          "status": "verified"
+        }
+      ],
+      "same_tier_members_by_photo": {
+        "ja": "f19 上部の残るローマン小活字4行、および f18 のイタリック群（issu stellaire、pire〜autant 階段）は写真比高による same-tier 判定（f18-f19_level0.json 参照）。イタリック側の定規直接実測は任意の将来課題。",
+        "en": "Four more roman small lines on f19 and the italic members on f18 are same-tier by photo ratio; a direct ruler check on the italic side remains optional future work."
+      }
+    }
+  ],
+  "paratext_sizes": {
+    "annex_name": "paratext_sizes",
+    "status": "canonical",
+    "source": "typography_scale_update_2026-07-25.json A（N 裁定 2026-07-25、oq_l0_f1_poeme_8mm 案 (a)）",
+    "principle": {
+      "ja": "本文 census 4層は詩本文（f3〜f23）の完結した実測事実であり、パラテクスト（扉等）のサイズはこの層モデルに混入させない。census のいずれの層とも一致しないパラテクスト実測サイズは本附属節に錨として記録する。census と同寸のパラテクスト要素（f1 の 5mm・4mm）は level-0 上 class 2・class 3 に対応づけてよいが、census の錨としては扱わない。",
+      "en": "The four body tiers are a completed measured fact about the poem body (f3–f23); paratext sizes are not admitted into that tier model. A measured paratext size matching no census tier is anchored here. Paratext elements that happen to match a census size may be mapped to class 2 / class 3 in level-0 but are not treated as census anchors."
+    },
+    "anchors": [
+      {
+        "anchor_word": "POÈME",
+        "anchor_location": {
+          "spread": "f1",
+          "face": "f1",
+          "text_unit": "tu_f1_poeme"
+        },
+        "style": "romain",
+        "cap_height_mm": 8.0,
+        "tolerance_mm": 0.5,
+        "measurement": {
+          "method": "ruler_on_page",
+          "date": "2026-07-24",
+          "measured_by": "N",
+          "method_note": "N 原本実測報告（2026-07-24）。8mm は本文 census 4層（14／5／4／3mm）のいずれにも該当しない、扉パラテクスト固有のサイズ。"
+        },
+        "layer_id": "layer_title_page_poeme",
+        "status": "verified",
+        "verification_note": "根拠の区別：8mm の数値根拠は 2026-07-24 の N 原本定規実測。2026-07-25 の N 作業は f1 記録全体の原本逐語照合（訂正0件）であり、サイズの再実測ではない。"
+      }
+    ],
+    "census_equivalent_paratext": {
+      "note": {
+        "ja": "census と同寸のため level-0 では class を付与するが、上記原則により census の錨ではないパラテクスト要素。本体初版が census 錨として登録していた3件（layer_title_page_italic_title／layer_title_page_author／par）をここへ移した。"
+      },
+      "entries": [
+        {
+          "anchor_word": "Un coup de Dés jamais n’abolira le Hasard",
+          "anchor_location": {
+            "spread": "f1",
+            "page": "f1",
+            "text_unit": "tu_f1_title"
+          },
+          "style": "italique",
+          "cap_height_mm": 5.0,
+          "tolerance_mm": 0.5,
+          "measurement": {
+            "method": "ruler_on_page",
+            "date": "2026-07-12",
+            "measured_by": "N"
+          },
+          "status": "verified",
+          "layer_id": "layer_title_page_italic_title",
+          "measure_on": "大文字 U / D / H",
+          "measurement_note": {
+            "ja": "5mm をわずかに超える可能性あり（測定者の所見）。5.0〜5.5mm の幅で保持。",
+            "en": "May slightly exceed 5 mm; retained as a 5.0–5.5 mm range."
+          },
+          "equivalent_size_class": 2
+        },
+        {
+          "anchor_word": "STÉPHANE MALLARMÉ",
+          "anchor_location": {
+            "spread": "f1",
+            "page": "f1",
+            "text_unit": "tu_f1_stephane_mallarme"
+          },
+          "style": "romain",
+          "cap_height_mm": 5.0,
+          "tolerance_mm": 0.5,
+          "measurement": {
+            "method": "ruler_on_page",
+            "date": "2026-07-12",
+            "measured_by": "N",
+            "method_note": "f1 正本レコードにより style＝romain 確定（N、2026-07-27）。text_unit は本体初版の tu_f1_author を正本 ID tu_f1_stephane_mallarme に訂正（update -25 B の実測ログ表記と一致）。"
+          },
+          "status": "verified",
+          "layer_id": "layer_title_page_author",
+          "equivalent_size_class": 2
+        },
+        {
+          "anchor_word": "par",
+          "anchor_location": {
+            "spread": "f1",
+            "page": "f1",
+            "text_unit": "tu_f1_par"
+          },
+          "style": "romain",
+          "cap_height_mm": 4.0,
+          "tolerance_mm": 0.5,
+          "measurement": {
+            "method": "ruler_on_page",
+            "date": "2026-07-24",
+            "measured_by": "N",
+            "method_note": "f1 正本レコードの N 実測（update -25 B）。text_unit は正本より転記。"
+          },
+          "status": "verified",
+          "equivalent_size_class": 3
+        }
+      ]
+    }
+  },
+  "measurement_log": {
+    "note": {
+      "ja": "本体に measurement_log 節が存在しなかったため、4 update の B／D 節（*_measurement_log_append）を統合して本節を新設した。以後の update はここへ追記する。"
+    },
+    "entries": [
+      {
+        "date": "2026-07-12",
+        "measured_by": "N",
+        "method": "ruler_on_page",
+        "tolerance_mm": 0.5,
+        "witness": "Ronat_1980",
+        "results": [
+          {
+            "scope": "f1 POÈME",
+            "cap_height_mm": 8.0
+          },
+          {
+            "scope": "f1 タイトル行（大文字 U / D / H）",
+            "cap_height_mm": 5.0,
+            "note": "5.0〜5.5mm の幅で保持。"
+          },
+          {
+            "scope": "f1 STÉPHANE MALLARMÉ",
+            "cap_height_mm": 5.0
+          },
+          {
+            "scope": "f3 UN COUP DE DÉS",
+            "cap_height_mm": 14.0
+          }
+        ],
+        "source": "typography_scale.json 本体（初版）"
+      },
+      {
+        "date": "2026-07-16",
+        "measured_by": "N",
+        "method": "ruler_on_page",
+        "tolerance_mm": 0.5,
+        "witness": "Ronat_1980",
+        "results": [
+          {
+            "scope": "f3 UN COUP DE DÉS",
+            "cap_height_mm": 14.0
+          },
+          {
+            "scope": "f5 JAMAIS",
+            "cap_height_mm": 14.0
+          }
+        ],
+        "source": "typography_scale_update_2026-07-16.json B"
+      },
+      {
+        "date": "2026-07-20",
+        "measured_by": "N",
+        "method": "ruler_on_page",
+        "tolerance_mm": 0.5,
+        "results": [
+          {
+            "scope": "f17 SI (italique capitals)",
+            "witness": "Ronat_1980",
+            "cap_height_mm": 5.0
+          },
+          {
+            "scope": "f17 SI (italique capitals)",
+            "witness": "NRF系（コピー）",
+            "cap_height_mm": 5.0
+          },
+          {
+            "scope": "f16-f17 italique 小文字（平原）",
+            "witness": "Ronat_1980",
+            "nominal_mm": 4.0
+          },
+          {
+            "scope": "italique 小文字 f（上下突き抜けの全高）",
+            "witness": "Ronat_1980",
+            "full_span_mm": 5.0
+          },
+          {
+            "scope": "italique 小文字 f（上下突き抜けの全高）",
+            "witness": "NRF系（コピー）",
+            "full_span_mm": 5.0
+          },
+          {
+            "scope": "italique 小文字 f（上下突き抜けの全高）",
+            "witness": "Cosmopolis_1897（コピー）",
+            "full_span_mm": 3.0
+          },
+          {
+            "scope": "Cosmopolis SI",
+            "witness": "Cosmopolis_1897（コピー）",
+            "cap_height_mm": 8.0
+          },
+          {
+            "scope": "Cosmopolis italique 小文字",
+            "witness": "Cosmopolis_1897（コピー）",
+            "nominal_mm": 2.0
+          }
+        ],
+        "source": "typography_scale_update_2026-07-20.json B・D"
+      },
+      {
+        "date": "2026-07-21",
+        "measured_by": "N",
+        "method": "ruler_alignment",
+        "witness": "Ronat_1980",
+        "results": [
+          {
+            "scope": "f18 C’ÉTAIT ＝ f19 LE NOMBRE（キャップ高一致）"
+          },
+          {
+            "scope": "f18 non 上辺 ＝ f19 LE HASARD 上辺／f18 autant 下辺 ＝ f19 LE HASARD 下辺",
+            "note": "layout 層向け（f18-f19_level0.json physical_observations 参照）"
+          }
+        ],
+        "source": "typography_scale_update_2026-07-22.json D.related"
+      },
+      {
+        "date": "2026-07-22",
+        "measured_by": "N",
+        "method": "ruler_on_page",
+        "tolerance_mm": 0.5,
+        "witness": "Ronat_1980",
+        "results": [
+          {
+            "scope": "f19 EXISTÂT-IL",
+            "cap_height_mm": 4.0
+          },
+          {
+            "scope": "f19 Choit",
+            "cap_height_mm": 4.0
+          },
+          {
+            "scope": "f19 autrement qu’hallucination…（行）",
+            "cap_height_mm": 3.0
+          },
+          {
+            "scope": "f20-f21 全ユニット（大文字 RIEN／N’AURA EU LIEU／QUE LE LIEU を含む）",
+            "cap_height_mm": 4.0,
+            "note": "NRF も同様（N 報告）。"
+          },
+          {
+            "scope": "f20 l’évènement ＝ f21 accompli（同じ高さ）",
+            "method": "ruler_alignment",
+            "note": "layout 層向け。ページ境界を跨ぐ統語単位の同一視覚水準。Cos 版では同一行（異同層向け）。"
+          }
+        ],
+        "source": "typography_scale_update_2026-07-22.json D ・ -07-22b.json B"
+      },
+      {
+        "date": "2026-07-24",
+        "measured_by": "N",
+        "method": "ruler_on_page",
+        "tolerance_mm": 0.5,
+        "witness": "Ronat_1980",
+        "results": [
+          {
+            "scope": "f1 POÈME（tu_f1_poeme）",
+            "cap_height_mm": 8.0,
+            "note": "census 外——paratext 附属節の錨。"
+          },
+          {
+            "scope": "f1 タイトル行（tu_f1_title、italique）",
+            "cap_height_mm": 5.0,
+            "note": "タイトル全体で同一。class 2 と同寸（level-0 で class 2 を付与）。"
+          },
+          {
+            "scope": "f1 par（tu_f1_par、romain）",
+            "cap_height_mm": 4.0,
+            "note": "class 3 と同寸（level-0 で class 3 を付与）。"
+          },
+          {
+            "scope": "f1 STÉPHANE MALLARMÉ（tu_f1_stephane_mallarme、romain）",
+            "cap_height_mm": 5.0,
+            "note": "class 2 と同寸（level-0 で class 2 を付与）。"
+          }
+        ],
+        "source": "typography_scale_update_2026-07-25.json B"
+      },
+      {
+        "date": "2026-07-27",
+        "measured_by": "N",
+        "method": "ruler_on_page",
+        "tolerance_mm": 0.5,
+        "witness": "Ronat_1980",
+        "results": [
+          {
+            "scope": "f6 SOIT",
+            "cap_height_mm": 4.0,
+            "note": "f6-f7 逐語照合（訂正0件）に際し原本で再確認。"
+          },
+          {
+            "scope": "f6 l’Abîme（綴り確認）",
+            "note": "大文字 A および î を原本確認。サイズは f6-f7 全域 4mm 一様による帰属。"
+          }
+        ],
+        "source": "N 報告（2026-07-27、f6-f7 照合）"
+      }
+    ]
+  },
+  "structural_notes": [
+    {
+      "id": "sn_relation_to_authorial_layer",
+      "source": "typography_scale_update_2026-07-16.json C",
+      "status": "recorded",
+      "ja": "class 1 の完結は oq_title_sentence_two_sizes（maquette_typography.json）に解答を与える：マケットの欄外数字は 36（f3）／36 en surcharge 28（f5）／28 ＋ esp. 2 p.（f11）と表題文内部で割れているが、Ronat_1980 はこれを単一の14mm層として実現した。すなわち「表題文＝単一層」は Ronat 層の事実であり、著者指示層に二段階の区別（またはその痕跡）が存在した可能性は消えない。検証は校正刷 E1–E5 の観察による将来課題（proof_states.json に接続予定）。"
+    },
+    {
+      "id": "sn_italic_f_protrusion",
+      "source": "typography_scale_update_2026-07-20.json C",
+      "status": "recorded",
+      "ja": "glyph_ink 設計時（2026-07-14）に N が注意喚起した「イタリック小文字で f のみ上下突き抜け（extension: both）」の実測化。NRF・Ronat では公称 4mm（class 3）の小文字に対し f の実質全高は 5mm——すなわち class 2 の SI キャップ高と同値に達する。Cosmopolis では公称 2mm の小文字に対し f は 3mm。活字サイズ（公称）と見た目の実質（視覚的専有高）が乖離し、錯視として働く効果の記録。glyph 単位の詳細記述は glyph_ink.json（f_it, extension: both）と将来の ink／layout 層へ。"
+    },
+    {
+      "id": "sn_cosmopolis_contrast",
+      "source": "typography_scale_update_2026-07-20.json D",
+      "status": "recorded",
+      "ja": "Cosmopolis 1897（コピー実測、2026-07-20、N）：SI は 8mm、イタリック小文字は 2mm。Ronat の 5mm／4mm（比 1.25）に対し Cos は 8mm／2mm（比 4.0）で、条件構造 SI の卓越性の実現がまったく異なる。type_class が異同軸になるという f12-f13 での観察の追加事例（f12-f13 では Cos の COMME SI 4mm／小文字 3mm）。variant 層向けの覚え書き。"
+    },
+    {
+      "id": "sn_size_style_independence",
+      "source": "typography_scale_update_2026-07-22.json E",
+      "status": "recorded",
+      "ja": "f18-f19 は census 全4層（14／5／4／3mm）が共存する詩中唯一の見開きであり、照合により書体との交差が全点確定した：class 1＝romain、class 2＝italique（純層）、class 3＝両書体、class 4＝両書体。すなわち Ronat_1980 においてサイズと書体は独立の設計軸であり、加えて class 3 のローマン大文字錨は大文字性もサイズから独立であることを示す。活字は「乱れ飛んで」いるのではなく、三つの独立軸（サイズ／書体／大文字性）の直交する秩序として配置されている——実測による確認（N、2026-07-22）。この構造は maquette_typography.json（authorial 層）の欄外数字体系との照合における基準面となる。"
+    },
+    {
+      "id": "sn_second_capital_sentence",
+      "source": "typography_scale_update_2026-07-22b.json C",
+      "status": "recorded",
+      "ja": "第2の中心文 RIEN … N’AURA EU LIEU … QUE LE LIEU（… EXCEPTÉ PEUT-ÊTRE UNE CONSTELLATION、f20–f23）は大文字のまま class 3（4mm）に置かれる。f18-f19 の EXISTÂT-IL で点として実測された「大文字性とサイズの独立」が、ここでは文の規模で実例化される。すなわち typography-scale モデルの内部で 2つの中心文を区別する唯一の軸はサイズ層（14mm／4mm）である——配置・余白等の他の活字論的属性は layout 層など別モデルの管轄とし、ここでは扱わない（N 実測にもとづく記録、2026-07-22）。EXCEPTÉ 以下（f22-f23）は 2026-07-23 の f22-f23 正本で全ユニット romain・class 3（大文字 EXCEPTÉ／PEUT-ÊTRE／UNE CONSTELLATION も 4mm）として確認済み。"
+    }
+  ],
+  "superseded": {
+    "size_class_mapping_2026_07_12": {
+      "note": {
+        "ja": "本体初版の暑定順位（14／8／5mm の3値）と「全 anchor の実測が揃った時点で mm 値の降順に size_class を確定する」という手続規定。実際には 2026-07-12 の全詩実測キャンペーンにより本文の4層（14／5／4／3mm）が確定し、POÈME 8mm は本文外のパラテクストとして census の外へ出た（oq_l0_f1_poeme_8mm 、案 (a) 採用）ため、降順一律の確定手続は採らない。また v0.3 期に「暑定 class 3 を廃止し class 4 に統合、3mm を新設」の番号改訂が行われており、本体初版の記述はそれ以前の状態を反映している。履歴として保存。"
+      },
+      "provisional_ordering_mm": [
+        14.0,
+        8.0,
+        5.0
+      ],
+      "f1_size_class_caveat": {
+        "ja": "本体初版の注記「f1 の size_class（題名=1、POÈME=2、著者名=3）は実測と不整合のため要改訂」は、f1 level-0 正本（2026-07-25 照合）により解消済み：タイトル行＝class 2、POÈME＝census 外、8mm、par＝class 3、STÉPHANE MALLARMÉ＝class 2。"
+      }
+    }
+  },
+  "open_items": [
+    {
+      "id": "oq_ts_class2_purity",
+      "status": "resolved",
+      "ja": "解決（N、2026-07-27）：f1 正本により STÉPHANE MALLARMÉ の style＝romain。よって class 2 の faces_present は [romain, italique] とし、「純イタリック層」の言明は f17 以降の詩本文に限定した。あわせて update -25 A の原則に従い、f1 の class 2／class 3 相当要素は census 錨から外して paratext_sizes.census_equivalent_paratext へ移した。"
+    },
+    {
+      "id": "oq_ts_class1_measurement_dates",
+      "status": "open",
+      "ja": "class 1 の4錨のうち N’ABOLIRA（f11）と LE HASARD（f19）の測定日付が提供済みファイル内にない。実測 14mm であることは update -16 A の note が明記しており事実として確定。日付のみ N 補完待ち（status: verified_date_unconfirmed）。"
+    },
+    {
+      "id": "oq_ts_f1_par_text_unit",
+      "status": "resolved",
+      "ja": "解決（N、2026-07-27）：正本 ID は tu_f1_par。実測は 2026-07-24（update -25 B）。あわせて本体初版の tu_f1_author を正本 ID tu_f1_stephane_mallarme に訂正した。"
+    },
+    {
+      "id": "oq_ts_body_italic_representative",
+      "status": "open",
+      "ja": "本体 pending 錨 layer_body_italic（代表語未定、「f12 以降のイタリック挿入節から選定」）の確定。本統合では tu_f12_une_insinuation_simple を提案（status: proposed_representative）。イタリック平原の起点という意味では f12 が自然だが、定規実測のしやすさで選ぶなら他候補もありうる。N 裁定。"
+    },
+    {
+      "id": "oq_ts_f6f7_anchors_provisional",
+      "status": "resolved",
+      "ja": "解決（N、2026-07-27）：f6-f7 逐語照合完了・訂正0件。SOIT は原本で 4mm 再確認、l’Abîme は 大文字 A と î まで原本確認。両錨の status を verified に更新。LE MAÎTRE（f8）との同級検証は oq_ts_le_maitre_same_class として分離。"
+    },
+    {
+      "id": "oq_ts_apostrophe_normalization_in_updates",
+      "status": "resolved",
+      "ja": "typography_scale_update_2026-07-22.json の anchor_word に U+0027 が混入していた（C'ÉTAIT、autrement qu'hallucination éparse d'agonie）。プロジェクト規約は全ファイル U+2019 統一であり、このままでは level-0 ユニットの text（U+2019）との文字列照合が失敗する。本統合で U+2019 に正規化して取り込んだ。英文散文中の所有格（N's 等）は本文データではないため対象外とした。"
+    },
+    {
+      "id": "oq_ts_le_maitre_same_class",
+      "status": "open",
+      "ja": "本体初版の layer_soit_maitre_caps は「SOIT と LE MAÎTRE（f8）が同級かどうかの検証を兼ねる」ことを錨の目的として明記していた。SOIT 側は確定したが、LE MAÎTRE 側は f8-f9 が v0.3 期の記録のままで level-0 改訂待ちのため未検証。次作業（f8-f9 level-0 改訂）で実施する。本項は class 3 の成員判定に影響しうる唯一の未決事項である。",
+      "scheduled": "f8-f9 level-0 改訂時に実施（N 了解 2026-07-27）"
+    },
+    {
+      "id": "oq_ts_f1_measurement_date_duplication",
+      "status": "open",
+      "ja": "f1 の4要素について、本体初版は measured: 2026-07-12、update -25 B は date: 2026-07-24 の N 実測として記録している。mm 値は全点一致しており数値上の齟齬はないが、同一要素に2つの実測日付が並ぶ。measurement_log には両日付をそのまま保存した。どちらを錨の正規日付とするか（初回実測か、裁定時の確認実測か）は N 裁定。"
+    },
+    {
+      "id": "oq_ts_paratext_title_line_face",
+      "status": "note",
+      "ja": "参考：f1 タイトル行は italique、STÉPHANE MALLARMÉ は romain で、いずれも 5mm。扉の階層がサイズではなく書体と字間で作られているという本体初版の観察は、f1 正本により裏付けられた（level0_schema.json への type_class null 許容規則の統合は 2026-07-26 に完了済み——update -25 C）。"
+    },
+    {
+      "id": "oq_ts_f6_labime_text_unit",
+      "status": "resolved",
+      "ja": "解決（N、2026-08-25）：class 3 錨 l’Abîme の anchor_location.text_unit を tu_f6_labime から正本 ID tu_f6_l_abime へ訂正。正本 12 本は無変更。既存 ID の改名ではなく、正本成立前に台帳へ置かれた予測 ID による壊れた参照の修復であるため deprecated_ids 処理は行わない。発見は 2026-07-28 の f8-f9 正本 observations_for_other_files による申し送り、裁定は 2026-08-25 の横断参照検査を経て。根拠は typography_scale_update_2026-08-25.json B 節。本体初版の予測 ID を正本 ID へ訂正した前例は oq_ts_f1_par_text_unit（tu_f1_author → tu_f1_stephane_mallarme、2026-07-27）。",
+      "correction": {
+        "date": "2026-08-26",
+        "by": "N（裁定）／ Claude（調査）",
+        "ja": "本エントリの ja 本文にある『正本成立前に台帳へ置かれた予測 ID』という説明は、2026-08-26 の調査により事実誤認と判明した。tu_f6_labime は予測値ではなく、trial 世代（2026-07-12）の f6-f7 記録に実在した ID である。本文は当時の判断の記録としてそのまま保持し、訂正は revisions の 2026-08-26 エントリに記す。訂正の対象は理由づけのみで、tu_f6_l_abime を採るという結論および deprecated_ids 処理を行わないという判断は変わらない。",
+        "see": "revisions（2026-08-26）"
+      }
+    }
+  ],
+  "validation_rules": {
+    "ja": [
+      "全 anchor の anchor_location.text_unit は、該当スプレッドの level-0 レコードに実在する tu_ ID でなければならない（TODO を含む錨は status を *_unconfirmed に保つ）。",
+      "全 anchor の cap_height_mm は当該 size_class の cap_height_mm と一致すること。",
+      "全 anchor の style は当該 size_class の faces_present に含まれること（TODO を除く）。",
+      "アポストロフは U+2019 に統一（anchor_word への U+0027 混入は検証エラー）。",
+      "size_class は 1〜4 の整数のみ。census 外の実測値は paratext_sizes に置き、size_classes に入れない。",
+      "level-0 レコードの units.type_class は本ファイルの size_class と矛盾しないこと。",
+      "size_classes[].anchors には census 錨のみを置く。census と同寸のパラテクスト要素は paratext_sizes.census_equivalent_paratext に置く（update -25 A 原則）。",
+      "faces_present は当該 class を付与された全ユニットの書体集合であり、anchors の書体集合の上位集合でなければならない。"
+    ]
+  },
+  "revisions": [
+    {
+      "date": "2026-07-26",
+      "by": "Claude (起案) / N (承認待ち)",
+      "summary": {
+        "ja": "本体は 2026-07-12 状態のままで、-16／-20／-22／-22b の4 update がいずれも未統合だった。本改訂で以下を実施：（1）構造を layer 主軸から size_class 主軸へ再編（level-0 レコードが整数 type_class を参照するため）。旧 layer_id は各錨の属性として保存。（2）class 1〜4（14／5／4／3mm）を明示化し、4 update の全錨を配置。（3）本体に measurement_log 節が存在しなかったため新設し、4 update の append 内容と初版の 2026-07-12 実測を収めた。（4）pending だった4錨のうち QUAND BIEN MÊME を確定、SOIT／l’Abîme を暑定（f6-f7 照合待ち）、layer_body_italic の代表語を提案。（5）POÈME 8mm を paratext_sizes の受け皿に退避保存（update -25 A の正式定義待ち）。（6）update -22 の anchor_word の U+0027 を U+2019 に正規化。（7）初版の暑定順位と f1 注記を superseded に履歴保存。"
+      },
+      "not_done": {
+        "ja": "typography_scale_update_2026-07-25.json の A（paratext_sizes 正式定義）・B（measurement_log）は同ファイル未添付のため未統合。"
+      }
+    },
+    {
+      "date": "2026-07-27",
+      "by": "Claude（起案）／N（指示・承認 2026-07-27）",
+      "summary": {
+        "ja": "N 指示（2026-07-27）と update -25 A・B を反映：（1）f6-f7 照合完了により SOIT・l’Abîme を verified へ（2）STÉPHANE MALLARMÉ の style＝romain、text_unit を正本 ID へ訂正、class 2 の faces_present を [romain, italique] に、「純イタリック層」を f17 以降へ限定（3）par の text_unit＝tu_f1_par、実測日 2026-07-24（4）validation_rules の「1、4」を「1〜4」に修正、あわせて錨／class 成員の区別と faces_present の定義規則を追加（5）update -25 A の paratext_sizes 附属節を正式化し、同節の原則に従って f1 の census 同寸3要素をcensus 錨から census_equivalent_paratext へ移動（6）update -25 B を measurement_log に追記。"
+      },
+      "judgement_call": {
+        "ja": "(5) の3要素（f1 タイトル行／STÉPHANE MALLARMÉ／par）を census 錨から paratext_sizes.census_equivalent_paratext へ移す設計は、update -25 A の原則「census と同寸のパラテクスト要素は census の錨としては扱わない」の適用として起案者が提案し、N が承認した（2026-07-27）。以後この分離を正式運用とする——census 錨は詩本文（f3〜f23）の実測代表点のみを指し、パラテクストは class を付与されても錨にはならない。",
+        "status": "approved"
+      }
+    },
+    {
+      "date": "2026-08-25",
+      "by": "N（裁定）／ Claude（調査・統合作業）",
+      "type": "reference_repair",
+      "source": "typography_scale_update_2026-08-25.json",
+      "ja": "class 3 錨 l’Abîme の anchor_location.text_unit を tu_f6_labime から正本 ID tu_f6_l_abime へ訂正した。変更は本 1 文字列のみで、anchor_word・cap_height_mm・status・measurement・layer_id・measure_on、および他のすべての錨・census・measurement_log は変更していない。正本 12 本も変更していない。【正本側 ID を採る理由】level0_schema.json の id_assignment_rules は顕著語スラッグにおいてアポストロフをアンダースコアに変換することを含意し、2026-08-25 の全数走査により正本 12 本のアポストロフ含有ユニット 52 件すべてがこの形を取ること（連結形 0 件）が確認された。tu_f6_l_abime は慣行どおり、tu_f6_labime は唯一の例外であり、しかも正本ではなく台帳側にあった。当該正本は 2026-07-27 に原本逐語照合済（訂正 0 件、大文字 A と î まで原本確認）。【ID 改名ではない理由】tu_f6_labime を ID として持つオブジェクトは一度も存在しなかった。台帳が実在しない ID を参照していたのであり、citation_scheme.json（frozen）が禁じる既存 ID の改名・再割当には当たらない——壊れた参照の修復である。よって deprecated_ids 処理は行わない（N 裁定）。前例：oq_ts_f1_par_text_unit（本体初版の tu_f1_author を tu_f1_stephane_mallarme へ訂正、2026-07-27、deprecated 処理なし）。【発見経緯】不一致は 2026-07-28、f8-f9 正本の observations_for_other_files が申し送りとして記録していた——正本が自らの管轄外の不整合を発見しつつ台帳を書き換えず、観察のみを場に残した事例。その観察は当時解決されなかったが失われず、2026-08-25 の横断参照検査で再検出され裁定に至った。【乖離の由来】当該錨は本体初版の pending 錨であり、f6-f7 正本が存在するより前に置かれた。anchor_location.text_unit に書かれていたのは、まだ起草されていない正本の ID の予測値である（同時期の update -12c／-12d が TODO_f10f11_record 等の明示的プレースホルダを用いたのに対し、こちらは実 ID 風の文字列を置いた）。正本起草時に規則が適用されて tu_f6_l_abime となったが、台帳側の予測値は更新されなかった。単純な誤記ではなく、まだ存在しない正本を先行して指そうとした痕跡である。【関連】proof_states.json の var_abime_capitalization が記録する E4 における l’abîme → l’Abîme の大文字化（マラルメ自身の修正、OC I p.370 var. a）は、錨語がなぜ大文字 A を持つかの生成史的説明であって、ID の綴りの問題とは別である。本訂正により、2026-08-03 の公開前 preflight が検出した 6 件の阻害要因のうち最後の 1 件が閉じる。"
+    },
+    {
+      "date": "2026-08-26",
+      "by": "N（裁定）／ Claude（調査）",
+      "type": "rationale_correction",
+      "corrects": "revisions（2026-08-26 の直前エントリ、date: 2026-08-25、type: reference_repair）",
+      "does_not_change": [
+        "class 3 錨 l’Abîme の anchor_location.text_unit = tu_f6_l_abime（訂正の方向は覆さない）",
+        "deprecated_ids 処理を行わないという判断",
+        "anchor_word・cap_height_mm・status・measurement・layer_id・measure_on",
+        "正本 12 本"
+      ],
+      "ja": "2026-08-25 の revision は、錨が指していた tu_f6_labime を『まだ起草されていない正本の ID の予測値』と説明した。この説明は事実誤認であり、ここに訂正する。既存の記述は削除も上書きもしない——当時そう判断したこと自体が成立史であるため。【判明した事実】2026-08-26 に f6-f7trial-1.json（内部日付 2026-07-12）を確認したところ、tu_f6_labime は当該ファイルに実在する ID であった。同世代の f4-f5trial-3・f8-f9trial-4 も含め、trial 世代はアポストロフを連結する命名（tu_f6_labime／tu_f6_daile／tu_f7_a_lenvergure／tu_f7_dun_batiment 等）を一貫して用いていた。level-0 世代で id_assignment_rules が適用され分離形（tu_f6_l_abime／tu_f6_d_aile 等）へ変わった際に、錨だけが旧世代の ID を指したまま残った——確認できた範囲で f4-f5 に 1 件、f6-f7 に 10 件、f8-f9 に 13 件の ID が両世代間で異なる。したがって錨は未来を予測して外したのではなく、当時実在した ID を正しく参照しており、参照先の世代が交代したときに追随しなかった。【trial 世代 ID の位置づけ】trial 世代の ID を deprecated_ids に登録する処理は行わない。これは新規の裁定ではなく、f1・f2-f3 の level-0 正本 provenance_note にある『旧試作 ID は正典未登録のため deprecated 処理不要』という 2026-07-24〜25 の判断の追認である（N、2026-08-26）。根拠：①trial 3 点の内部日付は 2026-07-12 で、citation_scheme.json の凍結（2026-07-17）より前 ②release_log.json v1.0 の coverage.full_record は収録深度を示す語彙であり正典登録・公開済み ID・独立ファイルの存在とは別軸である（同一覧に挙がる f1・f2-f3 にはそもそもファイルが存在しない）③当該判断は trial の存在を知る当事者により同時代に下された。【full_record との関係】trial 世代の記録は syntax・layout・interpretations・variants をtext_units と同一ファイルに載せていた。level-0 はこれを浅く置き換えたのではなく、一体だった記述空間から観察の層を抜き出したものである。したがって両者の関係は supersession ではなく設計の分化であり、superseded_by による接続は用いない。",
+      "en": "Corrects the rationale recorded on 2026-08-25 without altering it. tu_f6_labime was not a forecast of an identifier not yet assigned: it existed in the trial-generation record of f6-f7 (dated 2026-07-12), whose naming concatenated the apostrophe. When the level-0 generation applied the naming rules and produced the separated form, the anchor was left pointing at the earlier generation. The correction to tu_f6_l_abime stands; only its reasoning is amended. Trial-generation identifiers are not entered in deprecated_ids — a confirmation of the ruling already recorded in the provenance notes of f1 and f2-f3, not a new one."
+    }
+  ],
+  "approved": {
+    "by": "N",
+    "date": "2026-07-27",
+    "scope": {
+      "ja": "全5 update（-16／-20／-22／-22b／-25）の統合と、paratext を census の錨から分離する設計を承認。残る実質的な検証課題は LE MAÎTRE（f8）の同級確認のみであり、f8-f9 の level-0 改訂時に併せて実施する。"
+    }
+  }
+}

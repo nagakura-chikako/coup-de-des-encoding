@@ -1,0 +1,366 @@
+{
+  "file": "sources.json",
+  "schema_version": "0.3",
+  "created": "2026-07-16",
+  "description": {
+    "ja": "本データセットが参照する資料の台帳。実測・目視の対象である witness（版そのもの）と、文献的情報源である documentary_source（校訂資料・注釈）を区別する。スプレッド記録・typography_scale・variants からの出典参照はここに登録された ID を用いる。",
+    "en": "Registry of materials referenced by this dataset, distinguishing witnesses (physical editions subject to measurement and inspection) from documentary sources (critical apparatus and commentary). Source references elsewhere must use IDs registered here."
+  },
+  "witnesses": [
+    {
+      "id": "Ronat_1980",
+      "label": "Un coup de dés jamais n’abolira le hasard, édition mise en œuvre et présentée par Mitsou Ronat, réalisée par Tibor Papp, Paris, Change errant / d’atelier, 1980",
+      "access": "physical_copy",
+      "role": {
+        "ja": "本データセットの基底 witness。物理実測（cap_height 等）はすべて本版に対して行う。",
+        "en": "Base witness of this dataset. All physical measurements refer to this edition."
+      },
+      "caveats": [
+        {
+          "id": "caveat_ronat_editorial_theory",
+          "source": "Pleiade_1998_Marchal",
+          "content": {
+            "ja": "マルシャルは Note sur le texte（OC I, p.1322 注1）で、マラルメ自身のマケット指示「各頁は本文と空白を合わせて40行の基準（un chiffre de 40 lignes）で設定される」が、Ronat 1980 の「全詩は数12を軸に構想された」とする編集理論と矛盾することを明記している。よって Ronat_1980 の実現（レイアウト・活字選択）は、著者指示体系と同一視できない一つの編集的解釈である。本データセットの実測値は「Ronat_1980 における実現」の記録であり、authorial 層（maquette_typography.json）とはレイヤーを分けて扱う。",
+            "en": "Marchal (Note sur le texte, OC I p.1322 n.1) notes that Mallarmé’s own maquette rule — each page set on a basis of 40 lines, text and blanks together — contradicts Ronat’s editorial theory that the poem was conceived around the number 12. Ronat_1980 is therefore one editorial realization, not identical with the authorial instruction system. Measurements in this dataset record the Ronat_1980 realization; the authorial layer is kept separate in maquette_typography.json."
+          },
+          "status": "recorded"
+        }
+      ],
+      "responsibility": {
+        "mise_en_œuvre_et_présentation": "Mitsou Ronat",
+        "réalisation": "Tibor Papp",
+        "source_of_terms": "版元の責任表示（本版の記載）",
+        "ja": "現代の職能区分（editorial / design 等）へ翻訳しない。版自身が用いている語彙をそのまま保持する（N 裁定、2026-08-26）。理由：両者とも第2分冊に理論的論考を寄せており、いずれの仕事も単一の機能に還元されない。Papp は «Qui mentalement sépare» で支持体・空白・語の isolation・視線の運動を自ら理論化しており、『デザインの実作者』ではない。Ronat の提起（詩は正確な mise en page においてしか真に知りうるものにならない）に Papp が応答した関係が、同分冊の記述から読み取れる。過去の形式を現在のカテゴリへ書き換えないという本プロジェクトの原則の、書誌への適用でもある。",
+        "en": "The edition's own terms are kept rather than translated into modern job categories. Both parties contributed theoretical essays to the second fascicle; neither role reduces to a single function."
+      },
+      "physical": {
+        "ja": "2 分冊構成、四つ折り返しのケース入り。第1分冊＝詩（六つ折丁）。第2分冊＝« LE GENRE, QUE C’EN DEVIENNE UN… »（28 頁、批評論考集）。level-0 の対象は第1分冊の本文紙束のみであり、外側紙ケースの表記は対象外（f1 正本 scope_note、N 裁定 2026-07-24）。第2分冊は witness ではなく documentary_source として別に登録する（B 節）——同一の版でありながら、第1分冊は観測対象、第2分冊はその版を作った者たちによる言説であり、役割が異なる。",
+        "note": "編者所蔵本の同定情報（第2分冊を伴う完本、通し番号なし、外枠内側右上の鉛筆による書店書き入れ、1987 年以来使用）は docs/ 側の課題（README r8 の未確定事項 B4）であり、本案では扱わない。"
+      },
+      "method_accounts": {
+        "ja": "同一の版について、実現の当事者による内部からの方法記述と、第三者による外部からの評価を、それぞれ出所を明示して並存させる。どちらも他方を無効化しない——同じ対象に異なる入口から到達できる二つの記述である。",
+        "internal_account": {
+          "id": "acct_papp_realisation_method",
+          "source": "Ronat_1980_fascicle2 / Tibor Papp «Qui mentalement sépare», p.27",
+          "stance": "版内部からの記述（実現の当事者による）",
+          "ja": "Papp は、複数の校正刷に共通して現れる恒常項と、Mallarmé が要求したテクストおよび mise en page の訂正の双方を考慮して、Didot 活字でテクストを復元したと述べる。すなわち Ronat_1980 の実現は、校正刷 E1–E5（proof_states.json に登録）を根拠として行われたことが、実行者自身によって記述されている。",
+          "en": "Papp states that the text was re-established in Didot type, taking account both of the constants appearing across the different sets of proofs and of all the corrections of text and of mise en page requested by Mallarmé. The realization of Ronat_1980 thus rests, by its realizer's own account, on the proof states registered in proof_states.json.",
+          "confidence": "verified",
+          "confidence_basis": "N 所蔵現物の写真（2026-08-26）"
+        },
+        "external_assessment": {
+          "id": "caveat_ronat_editorial_theory",
+          "source": "Pleiade_1998_Marchal",
+          "stance": "版外部からの評価（第三者による）",
+          "pointer": "witnesses[Ronat_1980].caveats[caveat_ronat_editorial_theory]（既存。本案では変更しない）",
+          "ja": "同一の版について、外部からの留保（Marchal：Ronat の編集理論と Mallarmé 自身のマケット指示の矛盾）と、内部からの方法記述（Papp：校正刷の恒常項にもとづく復元）の二つが、それぞれ出所を明示して並存する。どちらも他方を無効化しない——同じ対象に、異なる入口から到達できる二つの記述である。"
+        }
+      }
+    },
+    {
+      "id": "NRF_1914",
+      "label": "Un coup de dés jamais n’abolira le hasard, Éd. de la Nouvelle Revue française, 1914",
+      "access": "photocopy",
+      "role": {
+        "ja": "照合用 witness（JAMAIS 右頁配置の確認に使用、2026-07-12）。マルシャルによれば、ディド社オリジナルとは全く異なる書体で組まれ、ルドン挿絵なし、表紙と Cosmopolis 序文が付加された形。",
+        "en": "Collation witness (used to confirm the recto placement of JAMAIS, 2026-07-12). Per Marchal, set in a typeface entirely different from the Didot original, without Redon’s illustrations, with a cover and the Cosmopolis preface added."
+      },
+      "aliases": [
+        "NRF系（コピー）",
+        "NRF系（コピー、単ページ接写）"
+      ]
+    },
+    {
+      "id": "Cosmopolis_1897",
+      "label": "« Un Coup de Dés jamais n’abolira le Hasard », Cosmopolis, t. VI, n° 17, mai 1897, p. 417–427",
+      "access": "photocopy",
+      "role": {
+        "ja": "異同層向けの照合 witness。誌面コピー（一部に N の朱筆校合注記あり）。雑誌の技術的制約により単頁が単位であり、見開き単位の Ronat_1980 とは面構成そのものが異なる。level-0 の転記には用いず、variant_notes における所在記録の対象。",
+        "en": "Collation witness for the variant layer, consulted as photocopies (some bearing N’s red-ink collation notes). Constrained to the single page as its unit, its page structure differs from the double-page unit of Ronat_1980. Not used for level-0 transcription; referenced in variant_notes only."
+      },
+      "state_registry": {
+        "ja": "テクスト状態としてのシグラは C。詳細（序文の著者性、Rouart-Valéry 蔵校正刷の修正一覧等）は proof_states.json を正とし、本台帳では重複記載しない。",
+        "sigla": "C",
+        "detailed_registry": "proof_states.json"
+      },
+      "aliases": [
+        "Cosmopolis 1897（コピー）",
+        "Cosmopolis 1897（コピー、N朱筆校合入り）"
+      ]
+    },
+    {
+      "id": "Didot_proofs",
+      "type": "collective_witness",
+      "label": "Épreuves Firmin-Didot pour l’édition définitive（決定版のための校正刷、第1〜第5刷）",
+      "access": "indirect",
+      "members": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5"
+      ],
+      "detailed_registry": "proof_states.json",
+      "role": {
+        "ja": "校正刷 E1–E5 の総称としての集合 witness。個々の刷の日付・現存組・異読は proof_states.json の states を正とし、本台帳では重複記載しない——sources.json は入口のみを保持する。",
+        "en": "A collective witness naming the five Firmin-Didot pulls. Dates, surviving sets, and readings of each pull are held in proof_states.json; this registry keeps only the entry point and does not duplicate them."
+      },
+      "access_note": {
+        "ja": "重要——本データセットにおける Didot_proofs への参照は、現時点ではすべて間接的である。唯一の参照（f8-f9 の vn_f8f9_didot_via_handscroll）は 1987 年手巻物葉の欄外注からの回収であり、原資料を直接確認したものではない旨が当該レコードに明記されている。すなわち Didot_proofs は prior_analyses（handscroll_1987）を経由してのみデータセットに入っている。access を 'indirect' とするのはこの経路を明示するためであり、将来 図版・現物により直接確認された場合は 'photographed_pages' 等へ更新する。",
+        "en": "All references to Didot_proofs in this dataset are currently indirect: the sole reference (vn_f8f9_didot_via_handscroll) is recovered from a marginal note on the 1987 handscroll and is marked as not verified against the originals. Didot_proofs therefore enters the dataset only by way of prior_analyses."
+      }
+    }
+  ],
+  "documentary_sources": [
+    {
+      "id": "Pleiade_1998_Marchal",
+      "label": "Stéphane Mallarmé, Œuvres complètes I, éd. Bertrand Marchal, Bibliothèque de la Pléiade, Gallimard, 1998 — Notice / Note sur le texte / Notes et variantes du Coup de dés (pp. 1315–1327)",
+      "access": "photographed_pages",
+      "provides": [
+        "maquette（方眼紙の制作見本）の物理記述とタイポグラフィ指示の転記",
+        "校正刷 E1–E5 の系譜（17組・完全7組）と推定カレンダー",
+        "ms / C / E1–E5 のシグラ体系と Notes et variantes",
+        "Cosmopolis 校正刷（Rouart-Valéry 蔵）の修正一覧",
+        "成立史（Cosmopolis 掲載の制約、Vollard/Redon 計画、印刷所 Firmin-Didot との攻防）"
+      ],
+      "transcription_chain": {
+        "ja": "データ取り込みは次の経路による：頁写真（2026-07-16 千夏子提供）→ Fable による直接読解 ＋ Gemini による詳細転記（Copilot チェック済）→ 両者の突合（2026-07-16、Fable）。突合で一致した項目は confidence 'transcribed_agreed'、いずれかにしか現れない・判読不確実な項目は 'uncertain' とし、最終的な現物照合（N による Pléiade 本体との対照）を経て 'verified' に昇格する。",
+        "en": "Ingestion path: page photographs (provided 2026-07-16) → direct reading by Fable + detailed transcription by Gemini (checked by Copilot) → cross-collation (2026-07-16, Fable). Items agreeing across both readings carry confidence 'transcribed_agreed'; uncertain or single-source items carry 'uncertain'; promotion to 'verified' requires collation against the physical Pléiade volume by N."
+      },
+      "confidence_values": [
+        "uncertain",
+        "transcribed_agreed",
+        "verified"
+      ]
+    },
+    {
+      "id": "Ronat_1980_fascicle2",
+      "label": "« LE GENRE, QUE C’EN DEVIENNE UN… », second fascicule de l’édition Ronat / Papp, Change errant / d’atelier, 1980, 28 p.",
+      "relation_to_witness": {
+        "ja": "Ronat_1980 と同一の版の第2分冊。witness（観測対象）ではなく documentary_source（言説）として登録する。実測・目視の対象は第1分冊の本文紙束のみである。",
+        "witness_id": "Ronat_1980"
+      },
+      "access": "physical_copy",
+      "provides": [
+        {
+          "text": "Mitsou Ronat, « Cette architecture spontanée et magique », p.1",
+          "used_as": [
+            "底本の性格づけ（README：版の企図、校正刷にもとづく作業、版面寸法の導出、編者自身が新資料の発見を否定し further research の第一の基礎として提示したこと）",
+            "caveat_ronat_editorial_theory における Ronat の編集理論（『12』を軸とする構想）の出所",
+            "活字 corps の段階についての記述（README r3 解決欄が level-0 の 4 class との整合を述べる際の参照先）"
+          ],
+          "confidence": "transcribed_agreed",
+          "note": "本論考の逐語確認は未実施。README および caveat の記述が本論考のどの箇所に対応するかの照合は将来課題。"
+        },
+        {
+          "text": "Tibor Papp, « Qui mentalement sépare », p.24–27",
+          "used_as": [
+            "Ronat_1980 の実現の方法についての、版内部からの記述（A 節 method_accounts.internal_account の出所）"
+          ],
+          "confidence": "transcribed_agreed",
+          "confidence_basis": "N 所蔵現物の全 4 頁写真（2026-08-26）",
+          "material_for_later_layers": {
+            "ja": "本論考には、level-0 の対象外だが後続層に関わる記述が多く含まれる——所在のみを記録し、内容は取り込まない（1987 手巻物の欄外注と同じ扱い）。①isolation の原理：詩の主柱が四つに分割され別々の頁に孤立していること ②孤立語が意味の展開に生む停止＝結節点（nœud）③視線の fixation と、孤立語における語内部構造の分析（Mehler / Bever / Carey を援用）④SOIT を同音異義による多重読みの例として挙げること ⑤具体的参照：16 頁左上に孤立する soucieux、8–9 頁の « cadavre par le bras écarté du secret qu’il détient » が中央余白により二分されること ⑥判型と読書運動の関係、jonction と disjonction の境界が未詳であること。これらは syntax／layout／readings 各層向けの素材であり、level-0 には取り込まない。"
+          },
+          "corps_note": {
+            "status": "not_correlated",
+            "ja": "Papp は、Mallarmé が bas de casse romain の殻の内側に italique（bas de casse と CAPITALES）を組み合わせ、CAPITALES en romain に corps 16・24・60 を用いて活字種別ごとの自律した読みを設計した、と記述する。別頁では corps が 60 に及ぶとも述べる。本データセットは、この記述と typography_scale.json の実測 4 class（14／5／4／3mm）との対応づけを行わない（N 裁定、2026-08-26）。理由：①Papp が何をどの基準で区分・計数しているかが資料上定義されていない ②Mallarmé は校正の過程で複数回にわたり活字の変更を求めており、校正刷ごとに別の活字が用いられた可能性があるため、何を同一種として数えるかが定まらない ③romain と italique を別種と数えるか否かで種類数が変わる。定義が資料上与えられていないものについて、こちらで数え方を補って結論を出さない。対応関係の有無自体を現段階では判断せず、typography_scale.json の open_items にも立てない——open question として立てること自体が『解くべき対応関係が存在する』という仮説を先に置くことになるため。将来、Didot の corps の定義、校正刷ごとの書体変更、romain／italique の計数規則が資料から十分に立てられた時点で、初めて typography 側の問いとして起こす。",
+            "en": "Papp records that Mallarmé used roman capitals at corps 16, 24 and 60. This dataset does not correlate that description with the four measured classes of typography_scale.json: the criteria by which Papp distinguishes and counts are not defined in the source, type may have changed between proof pulls, and the count differs depending on whether roman and italic are counted separately. No open question is raised on the typography side either, since raising one would already assume that a correspondence exists to be solved."
+          },
+          "confidence_note": {
+            "ja": "N 所蔵現物の全 4 頁写真により全文を確認済みだが、confidence は transcribed_agreed に留める。現行 sources.json の verified は「N による Pléiade 本体との対照」を念頭に定義されており、その適用範囲が未決であるため（oq_src_confidence_vocabulary_scope）。内容への疑義ではなく、既存語彙の意味が確定する前にその適用範囲を拡張しないための措置（N 裁定、2026-08-26）。将来 verified を「指定された物理資料との N による現物照合」へ一般化する裁定が行われた場合に昇格しうる。"
+          }
+        }
+      ],
+      "contents": {
+        "ja": "収録 11 篇。上記 3 篇のほかに、Tibor Papp « Déville »（p.8）、Jacques Roubaud « N’abolira Lazare »（p.10）、Bruno Montels « Convoquer le peu »（p.13）、Jean Pierre Faye « L’entre croisement »（p.14）、Claude Minière « Le risque picaresque »（p.17）、Rodolfo Hinostroza « Le dieu de la page blanche »（p.18）、Philippe Dôme « ¿::? »（p.20）、Paul Nagy（p.22）。これら 8 篇は現時点で本データセットの根拠として使用していないため、収録の所在のみを記録し provides には挙げない。将来使用する場合は provides に移す。",
+        "note": "Papp «Qui mentalement sépare» は、Hinostroza が同分冊で論じる読書運動の軸に言及しており、8 篇のうち少なくとも 1 篇は相互参照の関係にある。"
+      },
+      "validation_note": {
+        "ja": "sources.json の validation_rules 第 2 項により、本 documentary_source 由来のデータは confidence フィールドを必須とする。上記 provides の各項目はこれに従う。"
+      },
+      "contents_additional_note": {
+        "id": "note_fascicle2_observation",
+        "ja": "第2分冊 p.28 に Stéphane Mallarmé «Observation relative au poème»（Cosmopolis 1897 序文）が再録されている。これは書誌的事実として記録するものであり、本データセットの根拠として使用したものではない——provides には挙げない。f1 正本 vn_f1_cos が Cos 序文について述べる際に実際に参照したのは、慶應義塾大学の立仙氏よりリプリントを許された Cosmopolis 1897 のコピーであり（同コピーは 1987 年修士論文本体の付録に収録）、第2分冊の再録ではない（N 確認、2026-08-26）。同一のテクストが複数の資料に存在することと、当該読解が実際にどの物理資料を経由して成立したかは別の事実であり、後者を provenance として記録する。",
+        "en": "The second fascicle reprints Mallarmé’s Cosmopolis preface at p.28. This is recorded as a bibliographic fact only: it is not a source this dataset drew on. The reading recorded in f1 rests on a reprint of the Cosmopolis 1897 printing obtained from Prof. Tatsusen of Keio University, included as an appendix to the 1987 master’s thesis — not on this reprint. That the same text exists in several materials, and which physical material a given reading actually passed through, are different facts.",
+        "principle": {
+          "ja": "同一テクストの所在（source identity）と、実際に参照された資料（actual consultation）を分離する。"
+        }
+      }
+    },
+    {
+      "id": "Morel_2007",
+      "type": "facsimile_edition",
+      "label": "Stéphane Mallarmé, Un coup de Dés jamais n’abolira le Hasard. Manuscrit et épreuves. Édition et Observations de Françoise Morel, Paris, La Table Ronde, 2007",
+      "label_status": "complete",
+      "access": "physical_copy",
+      "relation_to_level0": {
+        "ja": "level-0 の対象外。level-0 は一つの完成した印刷物（Ronat_1980 第1分冊）を記録する層であり、Morel が複製するのは完成へ向かう過程——草稿・校正刷・訂正指示——である。Morel は『別のテクスト』ではなく、生成過程という時間軸を持ち込む資料であり、後続層（variants／readings／layout）で扱う。",
+        "en": "Outside the scope of level-0, which records one finished printed object. What Morel reproduces is the process leading to it — drafts, proofs, corrections. Not another text but a source that introduces a temporal axis, belonging to the later layers."
+      },
+      "reproduces": {
+        "ja": "版自身の記載による収録内容（現物写真、2026-08-02）。",
+        "items": [
+          {
+            "n": "1°",
+            "ja": "Cosmopolis 誌（Armand Colin、1897 年 5 月 4 日）掲載形の二形態——マラルメが訂正した校正刷と、それに続く決定形。表紙 16×25 cm／草稿 15.5×20・15×20・15.5×20 cm／校正刷 15×25 cm／印刷本文 15×23 cm。"
+          },
+          {
+            "n": "2°",
+            "ja": "判読困難な草稿 4 頁、およびマラルメ自筆の「prière d’insérer と呼びうる」1 頁。同文は NRF 1914 の単行本初版に「Préface」として再録された。25×33 cm（見開き 50×33 cm）。"
+          },
+          {
+            "n": "3°",
+            "ja": "Ambroise Vollard の「幻の版」（Odilon Redon 挿絵予定、未刊）の印刷に用いられた手稿。22.5×35 cm。"
+          },
+          {
+            "n": "4°",
+            "ja": "同版の初校（マラルメ訂正入り）、および後続校正刷の第 1 頁（裏表紙に複製）。表紙 30×39 cm／校正刷 28.5×37 cm。"
+          },
+          {
+            "n": "5°",
+            "ja": "読者の便宜のため、本版のために組み直された『骰子一擲』本文。"
+          },
+          {
+            "n": "6°",
+            "ja": "Françoise Morel «Observations»。"
+          }
+        ],
+        "reduction_note": {
+          "ja": "版自身が「技術的理由により、手稿と校正刷の複製はわずかに縮小されている」と明記している。本データセットは実測を扱うため、Morel の複製から寸法を採らないことの根拠として記録する。"
+        },
+        "attribution_correction": {
+          "ja": "5° は「本版のために組み直された（recomposé pour cette présente édition）」ものであり、Ronat_1980 の本文ではない。中間の要約に「Ronat が組み直した本文」とする誤読があったため、原文の記載により訂正して記録する（2026-08-27）。"
+        }
+      },
+      "actual_consultation": {
+        "ja": "2026-08-02、N が所蔵現物の収録目録および Vollard 版校正刷 1 見開き（f8-f9 相当、LE MAÎTRE を含む面。赤インクによるマラルメ自筆の指示——hauteur、語との対応位置、行の上下移動、および『距離が指示なく変更された。前の校正刷どおりに戻すこと』の旨の欄外書き込みを含む）を撮影・提示した。2026-08-27 には表紙・見返しを撮影・提示し、書誌事項を現物から確定した。本データセットが Morel 現物に接触した記録はこの 2 回であり、そこから採った記述は本エントリの reproduces のみである。",
+        "date": [
+          "2026-08-02",
+          "2026-08-27"
+        ],
+        "confidence": "transcribed_agreed",
+        "confidence_basis": "N 所蔵現物の写真（収録目録 1 葉、校正刷見開き 1 葉、表紙 1 葉、見返し 1 葉）",
+        "confidence_note": {
+          "ja": "verified の適用範囲が未決であるため transcribed_agreed に留める（oq_src_confidence_vocabulary_scope、2026-08-26 の裁定に従う）。"
+        }
+      },
+      "not_a_source_for": {
+        "ja": "1987 年の修士論文および手巻物統辞図の根拠資料ではない——Morel 2007 は当時存在しない。prior_analyses[handscroll_1987] との時系列上の非接触を明示する。本データセットにおける Morel の位置づけは、2026 年の README 執筆および層設計の際に、所蔵現物を知ったうえで行われたものである（N、2026-07-31／2026-08-02）。",
+        "principle": "同一テクストの所在（source identity）と、実際に参照された資料（actual consultation）を分離するという原則（sources.json documentary_sources[Ronat_1980_fascicle2].contents_additional_note）の、時系列軸における適用。"
+      },
+      "potential_resolution_paths": {
+        "status": "not_established",
+        "ja": "本項は、既に存在する未決事項に対して Morel が解決経路となりうる可能性を記録するものであり、対応関係を主張するものではない。新たな問いを立ててもいない——下記はいずれも既存の open question である。照合を行うまで、いかなる同定も行わない。",
+        "candidates": [
+          {
+            "existing_question": "sources.json > witnesses[Didot_proofs].access_note ／ oq_sources_didot_access_upgrade",
+            "ja": "Didot_proofs の access は現在 indirect（本データセットへの参照は手巻物欄外注を経由する間接情報のみ）。Morel 4° が Vollard 版初校（マラルメ訂正入り）を複製している。ただし Morel の 4° が proof_states.json の E1 に当たるか、後続校正刷の第 1 頁がどの刷にあたるかは未照合。同定を行うまで access は indirect のまま維持する。"
+          },
+          {
+            "existing_question": "proof_states.json > status_note.grounds[ground_coquille_ou_ambiguity]",
+            "ja": "OC p.426 [400] の où → ou が confidence: uncertain として残る。当該 coquille の出所は Cosmopolis 校正刷（coll. Mme Rouart-Valéry）であり、Morel 1° は Cosmopolis の訂正入り校正刷を複製している。ただし Morel が複製する組と Rouart-Valéry 蔵の組が同一かは未確認。"
+          },
+          {
+            "existing_question": "proof_states.json > status_note.grounds[ground_title_capitalization_detail]",
+            "ja": "var_title_order における C の大文字法の細部（Cosmopolis 題名の Coup が大文字か）が要精査のまま。Morel 1° の Cosmopolis 決定形が参照しうるが、未照合。"
+          }
+        ],
+        "not_applicable": {
+          "ja": "typography_scale.json の実測との照合には用いない——Morel 自身が手稿・校正刷の複製をわずかに縮小したと明記しており、寸法の根拠にならない。また level-0 は Ronat_1980 の実現形を測る層であり、校正刷の寸法はその対象ではない。"
+        }
+      },
+      "imprint": {
+        "publisher": "La Table Ronde",
+        "place": "Paris",
+        "year": "2007",
+        "isbn": "978-2-7103-2990-9",
+        "copyright_statement": "© La Table Ronde, Paris, 2007, pour la présente édition",
+        "edition_statement": "Édition et Observations de Françoise Morel",
+        "subtitle": "Manuscrit et épreuves",
+        "ja": "表紙および見返しの現物確認による（N、2026-08-27）。副題 « Manuscrit et épreuves » は、本書が新版の詩集ではなく手稿と校正刷の複製を主とする資料集として自称していることを示し、type: facsimile_edition の判定と一致する。"
+      },
+      "print_run": {
+        "ja": "Voluprint（papeteries de la Gorge de Domène）に印刷、2,500 部の番号入り（I〜X および 11〜2500）。",
+        "copy_identification": "N 所蔵本は no 2091（見返しに番号印字）。"
+      }
+    }
+  ],
+  "prior_analyses": {
+    "description": {
+      "ja": "本データセットに先行して存在した分析文書の台帳。テクストが現れた資料（witnesses）でも、他者による校訂・注釈（documentary_sources）でもなく、現在の編者自身による先行分析を登録する。level-0 はここから区切りの照合権威を得るが、内容（統語注・格文法分析・多読解注）は取り込まず、後続層向けの素材として所在のみを記録する。",
+      "en": "Registry of analytical documents that preceded this dataset: neither witnesses (materials in which the text appears) nor documentary sources (critical apparatus by others), but prior analyses by the present editor. Level-0 draws its segmentation authority from these while taking none of their content, recording only where that content lies for later layers."
+    },
+    "entries": [
+      {
+        "id": "handscroll_1987",
+        "label": "1987 年修士論文附録・十見開き手巻物統辞図（骰子一擲１〜１０）",
+        "author": "N（本データセットの編者）",
+        "created": "1987",
+        "access": "physical_copy",
+        "role": {
+          "ja": "分割粒度の照合権威（id_assignment_rules 第4項）。level-0 のユニット分割と手巻物の区切りを照合し、一致数を記録する（世代C は match_N_of_M、世代A・B は散文）。ただし『level-0 の unit は物理レイアウトによって決める』という運用原則（f2-f3 裁定 2026-07-25）が優先し、手巻物の分割が異なる場合は当該ユニットの note に差異として保存する。",
+          "en": "Authority for segmentation granularity: level-0 unit divisions are collated against the handscroll and the agreement recorded. The operating principle that level-0 units follow physical layout takes precedence; divergences are preserved as notes rather than adopted."
+        },
+        "content_not_ingested": {
+          "ja": "手巻物の欄外注（格文法注、解釈者シグラ C／D／M／K／G による多読解注、Cosmopolis 異読の併記、Igitur との連関、語源注等）は level-0 に取り込まない。syntax／readings／variants 各層向けの先行分析として、所在のみを各正本の collation_with_handscroll ／ handscroll_collation ／ segmentation_check に記録する。",
+          "en": "The marginal annotations are not ingested into level-0; their location is recorded for the syntax, readings, and variant layers."
+        },
+        "epistemic_status": {
+          "ja": "本文書は史料ではなく解釈である。1987 年時点の編者の分析を保存する一次資料であって、テクストの状態を証言するものではない。ただし Didot 校正刷の異読のように、本文書の欄外注を唯一の経路としてデータセットに入っている情報が存在する——その場合は当該レコードに間接情報である旨を明記する（vn_f8f9_didot_via_handscroll を参照）。",
+          "en": "This document is interpretation, not testimony: a primary source for the editor’s 1987 analysis, not a witness to the state of the text. Where information enters the dataset solely through its margins, the receiving record states that the route is indirect."
+        },
+        "aliases": [
+          "1987 手巻物統語図（骰子一擲７）",
+          "1987 手巻物統辞図（骰子一擲８）",
+          "1987 手巻物統辞図（骰子一擲９）",
+          "1987 手巻物統辞図（骰子一擲１０）"
+        ],
+        "leaf_labels_note": {
+          "ja": "世代C の正本は葉を evidence[].label（骰子一擲１／f2-f3／f4-f5／２／３）で指し、witness には登録 ID handscroll_1987 を用いる。世代B は witness 自体に葉名を含む自由記述を用いるため、上記 aliases で解決する。葉名の表記ゆれ（統語図／統辞図）は原資料および各記録の記載どおりに保持する。"
+        }
+      }
+    ]
+  },
+  "validation_rules": {
+    "ja": [
+      "実測レコード（cap_height 等）の witness は witnesses に登録された ID、またはその aliases のいずれかでなければならない。alias で書かれた値は、対応する登録 ID を指すものとして解決する。",
+      "documentary_source 由来のデータは confidence フィールドを必須とし、'verified' 以外の項目は現物照合 TODO を保持する。",
+      "prior_analyses に登録された文書は witness ではない。実測レコードの witness に用いてはならず、分割粒度・先行分析の参照にのみ用いる。",
+      "prior_analyses の文書を唯一の経路としてデータセットに入った情報は、受け側のレコードにその旨（間接情報であること）を明記しなければならない。"
+    ],
+    "en": [
+      "The witness of any measurement record must be a registered ID under witnesses, or one of its aliases; alias values resolve to the registered ID.",
+      "Data derived from a documentary_source must carry a confidence field; items below 'verified' retain a physical-collation TODO.",
+      "A document registered under prior_analyses is not a witness: it may not appear as the witness of a measurement record, and serves only for segmentation authority and reference to prior analysis.",
+      "Where information enters the dataset solely through a prior_analyses document, the receiving record must state that the route is indirect."
+    ],
+    "aliases_doctrine": {
+      "ja": "aliases は登録 ID の別表記であり、新たな資料を意味しない。alias の追加はいつでも許されるが、alias から ID への対応の変更は禁止する（citation_scheme.json の selector 規則に準じる）。alias は引用アドレスには用いない——ucd://source/<id> の <id> は常に登録 ID である。",
+      "en": "Aliases are alternative spellings of a registered ID, never a new material. Adding aliases is always permitted; changing an alias-to-ID mapping is forbidden. Aliases never appear in citation addresses."
+    }
+  },
+  "revisions": [
+    {
+      "date": "2026-08-25",
+      "by": "N（裁定）／ Claude（統合作業）",
+      "type": "registry_addition",
+      "source": "sources_update_2026-08-25.json",
+      "ja": "正本 12 本の witness 構造キー全走査（2026-08-25）にもとづく台帳の登録追加。設計変更ではなく、正本側は一切変更していない。①witnesses に Cosmopolis_1897（シグラ C、詳細は proof_states.json を正とする）と Didot_proofs（集合 witness、members E1–E5、access: indirect——本データセットへの参照は現時点ですべて手巻物欄外注を経由する間接情報）を追加 ②prior_analyses を第3のカテゴリとして新設し handscroll_1987 を登録——テクストが現れた資料でも他者による校訂でもない、現在の編者自身による先行分析であり、観察と解釈の区別を台帳の側で保つ ③世代B の自由記述 witness 8 種を aliases として各エントリに登録（案 C-1。正本側を登録 ID へ書き換えない）④validation_rules を 4 項に改訂——alias 解決の明文化、prior_analyses を witness として用いない規定、間接経路の明記義務を新設。schema_version は 0.3 据え置き。citation_scheme.json への container 追加は行わない（N 裁定）。"
+    },
+    {
+      "date": "2026-08-26",
+      "by": "N（裁定）／ Claude（調査・統合作業）",
+      "type": "registry_addition",
+      "source": "sources_update_2026-08-26.json",
+      "ja": "N 提供の現物写真（第2分冊の目次、および Tibor Papp «Qui mentalement sépare» 全 4 頁）にもとづく追加。①witnesses[Ronat_1980] の label を版元の責任表示どおりの完全形に改め、Tibor Papp を含めた——従来の label は、本データセットが測っている活字・紙面の実現者を書誌から落としていた。②responsibility を新設し、版自身の語彙（mise en œuvre et présentation / réalisation）をそのままキー名として保持する。現代の職能区分へ翻訳しない——両者とも第2分冊に理論的論考を寄せており、いずれの仕事も単一の機能に還元されない。③method_accounts を新設し、Papp による版内部からの方法記述（校正刷の恒常項と Mallarmé の要求した訂正の双方を踏まえた Didot 活字による復元）と、Marchal による外部からの評価（既存 caveat への参照。内容は複製しない）を、出所を分けて並置した。④documentary_sources に Ronat_1980_fascicle2（« LE GENRE, QUE C’EN DEVIENNE UN… »、28 p.）を追加。provides は現時点で実際に根拠として使用している 2 篇のみとし、残る 9 篇は contents に所在のみ記録する。Papp が記述する corps 16／24／60 と本データセットの実測 4 class との対応づけは行わず、typography_scale.json に open question も立てない——区分・計数の基準が資料上定義されておらず、問いを立てること自体が『解くべき対応関係が存在する』という仮説を先に置くことになるため。Mallarmé «Observation relative au poème» の再録は provides に含めない：f1 正本が参照したのはCosmopolis 1897 のコピー（立仙氏よりリプリント、1987 年修論本体の付録に収録）であり、第2分冊の再録ではないことが確認された（N、2026-08-26）——同一テクストの所在と、実際に参照された資料は別の事実である。Papp 論考の confidence は現物写真により全文確認済みだが transcribed_agreed に留める：現行語彙の verified が「N による Pléiade 本体との対照」を念頭に定義されており、その適用範囲が未決のため（内容への疑義ではなく、既存語彙の意味が確定する前に適用範囲を拡張しないための措置）。role・caveats・他の witnesses・prior_analyses・Pleiade_1998_Marchal・validation_rules は変更していない。typography_scale.json ほか他ファイル、正本 12 本も変更していない。Morel 2007 は別事項として保留。"
+    },
+    {
+      "date": "2026-08-27",
+      "by": "N（裁定）／ Claude（調査・統合作業）",
+      "type": "registry_addition",
+      "source": "sources_update_2026-08-27.json",
+      "ja": "documentary_sources に Morel_2007（Stéphane Mallarmé, Un coup de Dés jamais n’abolira le Hasard. Manuscrit et épreuves. Édition et Observations de Françoise Morel, Paris, La Table Ronde, 2007）を type: facsimile_edition として追加した。第2分冊（2026-08-26 登録）とは性格が異なる——第2分冊は『すでに根拠として使用している資料の登録漏れ』であったが、Morel は現在どの記録の根拠でもなく、README が『なぜこれが底本でないか』を説明するために名指している資料である。【README での扱い（r8 未確定事項 A2 の裁定、N 2026-08-27）】本文に残す。Ronat は第2分冊の解説で、各校正刷組のファクシミリ複製は——一刻も早くなされるべきだが——精神においてまったく異なる考証的事業であると書いており、Morel 2007 はその事業の実現にあたる。Ronat を level-0、Morel を後続層に置くことは、二つの版の編者が自分で引いた区分をそのまま採用していることになる。【記録した事項】版自身の記載による収録 6 項目（Cosmopolis 掲載形の二形態、草稿 4 頁と prière d’insérer、Vollard 版用手稿、同版初校と後続刷第 1 頁、本版のための再組版本文、Morel «Observations»）と各寸法。版が明記する「技術的理由により手稿と校正刷の複製はわずかに縮小されている」旨も記録した——実測を扱う本データセットが Morel から寸法を採らないことの根拠である。【明示した非接触】Morel 2007 は 1987 年の修士論文および手巻物統辞図の根拠資料ではない（当時未刊）。prior_analyses[handscroll_1987] との時系列上の非接触を記録した。【接続しなかったこと】proof_states.json には触れていない。Morel 1°・4° が既存の未決事項（Didot_proofs の access 昇格、Cosmopolis 校正刷の coquille、C の大文字法）の解決経路となりうる可能性は potential_resolution_paths に status: not_established として記録したが、同定は行っていない——新たな問いを立てたのではなく、既存の open question に候補を並置したにとどまる。照合が行われた時点で初めて proof_states 側を更新する。【訂正】収録目録 5° は「本版のために組み直された本文」であり Ronat_1980 の本文ではない。中間の要約にあった誤読を、原文の記載により訂正して記録した。書誌は表紙・見返しの現物確認による（2026-08-27）。confidence は transcribed_agreed（verified の適用範囲が未決のため、2026-08-26 の裁定に従う）。witnesses・prior_analyses・既存 documentary_sources 2 件・validation_rules は変更していない。proof_states.json・typography_scale.json・正本 12 本も変更していない。"
+    }
+  ]
+}

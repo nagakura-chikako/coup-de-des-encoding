@@ -1,0 +1,57 @@
+{
+  "file": "typography_scale_update_2026-07-20",
+  "description": {
+    "ja": "2026-07-20 の実測（f16-f17）による typography_scale.json への統合。(A) は class 2 への錨の追加（f17 SI、5mm 確定——NRF 版も同値で一致）。(B) は measurement_log 追記。(C) はイタリック小文字 f の上下突き抜け（アセンダー＋ディセンダー）の実質高実測——公称サイズと視覚的実質の乖離（錯視効果）の記録。(D) は Cosmopolis 版の対比サイズの覚え書き（異同層向け、今回は深追いしない）。",
+    "en": "Integration into typography_scale.json from the 2026-07-20 measurements (f16-f17). (A) adds a class 2 anchor (SI on f17, confirmed 5 mm; the NRF copy agrees). (B) appends to the measurement_log. (C) records the measured full span (ascender + descender) of the italic lowercase f — documenting the divergence between nominal size and visual presence. (D) notes the Cosmopolis contrast sizes for the variant layer, not pursued now."
+  },
+
+  "A_class_2_anchor": {
+    "size_class": "2",
+    "add_anchors": [
+      {
+        "anchor_word": "SI",
+        "anchor_location": { "spread": "f16-f17", "page": "f17", "text_unit": "tu_f17_si" },
+        "cap_height_mm": 5.0,
+        "tolerance_mm": 0.5,
+        "style": "italique",
+        "measurement": { "method": "ruler_on_page", "date": "2026-07-20", "measured_by": "N", "method_note": "method は従来と同一と仮定して記載。異なる場合は要訂正。" },
+        "witness_note": {
+          "ja": "Ronat_1980・NRF 系コピーの両方で 5mm を確認、両者一致。周囲のイタリック小文字は 4mm（class 3）の平原で、f12-f13 以来の連続と整合。",
+          "en": "Measured 5 mm in both Ronat_1980 and the NRF-line copy; both witnesses agree. Surrounding italic lowercase remains the 4 mm (class 3) plain, consistent since f12-f13."
+        }
+      }
+    ],
+    "note": {
+      "ja": "f16-f17 レコードの tu_f17_si（写真比推定で class 2 暫定付与）は本実測により確定。level-0 側 note は更新済み。",
+      "en": "The provisional class 2 on tu_f17_si (photo-ratio estimate) is hereby confirmed; the level-0 record note has been updated."
+    },
+    "status": "verified"
+  },
+
+  "B_measurement_log_append": {
+    "measured_by": "N",
+    "method": "ruler_on_page",
+    "tolerance_mm": 0.5,
+    "date": "2026-07-20",
+    "results": [
+      { "scope": "f17 SI (italique capitals)", "witness": "Ronat_1980", "cap_height_mm": 5.0 },
+      { "scope": "f17 SI (italique capitals)", "witness": "NRF系（コピー）", "cap_height_mm": 5.0 },
+      { "scope": "f16-f17 italique 小文字（平原）", "witness": "Ronat_1980", "nominal_mm": 4.0 },
+      { "scope": "italique 小文字 f（上下突き抜けの全高）", "witness": "Ronat_1980", "full_span_mm": 5.0 },
+      { "scope": "italique 小文字 f（上下突き抜けの全高）", "witness": "NRF系（コピー）", "full_span_mm": 5.0 },
+      { "scope": "italique 小文字 f（上下突き抜けの全高）", "witness": "Cosmopolis_1897（コピー）", "full_span_mm": 3.0 }
+    ]
+  },
+
+  "C_italic_f_protrusion": {
+    "ja": "glyph_ink 設計時（2026-07-14）に N が注意喚起した「イタリック小文字で f のみ上下突き抜け（extension: both）」の実測化。NRF・Ronat では公称 4mm（class 3）の小文字に対し f の実質全高は 5mm——すなわち class 2 の SI キャップ高と同値に達する。Cosmopolis では公称 2mm の小文字に対し f は 3mm。活字サイズ（公称）と見た目の実質（視覚的専有高）が乖離し、錯視として働く効果の記録。Ronat／NRF では f が本文と SI のサイズ階層を局所的に平準化する方向に、Cos では SI 8mm／小文字 2mm の急峻な階層が f 3mm を含めてなお保たれる方向に働く。glyph 単位の詳細記述は glyph_ink.json（f_it, extension: both）と将来の ink／layout 層へ。",
+    "en": "Measurement of the italic lowercase f’s double protrusion (extension: both), flagged by N at the glyph_ink design stage (2026-07-14). In NRF/Ronat the f spans 5 mm against a 4 mm nominal lowercase — reaching the very cap height of the class 2 SI. In Cosmopolis the f spans 3 mm against a 2 mm nominal. Nominal type size and visual presence thus diverge, producing an optical effect: in Ronat/NRF the f locally flattens the size hierarchy between body and SI, while in Cosmopolis the steep 8 mm / 2 mm hierarchy survives even the 3 mm f. Glyph-level detail belongs to glyph_ink.json (f_it, extension: both) and the future ink/layout layers.",
+    "status": "recorded"
+  },
+
+  "D_cosmopolis_contrast_note": {
+    "ja": "Cosmopolis 1897（コピー実測、2026-07-20、N）：SI は 8mm、イタリック小文字は 2mm。Ronat の 5mm／4mm（比 1.25）に対し Cos は 8mm／2mm（比 4.0）で、条件構造 SI の卓越性の実現がまったく異なる。type_class が異同軸になるという f12-f13 での観察の追加事例。今回は深追いせず、variant 層向けの覚え書きに留める。",
+    "en": "Cosmopolis 1897 (measured on the photocopy, 2026-07-20, N): SI at 8 mm, italic lowercase at 2 mm. Against Ronat’s 5/4 ratio (1.25), Cosmopolis realizes the conditional SI at a 4.0 ratio — a further instance of type size itself becoming a variant axis (cf. the f12-f13 observation). Recorded for the variant layer only; not pursued now.",
+    "status": "recorded"
+  }
+}

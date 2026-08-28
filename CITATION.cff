@@ -1,0 +1,43 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it as below, using a specific release tag."
+
+title: "Un Coup de Dés: a layered, machine-readable encoding"
+abstract: >-
+  A citable minimal encoding of the printed layout of Stéphane
+  Mallarmé's Un Coup de Dés jamais n'abolira le Hasard, as set in the
+  Ronat–Papp edition of 1980. The base layer (level-0) records a
+  deliberately limited set of observable typographic features and
+  excludes syntax, layout coordinates, variants, and interpretation,
+  so that later layers can be added by reference without altering it.
+
+type: dataset
+
+authors:
+  - family-names: Nagakura
+    given-names: Chikako
+    # orcid: "https://orcid.org/0000-0000-0000-0000"   # add when obtained
+
+version: "1.0.0"
+date-released: "2026-08-28"
+url: "https://github.com/nagakura-chikako/coup-de-des-encoding"
+repository-code: "https://github.com/nagakura-chikako/coup-de-des-encoding"
+
+license:
+  - CC-BY-4.0   # data, docs, and prose
+  - MIT         # tools/
+
+keywords:
+  - Mallarmé
+  - Un Coup de Dés
+  - textual scholarship
+  - typography
+  - layered encoding
+  - data architecture
+
+# After the first Zenodo release, add the concept DOI here — the one
+# that always resolves to the newest version — not a version DOI:
+#
+# identifiers:
+#   - type: doi
+#     value: "10.5281/zenodo.XXXXXXX"
+#     description: "Concept DOI — resolves to the latest version"

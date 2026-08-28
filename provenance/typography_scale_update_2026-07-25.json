@@ -1,0 +1,82 @@
+{
+  "file": "typography_scale_update_2026-07-25",
+  "description": {
+    "ja": "oq_l0_f1_poeme_8mm に対する N 裁定（2026-07-25、案 (a) 採用）の統合案。(A) typography_scale.json に paratext 附属節を新設し、本文 census 4層の外側にある f1 の 8mm 錨（POÈME）を記録する。4層 census（14／5／4／3mm）は詩本文（f3〜f23）全点実測で完結した事実としてそのまま維持し、パラテクスト固有サイズは層として追加しない。(B) measurement_log 追記（f1 全4要素の N 実測）。(C) level0_schema.json への注記案——type_class は census 4層内のみを表し、census 外のパラテクスト実測サイズは null 許容（note と附属節参照を必須とする）。",
+    "en": "Integration proposal implementing N's ruling (2026-07-25, option (a)) on oq_l0_f1_poeme_8mm. (A) adds a paratext annex to typography_scale.json holding the f1 anchor POÈME (8 mm), outside the four poem-body tiers; the completed 4-tier census (14/5/4/3 mm) is preserved untouched, and no fifth tier is introduced. (B) appends N's measurements of all four f1 elements to the measurement_log. (C) proposes an annotation to level0_schema.json: type_class denotes the census tiers only; measured paratext sizes outside the census may carry type_class null, with a mandatory note referencing this annex."
+  },
+  "resolves": {
+    "open_question": "oq_l0_f1_poeme_8mm (f1_level0.json)",
+    "resolved_by": "N",
+    "resolved_on": "2026-07-25",
+    "ruling": "案 (a)：paratext 附属節＋level-0 の census 外 null 許容"
+  },
+  "A_paratext_annex_add": {
+    "annex_name": "paratext_sizes",
+    "principle": {
+      "ja": "本文 census 4層は詩本文（f3〜f23）の完結した実測事実であり、パラテクスト（扉等）のサイズはこの層モデルに混入させない。census のいずれの層とも一致しないパラテクスト実測サイズは本附属節に錨として記録する。census と同寸のパラテクスト要素（f1 の 5mm・4mm）は level-0 上 class 2・class 3 に対応づけてよいが、census の錨としては扱わない。"
+    },
+    "anchors": [
+      {
+        "anchor_word": "POÈME",
+        "anchor_location": {
+          "spread": "f1",
+          "face": "f1",
+          "text_unit": "tu_f1_poeme"
+        },
+        "style": "romain",
+        "cap_height_mm": 8.0,
+        "tolerance_mm": 0.5,
+        "measurement": {
+          "method": "ruler_on_page",
+          "date": "2026-07-24",
+          "measured_by": "N",
+          "method_note": "N 原本実測報告（2026-07-24）。8mm は本文 census 4層（14／5／4／3mm）のいずれにも該当しない、扉パラテクスト固有のサイズ。"
+        },
+        "status": "verified",
+        "verification_note": "根拠の区別：8mm の数値根拠は 2026-07-24 の N 原本定規実測。2026-07-25 の N 作業は f1 記録全体の原本逐語照合（訂正0件）であり、サイズの再実測ではない。"
+      }
+    ]
+  },
+  "B_measurement_log_append": {
+    "measured_by": "N",
+    "method": "ruler_on_page",
+    "tolerance_mm": 0.5,
+    "witness": "Ronat_1980",
+    "date": "2026-07-24",
+    "results": [
+      {
+        "scope": "f1 POÈME（tu_f1_poeme）",
+        "cap_height_mm": 8.0,
+        "note": "census 外——paratext 附属節の錨。"
+      },
+      {
+        "scope": "f1 タイトル行（tu_f1_title、italique）",
+        "cap_height_mm": 5.0,
+        "note": "タイトル全体で同一。class 2 と同寸（level-0 で class 2 を付与）。"
+      },
+      {
+        "scope": "f1 par（tu_f1_par、romain）",
+        "cap_height_mm": 4.0,
+        "note": "class 3 と同寸（level-0 で class 3 を付与）。"
+      },
+      {
+        "scope": "f1 STÉPHANE MALLARMÉ（tu_f1_stephane_mallarme、romain）",
+        "cap_height_mm": 5.0,
+        "note": "class 2 と同寸（level-0 で class 2 を付与）。"
+      }
+    ]
+  },
+  "C_level0_schema_annotation_proposal": {
+    "target": "level0_schema.json > field_definitions.units.type_class および validation.machine_checks",
+    "ja": "追記案：『type_class は本文 typography census の4層（1=14mm, 2=5mm, 3=4mm, 4=3mm）への参照であり、census の対象範囲は詩本文（f3〜f23）である。パラテクスト面（f1 等）のユニットで実測サイズが census のいずれの層とも一致しない場合、type_class は null を許容する。その際 note に実測値と typography_scale.json paratext 附属節への参照を必須とする。』machine checks の対応修正：type_class ∈ {1,2,3,4} ∨ (type_class=null ∧ note 非 null ∧ paratext 附属節に当該ユニットの錨が存在)。",
+    "status": "proposed（level0_schema.json 本体への反映は N の編集による）"
+  },
+  "integration_status": {
+    "state": "proposal_not_yet_integrated",
+    "ja": "本裁定は現時点で本統合案ファイルと check_f1.py にのみ反映されており、正典本体は未更新。残作業：①typography_scale.json 本体への paratext 附属節（A 節）と measurement_log（B 節）の統合 ②level0_schema.json 本体への type_class 注記（C 節）の反映と validation.machine_checks の更新。いずれも N の編集により正典化する。",
+    "remaining_targets": [
+      "typography_scale.json",
+      "level0_schema.json"
+    ]
+  }
+}

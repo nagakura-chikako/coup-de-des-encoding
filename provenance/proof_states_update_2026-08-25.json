@@ -1,0 +1,89 @@
+{
+  "file": "proof_states_update_2026-08-25.json",
+  "kind": "review_draft",
+  "target": "proof_states.json",
+  "schema_version": "0.3",
+  "scope_declaration": {
+    "ja": "本 update が扱うのは var_fiancailles_capitalization.linked_spread の解決 1 件のみである。他の未決事項には触れず、status: draft も維持する。tu_f6_labime／tu_f6_l_abime の ID 不一致は本 update の対象外——別個の裁定事項として切り離す（N 指示、2026-08-25）。",
+    "en": "This update resolves exactly one item: the linked_spread of var_fiancailles_capitalization. It touches nothing else and does not lift status: draft. The tu_f6_labime / tu_f6_l_abime identifier mismatch is explicitly out of scope."
+  },
+
+  "A_resolve_linked_spread": {
+    "target_node": "proof_states.json > key_variants[] > var_fiancailles_capitalization",
+    "change": {
+      "field": "linked_spread",
+      "before": "TODO（該当スプレッド記録の作成時に接続）",
+      "after": "f10-f11"
+    },
+    "evidence": {
+      "ja": "f10-f11 level-0 正本（2026-07-18 起草、原本照合済）に tu_f11_fiancailles が実在する——face: f11、seq: 210、text: 'Fiançailles'、type_class: 3、style: romain。TODO の条件『該当スプレッド記録の作成時に接続』が満たされた。",
+      "en": "tu_f11_fiancailles exists in the collated f10-f11 level-0 record (face f11, seq 210, text 'Fiançailles', class 3, roman), satisfying the condition stated in the TODO."
+    },
+    "unit_reference_note": {
+      "ja": "text_unit を linked_spread と併せて記録するかは判断を要する。既存の var_abime_capitalization も linked_spread: 'f6-f7' のみを持ち、text_unit を持たない。本 update では既存の粒度に合わせ linked_spread のみを記す——粒度の変更は本 update の範囲外とする。なお正本側の text 'Fiançailles' は E4 以降の決定形であり、E4 におけるマラルメ自身の大文字化（OC I p.374 var. d）の結果が Ronat_1980 に継承されていることを、この接続が裏づける。",
+      "en": "Whether to record text_unit alongside linked_spread is left open: the existing var_abime_capitalization carries linked_spread only. This update matches the existing granularity."
+    },
+    "checked": {
+      "date": "2026-08-25",
+      "by": "Claude（調査）／ N（裁定）"
+    }
+  },
+
+  "B_status_maintained": {
+    "target_node": "proof_states.json > status",
+    "value": "draft",
+    "change": "なし（維持）",
+    "ruling": {
+      "date": "2026-08-25",
+      "by": "N",
+      "ja": "本 update は draft 解除ではない。『解決可能な TODO を 1 件減らした』ものとして記録する。draft の根拠は複数あり、TODO 1 件の解消では解除条件を満たさない。"
+    },
+    "remaining_grounds_for_draft": [
+      {
+        "id": "ground_confidence_ceiling",
+        "ja": "confidence の上限が transcribed_agreed であること。sources.json の定義では 'verified' への昇格に N による Pléiade 本体との現物照合を要するが、本ファイルの confidence 16 箇所の内訳は transcribed_agreed 15／uncertain 1 であり、verified はゼロ。ファイル全体が転記突合段階にある。",
+        "type": "現物照合により解決可能",
+        "status": "open"
+      },
+      {
+        "id": "ground_coquille_ou_ambiguity",
+        "ja": "cosmopolis_proof_corrections.coquilles[3]（OC p.426 [400]、où → ou）が confidence: uncertain。アクセント削除か選択の ou への変更かで、転記段階では両解釈が併記されていた。要現物確認。",
+        "type": "現物照合により解決可能",
+        "status": "open"
+      },
+      {
+        "id": "ground_title_capitalization_detail",
+        "ja": "var_title_order の決定形読みに『C との大文字法の細部差は要精査：Cosmopolis 題名では Coup が大文字との注あり（OC I p.1325 注2）』が付されている。なお Ronat_1980 の f1 題名行は逐語照合により小文字 coup で確定済み（f1 正本、2026-07-25）であり、Cos との差異は異同層の対象。",
+        "type": "現物照合により解決可能",
+        "status": "open"
+      },
+      {
+        "id": "ground_conjectural_calendar",
+        "ja": "proof_census.history の刷カレンダーが推定（conjectural）であること。これは Marchal 自身が conjectural と述べているものであり、現物照合によっても確定しない。未決のままであることが正しい記録である。",
+        "type": "原理的に未確定——解決を目指さない",
+        "status": "permanently_open"
+      }
+    ],
+    "grounds_note": {
+      "ja": "上記 4 件のうち 3 件は現物照合により解決可能だが、1 件（ground_conjectural_calendar）は解決しない種類の未決である。draft は『未完成』を意味するのではなく、『現物照合を経ていない転記突合段階にあり、かつ原理的に確定しない項目を含む』ことを意味する。v1.1 への収録は status: draft のまま行う——リリースへの収録と当該モジュールの確定は別の事柄である（release_log.json の modules_included における status 明示を参照）。",
+      "en": "Three of the four grounds are resolvable by physical collation; one is not, and is correctly left open. 'draft' here does not mean unfinished but: not yet collated against the originals, and containing items that will never be settled. Inclusion in v1.1 proceeds with status: draft — being included in a release and being settled are different things."
+    }
+  },
+
+  "C_out_of_scope": {
+    "ja": [
+      "tu_f6_labime ／ tu_f6_l_abime の ID 不一致——typography_scale.json の錨 ID と f6-f7 正本 ID の不一致であり、別個の裁定事項。本ファイルの var_abime_capitalization が記録する l’abîme → l’Abîme の大文字化（E4、マラルメ自身の修正）は、その裁定の資料にはなりうるが、大文字化の問題と ID の綴りの問題は別である。両者を同一 update に混ぜない（N 指示、2026-08-25）。",
+      "proof_states.json の他の全ノード——states／sigla／proof_census／cosmopolis_proof_corrections／posthumous_note／validation_rules は変更しない。",
+      "var_abime_capitalization および var_title_order は変更しない。"
+    ]
+  },
+
+  "D_unchanged": {
+    "ja": [
+      "status: draft（維持）",
+      "schema_version：0.3 据え置き",
+      "正本 12 本：変更しない",
+      "sources.json：本 update では変更しない（別 update）"
+    ]
+  }
+}

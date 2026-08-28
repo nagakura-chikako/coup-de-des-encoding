@@ -1,0 +1,198 @@
+{
+  "file": "sources_update_2026-08-25.json",
+  "kind": "review_draft",
+  "target": "sources.json",
+  "schema_version": "0.3",
+  "version_policy": {
+    "ja": "schema_version は 0.3 据え置き。台帳への登録追加と検証規則の明確化であり、設計変更ではない。sources.json 本体および正本 12 本は本 update では変更しない。"
+  },
+  "purpose": {
+    "ja": "正本 12 本が参照する資料 ID のうち、sources.json に未登録のもの、および世代B の自由記述形式を、台帳側の追加のみで解決する。正本側は一切変更しない——記録は書かれたときの形式のまま保持し、台帳が現在の機械にも読めるようにする（level0_schema.json の record_generations／optional_fields.alias_of と同じ解法）。",
+    "en": "Resolve, by additions to the registry alone, the source IDs referenced from the twelve level-0 records that are not yet registered here, together with the free-text witness strings used by generation-B records. No record is altered: the registry is taught to read them."
+  },
+
+  "survey": {
+    "ja": "2026-08-25、正本 12 本の構造キー witness を全走査した結果。",
+    "findings": [
+      { "value": "Ronat_1980", "spreads": 9, "registered": true },
+      { "value": "NRF_1914", "spreads": 5, "registered": true, "note": "世代C のみ。世代B は自由記述 'NRF系（コピー）' 等を用いる" },
+      { "value": "Cosmopolis_1897", "spreads": 5, "registered": false, "action": "A 節で witnesses に登録" },
+      { "value": "handscroll_1987", "spreads": 5, "registered": false, "action": "B 節で prior_analyses に登録（witnesses には入れない）" },
+      { "value": "Didot_proofs", "spreads": 1, "registered": false, "action": "A 節で集合 witness として登録", "note": "f8-f9 の variant_notes[].witness にのみ出現。evidence[] には現れない" },
+      { "value": "世代B の自由記述 8 種", "spreads": 4, "registered": false, "action": "C 節で aliases として解決" }
+    ],
+    "generation_note": {
+      "ja": "世代A（f10-f11／f12-f13／f14-f15）は構造キー witness を持たない（transcription_source が散文型）。したがって本 update の適用対象は世代B・C のみであり、世代A に未解決参照は存在しない。"
+    }
+  },
+
+  "A_witnesses_add": {
+    "target_node": "sources.json > witnesses（既存 2 件に追加）",
+    "add": [
+      {
+        "id": "Cosmopolis_1897",
+        "label": "« Un Coup de Dés jamais n’abolira le Hasard », Cosmopolis, t. VI, n° 17, mai 1897, p. 417–427",
+        "access": "photocopy",
+        "role": {
+          "ja": "異同層向けの照合 witness。誌面コピー（一部に N の朱筆校合注記あり）。雑誌の技術的制約により単頁が単位であり、見開き単位の Ronat_1980 とは面構成そのものが異なる。level-0 の転記には用いず、variant_notes における所在記録の対象。",
+          "en": "Collation witness for the variant layer, consulted as photocopies (some bearing N’s red-ink collation notes). Constrained to the single page as its unit, its page structure differs from the double-page unit of Ronat_1980. Not used for level-0 transcription; referenced in variant_notes only."
+        },
+        "state_registry": {
+          "ja": "テクスト状態としてのシグラは C。詳細（序文の著者性、Rouart-Valéry 蔵校正刷の修正一覧等）は proof_states.json を正とし、本台帳では重複記載しない。",
+          "sigla": "C",
+          "detailed_registry": "proof_states.json"
+        },
+        "aliases": [
+          "Cosmopolis 1897（コピー）",
+          "Cosmopolis 1897（コピー、N朱筆校合入り）"
+        ]
+      },
+      {
+        "id": "Didot_proofs",
+        "type": "collective_witness",
+        "label": "Épreuves Firmin-Didot pour l’édition définitive（決定版のための校正刷、第1〜第5刷）",
+        "access": "indirect",
+        "members": ["E1", "E2", "E3", "E4", "E5"],
+        "detailed_registry": "proof_states.json",
+        "role": {
+          "ja": "校正刷 E1–E5 の総称としての集合 witness。個々の刷の日付・現存組・異読は proof_states.json の states を正とし、本台帳では重複記載しない——sources.json は入口のみを保持する。",
+          "en": "A collective witness naming the five Firmin-Didot pulls. Dates, surviving sets, and readings of each pull are held in proof_states.json; this registry keeps only the entry point and does not duplicate them."
+        },
+        "access_note": {
+          "ja": "重要——本データセットにおける Didot_proofs への参照は、現時点ではすべて間接的である。唯一の参照（f8-f9 の vn_f8f9_didot_via_handscroll）は 1987 年手巻物葉の欄外注からの回収であり、原資料を直接確認したものではない旨が当該レコードに明記されている。すなわち Didot_proofs は prior_analyses（handscroll_1987）を経由してのみデータセットに入っている。access を 'indirect' とするのはこの経路を明示するためであり、将来 図版・現物により直接確認された場合は 'photographed_pages' 等へ更新する。",
+          "en": "All references to Didot_proofs in this dataset are currently indirect: the sole reference (vn_f8f9_didot_via_handscroll) is recovered from a marginal note on the 1987 handscroll and is marked as not verified against the originals. Didot_proofs therefore enters the dataset only by way of prior_analyses."
+        }
+      }
+    ]
+  },
+
+  "B_prior_analyses_add": {
+    "target_node": "sources.json（トップレベルに新設。witnesses / documentary_sources と並ぶ第3のカテゴリ）",
+    "ruling": {
+      "date": "2026-08-25",
+      "by": "N",
+      "ja": "handscroll_1987 を witnesses に登録しない。witnesses は『テクストが現れた資料』であり、手巻物統辞図はそのテクストを 1987 年に現在の編者自身が分節・分析した結果である。同じ箱に入れると、本データセットが基礎に置く観察と解釈の区別が台帳の側で崩れる。名称は prior_analyses——『現在のエンコーディングに先行して存在した分析』の意。"
+    },
+    "prior_analyses": {
+      "description": {
+        "ja": "本データセットに先行して存在した分析文書の台帳。テクストが現れた資料（witnesses）でも、他者による校訂・注釈（documentary_sources）でもなく、現在の編者自身による先行分析を登録する。level-0 はここから区切りの照合権威を得るが、内容（統語注・格文法分析・多読解注）は取り込まず、後続層向けの素材として所在のみを記録する。",
+        "en": "Registry of analytical documents that preceded this dataset: neither witnesses (materials in which the text appears) nor documentary sources (critical apparatus by others), but prior analyses by the present editor. Level-0 draws its segmentation authority from these while taking none of their content, recording only where that content lies for later layers."
+      },
+      "entries": [
+        {
+          "id": "handscroll_1987",
+          "label": "1987 年修士論文附録・十見開き手巻物統辞図（骰子一擲１〜１０）",
+          "author": "N（本データセットの編者）",
+          "created": "1987",
+          "access": "physical_copy",
+          "role": {
+            "ja": "分割粒度の照合権威（id_assignment_rules 第4項）。level-0 のユニット分割と手巻物の区切りを照合し、一致数を記録する（世代C は match_N_of_M、世代A・B は散文）。ただし『level-0 の unit は物理レイアウトによって決める』という運用原則（f2-f3 裁定 2026-07-25）が優先し、手巻物の分割が異なる場合は当該ユニットの note に差異として保存する。",
+            "en": "Authority for segmentation granularity: level-0 unit divisions are collated against the handscroll and the agreement recorded. The operating principle that level-0 units follow physical layout takes precedence; divergences are preserved as notes rather than adopted."
+          },
+          "content_not_ingested": {
+            "ja": "手巻物の欄外注（格文法注、解釈者シグラ C／D／M／K／G による多読解注、Cosmopolis 異読の併記、Igitur との連関、語源注等）は level-0 に取り込まない。syntax／readings／variants 各層向けの先行分析として、所在のみを各正本の collation_with_handscroll ／ handscroll_collation ／ segmentation_check に記録する。",
+            "en": "The marginal annotations are not ingested into level-0; their location is recorded for the syntax, readings, and variant layers."
+          },
+          "epistemic_status": {
+            "ja": "本文書は史料ではなく解釈である。1987 年時点の編者の分析を保存する一次資料であって、テクストの状態を証言するものではない。ただし Didot 校正刷の異読のように、本文書の欄外注を唯一の経路としてデータセットに入っている情報が存在する——その場合は当該レコードに間接情報である旨を明記する（vn_f8f9_didot_via_handscroll を参照）。",
+            "en": "This document is interpretation, not testimony: a primary source for the editor’s 1987 analysis, not a witness to the state of the text. Where information enters the dataset solely through its margins, the receiving record states that the route is indirect."
+          },
+          "aliases": [
+            "1987 手巻物統語図（骰子一擲７）",
+            "1987 手巻物統辞図（骰子一擲８）",
+            "1987 手巻物統辞図（骰子一擲９）",
+            "1987 手巻物統辞図（骰子一擲１０）"
+          ],
+          "leaf_labels_note": {
+            "ja": "世代C の正本は葉を evidence[].label（骰子一擲１／f2-f3／f4-f5／２／３）で指し、witness には登録 ID handscroll_1987 を用いる。世代B は witness 自体に葉名を含む自由記述を用いるため、上記 aliases で解決する。葉名の表記ゆれ（統語図／統辞図）は原資料および各記録の記載どおりに保持する。"
+          }
+        }
+      ]
+    }
+  },
+
+  "C_aliases_add": {
+    "target_node": "sources.json > witnesses[] および prior_analyses.entries[]（各エントリに aliases を追加）",
+    "ruling": {
+      "date": "2026-08-25",
+      "by": "N",
+      "ja": "案 C-1 採用。世代B の正本が用いる自由記述の witness 値を、正本側で登録 ID へ書き換えることはしない。台帳側に aliases を置き、『この表記もこの資料を指す』と読めるようにする。過去の記録を矯正せず、現在の機械が読めるようにするという本プロジェクトの原則に従う。"
+    },
+    "alias_map": {
+      "Ronat_1980": [],
+      "NRF_1914": ["NRF系（コピー）", "NRF系（コピー、単ページ接写）"],
+      "Cosmopolis_1897": ["Cosmopolis 1897（コピー）", "Cosmopolis 1897（コピー、N朱筆校合入り）"],
+      "handscroll_1987": [
+        "1987 手巻物統語図（骰子一擲７）",
+        "1987 手巻物統辞図（骰子一擲８）",
+        "1987 手巻物統辞図（骰子一擲９）",
+        "1987 手巻物統辞図（骰子一擲１０）"
+      ]
+    },
+    "occurrences": {
+      "ja": "世代B 4 本（f16-f17／f18-f19／f20-f21／f22-f23）の transcription_source.witnesses[].witness に出現。同じ 4 本の Ronat_1980 はすでに登録 ID 形式であり、alias を要しない。",
+      "detail": [
+        { "alias": "NRF系（コピー）", "spreads": ["f16-f17", "f18-f19", "f20-f21", "f22-f23"] },
+        { "alias": "NRF系（コピー、単ページ接写）", "spreads": ["f18-f19"] },
+        { "alias": "Cosmopolis 1897（コピー、N朱筆校合入り）", "spreads": ["f16-f17", "f18-f19"] },
+        { "alias": "Cosmopolis 1897（コピー）", "spreads": ["f20-f21", "f22-f23"] },
+        { "alias": "1987 手巻物統語図（骰子一擲７）", "spreads": ["f16-f17"] },
+        { "alias": "1987 手巻物統辞図（骰子一擲８）", "spreads": ["f18-f19"] },
+        { "alias": "1987 手巻物統辞図（骰子一擲９）", "spreads": ["f20-f21"] },
+        { "alias": "1987 手巻物統辞図（骰子一擲１０）", "spreads": ["f22-f23"] }
+      ]
+    },
+    "aliases_doctrine": {
+      "ja": "aliases は登録 ID の別表記であり、新たな資料を意味しない。alias の追加はいつでも許されるが、alias から ID への対応の変更は禁止する（citation_scheme.json の selector 規則に準じる）。alias は引用アドレスには用いない——ucd://source/<id> の <id> は常に登録 ID である。",
+      "en": "Aliases are alternative spellings of a registered ID, never a new material. Adding aliases is always permitted; changing an alias-to-ID mapping is forbidden. Aliases never appear in citation addresses."
+    }
+  },
+
+  "D_validation_rules_revision": {
+    "target_node": "sources.json > validation_rules",
+    "current": [
+      "実測レコード（cap_height 等）の witness は witnesses に登録された ID でなければならない。",
+      "documentary_source 由来のデータは confidence フィールドを必須とし、'verified' 以外の項目は現物照合 TODO を保持する。"
+    ],
+    "revised": {
+      "ja": [
+        "実測レコード（cap_height 等）の witness は witnesses に登録された ID、またはその aliases のいずれかでなければならない。alias で書かれた値は、対応する登録 ID を指すものとして解決する。",
+        "documentary_source 由来のデータは confidence フィールドを必須とし、'verified' 以外の項目は現物照合 TODO を保持する。",
+        "prior_analyses に登録された文書は witness ではない。実測レコードの witness に用いてはならず、分割粒度・先行分析の参照にのみ用いる。",
+        "prior_analyses の文書を唯一の経路としてデータセットに入った情報は、受け側のレコードにその旨（間接情報であること）を明記しなければならない。"
+      ],
+      "en": [
+        "The witness of any measurement record must be a registered ID under witnesses, or one of its aliases; alias values resolve to the registered ID.",
+        "Data derived from a documentary_source must carry a confidence field; items below 'verified' retain a physical-collation TODO.",
+        "A document registered under prior_analyses is not a witness: it may not appear as the witness of a measurement record, and serves only for segmentation authority and reference to prior analysis.",
+        "Where information enters the dataset solely through a prior_analyses document, the receiving record must state that the route is indirect."
+      ]
+    },
+    "note": {
+      "ja": "第1項の改訂は世代B の自由記述を適法にするためのものであり、規則を緩めるものではない——alias は台帳に明示的に登録された値に限られ、任意の文字列を許すわけではない。第3・第4項は本 update で新設した prior_analyses に対応する。"
+    }
+  },
+
+  "E_unchanged": {
+    "ja": [
+      "正本 12 本：変更しない。",
+      "既存 witnesses（Ronat_1980 / NRF_1914）の定義・role・caveats：変更しない。",
+      "documentary_sources（Pleiade_1998_Marchal）：変更しない。",
+      "proof_states.json：本 update では変更しない（別 update）。",
+      "schema_version：0.3 据え置き。"
+    ]
+  },
+
+  "F_open_for_ruling": [
+    {
+      "id": "oq_sources_didot_access_upgrade",
+      "status": "open",
+      "ja": "Didot_proofs の access を 'indirect' としたが、Berès A 等の図版が入手できた場合の昇格手続（'photographed_pages' への変更と、それに伴う vn_f8f9_didot_via_handscroll の間接情報注記の扱い）は定めていない。maquette_typography.json の verification_todos にも同趣旨の将来課題がある。"
+    },
+    {
+      "id": "oq_sources_generation_a_witness",
+      "status": "open",
+      "ja": "世代A（f10-f11／f12-f13／f14-f15）は構造キー witness を持たず、資料は transcription_source の散文中に記される。現時点で未解決参照は生じないが、将来 witness を機械的に集計する場合、世代A のみ集計対象外となる。level0_schema.json の record_generations に記述を足すか、集計側で許容するかは未定。"
+    }
+  ]
+}

@@ -1,0 +1,300 @@
+{
+  "file": "f10-f11_level0.json",
+  "schema_version": "0.3",
+  "schema_ref": "level0_schema.json (approved 2026-07-18)",
+  "spread_id": "f10-f11",
+  "record_depth": "level-0",
+  "base_state": "Ronat_1980",
+  "recorded": "2026-07-18",
+  "recorded_by": "N",
+  "status": "collated_with_original",
+  "transcription_source": {
+    "ja": "転記の底本は N 提供の Ronat_1980 見開き撮影画像（2026-07-18）。同時提供のもう1点（IMG_6405）は当初「f11 接写」と誤認したが、Cosmopolis 版該当頁（p.422）に N が1914系の異読を朱筆で書き込んだ校合コピーと判明（2026-07-18 訂正）。転記は Ronat 撮影画像のみに拠る。同日 N が原本と照合し、行構成の一点訂正（revision_history 参照）を除き忠実と確認。",
+    "en": "Transcription rests on N’s photograph of the Ronat_1980 spread (2026-07-18). The second photograph (IMG_6405), first taken for an f11 close-up, is in fact the corresponding Cosmopolis page (p. 422) bearing N’s red-ink collation of 1914-line readings (corrected 2026-07-18). Collated the same day by N against the physical copy; faithful apart from one line-division correction (see revision_history)."
+  },
+  "unit_count": 28,
+  "revision_history": [
+    {
+      "date": "2026-07-18",
+      "unit_id": "tu_f10_le_vieillard_vers_cette_conjonction",
+      "field": "text",
+      "before": "le vieillard vers cette conjonction suprême",
+      "after": "le vieillard vers cette conjonction suprême avec la probabilité",
+      "evidence": "N による Ronat 原本照合（2026-07-18）：「avec la probabilité」は独立行ではなく同一行。",
+      "by": "N"
+    }
+  ],
+  "deprecated_ids": [
+    {
+      "id": "tu_f10_avec_la_probabilite",
+      "superseded_by": "tu_f10_le_vieillard_vers_cette_conjonction",
+      "date": "2026-07-18",
+      "evidence": "同上の原本照合。写真の紙面の反りにより字下げ付き独立行と誤認したもの。",
+      "by": "N",
+      "note": "id 同一性変更の正式仕様は level0_schema.json の upgrade_path 節（deprecated + superseded_by、旧 ID は永久に解決可能）そのものとする——「id_immutability_rules」は独立文書ではなく同節への内部参照と裁定（N、2026-07-18、ChatGPT の照会を受けて）。deprecated_ids をスプレッド記録のトップレベル節とし、必須キーを {id, superseded_by, date, evidence, by} とする本配置を正式運用とする。"
+    }
+  ],
+  "units": [
+    {
+      "id": "tu_f10_ancestralement_a_n_ouvrir",
+      "face": "f10",
+      "seq": 10,
+      "text": "ancestralement à n’ouvrir pas la main",
+      "type_class": 3,
+      "style": "romain",
+      "note": "1987 手巻物統語図（骰子一擲４）との区切り差異：手巻物は本行を「ancestralement」と「à n’ouvrir pas la main」の2単位に分割し、それぞれ f8 の hésite に係る別個の格担持単位として注釈する。level-0 は裁定 oq_l0_segmentation_authority に従いタイポグラフィ行＝1単位（f1〜f9 整合）を維持し、手巻物の分割は syntax 層の先行分析として保存する。"
+    },
+    {
+      "id": "tu_f10_crispee",
+      "face": "f10",
+      "seq": 20,
+      "text": "crispée",
+      "type_class": 3,
+      "style": "romain",
+      "note": null
+    },
+    {
+      "id": "tu_f10_par_dela_l_inutile_tete",
+      "face": "f10",
+      "seq": 30,
+      "text": "par delà l’inutile tête",
+      "type_class": 3,
+      "style": "romain",
+      "note": null
+    },
+    {
+      "id": "tu_f10_legs_en_la_disparition",
+      "face": "f10",
+      "seq": 40,
+      "text": "legs en la disparition",
+      "type_class": 3,
+      "style": "romain",
+      "note": null
+    },
+    {
+      "id": "tu_f10_a_quelqu_un",
+      "face": "f10",
+      "seq": 50,
+      "text": "à quelqu’un",
+      "type_class": 3,
+      "style": "romain",
+      "note": null
+    },
+    {
+      "id": "tu_f10_ambigu",
+      "face": "f10",
+      "seq": 60,
+      "text": "ambigu",
+      "type_class": 3,
+      "style": "romain",
+      "note": null
+    },
+    {
+      "id": "tu_f10_l_ulterieur_demon_immemorial",
+      "face": "f10",
+      "seq": 70,
+      "text": "l’ultérieur démon immémorial",
+      "type_class": 3,
+      "style": "romain",
+      "note": null
+    },
+    {
+      "id": "tu_f10_ayant",
+      "face": "f10",
+      "seq": 80,
+      "text": "ayant",
+      "type_class": 3,
+      "style": "romain",
+      "note": null
+    },
+    {
+      "id": "tu_f10_de_contrees_nulles",
+      "face": "f10",
+      "seq": 90,
+      "text": "de contrées nulles",
+      "type_class": 3,
+      "style": "romain",
+      "note": null
+    },
+    {
+      "id": "tu_f10_induit",
+      "face": "f10",
+      "seq": 100,
+      "text": "induit",
+      "type_class": 3,
+      "style": "romain",
+      "note": null
+    },
+    {
+      "id": "tu_f10_le_vieillard_vers_cette_conjonction",
+      "face": "f10",
+      "seq": 110,
+      "text": "le vieillard vers cette conjonction suprême avec la probabilité",
+      "type_class": 3,
+      "style": "romain",
+      "note": "一行（原本照合により確定）。当初の写真読みでは二行と誤認。訂正は revision_history 参照。 1987 手巻物統語図も本行を一行として扱っており、r1 の訂正と一致。"
+    },
+    {
+      "id": "tu_f11_celui",
+      "face": "f11",
+      "seq": 120,
+      "text": "celui",
+      "type_class": 3,
+      "style": "romain",
+      "note": null
+    },
+    {
+      "id": "tu_f11_son_ombre_puerile",
+      "face": "f11",
+      "seq": 130,
+      "text": "son ombre puérile",
+      "type_class": 3,
+      "style": "romain",
+      "note": null
+    },
+    {
+      "id": "tu_f11_caressee_et_polie",
+      "face": "f11",
+      "seq": 140,
+      "text": "caressée et polie et rendue et lavée",
+      "type_class": 3,
+      "style": "romain",
+      "note": null
+    },
+    {
+      "id": "tu_f11_assouplie_par_la_vague",
+      "face": "f11",
+      "seq": 150,
+      "text": "assouplie par la vague et soustraite",
+      "type_class": 3,
+      "style": "romain",
+      "note": null
+    },
+    {
+      "id": "tu_f11_aux_durs_os_perdus",
+      "face": "f11",
+      "seq": 160,
+      "text": "aux durs os perdus entre les ais",
+      "type_class": 3,
+      "style": "romain",
+      "note": null
+    },
+    {
+      "id": "tu_f11_ne",
+      "face": "f11",
+      "seq": 170,
+      "text": "né",
+      "type_class": 3,
+      "style": "romain",
+      "note": null
+    },
+    {
+      "id": "tu_f11_d_un_ebat",
+      "face": "f11",
+      "seq": 180,
+      "text": "d’un ébat",
+      "type_class": 3,
+      "style": "romain",
+      "note": null
+    },
+    {
+      "id": "tu_f11_la_mer_par_l_aieul",
+      "face": "f11",
+      "seq": 190,
+      "text": "la mer par l’aïeul tentant ou l’aïeul contre la mer",
+      "type_class": 3,
+      "style": "romain",
+      "note": null
+    },
+    {
+      "id": "tu_f11_une_chance_oiseuse",
+      "face": "f11",
+      "seq": 200,
+      "text": "une chance oiseuse",
+      "type_class": 3,
+      "style": "romain",
+      "note": null
+    },
+    {
+      "id": "tu_f11_fiancailles",
+      "face": "f11",
+      "seq": 210,
+      "text": "Fiançailles",
+      "type_class": 3,
+      "style": "romain",
+      "note": null
+    },
+    {
+      "id": "tu_f11_dont",
+      "face": "f11",
+      "seq": 220,
+      "text": "dont",
+      "type_class": 3,
+      "style": "romain",
+      "note": null
+    },
+    {
+      "id": "tu_f11_le_voile_d_illusion",
+      "face": "f11",
+      "seq": 230,
+      "text": "le voile d’illusion rejailli leur hantise",
+      "type_class": 3,
+      "style": "romain",
+      "note": null
+    },
+    {
+      "id": "tu_f11_ainsi_que_le_fantome",
+      "face": "f11",
+      "seq": 240,
+      "text": "ainsi que le fantôme d’un geste",
+      "type_class": 3,
+      "style": "romain",
+      "note": null
+    },
+    {
+      "id": "tu_f11_chancellera",
+      "face": "f11",
+      "seq": 250,
+      "text": "chancellera",
+      "type_class": 3,
+      "style": "romain",
+      "note": "原文綴り chancellera（ll）を印刷どおり保持。"
+    },
+    {
+      "id": "tu_f11_s_affalera",
+      "face": "f11",
+      "seq": 260,
+      "text": "s’affalera",
+      "type_class": 3,
+      "style": "romain",
+      "note": null
+    },
+    {
+      "id": "tu_f11_folie",
+      "face": "f11",
+      "seq": 270,
+      "text": "folie",
+      "type_class": 3,
+      "style": "romain",
+      "note": "頁下部で N’ABOLIRA と同一視覚帯。ベースライン関係の記述は layout 層へ送る（観察のみ）。"
+    },
+    {
+      "id": "tu_f11_n_abolira",
+      "face": "f11",
+      "seq": 280,
+      "text": "N’ABOLIRA",
+      "type_class": 1,
+      "style": "romain",
+      "note": "type_class 1（14mm）。typography_scale_update_2026-07-16 (A) により class 1 は4錨（f3・f5・f11・f19）全点実測で完結済み。cl_global_phrase_capitale 第3成分としての接続は syntax 層（level-0 対象外）で行う。"
+    }
+  ],
+  "open_issues": [],
+  "segmentation_check": {
+    "source": "1987 年修士論文附録・十見開き手巻物統語図「骰子一擲４」（f10/f11 葉）",
+    "checked": "2026-07-18",
+    "result": {
+      "ja": "全28単位中27単位でタイポグラフィ行と手巻物の区切りが一致。唯一の差異は tu_f10_ancestralement_a_n_ouvrir（手巻物は2分割、当該 unit の note に記録）。手巻物は「le vieillard ... avec la probabilité」を一行として扱い、r1 訂正を裏書きする。",
+      "en": "27 of 28 units match the handscroll divisions; the single divergence is tu_f10_ancestralement_a_n_ouvrir (split in two in 1987; recorded in that unit’s note). The handscroll treats “le vieillard ... avec la probabilité” as one line, corroborating r1."
+    }
+  }
+}

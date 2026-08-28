@@ -1,0 +1,135 @@
+{
+  "file": "citation_scheme.json",
+  "schema_version": "0.3",
+  "created": "2026-07-17",
+  "status": "frozen",
+  "frozen_on": "2026-07-17",
+  "approved_by": "N",
+  "release_at_freeze": "1.0",
+  "description": {
+    "ja": "本データセット（UCD: Un Coup de Dés structural dataset）の引用文法。凍結後、対象アドレス（canonical target）は永久不変とする。設計原則：①対象アドレスと状態指定子の分離、②データセット・リリースと注リビジョンの分離、③巡（round）は表示プリセットであり canonical アドレスに含めない、④読解状態も引用可能なオブジェクトとする。",
+    "en": "Citation grammar for the UCD structural dataset. After freezing, canonical target addresses are immutable forever. Principles: (1) canonical target vs state selectors are separated; (2) dataset releases vs annotation revisions are separate dimensions; (3) rounds are presentation presets and never enter canonical addresses; (4) reading states are themselves citable objects."
+  },
+
+  "grammar": {
+    "form": "ucd[:<release>]://<address>[@<selectors>]",
+    "components": {
+      "scheme": {
+        "value": "ucd",
+        "ja": "スキーム名。データセット全体の名前空間。"
+      },
+      "release": {
+        "syntax": "v<major>.<minor>（例 v1.2）",
+        "ja": "データセット・リリース番号（省略可）。省略時は『現行リリース』を指す動的引用。論文・講演等の学術的引用ではリリース明記を必須とする（後述 citation_policy）。",
+        "en": "Dataset release (optional). Omission means a dynamic citation of the current release; scholarly citations must pin a release."
+      },
+      "address": {
+        "syntax": "<container>/<object_id>",
+        "immutability": "永久不変。ID の改名・再割当は禁止（deprecation は superseded_by で表現し、旧IDは永続リダイレクトとして保持する）",
+        "containers": {
+          "spread": "見開き。例 ucd://spread/f18-f19",
+          "unit": "テクスト・ユニット。例 ucd://unit/tu_f19_le_hasard（unit ID は全域一意なので spread の明示は不要。可読性のために ucd://spread/f18-f19/tu_f19_le_hasard と書いてもよく、両形は等価）",
+          "clause": "グローバル節。例 ucd://clause/cl_global_phrase_capitale",
+          "variant": "異同レコード。例 ucd://variant/var_title_order",
+          "annotation": "注釈オブジェクト。例 ucd://annotation/n_gcl_pc_01",
+          "measurement": "実測レコード。例 ucd://measurement/m_2026-07-16_f3（measurement_log 行に ID を付与する将来拡張とセットで有効化）",
+          "source": "witness・文献。例 ucd://source/Ronat_1980, ucd://source/Pleiade_1998_Marchal",
+          "state": "テクスト状態（シグラ）。例 ucd://state/E4",
+          "round": "巡プリセット（book_manifest 内の定義への参照）。例 ucd://round/3。※巡の『定義』の引用であり、対象アドレスに巡を混ぜることではない",
+          "reading": "読解状態ファイル。例 ucd://reading/rs_2027-03-N-001"
+        }
+      },
+      "selectors": {
+        "syntax": "@key=value（複数はセミコロン区切り：@layer=N;rev=2）",
+        "keys": {
+          "layer": {
+            "ja": "注釈層の指定。解釈者シグラ（C, D, M, K, G, N）または層ID（notes_en 等）。",
+            "example": "@layer=N"
+          },
+          "rev": {
+            "ja": "注リビジョンの指定。整数で固定引用、'current' で最新（既定値）。『当時の第2版』を指すか『現在の注』を指すかの区別はここで行う。",
+            "example": "@layer=N;rev=2"
+          },
+          "state": {
+            "ja": "テクスト状態（witness／シグラ）の指定。既定値は Ronat_1980。",
+            "example": "@state=E1（例：題名の Jamais 語順を指す場合 ucd://clause/cl_global_phrase_capitale@state=E1）"
+          },
+          "depth": {
+            "ja": "レコード深度の指定（level-0 ／ full）。通常は不要、深度差を明示したい研究文脈用。",
+            "example": "@depth=level-0"
+          }
+        },
+        "rule": {
+          "ja": "selector は可変・追加可能。selector の追加はいつでも許されるが、既存 selector の意味変更は禁止。",
+          "en": "Selectors are extensible; adding new keys is always allowed, changing the meaning of existing keys is forbidden."
+        }
+      }
+    }
+  },
+
+  "examples": [
+    {
+      "citation": "ucd:v1.0://unit/tu_f19_le_hasard",
+      "ja": "リリース1.0における LE HASARD ユニット（固定引用）"
+    },
+    {
+      "citation": "ucd:v1.0://unit/tu_f19_le_hasard@layer=N;rev=2",
+      "ja": "同ユニットに対する N の構造注・第2版（固定引用。第3版が出ても指示対象は変わらない）"
+    },
+    {
+      "citation": "ucd://unit/tu_f19_le_hasard@layer=N",
+      "ja": "同ユニットに対する N の構造注・現行版（動的引用。rev=current が既定）"
+    },
+    {
+      "citation": "ucd:v1.2://clause/cl_global_phrase_capitale@state=E1",
+      "ja": "校正第1刷における表題文（Jamais 語順の状態を指す）"
+    },
+    {
+      "citation": "ucd://reading/rs_2027-03-N-001",
+      "ja": "N の読解セッション記録（読解状態ファイル。ファイル内部にリリース番号のピン留めを必須で含む）"
+    },
+    {
+      "citation": "ucd:v1.0://round/3",
+      "ja": "リリース1.0のマニフェストにおける第3巡の定義（＝英訳層が加わる巡、という規則そのもの）"
+    }
+  ],
+
+  "release_policy": {
+    "numbering": "v<major>.<minor>。minor＝データ追加・注リビジョン追加・層追加。major＝スキーマ非互換変更（原則として起こさない）。",
+    "release_log": "リリースごとに日付・含有ファイル・changelog 要約を release_log.json（将来作成）に記録する。",
+    "citation_policy": {
+      "ja": "学術的引用（論文・講演・共同研究での共有）ではリリース番号と rev の明記を必須とする。動的引用（リリース・rev 省略）は作業中の内部参照のみに用いる。",
+      "en": "Scholarly citations must pin release and rev; dynamic citations are for internal working references only."
+    }
+  },
+
+  "round_and_layer_doctrine": {
+    "ja": "巡（round）は読み方のプリセット、層（layer）は恒久的な資料単位である。巡は book_manifest.json で編集可能（『英訳を2巡目に移す』は manifest の変更のみで、いかなる ID・アドレスも変化しない）。巡番号は整数とし、0 を『生成場（la mer の出現可能性空間）』のために予約する。現行構想の巡は 1 から始まる。",
+    "en": "Rounds are reading presets; layers are permanent resource units. Rounds are editable in book_manifest.json without touching any ID. Round numbers are integers, with 0 reserved for the generative field (the space of possibility of la mer); the current design starts at 1."
+  },
+
+  "reading_state_object": {
+    "ja": "読解状態（viewer から書き出される JSON）は次を必須で含む：reading_id（rs_ 接頭辞、一意）、pinned_release、閲覧履歴（面・巡・有効層集合の系列）、書き出し日時、閲覧者。localStorage 非依存の設計により、読解履歴そのものが持ち運び可能・引用可能・比較可能なファイルとなる。",
+    "en": "A reading state (exported by the viewer) must contain: a unique reading_id (rs_ prefix), the pinned release, the trajectory (sequence of face/round/active-layer states), export timestamp, and reader. The no-localStorage design makes reading histories portable, citable, and comparable files.",
+    "future": "同一正典データに複数の読解状態を読み込ませて比較する『読解の重ね合わせ』ビューを想定内とする。"
+  },
+
+  "id_immutability_rules": {
+    "ja": [
+      "凍結後、既存 ID の改名・削除・再割当を禁止する。",
+      "誤設定された ID は deprecated とし、superseded_by で新 ID へ接続する（旧 ID での引用は永久に解決可能）。",
+      "新規オブジェクトの ID は既存の命名規則（tu_, cl_global_, var_, oq_, rs_ 等の接頭辞）に従う。",
+      "巡番号・層の表示順・ラベルは ID ではないため自由に変更してよい。"
+    ]
+  },
+
+  "freeze_procedure": {
+    "ja": "本草稿を N が承認した時点で status を 'frozen' に変更し、以後の変更は selector 追加と container 追加のみ許す（grammar の form と既存要素の意味は不変）。凍結と同時にデータセット全体を v1.0 とし、release_log を開始する。",
+    "en": "Upon N’s approval, status becomes 'frozen'; thereafter only new selectors and new containers may be added. Freezing coincides with declaring the dataset release v1.0 and opening the release_log.",
+    "executed": {
+      "date": "2026-07-17",
+      "by": "N（承認）／ Fable（実行）",
+      "note": "release_log.json v1.0 を同日開始。"
+    }
+  }
+}

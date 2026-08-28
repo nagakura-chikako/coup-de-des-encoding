@@ -1,0 +1,258 @@
+{
+  "file": "f14-f15_level0.json",
+  "schema_version": "0.3",
+  "schema_ref": "level0_schema.json (approved 2026-07-18)",
+  "spread_id": "f14-f15",
+  "record_depth": "level-0",
+  "base_state": "Ronat_1980",
+  "recorded": "2026-07-20",
+  "recorded_by": "Claude (draft) / N (review and collation rulings 2026-07-20; verbatim collation with original 2026-08-24, no corrections)",
+  "status": "collated_with_original",
+  "transcription_source": {
+    "ja": "転記の底本は N 提供の Ronat_1980 見開き撮影画像（2026-07-20）。NRF 系コピー撮影画像は判読補助として参照し、行構成（全17行）の一致を確認。Cosmopolis 版コピー撮影画像2点（Cos12-13, Cos13-17）は異同層向け資料として保管（level-0 転記には不使用。改ページ位置 quiconque／prince を含む異同は将来の variant 層へ）。面の帰属：f14 は2行のみ（plume solitaire éperdue／sauf）、残る15行は f15。初稿は que la rencontre 以下3行を f14 に誤帰属した——写真の幾何学的中央を中溝と仮定した切り出しが原因で、実際の折り目は右寄り（ピクセル解析で確定）。N の校閲指摘（2026-07-20）を受けて訂正（deprecated_ids 参照）。物理／統語の区別：一つの印字行が左右頁へ連続して印刷される「中溝跨ぎ行」は本見開きには存在しない（sauf のインクは中溝の約490px手前で終わる）。一方、統語的には複合接続詞 sauf que が f14／f15 のページ境界に分割配置されており、ピクセル行解析で sauf（f14）と que la rencontre...（f15）は同一ベースライン上にある。タイポグラフィは切るが統語は切れていない。なお製本構造上、単一紙面に印刷される中央見開きは f12-f13 のみで、f14-f15 は別々の2紙面にまたがる。type_class は承認済み census により全ユニット class 3（4mm）：4mm の「平原」は f12-f13 から続き、3mm（class 4）の出現は f18-f19 のみ（census 優先の原則、写真比高推定は不使用）。原本での最終照合を完了（2026-08-24、N、訂正0件）：全17行の逐語確認、sauf（f14）と que la rencontre…（f15）の同一ベースラインの目視確認、全ユニット class 3（4mm）の目視確認をいずれも現物で行い、text・face・style とも訂正なし。",
+    "en": "Transcription rests on N’s photograph of the Ronat_1980 spread (2026-07-20). An NRF-line photocopy image was consulted as a legibility aid and confirms the same 17-line composition. Two Cosmopolis photocopy images (Cos12-13, Cos13-17) are retained as variant-layer material, unused for the level-0 text (including the quiconque/prince page-break variant). Face assignment: f14 carries only two lines (plume solitaire éperdue / sauf); the remaining fifteen are on f15. The first draft misassigned three lines (que la rencontre... onward) to f14 because the crop assumed the fold at the photograph’s geometric centre; the actual fold lies to the right (settled by pixel analysis). Corrected upon N’s review (2026-07-20; see deprecated_ids). Physical vs syntactic: no printed line runs continuously across the gutter (sauf’s ink ends ~490 px before the fold), yet the syntactic compound sauf que is distributed across the f14/f15 page boundary, with sauf (f14) and que la rencontre... (f15) sharing a single baseline per pixel-row analysis — typography cuts where syntax does not. Structurally, only f12-f13 is the single-sheet centre of the six unbound folded sheets; f14-f15 lies across two separate sheets. type_class is class 3 (4 mm) for all units per the approved census (class 4 appears only on f18-f19); no photo-ratio estimation was attempted. Final collation with the physical copy was completed on 2026-08-24 (N, no corrections): all seventeen lines verified verbatim, the shared baseline of sauf (f14) and que la rencontre… (f15) confirmed by eye, and class 3 (4 mm) confirmed for every unit on the physical copy; no corrections to text, face or style."
+  },
+  "unit_count": 17,
+  "revision_history": [
+    {
+      "date": "2026-07-20",
+      "unit_id": "tu_f15_exigument",
+      "field": "text",
+      "before": "exigûment",
+      "after": "exigüment",
+      "evidence": "N 校閲（2026-07-20）：exigüment はどの版（Cosmopolis・NRF・Ronat）もトレマ（ü）。初稿の写真拡大による曲折アクセント判読は誤り。手巻物typescript の exigüment とも一致（異同ではなく一致）。",
+      "by": "N"
+    }
+  ],
+  "deprecated_ids": [
+    {
+      "id": "tu_f14_que_la_rencontre",
+      "superseded_by": "tu_f15_que_la_rencontre",
+      "date": "2026-07-20",
+      "evidence": "N 校閲指摘（sauf que のページ跨ぎ）＋中溝位置のピクセル再解析：本行は f15 に位置。face 訂正に伴い ID の面接頭を訂正（命名規則：ID は開始面を採る）。",
+      "by": "N / Claude"
+    },
+    {
+      "id": "tu_f14_et_immobilise",
+      "superseded_by": "tu_f15_et_immobilise",
+      "date": "2026-07-20",
+      "evidence": "同上：本行は f15 に位置。",
+      "by": "N / Claude"
+    },
+    {
+      "id": "tu_f14_au_velours_chiffonne",
+      "superseded_by": "tu_f15_au_velours_chiffonne",
+      "date": "2026-07-20",
+      "evidence": "同上：本行は f15 に位置。",
+      "by": "N / Claude"
+    }
+  ],
+  "units": [
+    {
+      "id": "tu_f14_plume_solitaire_eperdue",
+      "face": "f14",
+      "seq": 10,
+      "text": "plume solitaire éperdue",
+      "type_class": 3,
+      "style": "italique",
+      "note": "f14 上部の単独行。f14 の印字はこの行と sauf の2行のみ（ピクセル行解析で確認）。type_class 3（4mm）：承認済み census により本見開きは全ユニット 4mm 層（写真比高推定は不使用）。1987 手巻物は本行を f12-f13 の Une insinuation／le mystère との同格として註する（relations／readings 層向け先行分析、level-0 には持ち込まない）。"
+    },
+    {
+      "id": "tu_f14_sauf",
+      "face": "f14",
+      "seq": 20,
+      "text": "sauf",
+      "type_class": 3,
+      "style": "italique",
+      "note": "f14 右端寄りの独立ユニット。次ユニット tu_f15_que_la_rencontre（f15）と同一ベースライン上にあり、統語的には複合接続詞 sauf que がページ境界を跨ぐが、印字はそれぞれの面で完結し中溝上に連続しない（transcription_source 参照）。level-0 は2ユニットとして記録（N 裁定、2026-07-20）。1987 手巻物統語図は両者を「sauf que la rencontre ou l’effleure une toque de minuit」の一行に結合して描く——統語単位を優先した描法として syntax 層の先行分析に保存。"
+    },
+    {
+      "id": "tu_f15_que_la_rencontre",
+      "face": "f15",
+      "seq": 30,
+      "text": "que la rencontre ou l’effleure une toque de minuit",
+      "type_class": 3,
+      "style": "italique",
+      "note": "f15 側の行だが、f14 右端の sauf と同一ベースライン（sauf que のページ跨ぎ、tu_f14_sauf の note 参照）。初稿の f14 誤帰属を N 校閲により訂正（deprecated_ids 参照）。"
+    },
+    {
+      "id": "tu_f15_et_immobilise",
+      "face": "f15",
+      "seq": 40,
+      "text": "et immobilise",
+      "type_class": 3,
+      "style": "italique",
+      "note": "初稿の f14 誤帰属を訂正（deprecated_ids 参照）。"
+    },
+    {
+      "id": "tu_f15_au_velours_chiffonne",
+      "face": "f15",
+      "seq": 50,
+      "text": "au velours chiffonné par un esclaffement sombre",
+      "type_class": 3,
+      "style": "italique",
+      "note": "初稿の f14 誤帰属を訂正（deprecated_ids 参照）。"
+    },
+    {
+      "id": "tu_f15_cette_blancheur_rigide",
+      "face": "f15",
+      "seq": 60,
+      "text": "cette blancheur rigide",
+      "type_class": 3,
+      "style": "italique",
+      "note": "原本写真は rigide。1987 手巻物typescript の regide は打字ミス（level-0 に影響なし、記録のみ）。"
+    },
+    {
+      "id": "tu_f15_derisoire",
+      "face": "f15",
+      "seq": 70,
+      "text": "dérisoire",
+      "type_class": 3,
+      "style": "italique",
+      "note": null
+    },
+    {
+      "id": "tu_f15_en_opposition_au_ciel",
+      "face": "f15",
+      "seq": 80,
+      "text": "en opposition au ciel",
+      "type_class": 3,
+      "style": "italique",
+      "note": null
+    },
+    {
+      "id": "tu_f15_trop",
+      "face": "f15",
+      "seq": 90,
+      "text": "trop",
+      "type_class": 3,
+      "style": "italique",
+      "note": null
+    },
+    {
+      "id": "tu_f15_pour_ne_pas_marquer",
+      "face": "f15",
+      "seq": 100,
+      "text": "pour ne pas marquer",
+      "type_class": 3,
+      "style": "italique",
+      "note": null
+    },
+    {
+      "id": "tu_f15_exigument",
+      "face": "f15",
+      "seq": 110,
+      "text": "exigüment",
+      "type_class": 3,
+      "style": "italique",
+      "note": "トレマ（ü）。N 校閲により確定：どの版もü（revision_history 参照）。手巻物typescript とも一致。"
+    },
+    {
+      "id": "tu_f15_quiconque",
+      "face": "f15",
+      "seq": 120,
+      "text": "quiconque",
+      "type_class": 3,
+      "style": "italique",
+      "note": "Cosmopolis 版はこの直後に改ページ（quiconque／prince）。異同層向けに保管、level-0 には持ち込まない。"
+    },
+    {
+      "id": "tu_f15_prince_amer_de_l_ecueil",
+      "face": "f15",
+      "seq": 130,
+      "text": "prince amer de l’écueil",
+      "type_class": 3,
+      "style": "italique",
+      "note": null
+    },
+    {
+      "id": "tu_f15_s_en_coiffe",
+      "face": "f15",
+      "seq": 140,
+      "text": "s’en coiffe comme de l’héroïque",
+      "type_class": 3,
+      "style": "italique",
+      "note": null
+    },
+    {
+      "id": "tu_f15_irresistible_mais_contenu",
+      "face": "f15",
+      "seq": 150,
+      "text": "irrésistible mais contenu",
+      "type_class": 3,
+      "style": "italique",
+      "note": null
+    },
+    {
+      "id": "tu_f15_par_sa_petite_raison_virile",
+      "face": "f15",
+      "seq": 160,
+      "text": "par sa petite raison virile",
+      "type_class": 3,
+      "style": "italique",
+      "note": null
+    },
+    {
+      "id": "tu_f15_en_foudre",
+      "face": "f15",
+      "seq": 170,
+      "text": "en foudre",
+      "type_class": 3,
+      "style": "italique",
+      "note": "f15 右下隅、見開き最終行。"
+    }
+  ],
+  "open_issues": [
+    {
+      "id": "oq_l0_f14f15_collation",
+      "status": "resolved",
+      "question": {
+        "ja": "現物 Ronat_1980 を机上に置いた最終照合のみ未了（写真・版比較による校閲は N により完了、2026-07-20：face 帰属 f14=2行と exigüment（ü）は確定済み——collation_resolutions 参照）。現物での重点確認：①逐語テクスト全17行の最終確認 ②sauf（f14）と que la rencontre...（f15）の同一ベースラインの目視確認 ③type_class 全ユニット class 3（4mm）の目視確認。",
+        "en": "Final physical-copy collation pending — only the check against the physical Ronat_1980 remains; the photo- and edition-based review is complete (N, 2026-07-20: face assignment with two lines on f14 and exigüment (ü) are settled — see collation_resolutions). Remaining checks on the physical copy: (1) final verbatim confirmation of all 17 lines; (2) visual confirmation of the shared baseline of sauf (f14) and que la rencontre... (f15); (3) visual confirmation of class 3 (4 mm) for all units."
+      },
+      "resolution": {
+        "date": "2026-08-24",
+        "by": "N",
+        "ja": "現物 Ronat_1980 との最終照合を完了、訂正0件。①全17行の逐語確認 ②sauf（f14）と que la rencontre…（f15）の同一ベースラインを現物で確認 ③全17ユニットが class 3（4mm）であることを現物で確認。text・face の訂正がないため revision_history は 2026-07-20 の1件のまま。",
+        "en": "Final collation against the physical Ronat_1980 completed with no corrections: (1) all seventeen lines verified verbatim; (2) the shared baseline of sauf (f14) and que la rencontre… (f15) confirmed on the physical copy; (3) class 3 (4 mm) confirmed for all seventeen units. revision_history keeps its single 2026-07-20 entry, no text or face corrections having arisen."
+      }
+    }
+  ],
+  "collation_resolutions": {
+    "resolved_by": "N",
+    "resolved_on": "2026-07-20",
+    "items": [
+      {
+        "id": "oq_l0_f14f15_face_attribution",
+        "status": "closed",
+        "ruling": {
+          "ja": "que la rencontre...／et immobilise／au velours chiffonné... の3行は f15 に位置し、f14 の印字は plume solitaire éperdue と sauf の2行のみ。統語単位 sauf que はページ境界を跨ぐが、印字行としての中溝跨ぎ（一行が左右頁へ連続印刷）は本見開きに存在しない——物理（印字行）と統語（複合接続詞）を区別して記述する。level-0 は活字どおり2ユニット（sauf／que la rencontre...）として記録し、sauf que の統語結合は syntax 層へ。ID は開始面を採る命名規則に従い tu_f15_* へ訂正（旧 tu_f14_* は deprecated_ids で永久解決可能）。"
+        }
+      },
+      {
+        "id": "oq_l0_f14f15_exigument",
+        "status": "closed",
+        "ruling": {
+          "ja": "exigüment はどの版（Cosmopolis・NRF・Ronat）もトレマ（ü）。初稿の写真拡大による曲折アクセント判読は誤りとして text を訂正（revision_history 参照）。手巻物typescript の exigüment は打字ミスではなく印刷と一致——手巻物由来の綴り差異として残るのは regide（→rigide）のみ。教訓：単一写真の拡大によるダイアクリティカル判読は暫定とし、版横断の知識・原本照合を優先する。"
+        }
+      }
+    ]
+  },
+  "segmentation_check": {
+    "source": "1987 年修士論文附録・十見開き手巻物統語図「骰子一擲６」（f14/f15 葉）",
+    "checked": "2026-07-20",
+    "result": {
+      "ja": "全17単位中16で手巻物の区切りとタイポグラフィ行が一致（16/17）。唯一の差異は sauf：手巻物は次行と結合した「sauf que la rencontre ou l’effleure une toque de minuit」の一行として描くが、活字は sauf（f14）と que la rencontre...（f15）をページ境界の両側に置く。両者が同一ベースライン上にあることを踏まえれば、手巻物の結合は統語単位（複合接続詞 sauf que）を優先した描法であり、level-0 の2ユニット記録と矛盾なく併存する（tu_f14_sauf の note・collation_resolutions 参照）。手巻物typescript の regide（→rigide）は打字ミスとして記録のみ（exigüment は印刷と一致し差異にあらず）。手巻物の格文法注（同格関係、en の指示対象、節境界をめぐる D／M の相違等）は syntax／readings 層の先行分析として保存。Cosmopolis 版異読（改ページ quiconque／prince、字句異同）は異同層向けに保管し、level-0 には持ち込まない。",
+      "en": "16 of 17 units match the handscroll divisions. The sole divergence is sauf: the handscroll draws it joined to the following line as one line, while the print places sauf (f14) and que la rencontre... (f15) on either side of the page boundary. Given their shared baseline, the handscroll’s joining reads as a rendering that privileges the syntactic unit (the compound sauf que) and coexists without contradiction with the two-unit level-0 record. The typescript spelling regide (→rigide) is recorded as a typo (exigüment matches the print and is no divergence). The handscroll’s case-grammar annotations are preserved as prior analysis for the syntax/readings layers. Cosmopolis readings (the quiconque/prince page break and lexical variants) are reserved for the variant layer."
+    }
+  },
+  "observations_for_other_files": {
+    "ja": "global_clauses.json の cl_global_conditionnelle は components に {surface: SI, spread: f12, text_unit: TODO} を置くが、f12-f13（確定済み13ユニット）にも本見開き f14-f15（17ユニット）にも大文字 SI は存在しない。条件構造の SI は f16-f17 に出現する見込みで、component の spread は f16 系へ更新が必要と思われる（N の裁定待ち、当該ファイルは未変更）。",
+    "en": "cl_global_conditionnelle in global_clauses.json places {surface: SI, spread: f12, text_unit: TODO}, but no capital SI exists in the settled f12-f13 record (13 units) or in this spread (17 units). The conditional SI is expected on f16-f17; the component’s spread likely needs updating (awaiting N’s ruling; the registry file is untouched)."
+  },
+  "collation_note": {
+    "date": "2026-08-24",
+    "by": "N",
+    "ja": "N による原本逐語・現物照合完了（2026-08-24、Ronat_1980 現物）：text・face・style とも訂正0件。sauf（f14）と que la rencontre…（f15）の同一ベースライン、および全17ユニットが class 3（4mm）であることを現物で確認。revision_history は 2026-07-20 の exigüment 訂正1件のまま確定。"
+  }
+}

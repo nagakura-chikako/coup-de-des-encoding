@@ -1,0 +1,124 @@
+{
+ "file": "typography_scale_update_2026-07-22",
+ "description": {
+  "ja": "2026-07-21〜22 の f18-f19 作業（N 実測・逐語照合）による typography_scale.json への統合。(A) は class 2 への錨3点の追加——照合の結果すべてイタリックであり、class 2 は純イタリック層のまま維持される。(B) は class 3 への錨2点の追加——初のローマン大文字錨（接続法群代表 EXISTÂT-IL）とイタリック錨（Choit）。(C) は class 4 への初の実測錨の追加——census の「3mm の出現は f18-f19 のみ」がここで初めて定規実測により実例化される。(D) は measurement_log 追記。(E) はサイズ×書体の独立性についての構造的注記。",
+  "en": "Integration into typography_scale.json from the f18-f19 work of 2026-07-21/22 (N's measurements and verbatim collation). (A) adds three anchors to class 2 — all italic on collation, so class 2 remains a purely italic tier. (B) adds two anchors to class 3 — its first roman-capital anchor (EXISTÂT-IL, representing the subjunctive group) and an italic anchor (Choit). (C) adds the first measured anchor of class 4, instantiating by ruler the census claim that the 3 mm tier occurs only on f18-f19. (D) appends to the measurement_log. (E) records a structural note on the independence of size and face."
+ },
+ "A_class_2_add_anchors": {
+  "size_class": "2",
+  "add_anchors": [
+   {
+    "anchor_word": "C'ÉTAIT",
+    "anchor_location": { "spread": "f18-f19", "page": "f18", "text_unit": "tu_f18_c_etait" },
+    "style": "italique",
+    "cap_height_mm": 5.0,
+    "tolerance_mm": 0.5,
+    "measurement": {
+     "method": "ruler_alignment_with_anchor",
+     "date": "2026-07-21",
+     "measured_by": "N",
+     "method_note": "N 実測により LE NOMBRE とキャップ高一致（2026-07-21 報告）。数値 5.0mm は LE NOMBRE の測定値（下記）を介した間接値。書体は N 逐語照合（2026-07-22）で italique 確定。"
+    }
+   },
+   {
+    "anchor_word": "LE NOMBRE",
+    "anchor_location": { "spread": "f18-f19", "page": "f19", "text_unit": "tu_f19_le_nombre" },
+    "style": "italique",
+    "cap_height_mm": 5.0,
+    "tolerance_mm": 0.5,
+    "measurement": {
+     "method": "photo_ratio_vs_class1_anchor",
+     "date": "2026-07-21",
+     "measured_by": "Claude (photo) / N (alignment + collation)",
+     "method_note": "NRF 単ページ接写における LE HASARD（class 1 錨、実測 14mm）比で 5.0mm。N 実測で C'ÉTAIT と同高。書体は N 逐語照合（2026-07-22）で italique 確定——写真上はローマンに見えたためドラフトで誤判定、照合で訂正（f18-f19_level0.json collation_note 参照）。定規による直接実測を行う場合は本エントリの method を ruler_on_page へ更新のこと。"
+    }
+   },
+   {
+    "anchor_word": "CE SERAIT",
+    "anchor_location": { "spread": "f18-f19", "page": "f18", "text_unit": "tu_f18_ce_serait" },
+    "style": "italique",
+    "cap_height_mm": 5.0,
+    "tolerance_mm": 0.5,
+    "measurement": {
+     "method": "photo_ratio_vs_sibling_anchors",
+     "date": "2026-07-21",
+     "measured_by": "Claude (photo) / N (collation)",
+     "method_note": "写真比高で C'ÉTAIT と同キャップ高。書体は N 逐語照合（2026-07-22）で italique 確定。"
+    }
+   }
+  ],
+  "note": {
+   "ja": "3錨とも italique であり、class 2 は SI（f17）以来の純イタリック層のまま維持される。統語上 cl_global_conditionnelle の3成分（SI／C'ÉTAIT／CE SERAIT——LE NOMBRE は C'ÉTAIT の対象格）を含む条件構造が、サイズ（5mm）と書体（イタリック）の両軸で統一され、ローマン 14mm の表題文と体系的に対峙することが全点確認された。",
+   "en": "All three anchors are italic: class 2 remains the purely italic tier it has been since SI (f17). The conditional structure is now confirmed unified on both axes (5 mm, italic), standing systematically against the roman 14 mm capital sentence."
+  },
+  "status": "verified"
+ },
+ "B_class_3_add_anchors": {
+  "size_class": "3",
+  "add_anchors": [
+   {
+    "anchor_word": "EXISTÂT-IL",
+    "anchor_location": { "spread": "f18-f19", "page": "f19", "text_unit": "tu_f19_existat_il" },
+    "style": "romain",
+    "cap_height_mm": 4.0,
+    "tolerance_mm": 0.5,
+    "measurement": { "method": "ruler_on_page", "date": "2026-07-22", "measured_by": "N" }
+   },
+   {
+    "anchor_word": "Choit",
+    "anchor_location": { "spread": "f18-f19", "page": "f19", "text_unit": "tu_f19_choit" },
+    "style": "italique",
+    "cap_height_mm": 4.0,
+    "tolerance_mm": 0.5,
+    "measurement": { "method": "ruler_on_page", "date": "2026-07-22", "measured_by": "N" }
+   }
+  ],
+  "note": {
+   "ja": "EXISTÂT-IL は class 3 初のローマン大文字錨（接続法五節 EXISTÂT／COMMENÇÂT／CESSÂT／SE CHIFFRÂT／ILLUMINÂT を代表）。「大文字＝大サイズ」ではないことの実測例——大文字性とサイズ層も独立である。Choit はイタリック錨（Choit ブロック8行を代表。書体は N 逐語照合 2026-07-22 で確定）。",
+   "en": "EXISTÂT-IL is the first roman-capital anchor of class 3 (representing the five subjunctives) — measured proof that capitals do not entail a larger tier. Choit anchors the italic Choit block (face settled by N's collation, 2026-07-22)."
+  },
+  "status": "verified"
+ },
+ "C_class_4_first_measured_anchor": {
+  "size_class": "4",
+  "add_anchors": [
+   {
+    "anchor_word": "autrement qu'hallucination éparse d'agonie",
+    "anchor_location": { "spread": "f18-f19", "page": "f19", "text_unit": "tu_f19_autrement_qu_hallucination" },
+    "style": "romain",
+    "cap_height_mm": 3.0,
+    "tolerance_mm": 0.5,
+    "measurement": { "method": "ruler_on_page", "date": "2026-07-22", "measured_by": "N" }
+   }
+  ],
+  "note": {
+   "ja": "class 4 初の定規実測錨。census の言明「3mm 層の出現は f18-f19 のみ」がこれで実測により実例化された。同層の他メンバー（f19 上部の残るローマン小活字4行、および f18 のイタリック群：issu stellaire・pire〜autant 階段）は写真比高による same-tier 判定（f18-f19_level0.json 参照）。イタリック側の定規直接実測は任意の将来課題。",
+   "en": "First ruler-measured anchor of class 4, instantiating the census claim that the 3 mm tier occurs only on f18-f19. Remaining members (four more roman small lines on f19; the italic issu stellaire and the pire→autant staircase on f18) are same-tier by photo ratio; a direct ruler check on the italic side remains optional future work."
+  },
+  "status": "verified"
+ },
+ "D_measurement_log_append": {
+  "measured_by": "N",
+  "method": "ruler_on_page",
+  "tolerance_mm": 0.5,
+  "witness": "Ronat_1980",
+  "date": "2026-07-22",
+  "results": [
+   { "scope": "f19 EXISTÂT-IL", "cap_height_mm": 4.0 },
+   { "scope": "f19 Choit", "cap_height_mm": 4.0 },
+   { "scope": "f19 autrement qu'hallucination…（行）", "cap_height_mm": 3.0 }
+  ],
+  "related": {
+   "date": "2026-07-21",
+   "results": [
+    { "scope": "f18 C'ÉTAIT ＝ f19 LE NOMBRE（キャップ高一致）", "method": "ruler_alignment" },
+    { "scope": "f18 non 上辺 ＝ f19 LE HASARD 上辺／f18 autant 下辺 ＝ f19 LE HASARD 下辺", "method": "ruler_alignment", "note": "layout 層向け（f18-f19_level0.json physical_observations 参照）" }
+   ]
+  }
+ },
+ "E_structural_note_size_style_independence": {
+  "ja": "f18-f19 は census 全4層（14／5／4／3mm）が共存する詩中唯一の見開きであり、今回の照合により書体との交差が全点確定した：class 1＝romain、class 2＝italique（純層）、class 3＝両書体（romain 接続法大文字群／italique Choit ブロック）、class 4＝両書体（romain 小活字群／italique issu stellaire・階段）。すなわち Ronat_1980 においてサイズと書体は独立の設計軸であり、加えて class 3 のローマン大文字錨は大文字性もサイズから独立であることを示す。活字は「乱れ飛んで」いるのではなく、三つの独立軸（サイズ／書体／大文字性）の直交する秩序として配置されている——実測による確認（N、2026-07-22）。この構造は maquette_typography.json（authorial 層）の欄外数字体系との照合における基準面となる。",
+  "en": "f18-f19 is the poem's only spread where all four census tiers co-occur, and the collation settles the full size×face cross-classification: class 1 roman; class 2 purely italic; classes 3 and 4 each containing both faces. Size and face are independent design axes in Ronat_1980, and the roman-capital anchor of class 3 shows capitalisation to be a third independent axis. The types are not in disarray but ordered on three orthogonal axes (size / face / capitalisation) — confirmed by measurement (N, 2026-07-22). This provides the reference plane for collation against the authorial layer (maquette_typography.json).",
+  "status": "recorded"
+ }
+}

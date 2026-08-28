@@ -1,0 +1,161 @@
+{
+  "file": "f4-f5_level0.json",
+  "schema_version": "0.3",
+  "schema_ref": "level0_schema.json (approved 2026-07-18)",
+  "spread_id": "f4-f5",
+  "record_depth": "level-0",
+  "base_state": "Ronat_1980",
+  "recorded": "2026-07-26",
+  "recorded_by": "Claude (draft) / N (measurements & rulings; verbatim collation 2026-07-26, no corrections to text/face)",
+  "status": "collated_with_original",
+  "unit_count": 4,
+  "revision_history": [],
+  "deprecated_ids": [],
+  "provenance_note": {
+    "ja": "現行 level-0 スキーマによる f4-f5 の初の正本起草（f1・f2-f3 に続く）。旧試作 ID は正典未登録のため deprecated 処理不要。起草は提供写真（Ronat4-5）の直接観察と画素計測にもとづき、既刊本一般の知識・記憶による補完は行っていない（f2-f3 の教訓に従う）。N 実測・裁定（2026-07-26）を経て同日原本逐語照合により正本化。"
+  },
+  "scope_note": {
+    "ja": "level-0 の対象は本文紙束のみ。f4 は f 系フォリエーション内の白紙面であり、f2 と同様テクスト・ユニットを持たない面として扱う。"
+  },
+  "evidence": [
+    {
+      "label": "Ronat4-5",
+      "witness": "Ronat_1980",
+      "desc": "見開き撮影。左＝f4（目視で完全白紙）、右＝f5。転記の主資料"
+    },
+    {
+      "label": "census_f5_anchor",
+      "witness": "Ronat_1980",
+      "desc": "表題文4錨 census（typography_scale_update_2026-07-16）：f5 錨 JAMAIS＝14mm。type_class 1 裁定の根拠。global_clauses.json の witness_note（2026-07-12、N 照合済・verified）とも整合"
+    },
+    {
+      "label": "N_measurement_f5_tiers",
+      "witness": "Ronat_1980",
+      "desc": "N 実測報告（2026-07-26）：JAMAIS＝14mm（census 錨と一致）、QUAND 以下第2〜4行＝すべて4mm。第2〜4行の type_class 3 裁定の優先根拠"
+    },
+    {
+      "label": "px_ratio_2026-07-26",
+      "witness": "Ronat_1980",
+      "desc": "Claude 写真画素計測（2026-07-26）：JAMAIS cap ≈80px（14mm 換算 ≈5.7px/mm）、第2〜4行 cap ≈24–25px（≈4.2–4.4mm 相当）で3行とも同寸。N 実測（4mm）と整合する参考資料（裁定根拠は N 実測）"
+    },
+    {
+      "label": "NRF4-5",
+      "witness": "NRF_1914",
+      "desc": "見開きコピー撮影。左白紙・右4行構成（JAMAIS／QUAND…CIRCONSTANCES／ÉTERNELLES／DU FOND D’UN NAUFRAGE）で、CIRCONSTANCES 後改行を含め行割りとも Ronat と一致。異同層向け参考"
+    },
+    {
+      "label": "Cos3-5",
+      "witness": "Cosmopolis_1897",
+      "desc": "誌面コピー撮影。QUAND BIEN MÊME 句は Cos でも2行組みだが、改行位置が DES の後（〈QUAND BIEN MÊME LANCÉ DANS DES／CIRCONSTANCES ÉTERNELLES〉）で、Ronat/NRF の CIRCONSTANCES 後改行と相違（N 確認 2026-07-26）。白紙面なし・柱あり。異同層向け参考"
+    },
+    {
+      "label": "骰子一擲f4-f5",
+      "witness": "handscroll_1987",
+      "desc": "1987 手巻物統辞図 f4-f5 葉。葉面上部に〈- f 4 -（空白）〉〈- f 5 -〉とタイプ明記（現行フォリエーションと一致）。区切り照合用。左側の紫囲みは Cos 版の2行組み（DES 後改行）の異文併記であり配置情報ではない（N 指示 2026-07-26）"
+    }
+  ],
+  "units": [
+    {
+      "id": "tu_f5_jamais",
+      "face": "f5",
+      "seq": 10,
+      "text": "JAMAIS",
+      "type_class": 1,
+      "style": "romain",
+      "note": "表題文4錨 census の f5 錨（typography_scale_update_2026-07-16、14mm；N 実測 2026-07-26 再確認）＝class 1。global_clauses.json cl_global_phrase_capitale 成分2（order 2）の既存参照 ID をそのまま採用（witness_note は 2026-07-12 に N 照合済・verified）。物理1行。写真画素計測（cap ≈80px）とも整合。"
+    },
+    {
+      "id": "tu_f5_quand_bien_meme",
+      "face": "f5",
+      "seq": 20,
+      "text": "QUAND BIEN MÊME LANCÉ DANS DES CIRCONSTANCES",
+      "type_class": 3,
+      "style": "romain",
+      "note": "物理1行（Ronat4-5 写真で確定。ÉTERNELLES は次行——Cos の DES 後改行との相違は variant_notes 参照）。N 実測 4mm（2026-07-26）＝class 3。MÊME の Ê・LANCÉ の É を含め逐語一致を N 原本照合で確定（2026-07-26）。"
+    },
+    {
+      "id": "tu_f5_eternelles",
+      "face": "f5",
+      "seq": 30,
+      "text": "ÉTERNELLES",
+      "type_class": 3,
+      "style": "romain",
+      "note": "物理1行（独立行。Ronat4-5 写真で確定。Cos では CIRCONSTANCES と同一行に置かれる——variant_notes 参照）。N 実測 4mm（2026-07-26）＝class 3。É を含め逐語一致を N 原本照合で確定（2026-07-26）。"
+    },
+    {
+      "id": "tu_f5_du_fond_d_un_naufrage",
+      "face": "f5",
+      "seq": 40,
+      "text": "DU FOND D’UN NAUFRAGE",
+      "type_class": 3,
+      "style": "romain",
+      "note": "物理1行。アポストロフの実在を写真画素解析で確認（D–U 間上部の小マーク、高さ ≈8px）、U+2019 に正規化して転記。N 実測 4mm（2026-07-26）＝class 3。D’UN のアポストロフを含め逐語一致を N 原本照合で確定（2026-07-26）。"
+    }
+  ],
+  "physical_observations": [
+    {
+      "id": "obs_f4f5_sheet_structure",
+      "ja": "Ronat_1980 の6枚入れ子折り紙構成（f12-f13 照合時に確定）により、f4 は第2シートの内面（f3 の裏面）、f5 は第3シートの表面——本見開きは別々の2紙面にまたがり、中溝は2紙の突き合わせ。"
+    },
+    {
+      "id": "obs_f4f5_no_gutter",
+      "ja": "中溝跨ぎの印字なし（f4 は白紙、f5 の印字はいずれも中溝から離れる。写真画素解析で確認）。"
+    },
+    {
+      "id": "obs_f4_blank_face",
+      "ja": "f4 は完全白紙面（印刷痕・刊記・頁付なし。N 原本照合 2026-07-26 で確定——oq_l0_f4f5_verbatim_details 解決済み）。テクスト・ユニットを持たない面として記録し、unit_count に寄与しない。"
+    },
+    {
+      "id": "obs_f5_layout_profile",
+      "ja": "f5 の活字プロファイル：class 1（14mm）romain 1行（JAMAIS、面上部）＋class 3（4mm）romain 大文字3行（中段〜下段）。全4物理行。各行の水平位置・字下げ・行間の実測は layout 層扱い（level-0 では位置を確定させない）。"
+    }
+  ],
+  "collation_with_handscroll": {
+    "leaf": "骰子一擲f4-f5（葉面上部のタイプ表記：〈- f 4 -（空白)〉〈- f 5 -〉。現行データセットのフォリエーションと一致——f2-f3 葉で記録した差分とは異なり、本葉に割り当ての差分なし）",
+    "result": "match_4_of_4",
+    "ja": "手巻物葉は JAMAIS（楕円枠）／QUAND BIEN MÊME LANCÉ DANS DES CIRCONSTANCES／ÉTERNELLES／DU FOND D’UN NAUFRAGE の枠構成を再現しており、区切りは本記録の4ユニット扱いと一致（4/4）。左側の紫囲みは Cos 版の2行組み〈QUAND BIEN MÊME LANCÉ DANS DES／CIRCONSTANCES ÉTERNELLES〉（DES 後改行）の異文併記であり、配置情報ではない（N 指示 2026-07-26）。葉上部にはタイプ打ちの統語説明（JAMAIS・QUAND 句・DANS・DU FOND の格・節機能に関する1987年時点の分析。C／D／M の解釈者言及を含む）があり、syntax 層向け素材として所在のみ記録する——逐語転記は level-0 の対象外。"
+  },
+  "variant_notes": [
+    {
+      "id": "vn_f4f5_nrf",
+      "witness": "NRF_1914",
+      "ja": "NRF は左＝白紙、右＝4行構成で、行割り（CIRCONSTANCES 後改行・ÉTERNELLES 独立行）とも Ronat と一致することを写真で確認。位置・余白の詳細比較は異同層へ。"
+    },
+    {
+      "id": "vn_f4f5_cos",
+      "witness": "Cosmopolis_1897",
+      "ja": "Cos には f4 白紙面に相当する頁分離がなく、柱付き誌面内で JAMAIS の後に QUAND BIEN MÊME 句が続く。同句は Cos でも2行組みだが改行位置が異なる：Cos は DES の後で改行し〈QUAND BIEN MÊME LANCÉ DANS DES／CIRCONSTANCES ÉTERNELLES〉、Ronat/NRF は CIRCONSTANCES の後で改行し〈…DANS DES CIRCONSTANCES／ÉTERNELLES〉（N 確認 2026-07-26。手巻物紫囲みの併記とも一致）。DU FOND D’UN NAUFRAGE は独立行で一致。同一頁内に SOIT 以下（f6 相当以降）が連続。いずれも異同層向け。"
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "oq_l0_f5_secondary_tier_class",
+      "status": "resolved",
+      "ja": "設計判断：f5 第2〜4行の type_class 確定。起草時は写真画素計測（≈4.2–4.4mm 相当）にもとづく暫定 class 3 で、N 定規実測待ちとしていた。",
+      "resolution": {
+        "date": "2026-07-26",
+        "by": "N",
+        "ja": "N 実測により JAMAIS＝14mm（class 1）、QUAND 以下第2〜4行＝すべて4mm（class 3）で確定。暫定値と一致し、変更なし。"
+      }
+    },
+    {
+      "id": "oq_l0_f4f5_verbatim_details",
+      "status": "resolved",
+      "category": "pending_verbatim_collation",
+      "ja": "原本逐語照合時の確認事項：①f4 が完全白紙であること（印刷痕・刊記・頁付なし）②MÊME の Ê・LANCÉ/ÉTERNELLES の É・D’UN のアポストロフを含む逐語一致。",
+      "resolution": {
+        "date": "2026-07-26",
+        "by": "N",
+        "ja": "①f4 は完全白紙で確定（印刷痕・刊記・頁付なし）②MÊME の Ê・LANCÉ の É・ÉTERNELLES の É・D’UN のアポストロフ（U+2019）を含め逐語一致・問題なし。text／face の訂正なし。"
+      }
+    }
+  ],
+  "notes": {
+    "ja": "本記録は level-0（引用可能性の保証）に限定する。variant・syntax・readings に属する事項はすべて note／variant_notes／open_questions に留め、global_clauses.json ほか台帳類は変更しない。tu_f5_jamais の正本化により、cl_global_phrase_capitale 成分2（order 2、f5:tu_f5_jamais）の参照が現行 level-0 正本レコードで裏づけられる（f3 成分は f2-f3 正本〔2026-07-25〕で解決済み）。ユニット粒度は f2-f3 裁定の運用原則『level-0 の unit は物理レイアウトによって決める』に従い1行1ユニット。type_class は N 実測（2026-07-26）により全4ユニット確定済み。open_questions の運用は f1 の区分（設計判断＝status: open／逐語照合待ち＝category: pending_verbatim_collation）に従う。"
+  },
+  "collation_note": {
+    "date": "2026-07-26",
+    "by": "N",
+    "ja": "原本逐語照合完了・text／face の訂正0件。f4 の完全白紙（印刷痕・刊記・頁付なし）、MÊME の Ê・LANCÉ/ÉTERNELLES の É・D’UN のアポストロフ（U+2019）を含む逐語一致を確認。revision_history は空のまま確定。"
+  }
+}

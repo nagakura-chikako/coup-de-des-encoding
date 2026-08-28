@@ -1,0 +1,124 @@
+{
+  "file": "f2-f3_level0.json",
+  "schema_version": "0.3",
+  "schema_ref": "level0_schema.json (approved 2026-07-18)",
+  "spread_id": "f2-f3",
+  "record_depth": "level-0",
+  "base_state": "Ronat_1980",
+  "recorded": "2026-07-25",
+  "recorded_by": "Claude (draft) / N (measurements & rulings; verbatim collation 2026-07-25, no corrections to text/face)",
+  "status": "collated_with_original",
+  "unit_count": 1,
+  "revision_history": [],
+  "deprecated_ids": [],
+  "provenance_note": {
+    "ja": "過去の f1-f3 試作（f1-f3 期）は試行錯誤中で正本未作成であり、本記録が現行 level-0 スキーマによる f2-f3 の初の正本起草（f1 正本〔2026-07-24 起草・2026-07-25 照合完了〕に続く）。旧試作 ID は正典未登録のため deprecated 処理不要。なお本セッション起草時ドラフトは f3 の配置を〈UN COUP／DE DÉS〉の2行段差と誤記述していた（NRF 系刊本についての記憶にもとづく推定が写真の観察を上書きした転記過誤。提供写真は Ronat・NRF とも物理1行を示す）。正本化前に N 裁定・原本照合（2026-07-25）にもとづき1行へ全面訂正した（正典レコードの text 訂正ではないため revision_history には記載しない。f1 の前例と同じ扱い）。"
+  },
+  "scope_note": {
+    "ja": "level-0 の対象は本文紙束のみ（f1 記録の N 裁定 2026-07-24 に従う）。f2 は f 系フォリエーション内の白紙面であり、f1 記録の『白ページ0』（フォリエーション外）とは区別する。"
+  },
+  "evidence": [
+    {
+      "label": "Ronat2-3",
+      "witness": "Ronat_1980",
+      "desc": "見開き撮影。左＝f2（完全白紙）、右＝f3。転記の主資料"
+    },
+    {
+      "label": "N_measurement_14mm",
+      "witness": "Ronat_1980",
+      "desc": "N 実測報告：UN COUP DE DÉS＝14mm（2026-07-25 申告。表題文4錨 census〔typography_scale_update_2026-07-16、f3 錨実測 14mm〕と一致）。type_class 裁定の優先根拠"
+    },
+    {
+      "label": "NRF2-3",
+      "witness": "NRF_1914",
+      "desc": "見開きコピー撮影。左白紙・右 UN COUP DE DÉS の1行配置で Ronat と構成一致。異同層向け参考"
+    },
+    {
+      "label": "Cos3-5",
+      "witness": "Cosmopolis_1897",
+      "desc": "誌面コピー撮影（f3〜f9 相当内容を含む）。UN COUP DE DÉS は1行組みで同一頁内に JAMAIS 以下が続く。異同層向け参考"
+    },
+    {
+      "label": "骰子一擲f2-f3",
+      "witness": "handscroll_1987",
+      "desc": "1987 手巻物統辞図 f2-f3 葉（提供ファイル名。台帳上の葉番号は N 確認）。区切り照合用"
+    }
+  ],
+  "units": [
+    {
+      "id": "tu_f3_un_coup_de_des",
+      "face": "f3",
+      "seq": 10,
+      "text": "UN COUP DE DÉS",
+      "type_class": 1,
+      "style": "romain",
+      "note": "N 実測 14mm（表題文4錨 census、typography_scale_update_2026-07-16；2026-07-25 N 再確認）＝class 1。物理的に1行（N 原本照合 2026-07-25 確定）であり、N 原則『level-0 の unit は物理レイアウトによって決める』（oq_l0_f3_unit_granularity 裁定）により1行1ユニット。global_clauses.json の cl_global_phrase_capitale 成分1（order 1）の既存参照・census 単一錨・手巻物単一枠とも整合する。字間を広く取った大文字（字間は layout 層扱い）。"
+    }
+  ],
+  "physical_observations": [
+    {
+      "id": "obs_f2f3_sheet_structure",
+      "ja": "Ronat_1980 の6枚入れ子折り紙構成（f12-f13 照合時に確定した構造）により、f2 は最外シートの内面（f1 の裏面）、f3 は第2シートの表面——本見開きは別々の2紙面にまたがる。中溝は2紙の突き合わせ。"
+    },
+    {
+      "id": "obs_f2f3_no_gutter",
+      "ja": "中溝跨ぎの印字なし（f2 は白紙、f3 の印字は右面上部の1行のみで中溝から離れる）。"
+    },
+    {
+      "id": "obs_f2_blank_face",
+      "ja": "f2 は本文紙束内の完全白紙面（印刷痕・刊記・頁付なし。N 原本照合 2026-07-25 で確定——oq_l0_f2f3_verbatim_details 解決済み）。テクスト・ユニットを持たない面として記録し、level-0 上は unit_count に寄与しない。"
+    },
+    {
+      "id": "obs_f3_layout_profile",
+      "ja": "f3 の活字プロファイル：14mm romain 大文字のみ（UN COUP DE DÉS の1行、面上部に配置、下方は全面余白）。詩本文（f3〜f23）はこの class 1 単独面から開始する。行位置・余白の実測は layout 層扱い。"
+    }
+  ],
+  "collation_with_handscroll": {
+    "leaf": "骰子一擲f2-f3（台帳上の葉番号：f3・f4〔空白〕。N 判読 2026-07-25）",
+    "result": "match_1_of_1",
+    "ja": "手巻物葉は UN COUP DE DÉS を単一枠で再現しており、区切りは本記録の1ユニット扱いと一致（1/1）。フォリエーションには差分あり：手巻物は空白面を f4 として f3 の後に置くのに対し、現行データセットは空白面 f2 が f3 に先行する。oq_l0_segmentation_authority の裁定方針に従い割り当ての差分として本注記に記録し、後続層で生かす。欄外注（N 判読 2026-07-25）：①〈(n’)abolira の主語。［動詞の作用の原因を表す行為。］〉——現行 case_frame における主語の格役割（動作主か道具か）の争点に対する1987年時点の先行分析（主語を〈原因を表す行為〉と規定）であり、syntax 層向けに保存 ②〈Igitur 別稿 IV「MALGRÉ LA DÉFENSE DE SA MÈRE, ALLANT JOUER DANS LES TOMBEAUX」において、2つのダイスが投げられ、「12（真夜中）」が出されることが暗示される。Il jette les dés, le coup s’accomplit, douze, le temps (minuit).（Igitur, Divagations, Un Coup de Dés, Gallimard, Collection Poésies, 1976, p.66）〉——readings 層向け素材。いずれも level-0 には取り込まない。"
+  },
+  "variant_notes": [
+    {
+      "id": "vn_f2f3_nrf",
+      "witness": "NRF_1914",
+      "ja": "NRF は左＝白紙、右＝UN COUP DE DÉS の1行配置で、行割り・面構成とも Ronat と一致することを写真で確認。位置・余白の詳細比較は異同層へ。"
+    },
+    {
+      "id": "vn_f2f3_cos",
+      "witness": "Cosmopolis_1897",
+      "ja": "Cos には f2 白紙面・f3 単独面に相当する頁分離がなく、柱〈UN COUP DE DÉS JAMAIS N’ABOLIRA LE HASARD〉付きの誌面冒頭に UN COUP DE DÉS が1行組みで置かれ、同一頁内に JAMAIS 以下（f5 相当以降）が続く（1行組み自体は Ronat と一致）。白紙面・単独面の不在（誌面の連続組み）・柱の存在は異同層向け。頁番号は左葉 419 と判読（要 N 確認）。"
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "oq_l0_f3_unit_granularity",
+      "status": "resolved",
+      "ja": "設計判断：UN COUP DE DÉS を (a) 単一ユニット tu_f3_un_coup_de_des として記録（起草採用）か、(b) 行単位2分割か。（経緯：起草時ドラフトは本行を〈UN COUP／DE DÉS〉の2行段差と誤認していたため擬似的な争点となっていた。N 照合により物理1行が確定し、(a) は行基調の粒度とも一致する——provenance_note 参照。）",
+      "resolution": {
+        "date": "2026-07-25",
+        "by": "N",
+        "ja": "案 (a) 単一ユニット採用・案 (b) 却下。理由：原本の物理レイアウトが1行であるため。あわせて運用原則を確立——『level-0 の unit は物理レイアウトによって決める』（解釈の層ではいかなる読解の可能性も排除しないが、level-0 は原本の構造を忠実にたどる）。oq_l0_style_mixte の裁定（書体の都合でユニットを分割しない）とも整合：粒度の基準は行構成という物理レイアウトであり、書体ではない。GPT 理由づけ（N 承認・併記）：本見開きでは UN COUP DE DÉS が行というより一つのタイポグラフィ的出来事として立ち現れており、level-0 の記録単位としては単一ユニットが最も自然。class 1 の最初の census 錨が一意に保たれること、tu_f3_un_coup_de_des を参照する global_clauses および checker と整合すること、将来 level-1 以降で必要なら行情報を追加できることも利点。"
+      }
+    },
+    {
+      "id": "oq_l0_f2f3_verbatim_details",
+      "status": "resolved",
+      "category": "pending_verbatim_collation",
+      "ja": "逐語照合時の確認事項：①f2 が完全白紙であること（印刷痕・刊記・頁付なし）②DÉS のアクセント（É）を含む逐語一致 ③手巻物 f2-f3 葉の欄外注の判読と台帳上の葉番号。",
+      "resolution": {
+        "date": "2026-07-25",
+        "by": "N",
+        "ja": "①f2 は完全白紙で確定 ②逐語一致・問題なし ③台帳上の葉番号は f3・f4（空白）、欄外注2件を判読（collation_with_handscroll に転記）。text／face の訂正なし。"
+      }
+    }
+  ],
+  "notes": {
+    "ja": "本記録は level-0（引用可能性の保証）に限定する。variant・syntax・readings に属する事項はすべて note／variant_notes／open_questions に留め、global_clauses.json ほか台帳類は変更しない。tu_f3_un_coup_de_des の実在により、cl_global_phrase_capitale 成分1（order 1、f3:tu_f3_un_coup_de_des）の参照は現行 level-0 スキーマの正本レコードで初めて裏づけられる（f11・f19 成分は level-0 v1.1 で、f5 成分は v1.0 full_record で解決済み）。open_questions の運用は f1 の区分（設計判断＝status: open／逐語照合待ち＝category: pending_verbatim_collation）に従う。また本記録の裁定により、ユニット粒度の運用原則『level-0 の unit は物理レイアウトによって決める』が確立された（以後のスプレッド起草に適用）。"
+  },
+  "collation_note": {
+    "date": "2026-07-25",
+    "by": "N",
+    "ja": "原本逐語照合完了・text／face の訂正0件。f2 の完全白紙、DÉS のアクセントを含む逐語一致を確認。起草時の配置誤記述（2行段差→1行）は正本化前の全面訂正として provenance_note に記録。revision_history は空のまま確定。"
+  }
+}

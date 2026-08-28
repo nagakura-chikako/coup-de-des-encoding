@@ -1,0 +1,50 @@
+{
+  "file": "typography_scale_update_2026-07-16",
+  "description": {
+    "ja": "2026-07-16 の実測（f3, f5）による typography_scale.json への統合。(A) は class 1 への錨2点の追加であり、これをもって表題文4成分の全実測が完了、class 1 は完結する。(B) は measurement_log 追記。(C) は authorial 層（maquette_typography.json）との関係についての構造的注記。",
+    "en": "Integration into typography_scale.json from the 2026-07-16 measurements (f3, f5). (A) adds two anchors to class 1, completing measurement of all four components of the capital sentence. (B) appends to the measurement_log. (C) records the structural relation to the authorial layer (maquette_typography.json)."
+  },
+
+  "A_class_1_final_anchors": {
+    "size_class": "1",
+    "add_anchors": [
+      {
+        "anchor_word": "UN COUP DE DÉS",
+        "anchor_location": { "spread": "f2-f3", "page": "f3", "text_unit": "tu_f3_un_coup_de_des" },
+        "cap_height_mm": 14.0,
+        "tolerance_mm": 0.5,
+        "measurement": { "method": "ruler_on_page", "date": "2026-07-16", "measured_by": "N", "method_note": "method は従来と同一と仮定して記載。異なる場合は要訂正。" }
+      },
+      {
+        "anchor_word": "JAMAIS",
+        "anchor_location": { "spread": "f4-f5", "page": "f5", "text_unit": "tu_f5_jamais" },
+        "cap_height_mm": 14.0,
+        "tolerance_mm": 0.5,
+        "measurement": { "method": "ruler_on_page", "date": "2026-07-16", "measured_by": "N", "method_note": "同上。" }
+      }
+    ],
+    "note": {
+      "ja": "class 1 の4錨（f3 UN COUP DE DÉS ／ f5 JAMAIS ／ f11 N’ABOLIRA ／ f19 LE HASARD）がすべて実測14mmで確定。Ronat_1980 において表題文が単一のサイズ層を成すことは、もはや仮説ではなく全点実測の事実である。",
+      "en": "All four anchors of class 1 (f3, f5, f11, f19) are now measured at 14 mm. That the capital sentence forms a single size tier in Ronat_1980 is no longer a hypothesis but a fully measured fact."
+    },
+    "status": "verified"
+  },
+
+  "B_measurement_log_append": {
+    "measured_by": "N",
+    "method": "ruler_on_page",
+    "tolerance_mm": 0.5,
+    "witness": "Ronat_1980",
+    "date": "2026-07-16",
+    "results": [
+      { "scope": "f3 UN COUP DE DÉS", "cap_height_mm": 14.0 },
+      { "scope": "f5 JAMAIS", "cap_height_mm": 14.0 }
+    ]
+  },
+
+  "C_relation_to_authorial_layer": {
+    "ja": "本確定は oq_title_sentence_two_sizes（maquette_typography.json）に解答を与える：マケットの欄外数字は 36（f3）／36 en surcharge 28（f5）／28 ＋ esp. 2 p.（f11）と表題文内部で割れているが、Ronat_1980 はこれを単一の14mm層として実現した。すなわち「表題文＝単一層」は Ronat 層の事実であり、著者指示層に二段階の区別（またはその痕跡）が存在した可能性は消えない。決定版計画で 36／28 が実際にどの活字に翻訳される予定だったかは、校正刷 E1–E5 の観察によってのみ検証可能（将来課題として proof_states.json に接続）。",
+    "en": "This settles oq_title_sentence_two_sizes: the maquette marginal figures split within the capital sentence (36 / 36-over-28 / 28 + esp. 2 p.), yet Ronat_1980 realizes it as a single 14 mm tier. 'Single tier' is thus a fact of the Ronat layer; a two-step authorial distinction (or its trace) remains possible, verifiable only against the proofs E1–E5.",
+    "status": "recorded"
+  }
+}

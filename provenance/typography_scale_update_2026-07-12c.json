@@ -1,0 +1,89 @@
+{
+  "file": "typography_scale_update_2026-07-12c",
+  "description": {
+    "ja": "2026-07-12 の全面実測（N測定、ruler_on_page、±0.5mm）に基づく typography_scale.json の更新一式。既存の class 3・class 4 エントリを (A)(B) で差し替え、(C)(D) を新規追加、(E) を measurement_log として保存すること。",
+    "en": "Batch update to typography_scale.json based on the full measurement campaign of 2026-07-12 (by N, ruler_on_page, ±0.5 mm). Replace the existing class 3 and class 4 entries with (A)(B), add (C)(D) as new entries, and store (E) as the measurement_log."
+  },
+
+  "A_class_3_abolished": {
+    "size_class": "3",
+    "status": "abolished",
+    "abolished": "2026-07-12",
+    "merged_into": "4",
+    "revision_context": {
+      "ja": "暫定スケール（f4-f5 セッション）で「SOIT・LE MAÎTRE のキャピタル層」として仮設。全面実測により f6-f10 の活字が全て 4mm と確定し、キャピタル層は独立のサイズではなく本文活字の大文字使い（＋字間）であることが判明したため廃止、class 4 に統合。番号は欠番として保存する。",
+      "en": "Provisionally posited (f4-f5 session) as the 'SOIT / LE MAÎTRE capital tier.' Full measurement established all type on f6-f10 at 4 mm, showing the capital tier to be body type in capitals (plus letter-spacing), not an independent size. Abolished and merged into class 4; the number is retired, not reassigned."
+    }
+  },
+
+  "B_class_4_revised": {
+    "size_class": "4",
+    "layer_label": "本文層（4mm 級。ローマン体・イタリック体、大文字法・小文字とも）",
+    "cap_height_mm": 4.0,
+    "tolerance_mm": 0.5,
+    "anchors": [
+      { "anchor_word": "SOIT", "spread": "f6-f7", "page": "f6", "text_unit": "tu_f6_soit" },
+      { "anchor_word": "LE MAÎTRE", "spread": "f8-f9", "page": "f8", "text_unit": "tu_f8_maitre", "note": "former class 3" }
+    ],
+    "measured_scope": {
+      "ja": "f6-f10 の全ユニット、および f12-f17 のイタリック（f17 の SI を除く）が全て 4mm であることを実測確認。ローマン／イタリック、大文字法／小文字はこのクラス内の style・case 次元であり、サイズを変えない。",
+      "en": "Measurement confirms all units on f6-f10, and all italics on f12-f17 (except SI on f17), at 4 mm. Roman/italic and upper/lower case are style and case dimensions within this class; they do not alter size."
+    },
+    "measurement": { "method": "ruler_on_page", "date": "2026-07-12", "measured_by": "N" },
+    "status": "verified"
+  },
+
+  "C_class_1_anchor": {
+    "size_class": "1",
+    "layer_label": "表題文層",
+    "anchor_word": "N'ABOLIRA",
+    "anchor_location": { "spread": "f10-f11", "page": "f11", "text_unit": "TODO_f10f11_record" },
+    "cap_height_mm": 14.0,
+    "tolerance_mm": 0.5,
+    "measurement": { "method": "ruler_on_page", "date": "2026-07-12", "measured_by": "N" },
+    "status": "verified",
+    "note": {
+      "ja": "表題文の他の3語——UN COUP DE DÉS (f3)・JAMAIS (f5)・LE HASARD (f19)——が同じ 14mm 級かは各スプレッドでの実測で確認すること。TODO。",
+      "en": "Whether the other three words of the title sentence — UN COUP DE DÉS (f3), JAMAIS (f5), LE HASARD (f19) — share the 14 mm tier is to be confirmed by measurement on each spread. TODO."
+    }
+  },
+
+  "D_new_class_si_hinge": {
+    "size_class": "5mm_si",
+    "layer_label": "SI 蝶番層（f17 の単独クラス）",
+    "anchor_word": "SI",
+    "anchor_location": { "spread": "f16-f17", "page": "f17", "text_unit": "TODO_f16f17_record" },
+    "cap_height_mm": 5.0,
+    "tolerance_mm": 0.5,
+    "style": "italic",
+    "measurement": { "method": "ruler_on_page", "date": "2026-07-12", "measured_by": "N" },
+    "status": "verified",
+    "notes": [
+      {
+        "ja": "f12-f17 のイタリック層の中で唯一の例外的サイズ。本文 4mm からわずか 1mm の上昇であり、実測なしには階層として検出できない最小の卓越。条件文 SI C'ÉTAIT... への蝶番という統辞的役割（f16-f17 記録参照）に、固有のサイズ層が対応する。",
+        "en": "The sole size exception within the italic layer of f12-f17: a rise of just 1 mm above the 4 mm body — the smallest prominence, undetectable as a tier without measurement. The syntactic role of hinge into the conditional SI C'ÉTAIT... (see the f16-f17 record) is matched by a size tier of its own."
+      },
+      {
+        "ja": "クラスIDの序数意味論について：実測 mm 値が真の順序を与えるため、以後 size_class の番号は識別子として扱い、序列は cap_height_mm から導出する。全スプレッドの実測完了後、v0.4 で一括再付番するかを判断。暫定IDとして '5mm_si' を用いる。QUAND BIEN MÊME 層（暫定 class 2、未実測）との同異も要確認。",
+        "en": "On ordinal semantics of class IDs: since measured mm values now give the true ordering, size_class numbers are henceforth treated as identifiers, with ranking derived from cap_height_mm. Whether to renumber wholesale in v0.4 will be decided after all spreads are measured; '5mm_si' serves as the provisional ID. Identity or difference with the QUAND BIEN MÊME tier (provisional class 2, unmeasured) remains to be checked."
+      }
+    ]
+  },
+
+  "E_measurement_log_2026-07-12": {
+    "measured_by": "N",
+    "method": "ruler_on_page",
+    "tolerance_mm": 0.5,
+    "witness": "Ronat_1980",
+    "results": [
+      { "scope": "f6-f10 全ユニット", "cap_height_mm": 4.0, "finding": "大きく見える語は全て大文字法によるもの。サイズ層は単一。" },
+      { "scope": "f11 N'ABOLIRA", "cap_height_mm": 14.0 },
+      { "scope": "f12-f17 イタリック（SI を除く）", "cap_height_mm": 4.0 },
+      { "scope": "f17 SI（イタリック）", "cap_height_mm": 5.0, "finding": "イタリック層内の唯一の例外サイズ。" }
+    ],
+    "summary": {
+      "ja": "f6-f17 の中間部はほぼ単一サイズ（4mm）の平原であり、活字階層は大文字法・イタリック・字間によって産出される。サイズの劇は表題文の語（N'ABOLIRA 14mm）と f17 の SI（5mm）に集中し、本格的なサイズ変化は f18 以降に始まる。",
+      "en": "The poem's middle section f6-f17 is an almost single-size plain (4 mm), its typographic hierarchy produced by capitalization, italics, and letter-spacing. The drama of size is concentrated in the title-sentence words (N'ABOLIRA, 14 mm) and the SI of f17 (5 mm); genuine size variation begins only after f18."
+    }
+  }
+}

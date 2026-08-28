@@ -1,0 +1,316 @@
+{
+  "file": "f6-f7_level0.json",
+  "schema_version": "0.3",
+  "schema_ref": "level0_schema.json (approved 2026-07-18; revised 2026-07-26, 2026-07-27)",
+  "spread_id": "f6-f7",
+  "record_depth": "level-0",
+  "base_state": "Ronat_1980",
+  "recorded": "2026-07-26",
+  "recorded_by": "Claude (draft) / N (measurements & rulings 2026-07-26; verbatim collation 2026-07-27, no corrections to text/face)",
+  "status": "collated_with_original",
+  "unit_count": 21,
+  "revision_history": [],
+  "deprecated_ids": [],
+  "provenance_note": {
+    "ja": "現行 level-0 スキーマによる f6-f7 の初の正本起草（f1・f2-f3・f4-f5 に続く）。v0.3 期の旧試作 f6-f7.json は正典未登録のため deprecated 処理は不要。起草は提供写真（Ronat6-7）の直接観察と画素計測にもとづき、既刊本一般の知識・記憶による補完は行っていない。"
+  },
+  "scope_note": {
+    "ja": "level-0 の対象は本文紙束のみ。統語・レイアウト・関係・多読解・異同の各層に属する事項は note／variant_notes／open_questions に留め、global_clauses.json ほか台帳類は変更しない。 なお f6 面に観察される淡い裏写り痕跡は、肉眼では視認できず、その配置が作者の計算によるものかという問いは level-0 の記述範囲を超えるため本記録には含めない（N 裁定 2026-07-27）。アニメーション化によって新たな認知が可能になる、という形での提示は別layer の課題とする。"
+  },
+  "evidence": [
+    {
+      "label": "Ronat6-7",
+      "witness": "Ronat_1980",
+      "desc": "見開き撮影。左＝f6、右＝f7。転記の主資料"
+    },
+    {
+      "label": "N_measurement_2026-07-26",
+      "witness": "Ronat_1980",
+      "desc": "N 実測報告（2026-07-26）：本見開きの活字は全て 4mm。type_class 3 裁定の優先根拠。census の『4mm の平原は f6-f17 と f20-f23 を覆う』（全詩実測キャンペーン）とも整合"
+    },
+    {
+      "label": "px_analysis_2026-07-26",
+      "witness": "Ronat_1980",
+      "desc": "Claude 写真画素解析（2026-07-26）：縦エッジ検出で中溝 x≈1704。長行3本のベースライン勾配から写真の傾きを -0.0150 px/px（-0.859°）と推定し補正。補正後の行検出で f6＝11行・f7＝10行。行高（アセンダ〜ベースライン）は f6 が 26–28px、f7 が 25–28px で全域一様、ディセンダを含む行のみ 35–39px。N 実測（4mm 一様）と整合する参考資料（裁定根拠は N 実測）"
+    },
+    {
+      "label": "NRF6-7",
+      "witness": "NRF_1914",
+      "desc": "見開きコピー撮影。行割り・構成とも Ronat と一致（f6 11行／f7 10行）。par（f6 末行）と avance retombée…（f7 頭行）のベースライン一致も同様に観察される。ただし本コピーは紙の折れと歪みが大きく、Ronat と同精度の画素比較には用いない。異同層向け参考"
+    },
+    {
+      "label": "Cos6-7",
+      "witness": "Cosmopolis_1897",
+      "desc": "誌面コピー撮影（p.420、頁番号を判読）。f6・f7 相当の全文が頁分離なしで1頁に収まり、行数は20（Ronat の21行に対し par 行の扱いが異なる）。N 朱筆の校合注記2件を含む。異同層向け参考"
+    },
+    {
+      "label": "骰子一擲２",
+      "witness": "handscroll_1987",
+      "desc": "1987 手巻物統辞図 f6-f7 葉。葉面上部に〈- f 6 -〉〈- f 7 -〉とタイプ明記（現行フォリエーションと一致）。区切り照合用"
+    }
+  ],
+  "units": [
+    {
+      "id": "tu_f6_soit",
+      "face": "f6",
+      "seq": 10,
+      "text": "SOIT",
+      "type_class": 3,
+      "style": "romain",
+      "note": "物理1行。大文字・字間広め（字間は layout 層扱い）。N 実測 4mm＝class 3——2026-07-26 の実測報告を 2026-07-27 の原本照合で再確認（verified）。本ユニットについて確定しているのはこの class 3 帰属のみ。全詩実測キャンペーン（2026-07-12 頃）では本語と LE MAÎTRE（f8）がともに 4mm と実測されており、これが暫定 class 3 廃止・class 4 統合の契機となったが、両語を同一 class の成員として level-0 上で確認する作業は typography_scale.json の oq_ts_le_maitre_same_class として f8-f9 の level-0 改訂時に実施予定であり未了。本 note は既往実測の事実を記すに留め、同級判定を先取りしない。大文字性は活字サイズと独立（f20-f21 で文規模の実例化）。"
+    },
+    {
+      "id": "tu_f6_que",
+      "face": "f6",
+      "seq": 20,
+      "text": "que",
+      "type_class": 3,
+      "style": "romain",
+      "note": "物理1行。SOIT の直下やや右に字下げ。"
+    },
+    {
+      "id": "tu_f6_l_abime",
+      "face": "f6",
+      "seq": 30,
+      "text": "l’Abîme",
+      "type_class": 3,
+      "style": "romain",
+      "note": "物理1行。大文字 A および î の曲折アクセントを N が原本で確認（2026-07-27、verified）。アポストロフは U+2019 に正規化。Cos は小文字始まり——variant_notes 参照。"
+    },
+    {
+      "id": "tu_f6_blanchi",
+      "face": "f6",
+      "seq": 40,
+      "text": "blanchi",
+      "type_class": 3,
+      "style": "romain",
+      "note": "物理1行。以下 étale・furieux とともに階段状に右下がりに配置（配置の実測は layout 層扱い）。"
+    },
+    {
+      "id": "tu_f6_etale",
+      "face": "f6",
+      "seq": 50,
+      "text": "étale",
+      "type_class": 3,
+      "style": "romain",
+      "note": "物理1行。"
+    },
+    {
+      "id": "tu_f6_furieux",
+      "face": "f6",
+      "seq": 60,
+      "text": "furieux",
+      "type_class": 3,
+      "style": "romain",
+      "note": "物理1行。"
+    },
+    {
+      "id": "tu_f6_sous_une_inclinaison",
+      "face": "f6",
+      "seq": 70,
+      "text": "sous une inclinaison",
+      "type_class": 3,
+      "style": "romain",
+      "note": "物理1行。"
+    },
+    {
+      "id": "tu_f6_plane_desesperement",
+      "face": "f6",
+      "seq": 80,
+      "text": "plane désespérément",
+      "type_class": 3,
+      "style": "romain",
+      "note": "物理1行。f6 で唯一ディセンダを含む行（行高 39px、他は 26–28px）。é 3箇所は逐語照合の確認事項（open_questions 参照）。"
+    },
+    {
+      "id": "tu_f6_d_aile",
+      "face": "f6",
+      "seq": 90,
+      "text": "d’aile",
+      "type_class": 3,
+      "style": "romain",
+      "note": "物理1行。アポストロフは U+2019 に正規化。"
+    },
+    {
+      "id": "tu_f6_la_sienne",
+      "face": "f6",
+      "seq": 100,
+      "text": "la sienne",
+      "type_class": 3,
+      "style": "romain",
+      "note": "物理1行。"
+    },
+    {
+      "id": "tu_f6_par",
+      "face": "f6",
+      "seq": 110,
+      "text": "par",
+      "type_class": 3,
+      "style": "romain",
+      "note": "物理1行、f6 の最終行。中溝側にもっとも近く寄る行（右端 x≈1479、中溝 x≈1704 まで余白 225px）。f7 頭行 tu_f7_avance_retombee と同一ベースライン（傾き補正後の差 ≈1px）だが、両者の間には約471px（≈67mm）の空白があり連続組みの行ではない。統語句 par avance retombée… は面境界を跨ぐが、印字行としての中溝跨ぎには当たらない——N 裁定（2026-07-27）により level-0 は物理配置を忠実に記録し面帰属で2分割、par avance を一まとまりとして読みうることは readings／syntax 層で記述する（obs_f6f7_shared_baseline／oq_l0_f6f7_par_gutter 参照）。"
+    },
+    {
+      "id": "tu_f7_avance_retombee",
+      "face": "f7",
+      "seq": 120,
+      "text": "avance retombée d’un mal à dresser le vol",
+      "type_class": 3,
+      "style": "romain",
+      "note": "物理1行、f7 の頭行。tu_f6_par と同一ベースライン（obs_f6f7_shared_baseline 参照）。Cos は par を含めて1行組み——variant_notes 参照。アポストロフは U+2019 に正規化。"
+    },
+    {
+      "id": "tu_f7_et_couvrant_les_jaillissements",
+      "face": "f7",
+      "seq": 130,
+      "text": "et couvrant les jaillissements",
+      "type_class": 3,
+      "style": "romain",
+      "note": "物理1行。"
+    },
+    {
+      "id": "tu_f7_coupant_au_ras_les_bonds",
+      "face": "f7",
+      "seq": 140,
+      "text": "coupant au ras les bonds",
+      "type_class": 3,
+      "style": "romain",
+      "note": "物理1行。"
+    },
+    {
+      "id": "tu_f7_tres_a_l_interieur_resume",
+      "face": "f7",
+      "seq": 150,
+      "text": "très à l’intérieur résume",
+      "type_class": 3,
+      "style": "romain",
+      "note": "物理1行。アポストロフは U+2019 に正規化。"
+    },
+    {
+      "id": "tu_f7_l_ombre_enfouie",
+      "face": "f7",
+      "seq": 160,
+      "text": "l’ombre enfouie dans la profondeur par cette voile alternative",
+      "type_class": 3,
+      "style": "romain",
+      "note": "物理1行。本見開き最長の行（x≈1948–2919）。Cos は同位置に transparence を置く——語そのものの異同として variant_notes 参照。アポストロフは U+2019 に正規化。"
+    },
+    {
+      "id": "tu_f7_jusqu_adapter",
+      "face": "f7",
+      "seq": 170,
+      "text": "jusqu’adapter",
+      "type_class": 3,
+      "style": "romain",
+      "note": "物理1行。アポストロフ後に語間を置かない連続組みであることを N が原本で確認（2026-07-27）。手巻物の〈jusqu’ adapter〉という分かち書きは手巻物側の表記であり、原本の組みとは異なる——syntax 層向けに note に保存。アポストロフは U+2019 に正規化。"
+    },
+    {
+      "id": "tu_f7_a_l_envergure",
+      "face": "f7",
+      "seq": 180,
+      "text": "à l’envergure",
+      "type_class": 3,
+      "style": "romain",
+      "note": "物理1行。アポストロフは U+2019 に正規化。"
+    },
+    {
+      "id": "tu_f7_sa_beante_profondeur",
+      "face": "f7",
+      "seq": 190,
+      "text": "sa béante profondeur en tant que la coque",
+      "type_class": 3,
+      "style": "romain",
+      "note": "物理1行。"
+    },
+    {
+      "id": "tu_f7_d_un_batiment",
+      "face": "f7",
+      "seq": 200,
+      "text": "d’un bâtiment",
+      "type_class": 3,
+      "style": "romain",
+      "note": "物理1行。アポストロフは U+2019 に正規化。"
+    },
+    {
+      "id": "tu_f7_penche_de_l_un_ou_l_autre_bord",
+      "face": "f7",
+      "seq": 210,
+      "text": "penché de l’un ou l’autre bord",
+      "type_class": 3,
+      "style": "romain",
+      "note": "物理1行、詩面の最終行。アポストロフ2箇所は U+2019 に正規化。"
+    }
+  ],
+  "physical_observations": [
+    {
+      "id": "obs_f6f7_sheet_structure",
+      "ja": "Ronat_1980 の6枚入れ子折り紙構成（f12-f13 照合時に確定）により、f6 は第3シートの内面（f5 の裏面）、f7 は第4シートの表面——本見開きは別々の2紙面にまたがり、中溝は2紙の突き合わせ。f4-f5・f14-f15・f16-f17 と同型の構成。"
+    },
+    {
+      "id": "obs_f6f7_gutter",
+      "ja": "中溝は縦エッジ量の列集計で x≈1704（Ronat6-7 写真座標）。中溝を跨いで連続する印字はない。"
+    },
+    {
+      "id": "obs_f6f7_shared_baseline",
+      "ja": "tu_f6_par（f6）と tu_f7_avance_retombee（f7）は同一ベースライン。写真の傾き（-0.859°、右頁長行3本のベースライン勾配から推定）を補正したうえで、par のベースライン ≈990px、avance… のベースライン ≈991px——差 ≈1px（≒0.15mm）。ただし par の右端（x≈1479）から avance… の左端（x≈1950）までの空白は約471px（≈67mm、当該行の平均語間の約25倍）であり、中溝を跨いで連続組みされた1行ではない。したがって『同一ベースラインだが中溝跨ぎ行ではない』と記述する——f14-f15 の sauf｜que la rencontre と同型（用語の適用基準は oq_l0_f6f7_par_gutter 参照）。"
+    },
+    {
+      "id": "obs_f6f7_line_distribution",
+      "ja": "f6 の印字は面の上半（補正後 y 270–1000）、f7 の印字は下半（y 965–1718）に配され、両面のベースラインが一致するのは par｜avance… の1本のみ。両面の印字帯が重なるのはこの一線に限られる。"
+    },
+    {
+      "id": "obs_f6f7_type_profile",
+      "ja": "全21行が単一の活字層。N 実測 4mm＝class 3（2026-07-26）。書体は全ユニット romain——f12-f13 で始まった italique の平原はまだ現れておらず、本見開きは f20-f21・f22-f23 と同じく romain 単一層。写真の行高はアセンダ〜ベースラインで 25–28px、ディセンダを含む行で 35–39px と全域一様で、N 実測と整合する。"
+    }
+  ],
+  "collation_with_handscroll": {
+    "leaf": "骰子一擲２（葉面上部のタイプ表記：〈- f 6 -〉〈- f 7 -〉。現行データセットのフォリエーションと一致）",
+    "result": "match_20_of_21",
+    "ja": "手巻物葉の区切りは20枠で、本記録の21ユニットとは1箇所のみ相違する。相違点は par＋avance retombée d’un mal à dresser le vol の結合——手巻物はこれを1枠とし、かつ f7 側に配置している。level-0 は面帰属により2分割（tu_f6_par／tu_f7_avance_retombee）。f14-f15 の sauf、f20-f21 の l’évènement｜accompli、f22-f23 の endroit｜fusionne と同型の、頁境界を跨ぐ統語句をめぐる差異であり、oq_l0_segmentation_authority の裁定方針に従い note に保存して syntax 層の先行分析として残す。N 裁定（2026-07-27）により、この結合を readings／syntax 層で扱い level-0 は物理配置に留めるという役割分担が確定したため、20/21 の差異は解消すべき不一致ではなく層の分担の現れとして確定する。残る19箇所（f6 の SOIT〜la sienne 10枠、f7 の et couvrant〜penché 9枠）は完全一致。",
+    "annotation_location_note": {
+      "ja": "葉面には1987年時点のタイプ打ち統語分析（C／D／G／K／M の解釈者言及を含む）と、朱・青・黒の色分けによる係り受け囲みがある。逐語転記は level-0 の対象外とし（運用原則）、所在のみ記録する。syntax 層向けに特筆すべき所在：①SOIT の二重の流れ（文法的には SOIT que l’Abîme へ、活字的には f8 の SOIT LE MAÎTRE へ）という C・M 参照の分析 ②résume を f8 の hésite と並ぶ SOIT 内の2大動詞とする整理 ③plane を関係代名詞を欠いた疑似挿入節と解する K の読解の記載 ④l’Abîme を résume の主語とし blanchi／étale／furieux を3つの同格な付加形容詞とする格分析。①②は v0.3 期に f8-f9 セッションで扱われた SOIT の統語的射程と直接対応する（下記 notes 参照）。"
+    }
+  },
+  "variant_notes": [
+    {
+      "id": "vn_f6f7_nrf",
+      "witness": "NRF_1914",
+      "ja": "NRF は行割り・構成とも Ronat と一致（f6 11行／f7 10行、par は f6 末行）。par と avance retombée… のベースライン一致も同様に観察される。ただし本コピー撮影は紙の折れと歪みが大きく、Ronat と同精度のベースライン比較は行えない旨を明記する。位置・余白の詳細比較は異同層へ。"
+    },
+    {
+      "id": "vn_f6f7_cos",
+      "witness": "Cosmopolis_1897",
+      "ja": "Cos は誌面 p.420 に f6・f7 相当の全文が頁分離なしで収まり、詩行は20行。異同3点。①〈par avance retombée d’un mal à dresser le vol〉が1行組み（Ronat/NRF は par が f6 末行、以下が f7 頭行）。②当該語が小文字始まり（N 朱筆で「A」と注記し大文字化の異同を記録）。曲折アクセント（î）の有無はコピーの解像度では判読できず未確認——異同層で原資料により確認を要する。③**l’ombre enfouie dans la transparence par cette voile alternative**——Ronat/NRF の profondeur に対し Cos は transparence。語そのものの異同であり、N 朱筆で transparence を丸囲みし profondeur を併記している。本見開きで最も重い異同項目として異同層へ送る。"
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "oq_l0_f6f7_par_gutter",
+      "status": "resolved",
+      "ja": "設計判断：par（f6）｜avance retombée…（f7）の記述用語。測定事実は確定している——同一ベースライン（傾き補正後の差 ≈1px）かつ両者間に約67mm の空白。起草は f14-f15 前例（同一ベースライン・中溝跨ぎ行ではない・面帰属で2分割）を採用した。ただし f16-f17 では『別紙面2枚にまたがる見開きでのベースライン連続』を中溝跨ぎ行と認定した前例があり、両前例の適用基準——ベースライン一致で足りるのか、語間相当の間隔で連続組みされていることを要するのか——が corpus 内で未だ明文化されていない。N 裁定を求める。なお裁定がいずれであっても本記録のユニット分割（2分割）と ID は変わらず、physical_observations の記述と用語のみが変わる。",
+      "resolution": {
+        "date": "2026-07-27",
+        "by": "N",
+        "ja": "案 (a) 採用。level-0 は物理配置を忠実に記録し 21ユニットを維持する（tu_f6_par／tu_f7_avance_retombee の2分割）。par avance を一まとまりとして読みうることは readings／syntax 層で記述する、という層の役割分担を確定した。したがって本見開きは『同一ベースラインだが中溝跨ぎ行ではない』——f14-f15 前例の適用で確定し、手巻物との区切り照合は 20/21 のまま（統語的結合＝手巻物／物理分割＝level-0 の役割分担は f20-f21・f22-f23 と同型）。なお f16-f17 レコードの『別紙面2枚にまたがるベースライン連続＝中溝跨ぎ行』という記述との用語整合は本裁定の射程外であり、corpus 全体の用語統一として別途扱う。"
+      }
+    },
+    {
+      "id": "oq_l0_f6f7_verbatim",
+      "status": "resolved",
+      "category": "pending_verbatim_collation",
+      "ja": "原本逐語照合時の確認事項。①l’Abîme の大文字 A と î の曲折 ②plane désespérément の é 3箇所 ③jusqu’adapter がアポストロフ後に語間を置かない連続組みか（手巻物は〈jusqu’ adapter〉と分かち書き）④très／à／béante／bâtiment／penché／retombée／résume の各アクセント ⑤アポストロフ全8箇所が U+2019 相当の字形であること ⑥全21行が 4mm（class 3）であることの実測確認。",
+      "resolution": {
+        "date": "2026-07-27",
+        "by": "N",
+        "ja": "原本逐語照合完了、text／face の訂正0件。①l’Abîme の大文字 A と î の曲折を原本で確認 ②③④⑤いずれも逐語一致——jusqu’adapter は原本でも連続組みであることを確認（手巻物の分かち書きは手巻物側の表記として unit note に保存）⑥SOIT の 4mm を実測で確認し、全21ユニット class 3 で確定。起草時に⑦として挙げていた f6 面の裏写りの同定は、level-0 の記述範囲を超えるとの裁定により確認事項から削除（scope_note 参照）。"
+      }
+    }
+  ],
+  "notes": {
+    "ja": "本記録は level-0（引用可能性の保証）に限定する。global_clauses.json は変更しない。台帳との関係について特記：現行 global_clauses.json（2026-07-27 時点で参照した版）に登録されている clause は cl_global_phrase_capitale と cl_global_conditionnelle の2件のみで、f6／f7 への参照および cl_global_soit・cl_global_maitre_hesite は存在しない。したがって本記録の新規 ID が台帳の既存参照と衝突する余地はない。一方でプロジェクト記録上は v0.3 期の f8-f9 セッションで cl_global_soit（分岐1＝f6-f7 の l’Abîme…résume、分岐2＝f8-f11 の hésite）が台帳登録されたとされており、現行台帳との差異は N の確認事項として記録するに留める（本記録では台帳を変更しない）。ユニット粒度は f2-f3 裁定の運用原則『level-0 の unit は物理レイアウトによって決める』に従い1行1ユニット。type_class は N 実測（2026-07-26、全て 4mm）を優先根拠とし全21ユニット class 3。open_questions の運用は f1 の区分（設計判断＝status: open／逐語照合待ち＝category: pending_verbatim_collation）に従う。"
+  },
+  "collation_note": {
+    "date": "2026-07-27",
+    "by": "N",
+    "ja": "原本逐語照合完了・text／face の訂正0件。l’Abîme の大文字 A と î、plane désespérément の é、très／à／béante／bâtiment／penché／retombée／résume の各アクセント、アポストロフ全8箇所、および jusqu’adapter の連続組みを確認。SOIT の N 実測 4mm も再確認し、全21ユニット class 3・romain で確定。revision_history は空のまま確定——f16-f17・f20-f21・f22-f23・f1・f2-f3・f4-f5 に続く転記訂正0件の見開き。"
+  }
+}

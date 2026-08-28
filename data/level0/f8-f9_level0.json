@@ -1,0 +1,494 @@
+{
+  "file": "f8-f9_level0.json",
+  "schema_version": "0.3",
+  "schema_ref": "level0_schema.json (approved 2026-07-18; revised 2026-07-26, 2026-07-27)",
+  "spread_id": "f8-f9",
+  "record_depth": "level-0",
+  "base_state": "Ronat_1980",
+  "recorded": "2026-07-27",
+  "recorded_by": "Claude (draft) / N (measurements & rulings 2026-07-27; verbatim collation and tear-gap measurements 2026-07-28, no corrections to text/face)",
+  "status": "collated_with_original",
+  "unit_count": 37,
+  "revision_history": [],
+  "deprecated_ids": [],
+  "provenance_note": {
+    "ja": "現行 level-0 スキーマによる f8-f9 の初の正本起草。v0.3 期の f8-f9.json（37 text units、統語・レイアウト・解釈の各層を含む）は歴史資料としてのみ参照し、その構造・ID・裁定は継承していない。旧記録の 37 の ID は現行台帳（global_clauses.json／typography_scale.json）から一切参照されていないことを機械的に確認したため、正典未登録と判断し deprecated_ids は空配列とする（形式的な deprecated 処理を行わない）。起草は提供写真（Ronat8-9）の直接観察と画素計測にもとづき、既刊本一般の知識・記憶による補完は行っていない。"
+  },
+  "scope_note": {
+    "ja": "level-0 の対象は本文紙束のみ。統語・レイアウト・関係・多読解・異同の各層に属する事項は note／variant_notes／open_questions に留め、global_clauses.json ほか台帳類は変更しない。本見開きは SOIT（f6）以下の統語連鎖・LE MAÎTRE の格関係・hésite の対象格（f10 まで持続）など強い統語的解釈を誘う面だが、level-0 ではそれらを一切先取りせず、物理1行＝1ユニットの原則で観察可能な事実のみを確定する。se｜prépare の分断、cadavre｜écarté の連結など、対をなす行の統語的解釈は syntax／readings 層の課題として open_questions・notes に所在のみ記録する。"
+  },
+  "evidence": [
+    {
+      "label": "Ronat8-9",
+      "witness": "Ronat_1980",
+      "desc": "見開き撮影。左＝f8、右＝f9。転記の主資料"
+    },
+    {
+      "label": "N_measurement_2026-07-27",
+      "witness": "Ronat_1980",
+      "desc": "N 実測報告（2026-07-27）：①本見開きの活字は大文字・小文字を含めて全ユニット 4mm（class 3）で、LE MAÎTRE を含め例外なし ②同一ベースライン上に左右へ分離配置される行は9組（LE MAÎTRE…hors d’anciens calculs／inférant…jadis／conflagration…à ses pieds／que se…prépare／menace…un destin／ne peut pas…être un autre／le bras…écarté／un…envahit／naufrage cela…direct de l’homme）——LE MAÎTRE…hors d’anciens calculs は 1987 年にも実測されており、2026-07-27 に N が再測定して同一ベースラインを再確認した。初回の実測メモでは本組が数え落とされ「8組」と報告されていたが、N の再確認により9組へ訂正（oq_l0_f8f9_le_maitre_baseline 参照） ③9組のうち Cosmopolis で二行組にとどまるのは inférant…jadis と conflagration…à ses pieds の2組のみで、他6組は Cosmopolis でも一行（本項は初回報告のまま。LE MAÎTRE 組の Cos における扱いは vn_f8f9_cos 参照）。type_class 裁定および同一ベースライン判定の優先根拠"
+    },
+    {
+      "label": "px_analysis_2026-07-27",
+      "witness": "Ronat_1980",
+      "desc": "Claude 写真画素解析（2026-07-27）：縦エッジ列集計で中溝 x≈1540。行検出で f8＝16行・f9＝21行（転記と一致）。キャップ高換算 ≈5.9px/mm（キャップ高 23.5px＝4mm）。N の8組はいずれも生の（無補正の）ベースライン差 0–7px（≒0–1.2mm）。参考資料であり、裁定根拠は N 実測"
+    },
+    {
+      "label": "NRF8-9",
+      "witness": "NRF_1914",
+      "desc": "見開きコピー撮影。行割り・構成とも Ronat と一致（f8 16行／f9 21行）。f10-f11 の本文および N’ABOLIRA の裏写りが顕著で、紙の歪みも大きいため Ronat と同精度の画素比較には用いない。異同層向け参考"
+    },
+    {
+      "label": "Cos8-9",
+      "witness": "Cosmopolis_1897",
+      "desc": "誌面コピー撮影（p.421、頁番号を判読）。f8・f9 相当の全文が頁分離なしで1頁に収まり、詩行は30行。N 朱筆の校合注記を複数含む。異同層向け参考"
+    },
+    {
+      "label": "骰子一擲３",
+      "witness": "handscroll_1987",
+      "desc": "1987 手巻物統辞図 f8-f9 葉（修論附録十葉の3枚目）。葉面上部に〈- f 8 -〉〈- f 9 -〉とタイプ明記（f9 側の数字に重ね書きの痕跡あり、open_questions 参照）。区切り照合用"
+    },
+    {
+      "label": "N_measurement_2026-07-28",
+      "witness": "Ronat_1980",
+      "desc": "N 定規実測（2026-07-28）：同一ベースライン9組の左右間隔（左成分の行末から右成分の行頭まで）。標準型7組＝いずれも 8.0cm（conflagration｜à ses pieds、que se｜prépare、menace｜un destin、ne peut pas｜être un autre、le bras｜écarté、un｜envahit、naufrage cela｜direct de l’homme）／LE MAÎTRE｜hors d’anciens calculs＝13.7cm／inférant｜jadis＝20.7cm。あわせて原本逐語照合を実施し、text・face の訂正0件"
+    }
+  ],
+  "units": [
+    {
+      "id": "tu_f8_le_maitre",
+      "face": "f8",
+      "seq": 10,
+      "text": "LE MAÎTRE",
+      "type_class": 3,
+      "style": "romain",
+      "note": "物理1行、f8 の最上行。全大文字。f9 の tu_f9_hors_d_anciens_calculs と同一ベースライン（N 実測、9組の1）。N 実測 4mm＝class 3（2026-07-27、本見開き全ユニット一様との報告）。画素上のキャップ高は L/E/M/A/T/R/E ＝23–24px で、f9 の Esprit の E（23px）および本文の大文字・昇り棒（22–25px）と同値——LE MAÎTRE は独立のサイズ層を成さない（typography_scale.json の oq_ts_le_maitre_same_class 参照。裁定根拠は N 実測、写真は傍証）。Î の曲折アクセントを写真上で確認（アクセント込みの実質全高 35px）。大文字性・字間・統語上の前景化はいずれもサイズとは独立の軸であり、level-0 では確定しない（字間は layout 層、統語は syntax 層）。"
+    },
+    {
+      "id": "tu_f9_hors_d_anciens_calculs",
+      "face": "f9",
+      "seq": 20,
+      "text": "hors d’anciens calculs",
+      "type_class": 3,
+      "style": "romain",
+      "note": "物理1行、f9 の最上行。tu_f8_le_maitre と同一ベースライン（N 実測。1987 年の実測に加え 2026-07-27 に再測定して確認）——9組の1（obs_f8f9_shared_baselines 参照）。両者の間には中溝を挟んで 13.7cm の空白があり（N 実測 2026-07-28）、連続組みの1行ではない。アポストロフは U+2019 に正規化。"
+    },
+    {
+      "id": "tu_f9_ou_la_manoeuvre",
+      "face": "f9",
+      "seq": 30,
+      "text": "où la manœuvre avec l’âge oubliée",
+      "type_class": 3,
+      "style": "romain",
+      "note": "物理1行。œ 合字。アポストロフは U+2019 に正規化。"
+    },
+    {
+      "id": "tu_f8_surgi",
+      "face": "f8",
+      "seq": 40,
+      "text": "surgi",
+      "type_class": 3,
+      "style": "romain",
+      "note": "物理1行。"
+    },
+    {
+      "id": "tu_f8_inferant",
+      "face": "f8",
+      "seq": 50,
+      "text": "inférant",
+      "type_class": 3,
+      "style": "romain",
+      "note": "物理1行。f9 の tu_f9_jadis_il_empoignait と同一ベースライン（N 実測 2026-07-27、obs_f8f9_shared_baselines 参照）。"
+    },
+    {
+      "id": "tu_f9_jadis_il_empoignait",
+      "face": "f9",
+      "seq": 60,
+      "text": "jadis il empoignait la barre",
+      "type_class": 3,
+      "style": "romain",
+      "note": "物理1行。tu_f8_inferant と同一ベースライン（N 実測）だが、両者の間隔は 20.7cm（N 実測 2026-07-28）と本見開き最大。手巻物はこの行のみ対の相手と結合していない——collation_with_handscroll 参照。"
+    },
+    {
+      "id": "tu_f8_de_cette_conflagration",
+      "face": "f8",
+      "seq": 70,
+      "text": "de cette conflagration",
+      "type_class": 3,
+      "style": "romain",
+      "note": "物理1行。行末は f8 の内側マージン（x≈1326）に達する。f9 の tu_f9_a_ses_pieds と同一ベースライン（N 実測）。"
+    },
+    {
+      "id": "tu_f9_a_ses_pieds",
+      "face": "f9",
+      "seq": 80,
+      "text": "à ses pieds",
+      "type_class": 3,
+      "style": "romain",
+      "note": "物理1行。行頭は f9 の内側マージン（x≈1750）。tu_f8_de_cette_conflagration と同一ベースライン（N 実測）。"
+    },
+    {
+      "id": "tu_f9_de_l_horizon_unanime",
+      "face": "f9",
+      "seq": 90,
+      "text": "de l’horizon unanime",
+      "type_class": 3,
+      "style": "romain",
+      "note": "物理1行。アポストロフは U+2019 に正規化。"
+    },
+    {
+      "id": "tu_f8_que_se",
+      "face": "f8",
+      "seq": 100,
+      "text": "que se",
+      "type_class": 3,
+      "style": "romain",
+      "note": "物理1行。行末は内側マージン（x≈1326）。f9 の tu_f9_prepare と同一ベースライン（N 実測）。両者の間には中溝を挟んで 8.0cm の空白があり（N 実測 2026-07-28）、連続組みの1行ではない（obs_f8f9_shared_baselines）。"
+    },
+    {
+      "id": "tu_f9_prepare",
+      "face": "f9",
+      "seq": 110,
+      "text": "prépare",
+      "type_class": 3,
+      "style": "romain",
+      "note": "物理1行。行頭は内側マージン（x≈1751）。tu_f8_que_se と同一ベースライン（N 実測）。両者を代名動詞 se prépare の分断として読むかは syntax／readings 層の課題——level-0 は物理配置のみを記録する（notes 参照）。"
+    },
+    {
+      "id": "tu_f9_s_agite_et_mele",
+      "face": "f9",
+      "seq": 120,
+      "text": "s’agite et mêle",
+      "type_class": 3,
+      "style": "romain",
+      "note": "物理1行。アポストロフは U+2019 に正規化。"
+    },
+    {
+      "id": "tu_f9_au_poing",
+      "face": "f9",
+      "seq": 130,
+      "text": "au poing qui l’étreindrait",
+      "type_class": 3,
+      "style": "romain",
+      "note": "物理1行。アポストロフは U+2019 に正規化。"
+    },
+    {
+      "id": "tu_f8_comme_on_menace",
+      "face": "f8",
+      "seq": 140,
+      "text": "comme on menace",
+      "type_class": 3,
+      "style": "romain",
+      "note": "物理1行。行末は内側マージン（x≈1328）。f9 の tu_f9_un_destin_et_les_vents と同一ベースライン（N 実測）。"
+    },
+    {
+      "id": "tu_f9_un_destin_et_les_vents",
+      "face": "f9",
+      "seq": 150,
+      "text": "un destin et les vents",
+      "type_class": 3,
+      "style": "romain",
+      "note": "物理1行。行頭は内側マージン（x≈1753）。tu_f8_comme_on_menace と同一ベースライン（N 実測）。"
+    },
+    {
+      "id": "tu_f8_l_unique_nombre",
+      "face": "f8",
+      "seq": 160,
+      "text": "l’unique Nombre qui ne peut pas",
+      "type_class": 3,
+      "style": "romain",
+      "note": "物理1行。行末は内側マージン（x≈1328）。語頭大文字 Nombre。f9 の tu_f9_etre_un_autre と同一ベースライン（N 実測）。アポストロフは U+2019 に正規化。Cos は語順・大文字・en の有無が異なる——variant_notes 参照。"
+    },
+    {
+      "id": "tu_f9_etre_un_autre",
+      "face": "f9",
+      "seq": 170,
+      "text": "être un autre",
+      "type_class": 3,
+      "style": "romain",
+      "note": "物理1行。行頭は内側マージン（x≈1753）。tu_f8_l_unique_nombre と同一ベースライン（N 実測）。"
+    },
+    {
+      "id": "tu_f9_esprit",
+      "face": "f9",
+      "seq": 180,
+      "text": "Esprit",
+      "type_class": 3,
+      "style": "romain",
+      "note": "物理1行。語頭大文字。キャップ高 23px は LE MAÎTRE の大文字（23–24px）と同値（obs_f8f9_type_profile）。Cos は小文字始まり——variant_notes 参照。"
+    },
+    {
+      "id": "tu_f9_pour_le_jeter",
+      "face": "f9",
+      "seq": 190,
+      "text": "pour le jeter",
+      "type_class": 3,
+      "style": "romain",
+      "note": "物理1行。Cos は lancer——variant_notes 参照。"
+    },
+    {
+      "id": "tu_f9_dans_la_tempete",
+      "face": "f9",
+      "seq": 200,
+      "text": "dans la tempête",
+      "type_class": 3,
+      "style": "romain",
+      "note": "物理1行。"
+    },
+    {
+      "id": "tu_f9_en_reployer",
+      "face": "f9",
+      "seq": 210,
+      "text": "en reployer la division et passer fier",
+      "type_class": 3,
+      "style": "romain",
+      "note": "物理1行。物理1行としては本見開きで最長（x≈2140–2636）。統語的な長短は引き裂かれた行との比較を要するため level-0 では扱わない（layout／syntax 層）。Cos は l’âpre division——variant_notes 参照。"
+    },
+    {
+      "id": "tu_f8_hesite",
+      "face": "f8",
+      "seq": 220,
+      "text": "hésite",
+      "type_class": 3,
+      "style": "romain",
+      "note": "物理1行。行末は内側マージン（x≈1330）に達するが、同一ベースライン上に f9 側の行はない（8組の対のいずれにも属さない）。"
+    },
+    {
+      "id": "tu_f8_cadavre_par_le_bras",
+      "face": "f8",
+      "seq": 230,
+      "text": "cadavre par le bras",
+      "type_class": 3,
+      "style": "romain",
+      "note": "物理1行。行末は内側マージン（x≈1331）。f9 の tu_f9_ecarte_du_secret と同一ベースライン（N 実測）。"
+    },
+    {
+      "id": "tu_f9_ecarte_du_secret",
+      "face": "f9",
+      "seq": 240,
+      "text": "écarté du secret qu’il détient",
+      "type_class": 3,
+      "style": "romain",
+      "note": "物理1行。行頭は内側マージン（x≈1755）。tu_f8_cadavre_par_le_bras と同一ベースライン（N 実測）。アポストロフは U+2019 に正規化。"
+    },
+    {
+      "id": "tu_f8_plutot",
+      "face": "f8",
+      "seq": 250,
+      "text": "plutôt",
+      "type_class": 3,
+      "style": "romain",
+      "note": "物理1行。f8 で最も左に出る行（x≈647）。"
+    },
+    {
+      "id": "tu_f8_que_de_jouer",
+      "face": "f8",
+      "seq": 260,
+      "text": "que de jouer",
+      "type_class": 3,
+      "style": "romain",
+      "note": "物理1行。"
+    },
+    {
+      "id": "tu_f8_en_maniaque_chenu",
+      "face": "f8",
+      "seq": 270,
+      "text": "en maniaque chenu",
+      "type_class": 3,
+      "style": "romain",
+      "note": "物理1行。Cos は chenu の位置が異なる——variant_notes 参照。"
+    },
+    {
+      "id": "tu_f8_la_partie",
+      "face": "f8",
+      "seq": 280,
+      "text": "la partie",
+      "type_class": 3,
+      "style": "romain",
+      "note": "物理1行。"
+    },
+    {
+      "id": "tu_f8_au_nom_des_flots",
+      "face": "f8",
+      "seq": 290,
+      "text": "au nom des flots",
+      "type_class": 3,
+      "style": "romain",
+      "note": "物理1行。"
+    },
+    {
+      "id": "tu_f8_un",
+      "face": "f8",
+      "seq": 300,
+      "text": "un",
+      "type_class": 3,
+      "style": "romain",
+      "note": "物理1行。物理1行としては本見開きで最短（2文字、x≈1302–1334）。行末は内側マージン。f9 の tu_f9_envahit_le_chef と同一ベースライン（N 実測）、左右間隔 8.0cm（N 実測 2026-07-28）。"
+    },
+    {
+      "id": "tu_f9_envahit_le_chef",
+      "face": "f9",
+      "seq": 310,
+      "text": "envahit le chef",
+      "type_class": 3,
+      "style": "romain",
+      "note": "物理1行。行頭は内側マージン（x≈1761）。tu_f8_un と同一ベースライン（N 実測）。"
+    },
+    {
+      "id": "tu_f9_coule_en_barbe_soumise",
+      "face": "f9",
+      "seq": 320,
+      "text": "coule en barbe soumise",
+      "type_class": 3,
+      "style": "romain",
+      "note": "物理1行。"
+    },
+    {
+      "id": "tu_f8_naufrage_cela",
+      "face": "f8",
+      "seq": 330,
+      "text": "naufrage cela",
+      "type_class": 3,
+      "style": "romain",
+      "note": "物理1行、f8 の最終行。行末は内側マージン（x≈1339）。f9 の tu_f9_direct_de_l_homme と同一ベースライン（N 実測）。"
+    },
+    {
+      "id": "tu_f9_direct_de_l_homme",
+      "face": "f9",
+      "seq": 340,
+      "text": "direct de l’homme",
+      "type_class": 3,
+      "style": "romain",
+      "note": "物理1行。行頭は内側マージン（x≈1763）。tu_f8_naufrage_cela と同一ベースライン（N 実測）。Cos は de を欠く可能性——variant_notes および open_questions 参照。アポストロフは U+2019 に正規化。"
+    },
+    {
+      "id": "tu_f9_sans_nef",
+      "face": "f9",
+      "seq": 350,
+      "text": "sans nef",
+      "type_class": 3,
+      "style": "romain",
+      "note": "物理1行。"
+    },
+    {
+      "id": "tu_f9_n_importe",
+      "face": "f9",
+      "seq": 360,
+      "text": "n’importe",
+      "type_class": 3,
+      "style": "romain",
+      "note": "物理1行。アポストロフは U+2019 に正規化。"
+    },
+    {
+      "id": "tu_f9_ou_vaine",
+      "face": "f9",
+      "seq": 370,
+      "text": "où vaine",
+      "type_class": 3,
+      "style": "romain",
+      "note": "物理1行、詩面の最終行。"
+    }
+  ],
+  "physical_observations": [
+    {
+      "id": "obs_f8f9_sheet_structure",
+      "ja": "Ronat_1980 の6枚入れ子折り紙構成（f12-f13 照合時に確定）から導かれる帰結として、f8 は第4シートの内面（f7 の裏面）、f9 は第5シートの表面——本見開きは別々の2紙面にまたがり、中溝は2紙の突き合わせである。f2-f3・f4-f5・f6-f7・f14-f15・f16-f17 と同型の構成であり、単一紙面の f12-f13 とは異なる。本項は既確定の紙構成からの帰結であって、本見開きの写真から新たに観察した事実ではない。"
+    },
+    {
+      "id": "obs_f8f9_gutter",
+      "ja": "中溝は縦エッジ量の列集計で x≈1540（Ronat8-9 写真座標）。中溝を跨いで連続して組まれた印字はない。"
+    },
+    {
+      "id": "obs_f8f9_shared_baselines",
+      "ja": "N 実測（2026-07-27）により、同一ベースライン上に左右へ分離配置される行は9組。うち LE MAÎTRE｜hors d’anciens calculs は 1987 年にも実測されており、2026-07-27 の再測定で再確認された（初回の実測メモでは本組が数え落とされ「8組」と報告されていた——oq_l0_f8f9_le_maitre_baseline に訂正の経緯を記録）。写真計測でもこの9組はすべて生のベースライン差 0–7px（≒0–1.2mm）で一致し、LE MAÎTRE 組は差 0px で他の8組と区別できない。ただし各組の左成分の行末と右成分の行頭のあいだには中溝を挟んで大きな空白があり、いずれも連続組みの1行ではない。N 定規実測（2026-07-28）による左右間隔は三型に分かれる：標準型7組（conflagration｜à ses pieds、que se｜prépare、menace｜un destin、ne peut pas｜être un autre、le bras｜écarté、un｜envahit、naufrage cela｜direct de l’homme）がいずれも 8.0cm、LE MAÎTRE｜hors d’anciens calculs が 13.7cm、inférant｜jadis が 20.7cm。f6-f7 の par｜avance と同型であり、f14-f15 の sauf｜que la rencontre とも同型。なお写真計測との関係について：起草時の写真由来推定（それぞれ ≈72mm／≈125mm／≈188mm）は実測に対して一律 約10% 短く出ていた（比はいずれも ≈1.10 で一定）。これらの距離はすべて中溝を跨ぐため、ノド付近で紙面がカメラから逃げることによる投影短縮と考えられる——面内の行の傾き（-0.0117 px/px）と対をなす行どうしを結ぶ傾き（≈+0.003 px/px）が一致せず、中溝を跨ぐ剛体的な傾き補正がこの写真では成立しないことと同一の原因である。距離・ベースライン一致の判定はいずれも N の定規実測を優位とし、写真由来の数値は px のみを参考値として残す。"
+    },
+    {
+      "id": "obs_f8f9_inner_margins",
+      "ja": "9組のうち7組では、左成分の行末が f8 の内側マージン（x≈1326–1339）に達し、右成分の行頭が f9 の内側マージン（x≈1750–1763）から始まる。すなわち組版上は左右の面がそれぞれ内側マージンまで満たされており、この7組の左右間隔は N 実測でいずれも 8.0cm と一定である（標準型）。ただし hésite（tu_f8_hesite）も同じ内側マージンに達しながら同一ベースライン上に f9 側の行をもたない——内側マージンへの到達は対の存在を意味しない。残る2組（LE MAÎTRE｜hors d’anciens calculs＝13.7cm、inférant｜jadis＝20.7cm）はいずれの成分も内側マージンに達しない。（起草時の初版は「8組のうち6組」と記していたが、これは8組フレームからの機械的な差引きによる Claude の数え違いで、実測値は7組。9組への訂正とあわせて修正した。）"
+    },
+    {
+      "id": "obs_f8f9_type_profile",
+      "ja": "全37行が単一の活字層。N 実測 4mm＝class 3（2026-07-27、大文字を含め例外なし）。書体は全ユニット romain で、イタリックは本見開きに一切現れない（f12 以降のイタリック層の手前、f6-f7 に続く romain 単一層の見開き）。写真上のキャップ高は LE MAÎTRE の各大文字が 23–24px、f9 の Esprit の E が 23px、本文の大文字・昇り棒が 22–25px、x ハイトが 13–15px。すなわち写真計測も LE MAÎTRE が独立のサイズ層を成さないことと整合する（裁定根拠は N 実測、写真は傍証）。"
+    },
+    {
+      "id": "obs_f8f9_le_maitre_letterforms",
+      "ja": "LE MAÎTRE のグリフ外接矩形間の間隔は 2–4px で、f9 の Esprit（2–3px）や本文小文字（2–4px）と同程度であり、写真上は際立った字間拡張を示さない。旧 v0.3 記録は本ユニットに letter_spacing: spaced を与えていたが、本記録はこれを継承しない——字間は layout 層の対象であり、level-0 では確定しない。Î の曲折アクセントは写真で確認（アクセント込みの実質全高 35px、字面高 23px）。"
+    },
+    {
+      "id": "obs_f8f9_line_distribution",
+      "ja": "f8 の印字は y 234–1505、f9 の印字は y 243–1647（Ronat8-9 写真座標）。両面の印字帯は上端でほぼ揃い、f9 が下方へより長く続く。f6-f7 のように片面が上半・他面が下半に分かれる配置ではなく、両面の行が交互に噛み合う。なお f9 側では tu_f9_envahit_le_chef（x≈1761）と tu_f9_coule_en_barbe_soumise（x≈1762）が同一の左マージンに揃う。"
+    }
+  ],
+  "collation_with_handscroll": {
+    "leaf": "骰子一擲３（葉面上部のタイプ表記：〈- f 8 -〉〈- f 9 -〉。f9 側の数字に重ね書きの痕跡あり——oq_l0_f8f9_verbatim 参照。現行データセットのフォリエーションとは一致）",
+    "result": "match_30_of_37",
+    "ja": "手巻物葉の区切りは30枠で、本記録の37ユニットとの差異は7箇所。いずれも本記録が面帰属により2分割している行を手巻物が1枠に結合したものである：①de cette conflagration＋à ses pieds ②que se＋prépare ③comme on menace＋un destin et les vents ④l’unique Nombre qui ne peut pas＋être un autre ⑤cadavre par le bras＋écarté du secret qu’il détient ⑥un＋envahit le chef ⑦naufrage cela＋direct de l’homme。すなわち手巻物は9組のうち7組を結合しており、結合していないのは inférant｜jadis と LE MAÎTRE｜hors d’anciens calculs の2組（jadis il empoignait la barre は譲歩の挿入節として黄色の枠で単独に囲まれている）。手巻物の区切りは統語的単位によるものであり、level-0 の物理単位とは層が異なる——oq_l0_segmentation_authority の裁定方針および f6-f7・f20-f21・f22-f23 の前例に従い、解消すべき不一致ではなく層の分担の現れとして記録する。残る23箇所は完全一致。",
+    "annotation_location_note": {
+      "ja": "葉面には1987年時点のタイプ打ち統語分析（C／D／M／G／K の解釈者言及を含む）と、朱・青・黄・黒の色分けによる係り受け囲みがある。逐語転記は level-0 の対象外とし（運用原則）、所在のみ記録する。syntax 層向けに特筆すべき所在：⓪hors d’anciens calculs の欄外注「hors d’… LE MAÎTRE と同じレベルで résume につながる分離の場所格」——物理層では LE MAÎTRE と同一ベースラインでありながら、統語層では LE MAÎTRE と結合せず f7 の résume に接続する分離の場所格として読む、という層の区別が 1987 年から一貫していることを示す注記（N 指摘、2026-07-27）。①LE MAÎTRE を hésite の主語かつ surgi・inférant の分詞主語とし、surgi に対しては無意志の対象格、inférant・hésite に対しては有意志の行為者格とする格分析 ②inférant の推論の出所を二重の de（de cette conflagration／de l’horizon unanime）に見る分析と、2つめの de を所属と読む解釈への×印 ③que 以下の3動詞（se prépare／s’agite／mêle）が対象格主語 l’unique Nombre を要求するという整理、および D による破格の省略 s’agite et (se) mêle の指摘 ④Esprit を LE MAÎTRE と同格としつつ「活字の上では Nombre と同格にも成り得る」と併記する注記 ⑤un を un flot と解し、これを主語として envahit と coule の2動詞を取る構造とする読み（1987 年当時からの読解）、および un envahit le chef 以下の挿入節の射程をめぐる対立（D＝vaine まで／M・G＝soumise まで、naufrage…vaine は同格の別挿入節）⑥Cos 版異読の併記（le nombre unique／tout chenu／en maniaque la partie）と Didot 校正刷りの le Nombre unique。①〜⑤は v0.3 期の f8-f9 記録が interpretations 層に転記していたもので、本 level-0 では所在のみを保持する。"
+    }
+  },
+  "variant_notes": [
+    {
+      "id": "vn_f8f9_nrf",
+      "witness": "NRF_1914",
+      "ja": "NRF は行割り・構成とも Ronat と一致（f8 16行／f9 21行）。ただし本コピー撮影は f10-f11 本文および N’ABOLIRA の裏写りが顕著で、紙の歪みも大きく、Ronat と同精度のベースライン比較・位置比較は行えない。位置・余白の詳細比較は異同層へ。"
+    },
+    {
+      "id": "vn_f8f9_cos",
+      "witness": "Cosmopolis_1897",
+      "ja": "Cos は誌面 p.421 に f8・f9 相当の全文が頁分離なしで収まり、詩行は30行。行割りの異同：9組のうち Cos でも二行組にとどまるのは inférant｜jadis と de cette conflagration｜à ses pieds、および LE MAÎTRE｜hors d’anciens calculs の3組で、残る6組は Cos では1行に組まれている（N 実測報告は8組フレームで「二行組は2組」と記す。LE MAÎTRE 組が Cos でも別行であることは Claude の写真観察であり、N の実測報告の一部ではない）（que se prépare／comme on menace un destin et les vents／le nombre unique qui ne peut pas en être un autre／cadavre par le bras écarté du secret qu’il détient／un envahit le chef／naufrage cela direct l’homme）——N 実測報告（2026-07-27）と一致。語そのものの異同（いずれも N 朱筆の校合注記を伴う）：①le nombre unique qui ne peut pas en être un autre（Ronat／NRF は l’unique Nombre qui ne peut pas ／ être un autre）——語順の逆転、小文字化、en の付加。N は朱筆で l’unique Nombre を併記し en を丸囲み ②esprit（Ronat は Esprit）——N 朱筆「E」③pour le lancer（Ronat は pour le jeter）——N は lancer を丸囲みし朱筆「jeter」④en reployer l’âpre division（Ronat は la division）——N は l’âpre を丸囲みし朱筆「la」⑤chenu の位置——Cos は hésite の直後に tout chenu を置き、que de jouer en maniaque la partie とする（Ronat は en maniaque chenu）。N は朱筆で chenu を書き入れ抹消記号を付す ⑥naufrage cela direct l’homme——Ronat の direct de l’homme に対し de を欠くように読めるが、コピーの解像度では確定できない（open_questions 参照）。これらはいずれも異同層へ送る。"
+    },
+    {
+      "id": "vn_f8f9_didot_via_handscroll",
+      "witness": "Didot_proofs",
+      "ja": "手巻物葉の注記による間接情報：Didot 校正刷りは le Nombre unique（Cos の語順に大文字 Nombre）。原資料を直接確認したものではなく、1987 年の分析からの回収であることを明記する。異同層で校正刷そのものにより確認を要する。"
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "oq_l0_f8f9_le_maitre_baseline",
+      "status": "resolved",
+      "category": "pending_verbatim_collation",
+      "ja": "N 実測報告（2026-07-27）は同一ベースライン上に左右分離される行を8組列挙するが、LE MAÎTRE（f8）と hors d’anciens calculs（f9）はそこに含まれていない。他方、写真計測では両者のベースライン差は 0px で、8組（差 0–7px）と区別できない。両者を結ぶ傾きも 0.000 px/px で、8組のうち naufrage 組（0.000）と同値である。8組という数え上げが意図的な除外なのか（たとえば LE MAÎTRE を別の活字的単位として扱う判断）、あるいは列挙漏れなのかを N に確認したい。なお本項の帰趨は本記録のユニット分割・ID・type_class をいずれも変えず、obs_f8f9_shared_baselines と obs_f8f9_inner_margins の記述のみが変わる。参考：手巻物はこの組を結合しておらず、Cos でも別行である（ただし手巻物の区切りは統語的単位によるため、ベースライン問題の証拠にはならない）。",
+      "resolution": {
+        "date": "2026-07-27",
+        "by": "N",
+        "ja": "初期ドラフトが依拠した「8組」は N の転記漏れであり、LE MAÎTRE｜hors d’anciens calculs は今回未実測だったのではない。本組は 1987 年にも実測されており、2026-07-27 の再確認・再測定によりあらためて同一ベースラインであることが確認された。したがって本見開きの同一ベースライン上の左右分離配置は9組が正であり、evidence（N_measurement_2026-07-27）、tu_f9_hors_d_anciens_calculs の note、obs_f8f9_shared_baselines、obs_f8f9_inner_margins を9組に修正した。本訂正は level-0 の設計・ユニット分割・ID・type_class のいずれにも影響しない。また物理層と統語層の区別は 1987 年から一貫している——手巻物は本組を結合せず、欄外注は hors d’anciens calculs を「LE MAÎTRE と同じレベルで résume につながる分離の場所格」と記す。すなわち〈物理層＝同一ベースライン（9組）／統語層＝LE MAÎTRE とは結合せず résume に接続する分離の場所格〉。裁定履歴として本項を削除せず resolved で保存する（N 指示）。"
+      }
+    },
+    {
+      "id": "oq_l0_f8f9_seq_convention",
+      "status": "open",
+      "ja": "設計判断：本記録の seq は「見開き全体のベースライン順（上→下）、同一ベースライン上では f8→f9」で付与した（10刻み、10〜370）。f6-f7 は面順（f6 全11行→f7 全10行）、f16-f17 はベースライン順を採っており、corpus 内で運用が分かれている。本見開きは両面の行が交互に噛み合う配置のため、ベースライン順の方が物理配置を素直に写すと判断したが、面順への統一を望む場合は seq のみ改番すれば足りる（seq は ID ではなく canonical アドレスにも入らないため、昇格時も含めて自由に改訂可能——seq_doctrine）。なお seq はあくまで物理的な垂直位置の順であり、読解順の主張ではない。"
+    },
+    {
+      "id": "oq_l0_f8f9_verbatim",
+      "status": "resolved",
+      "category": "pending_verbatim_collation",
+      "ja": "原本逐語照合時の確認事項。①LE MAÎTRE の Î の曲折アクセント ②語頭大文字 Nombre（tu_f8_l_unique_nombre）と Esprit（tu_f9_esprit）③manœuvre の œ 合字（oe 分綴でないこと）④アクセント一括：inférant／hésite／plutôt／prépare／s’agite et mêle／étreindrait／être／tempête／écarté／détient／âge／à ses pieds／où（2箇所）⑤アポストロフ全9箇所（f8：l’unique の1箇所／f9：d’anciens、l’âge、l’horizon、s’agite、l’étreindrait、qu’il、l’homme、n’importe の8箇所）が U+2019 相当の字形であること ⑥全37行が 4mm（class 3）・romain であることの再確認（とくに LE MAÎTRE と Esprit）⑦Cos の naufrage cela direct l’homme に de があるか（vn_f8f9_cos ⑥）⑧手巻物 f9 側の葉ラベルに見える重ね書きの性質（f8→f9 の訂正か否か）。⑦⑧は level-0 の text／face を左右しないため、確認の優先度は低い。",
+      "resolution": {
+        "date": "2026-07-28",
+        "by": "N",
+        "ja": "原本逐語照合完了、text／face の訂正0件。①〜⑥（Î の曲折、Nombre・Esprit の語頭大文字、manœuvre の œ 合字、アクセント一括、アポストロフ9箇所、全37行が 4mm・romain であること）をいずれも原本で確認。⑦（Cos の direct l’homme に de があるか）と⑧（手巻物 f9 側ラベルの重ね書き）は原本の text／face を左右しないため本項では解決とし、⑦は異同層（vn_f8f9_cos）、⑧は手巻物アーカイブ側の課題として持ち越す。"
+      }
+    },
+    {
+      "id": "oq_l0_f8f9_global_clause_registry",
+      "status": "open",
+      "ja": "設計判断（台帳への変更提案であり、本記録では実行しない）。現行 global_clauses.json に登録されている clause は cl_global_phrase_capitale と cl_global_conditionnelle の2件のみで、cl_global_soit・cl_global_maitre_hesite は存在せず、f6〜f9 への参照もゼロである（機械的に確認）。他方、v0.3 期の f8-f9 記録は relations に cl_global_maitre_hesite→cl_global_soit（branch_of）、cl_global_maitre_hesite→cl_f6f7_abime_resume（coordinate_branch）、cl_global_maitre_hesite→cl_global_phrase_capitale（embedded_in）の3関係を持ち、cl_global_soit は 2026-07-12 に台帳登録済みと記していた。差異の原因（v1.0 凍結時の整理か、別ファイル管理か）は N の確認事項。提案：(a) 両 clause の再登録は syntax 層の着手時に行い、components は本記録の新 ID（tu_f8_le_maitre／tu_f8_hesite／tu_f6_soit ほか）で構成する。level-0 は統語を扱わないため、本記録は台帳を参照も変更もしない。(b) 再登録時には cl_global_soit の spread_span を f6〜f10 以降まで見積もる必要がある（hésite の対象格が f10 に及ぶという 1987 年の分析による）ため、f10-f11 正本との突き合わせが前提となる。いずれも N 裁定。"
+    },
+    {
+      "id": "oq_l0_f8f9_typography_scale_update",
+      "status": "open",
+      "ja": "設計判断（typography_scale.json への変更提案であり、本記録では実行しない）。①oq_ts_le_maitre_same_class（class 3 の成員判定に影響しうる唯一の未決事項）は、本見開きの N 実測（2026-07-27、大文字を含め全ユニット 4mm、LE MAÎTRE も例外なし）により解決可能である。提案：size_class 3 の anchors に LE MAÎTRE を追加（anchor_location＝{spread: f8-f9, page: f8, text_unit: tu_f8_le_maitre}、style: romain、cap_height_mm: 4.0、measurement.method: ruler_on_page、date: 2026-07-27、measured_by: N、layer_id: layer_soit_maitre_caps、status: verified）し、open_items の oq_ts_le_maitre_same_class を status: resolved（SOIT と LE MAÎTRE は同一 class 3 の成員。layer_soit_maitre_caps は錨2点で完結）に更新する。あわせて structural_notes に、f6-f9 が「サイズ差ゼロのまま大文字法のみで活字階層を作る」範囲であることを、f18-f19 の EXISTÂT-IL・f20-f23 の第2の中心文と並ぶ第3の実例として記録することを提案する。②別件の不整合：class 3 の錨 l’Abîme の anchor_location.text_unit が typography_scale.json では tu_f6_labime、f6-f7 正本では tu_f6_l_abime であり、文字列が一致しない。正本側 ID（tu_f6_l_abime）に合わせる訂正を提案する。③参考：本記録の起草時に添付された level0_schema.json は 2026-07-18 承認版であり、2026-07-26・07-27 の改訂（type_class の null 許容規則、record_template の deprecated_ids、status の定義、machine_checks 20項目、revisions 節）を含んでいない。本記録は改訂後のスキーマに準拠して起草しているため、添付版とのみ照合すると machine_checks の同期検証が失敗する。"
+    }
+  ],
+  "notes": {
+    "ja": "本記録は level-0（引用可能性の保証）に限定する。ユニット粒度は f2-f3 裁定の運用原則『level-0 の unit は物理レイアウトによって決める』に従い、物理1行＝1ユニット（f8 16行／f9 21行、計37）。type_class は N 実測（2026-07-27、大文字を含め全て 4mm）を優先根拠とし全37ユニット class 3、style は全ユニット romain。旧 v0.3 記録との関係：ユニット数は同じ37だが、これは同じ物理行を数えた結果の一致であって旧記録の分割を継承したものではない。旧記録の size_class は旧番号体系（4mm＝class 4）によるもので、現行体系（4mm＝class 3）とは意味が異なるため一切引き継がない。旧 ID のうち24件は現行命名規則でも同一文字列になり、13件は異なる（tu_f8_maitre→tu_f8_le_maitre、tu_f8_conflagration→tu_f8_de_cette_conflagration、tu_f8_unique_nombre→tu_f8_l_unique_nombre、tu_f8_cadavre→tu_f8_cadavre_par_le_bras、tu_f8_maniaque_chenu→tu_f8_en_maniaque_chenu、tu_f9_hors_calculs→tu_f9_hors_d_anciens_calculs、tu_f9_jadis→tu_f9_jadis_il_empoignait、tu_f9_horizon_unanime→tu_f9_de_l_horizon_unanime、tu_f9_sagite_mele→tu_f9_s_agite_et_mele、tu_f9_un_destin→tu_f9_un_destin_et_les_vents、tu_f9_coule_en_barbe→tu_f9_coule_en_barbe_soumise、tu_f9_direct_de_lhomme→tu_f9_direct_de_l_homme、tu_f9_nimporte→tu_f9_n_importe）。旧 ID は正典未登録のため deprecated_ids には登録しない（provenance_note 参照）。統語に関わる事項——se｜prépare の分断、LE MAÎTRE の格役割、hésite の対象格が f10 に及ぶこと、挿入節の射程をめぐる D／M／G の対立、Esprit の同格先の二重性——はすべて syntax／readings 層の対象であり、本記録では collation_with_handscroll.annotation_location_note に所在のみを記す。台帳（global_clauses.json／typography_scale.json）は本記録では変更せず、必要な変更案は open_questions の oq_l0_f8f9_global_clause_registry と oq_l0_f8f9_typography_scale_update に根拠つきで提示する。open_questions の運用は f1 の区分（設計判断＝status: open／逐語照合で確定する事項＝category: pending_verbatim_collation）に従う。 【後続層（layout／syntax）への申し送り——N、2026-07-28。いずれも level-0 の判断ではなく、記録のみ】①引き裂きの三型：同一ベースライン9組の左右間隔は 8.0cm（標準型7組）／13.7cm（LE MAÎTRE 組）／20.7cm（inférant 組）の三型に分かれる。標準型がほぼ一定値に統一されていることは layout 層で利用できる物理データである。②hésite（tu_f8_hesite）が内側マージンに達しながら同一ベースライン上に対をもたないという物理事実は、syntax 層で hésiter à の係り先が次見開き（f10）へ続くことを検討する際の根拠になりうる。③un｜envahit の組：物理的には un が envahit と同高に引き裂かれ、さらに envahit と coule が同一の左マージンに揃う（obs_f8f9_line_distribution）。手巻物は 1987 年当時から un (flot) を主語とし envahit・coule の2動詞を取る構造として読んでおり（collation_with_handscroll の所在記録⑤）、レイアウトと統語の関係を layout／syntax 層で検討する対象となる。"
+  },
+  "collation_note": {
+    "date": "2026-07-28",
+    "by": "N",
+    "ja": "原本逐語照合完了・text／face の訂正0件。LE MAÎTRE の Î の曲折、語頭大文字 Nombre・Esprit、manœuvre の œ 合字、inférant／hésite／plutôt／prépare／mêle／étreindrait／être／tempête／écarté／détient／âge／à ses pieds／où の各アクセント、アポストロフ全9箇所を確認。全37ユニット class 3・romain で確定。あわせて同一ベースライン9組の左右間隔を定規実測（標準型7組 8.0cm／LE MAÎTRE 組 13.7cm／inférant 組 20.7cm）。revision_history は空のまま確定——f16-f17・f20-f21・f22-f23・f1・f2-f3・f4-f5・f6-f7 に続く転記訂正0件の見開き。なお起草段階で確定した観察のうち、tu_f8_surgi の「ディセンダを含む」という特記は本語だけを特記する理由がないため削除し、tu_f9_en_reployer・tu_f8_un の「最長／最短」は「物理1行として」であることを明示する表現に改めた（いずれも N 指摘、2026-07-28）。"
+  }
+}
