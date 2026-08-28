@@ -1,0 +1,14 @@
+# Blank issues must stay enabled: the level-0 correction form is
+# deliberately narrow, and readings, questions, later-layer
+# proposals, and things a reader suspects but cannot yet show all
+# need somewhere to go. An open question is part of the record here,
+# not a defect in it.
+blank_issues_enabled: true
+
+contact_links:
+  - name: How contributions are handled
+    url: https://github.com/nagakura-chikako/coup-de-des-encoding/blob/main/CONTRIBUTING.md
+    about: Pull requests are not accepted at present. Please read this first.
+  - name: 参加について（日本語）
+    url: https://github.com/nagakura-chikako/coup-de-des-encoding/blob/main/CONTRIBUTING.ja.md
+    about: 現在 pull request は受け付けていません。まずこちらをご覧ください。
