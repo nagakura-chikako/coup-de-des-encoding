@@ -9,7 +9,12 @@ abstract: >-
   deliberately limited set of observable typographic features and
   excludes syntax, layout coordinates, variants, and interpretation,
   so that later layers can be added by reference without altering it.
-
+  
+  Licensing: data, documentation, and prose are under CC BY 4.0; code
+  under tools/ is under MIT. The single license value in this record's
+  metadata reflects the predominant license only; see LICENSING.md for
+  the authoritative terms. Licenses cover only rights held by the
+  publisher and do not extend to third-party materials.
 type: dataset
 
 authors:
@@ -17,14 +22,16 @@ authors:
     given-names: Chikako
     # orcid: "https://orcid.org/0000-0000-0000-0000"   # add when obtained
 
-version: "1.0.0"
-date-released: "2026-08-28"
+version: "1.0.1"
+date-released: "2026-08-29"
 url: "https://github.com/nagakura-chikako/coup-de-des-encoding"
 repository-code: "https://github.com/nagakura-chikako/coup-de-des-encoding"
 
-license:
-  - CC-BY-4.0   # data, docs, and prose
-  - MIT         # tools/
+# Single value for Zenodo GitHub-importer compatibility only.
+# This repository is multi-licensed: data, docs, and prose are CC BY 4.0;
+# code under tools/ is MIT. Authoritative terms: LICENSE, LICENSE-CODE,
+# LICENSING.md, RIGHTS.md.
+license: CC-BY-4.0
 
 keywords:
   - Mallarmé
