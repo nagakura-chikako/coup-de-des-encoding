@@ -44,7 +44,7 @@ keywords:
 # After the first Zenodo release, add the concept DOI here — the one
 # that always resolves to the newest version — not a version DOI:
 #
-  identifiers:
-    - type: doi
-      value: "10.5281/zenodo.22153567"
-      description: "Concept DOI — resolves to the latest version"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.22153567"
+    description: "Concept DOI - resolves to the latest version"
