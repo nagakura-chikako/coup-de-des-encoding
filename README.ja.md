@@ -1,4 +1,5 @@
 # 骰子一擲 —— 層構造をもつ機械可読エンコーディング
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22153567.svg)](https://doi.org/10.5281/zenodo.22153567)
 
 ステファヌ・マラルメ『骰子一擲』（Un Coup de Dés jamais n'abolira le Hasard）の、引用可能性を保証する最小限のエンコーディング。**解釈がこの先何十年積み重なっても、その土台となった記録を書き換えずに済む**ように設計されています。
 
