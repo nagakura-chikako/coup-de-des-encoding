@@ -1,4 +1,6 @@
 # Un Coup de Dés — a layered, machine-readable encoding
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22153567.svg)](https://doi.org/10.5281/zenodo.22153567)
+
 
 A citable minimal encoding of Stéphane Mallarmé's *Un Coup de Dés jamais n'abolira le Hasard*, built so that interpretation can accumulate over decades without ever rewriting the record it rests on.
 
