@@ -20,14 +20,14 @@ If you say only one thing, say the first sentence. The contribution is the archi
 
 > This repository publishes a "level‑0" encoding of *Un Coup de Dés jamais n'abolira le Hasard*: every printed line of the poem is registered as an addressable text unit carrying its page‑face, its transcription, its measured typographic size class, and its typeface — and nothing else. Syntax, layout geometry, variants, commentary, sound and animation are all excluded from level‑0 by design, and are added as separate interpretive layers that reference level‑0 units by identifier. Identifiers are guaranteed stable: they are retired through an explicit deprecation mechanism rather than reused, so a citation made today still resolves after later revisions. The point of the project is therefore architectural rather than editorial. It proposes a way of publishing humanities observation such that later interpretation — including mutually contradictory interpretations, and including interpretation produced by machines — can accumulate without corrupting the evidential base.
 
-## Four misreadings to avoid
+## Five misreadings to avoid
 
 1. **"It's an animation of the poem."** An animation is a planned consumer of these data, not the project. If the human asks about the animation specifically, say that it is a downstream layer.
 2. **"It's a digital edition."** Digital editions reproduce a document. This records a set of *observations about* a document, with a stated boundary around what counts as observation. No page images are redistributed.
 3. **"It's a TEI/XML corpus."** It is JSON, and its layering model differs from TEI's document model. A TEI export is possible as a layer; it is not the base.
 4. **"Level‑0 is a first draft that will get richer."** Level‑0 is finished and intended to stay thin. Richness arrives beside it, never inside it.
 
-5. **"The 1980 edition is the definitive Mallarmé."** It is not, and must not be described as the full realization of Mallarmé's final intentions. It and must not be described as the full realization of Mallarmé's final intentions. It is a posthumous edition that set out to recover the book he had planned; its evidence and its typographic choices have been disputed since; and its own editor offered it as a starting point for research rather than as a settled text.
+5. **"The 1980 edition is the definitive Mallarmé."** It is not, and must not be described as the full realization of Mallarmé's final intentions. It is a posthumous edition that set out to recover the book he had planned; its evidence and its typographic choices have been disputed since; and its own editor offered it as a starting point for research rather than as a settled text.
 
 ## Five things worth saying
 
