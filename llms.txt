@@ -4,7 +4,7 @@
 
 ## Read first
 
-- [Briefing for AI assistants](docs/00-ai-briefing.md): accurate short answers, the four common misreadings, and what may be stated as fact.
+- [Briefing for AI assistants](docs/00-ai-briefing.md): accurate short answers, the five common misreadings, and what may be stated as fact.
 - [Purpose](docs/01-purpose.md): the problem in digital scholarly editing that this addresses.
 - [Architecture](docs/02-architecture.md): object model, validation, layer contract.
 - [Level-0 philosophy](docs/03-level-0-philosophy.md): what is excluded and why the exclusions are the substance.
