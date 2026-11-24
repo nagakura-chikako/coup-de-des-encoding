@@ -6,19 +6,19 @@ Three things, independently:
 
 | Object | Scheme | Example |
 |---|---|---|
-| The level‑0 canonical record | `MAJOR.MINOR.PATCH` | `1.1` |
-| Each schema | own `schema_version` | `level0_schema.json` at `0.3` |
-| Each layer | own `MAJOR.MINOR.PATCH`, pinned to a level‑0 range | `syntax-n 0.1.0` requiring `level0 >=1.1.0` |
+| The level‑0 canonical record | `MAJOR.MINOR.PATCH` | `2.0.0` |
+| Each schema | own `schema_version` | `level0_schema.json` at `0.4` |
+| Each layer | own `MAJOR.MINOR.PATCH`, pinned to a level‑0 range | `syntax-n 0.1.0` requiring `level0 >=2.0.0` |
 
-Git tags name the release object: `l0-v1.1.0`, `layer-syntax-n-v0.1.0`.
+Repository releases are tagged `MAJOR.MINOR.PATCH` (`2.0.0`). Separate tags for the level‑0 record and for layers (`l0-v…`, `layer-…-v…`) were planned in the first design and have not been used; the level‑0 record version is stated in `CHANGELOG.md` and in `data/global/release_log.json`.
 
 Three further numbers circulate in this repository and are **not** the same as the level-0 record version above. They are kept apart on purpose:
 
 | | scheme | current |
 |---|---|---|
 | citation scheme | `v<major>.<minor>` | v1.0, frozen 2026-07-17 |
-| dataset release, in `data/global/release_log.json` | `v<major>.<minor>` | v1.1 |
-| repository release, the git tag and `CITATION.cff` | `MAJOR.MINOR.PATCH` | 1.0.0 |
+| dataset release, in `data/global/release_log.json` | `v<major>.<minor>` | v2.0 |
+| repository release, the git tag and `CITATION.cff` | `MAJOR.MINOR.PATCH` | 2.0.0 |
 
 A layer's `depends_on` pins the **level-0 record** version, not any of these.
 
@@ -26,9 +26,9 @@ A layer's `depends_on` pins the **level-0 record** version, not any of these.
 
 | Increment | Meaning | Guarantee to citers |
 |---|---|---|
-| **PATCH** | A field value corrected against the copy, with a `revision_history` entry (`date`, `unit_id`, `field`, `before`, `after`, `evidence`, `by`). No identifier changes. | Every existing citation resolves to the same object. |
+| **PATCH** | A field value corrected against the copy — the text, or the face on which a unit was recorded — with a `revision_history` entry (`date`, `unit_id`, `field`, `before`, `after`, `evidence`, `by`). No identifier changes. | Every existing citation resolves to the same object. |
 | **MINOR** | New records, new optional fields, new global clauses, resolved open questions, identifier retirements via `deprecated_ids`. | Every existing citation resolves; a retired identifier resolves through `superseded_by`. |
-| **MAJOR** | A change to the meaning of an existing field, or to the unit‑extent rule. | Migration note required; layers must be re‑validated. |
+| **MAJOR** | A change to the meaning of an existing field, or to the unit‑extent rule. | Migration note required; layers must be re‑validated. Example: 2.0.0, where lines crossing the gutter came to be recorded one unit per face ([migration note](migrations/2.0.md)). |
 
 Note the deliberate placement: **retiring an identifier is MINOR, not MAJOR.** Deprecation is a normal, supported event; it is silent reuse that is forbidden.
 
@@ -46,6 +46,26 @@ Mechanism:
     "evidence": "face misattribution corrected at collation",
     "by": "N" }
 ]
+```
+
+This entry dates from f14–f15 (2026‑07‑20, before publication), when a face misattribution was handled by retiring identifiers. It is kept as it was. Since 2026‑09‑26 a misrecorded face is corrected in place, keeping the identifier, as a field correction:
+
+```json
+"revision_history": [
+  { "date": "2026-09-26", "unit_id": "tu_f11_celui", "field": "face",
+    "before": "f11", "after": "f10",
+    "evidence": "collated against the Ronat copy", "by": "N" }
+]
+```
+
+The face prefix in such an identifier then records the face at issue. The validator accepts the mismatch only when the face corrections form an unbroken chain from that prefix to the current face.
+
+Retirement is reserved for changes of extent. When one unit is split, `superseded_by` lists the successors in reading order:
+
+```json
+{ "id": "tu_f12_une_insinuation_simple",
+  "superseded_by": ["tu_f12_une_insinuation", "tu_f13_simple"],
+  "date": "2026-11-24", "evidence": "…", "by": "N" }
 ```
 
 `deprecated_ids` is a **required key** at record top level, present as an empty array when unused, so that its absence is always a schema error rather than an oversight. `tools/units_manifest.json` records a fingerprint of the immutable unit fields for every record; `tools/verify_sync.py` compares the working tree against it and fails on any change that was not deliberate.

@@ -27,7 +27,7 @@ layers/syntax-n/
   "layer_id": "syntax-n",
   "title": "Syntactic segmentation after the 1987 hand-scroll diagrams",
   "version": "0.1.0",
-  "depends_on": { "level0": ">=1.1.0" },
+  "depends_on": { "level0": ">=2.0.0" },
   "authors": [{ "name": "Nagakura Chikako", "sigla": "N" }],
   "claim_type": "interpretive",
   "attaches_to": "text_unit",

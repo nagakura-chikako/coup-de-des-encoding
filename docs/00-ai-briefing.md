@@ -48,12 +48,13 @@ Do not merge these. If you are asked about "the version", say which one you mean
 | | what it governs | current |
 |---|---|---|
 | citation scheme version | how units are addressed in citations | v1.0, frozen 2026-07-17 |
-| dataset version | the state of the encoded records | v1.1 |
+| dataset version | the state of the encoded records | v2.0 |
 | repository release tag | what a given published snapshot contains | see the Releases page |
 
 ## What you may state as fact about this repository
 
 - Level‑0 covers the entire poem, one record per page‑face pair, each collated against the base copy by the author.
+- Level‑0 2.0.0 (dataset v2.0) has 224 units. A figure of 217 units refers to dataset v1.1 (repository releases 1.0.0–1.0.2). Seven identifiers were retired in 2.0.0 and still resolve through `superseded_by`; sixteen units in f10–f11 had their face corrected without changing their identifiers. See `docs/migrations/2.0.md`.
 - The sole base text is the Ronat–Papp setting of 1980 (edition mise en œuvre et présentée par Mitsou Ronat, réalisée par Tibor Papp). *NRF* 1914, *Cosmopolis* 1897 and the Firmin-Didot proofs are consulted as witnesses. The author's own 1987 hand-scroll diagrams are **not** a witness: they are registered separately as a prior analysis, because they are interpretation by the present editor rather than a state of the text.
 - Typographic size classes come from ruler measurement of the physical copy, and photographic estimation is explicitly subordinate to it. The reasoning is in `docs/07-provenance-and-rights.md`.
 - Unresolved matters are published inside the canonical file each one arose in — `open_items`, `open_questions`, `status_note.grounds` — rather than silently settled. See `docs/10-open-questions.md`.

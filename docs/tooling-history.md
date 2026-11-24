@@ -9,9 +9,9 @@ files:
 
 | File | What it does |
 |---|---|
-| `check_level0.py` | Checks one record — or all twelve — against the twenty `machine_checks` declared in `level0_schema.json`. `--record`, `--all`, `--refs`, `--labels`, `--quiet` |
+| `check_level0.py` | Checks one record — or all twelve — against the twenty‑one `machine_checks` declared in `level0_schema.json` (twenty until 2.0.0). `--record`, `--all`, `--refs`, `--labels`, `--quiet` |
 | `verify_sync.py` | Checks the *relationship* between schema, records, and checker: label synchronisation, template coverage, and the fingerprint of the immutable unit fields |
-| `units_manifest.json` | The fingerprint ledger — 12 records, 217 units. `verify_sync.py` compares against it |
+| `units_manifest.json` | The fingerprint ledger — 12 records, 224 units. `verify_sync.py` compares against it |
 
 **Nothing else should be run against this dataset.** This document exists because
 those three files had predecessors, and the predecessors are worth describing even
@@ -126,9 +126,9 @@ document is the record of their existence.
 
 | ファイル | 役割 |
 |---|---|
-| `check_level0.py` | 1本のレコード、または12本すべてを、`level0_schema.json` の `machine_checks` 20項目に照らして検査する。`--record`／`--all`／`--refs`／`--labels`／`--quiet` |
+| `check_level0.py` | 1本のレコード、または12本すべてを、`level0_schema.json` の `machine_checks` 21項目（2.0.0 までは20項目）に照らして検査する。`--record`／`--all`／`--refs`／`--labels`／`--quiet` |
 | `verify_sync.py` | schema・レコード・checker の**三者の関係**を検査する。ラベルの同期、テンプレートの充足、`units` 不変項目の指紋照合 |
-| `units_manifest.json` | 指紋台帳（12レコード・217ユニット）。`verify_sync.py` が照合する |
+| `units_manifest.json` | 指紋台帳（12レコード・224ユニット）。`verify_sync.py` が照合する |
 
 **これ以外を本データセットに対して実行しないでください。**本文書があるのは、この3点に
 前身があり、同梱しないとしても記述する価値があるからです。

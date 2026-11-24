@@ -294,11 +294,11 @@
           "measure_on": "大文字 A"
         },
         {
-          "anchor_word": "Une insinuation simple",
+          "anchor_word": "Une insinuation",
           "anchor_location": {
             "spread": "f12-f13",
             "page": "f12",
-            "text_unit": "tu_f12_une_insinuation_simple"
+            "text_unit": "tu_f12_une_insinuation"
           },
           "style": "italique",
           "cap_height_mm": 4.0,
@@ -310,7 +310,12 @@
             "method_note": "本体の pending 錨（代表語未定、「f12 以降のイタリック挿入節から選定」）への提案。f12-f13 は全ユニット italique・class 3 の見開きであり、イタリック平原の起点にあたる。代表語の確定と定規実測は N 裁定。"
           },
           "status": "proposed_representative",
-          "layer_id": "layer_body_italic"
+          "layer_id": "layer_body_italic",
+          "relocation_note": {
+            "date": "2026-11-24",
+            "by": "N",
+            "ja": "f12-f13 の中溝跨ぎ行の分割（C 案）に伴い、退役した tu_f12_une_insinuation_simple から、f12 側の後継 tu_f12_une_insinuation へ付け替え。本錨の measurement は census_uniform（見開き全体が 4mm）であり、行内の特定箇所での定規実測ではないため、付け替えによってサイズの根拠は変わらない。f12 をイタリック平原の起点とする提案理由もそのまま生きる。status は proposed_representative のまま。"
+          }
         },
         {
           "anchor_word": "EXISTÂT-IL",
@@ -770,7 +775,7 @@
     {
       "id": "oq_ts_body_italic_representative",
       "status": "open",
-      "ja": "本体 pending 錨 layer_body_italic（代表語未定、「f12 以降のイタリック挿入節から選定」）の確定。本統合では tu_f12_une_insinuation_simple を提案（status: proposed_representative）。イタリック平原の起点という意味では f12 が自然だが、定規実測のしやすさで選ぶなら他候補もありうる。N 裁定。"
+      "ja": "本体 pending 錨 layer_body_italic（代表語未定、「f12 以降のイタリック挿入節から選定」）の確定。本統合では tu_f12_une_insinuation_simple を提案（status: proposed_representative）。イタリック平原の起点という意味では f12 が自然だが、定規実測のしやすさで選ぶなら他候補もありうる。N 裁定。（2026-11-24 注：C 案による分割に伴い、提案先は tu_f12_une_insinuation に付け替え済み。）"
     },
     {
       "id": "oq_ts_f6f7_anchors_provisional",
@@ -864,6 +869,13 @@
       ],
       "ja": "2026-08-25 の revision は、錨が指していた tu_f6_labime を『まだ起草されていない正本の ID の予測値』と説明した。この説明は事実誤認であり、ここに訂正する。既存の記述は削除も上書きもしない——当時そう判断したこと自体が成立史であるため。【判明した事実】2026-08-26 に f6-f7trial-1.json（内部日付 2026-07-12）を確認したところ、tu_f6_labime は当該ファイルに実在する ID であった。同世代の f4-f5trial-3・f8-f9trial-4 も含め、trial 世代はアポストロフを連結する命名（tu_f6_labime／tu_f6_daile／tu_f7_a_lenvergure／tu_f7_dun_batiment 等）を一貫して用いていた。level-0 世代で id_assignment_rules が適用され分離形（tu_f6_l_abime／tu_f6_d_aile 等）へ変わった際に、錨だけが旧世代の ID を指したまま残った——確認できた範囲で f4-f5 に 1 件、f6-f7 に 10 件、f8-f9 に 13 件の ID が両世代間で異なる。したがって錨は未来を予測して外したのではなく、当時実在した ID を正しく参照しており、参照先の世代が交代したときに追随しなかった。【trial 世代 ID の位置づけ】trial 世代の ID を deprecated_ids に登録する処理は行わない。これは新規の裁定ではなく、f1・f2-f3 の level-0 正本 provenance_note にある『旧試作 ID は正典未登録のため deprecated 処理不要』という 2026-07-24〜25 の判断の追認である（N、2026-08-26）。根拠：①trial 3 点の内部日付は 2026-07-12 で、citation_scheme.json の凍結（2026-07-17）より前 ②release_log.json v1.0 の coverage.full_record は収録深度を示す語彙であり正典登録・公開済み ID・独立ファイルの存在とは別軸である（同一覧に挙がる f1・f2-f3 にはそもそもファイルが存在しない）③当該判断は trial の存在を知る当事者により同時代に下された。【full_record との関係】trial 世代の記録は syntax・layout・interpretations・variants をtext_units と同一ファイルに載せていた。level-0 はこれを浅く置き換えたのではなく、一体だった記述空間から観察の層を抜き出したものである。したがって両者の関係は supersession ではなく設計の分化であり、superseded_by による接続は用いない。",
       "en": "Corrects the rationale recorded on 2026-08-25 without altering it. tu_f6_labime was not a forecast of an identifier not yet assigned: it existed in the trial-generation record of f6-f7 (dated 2026-07-12), whose naming concatenated the apostrophe. When the level-0 generation applied the naming rules and produced the separated form, the anchor was left pointing at the earlier generation. The correction to tu_f6_l_abime stands; only its reasoning is amended. Trial-generation identifiers are not entered in deprecated_ids — a confirmation of the ruling already recorded in the provenance notes of f1 and f2-f3, not a new one."
+    },
+    {
+      "date": "2026-11-24",
+      "by": "N（作業は Claude、N の裁定による）",
+      "summary": {
+        "ja": "level-0 2.0.0（C 案による中溝跨ぎ行の分割）に伴い、class 3 の layer_body_italic 提案錨の text_unit を tu_f12_une_insinuation_simple（退役）から tu_f12_une_insinuation へ付け替え。サイズ値・status は不変。"
+      }
     }
   ],
   "approved": {

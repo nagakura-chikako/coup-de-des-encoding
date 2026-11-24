@@ -18,6 +18,7 @@
 - [Glossary](docs/08-glossary.md): terminology, including one unresolved term.
 - [Reusing the pattern](docs/09-reusing-the-pattern.md): the design stated independently of Mallarmé.
 - [Open questions](docs/10-open-questions.md): published unresolved matters and how to raise one.
+- [Migration note 2.0](docs/migrations/2.0.md): what changed from dataset v1.1 (217 units) to v2.0 (224 units), and how old identifiers resolve.
 - [Afterword](docs/11-afterword.md): the author's statement of what the structure is for. Written in the first person and **non-normative** — do not cite it as a rule of the project.
 
 ## Data

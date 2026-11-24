@@ -1,7 +1,7 @@
 {
   "file": "f10-f11_level0.json",
-  "schema_version": "0.3",
-  "schema_ref": "level0_schema.json (approved 2026-07-18)",
+  "schema_version": "0.4",
+  "schema_ref": "level0_schema.json (approved 2026-07-18; 0.4 revised 2026-11-24)",
   "spread_id": "f10-f11",
   "record_depth": "level-0",
   "base_state": "Ronat_1980",
@@ -21,6 +21,150 @@
       "before": "le vieillard vers cette conjonction suprême",
       "after": "le vieillard vers cette conjonction suprême avec la probabilité",
       "evidence": "N による Ronat 原本照合（2026-07-18）：「avec la probabilité」は独立行ではなく同一行。",
+      "by": "N"
+    },
+    {
+      "date": "2026-09-26",
+      "unit_id": "tu_f11_celui",
+      "field": "face",
+      "before": "f11",
+      "after": "f10",
+      "evidence": "N による Ronat_1980 原本照合（2026-09-26）：f11 に印刷されているのは N’ABOLIRA のみで、celui〜folie の16行は f10 に印刷されている。2026-07-18 の起草時、IMG_6405（実は Cosmopolis 版 p.422 の校合コピー）を f11 の接写と誤認したことに由来する面帰属の誤りと推定される。2026-11-24 に N が原本で再照合し確認。記録の誤りの訂正であり、ID は維持する（doctrine.upgrade_path）。",
+      "by": "N"
+    },
+    {
+      "date": "2026-09-26",
+      "unit_id": "tu_f11_son_ombre_puerile",
+      "field": "face",
+      "before": "f11",
+      "after": "f10",
+      "evidence": "N による Ronat_1980 原本照合（2026-09-26）：f11 に印刷されているのは N’ABOLIRA のみで、celui〜folie の16行は f10 に印刷されている。2026-07-18 の起草時、IMG_6405（実は Cosmopolis 版 p.422 の校合コピー）を f11 の接写と誤認したことに由来する面帰属の誤りと推定される。2026-11-24 に N が原本で再照合し確認。記録の誤りの訂正であり、ID は維持する（doctrine.upgrade_path）。",
+      "by": "N"
+    },
+    {
+      "date": "2026-09-26",
+      "unit_id": "tu_f11_caressee_et_polie",
+      "field": "face",
+      "before": "f11",
+      "after": "f10",
+      "evidence": "N による Ronat_1980 原本照合（2026-09-26）：f11 に印刷されているのは N’ABOLIRA のみで、celui〜folie の16行は f10 に印刷されている。2026-07-18 の起草時、IMG_6405（実は Cosmopolis 版 p.422 の校合コピー）を f11 の接写と誤認したことに由来する面帰属の誤りと推定される。2026-11-24 に N が原本で再照合し確認。記録の誤りの訂正であり、ID は維持する（doctrine.upgrade_path）。",
+      "by": "N"
+    },
+    {
+      "date": "2026-09-26",
+      "unit_id": "tu_f11_assouplie_par_la_vague",
+      "field": "face",
+      "before": "f11",
+      "after": "f10",
+      "evidence": "N による Ronat_1980 原本照合（2026-09-26）：f11 に印刷されているのは N’ABOLIRA のみで、celui〜folie の16行は f10 に印刷されている。2026-07-18 の起草時、IMG_6405（実は Cosmopolis 版 p.422 の校合コピー）を f11 の接写と誤認したことに由来する面帰属の誤りと推定される。2026-11-24 に N が原本で再照合し確認。記録の誤りの訂正であり、ID は維持する（doctrine.upgrade_path）。",
+      "by": "N"
+    },
+    {
+      "date": "2026-09-26",
+      "unit_id": "tu_f11_aux_durs_os_perdus",
+      "field": "face",
+      "before": "f11",
+      "after": "f10",
+      "evidence": "N による Ronat_1980 原本照合（2026-09-26）：f11 に印刷されているのは N’ABOLIRA のみで、celui〜folie の16行は f10 に印刷されている。2026-07-18 の起草時、IMG_6405（実は Cosmopolis 版 p.422 の校合コピー）を f11 の接写と誤認したことに由来する面帰属の誤りと推定される。2026-11-24 に N が原本で再照合し確認。記録の誤りの訂正であり、ID は維持する（doctrine.upgrade_path）。",
+      "by": "N"
+    },
+    {
+      "date": "2026-09-26",
+      "unit_id": "tu_f11_ne",
+      "field": "face",
+      "before": "f11",
+      "after": "f10",
+      "evidence": "N による Ronat_1980 原本照合（2026-09-26）：f11 に印刷されているのは N’ABOLIRA のみで、celui〜folie の16行は f10 に印刷されている。2026-07-18 の起草時、IMG_6405（実は Cosmopolis 版 p.422 の校合コピー）を f11 の接写と誤認したことに由来する面帰属の誤りと推定される。2026-11-24 に N が原本で再照合し確認。記録の誤りの訂正であり、ID は維持する（doctrine.upgrade_path）。",
+      "by": "N"
+    },
+    {
+      "date": "2026-09-26",
+      "unit_id": "tu_f11_d_un_ebat",
+      "field": "face",
+      "before": "f11",
+      "after": "f10",
+      "evidence": "N による Ronat_1980 原本照合（2026-09-26）：f11 に印刷されているのは N’ABOLIRA のみで、celui〜folie の16行は f10 に印刷されている。2026-07-18 の起草時、IMG_6405（実は Cosmopolis 版 p.422 の校合コピー）を f11 の接写と誤認したことに由来する面帰属の誤りと推定される。2026-11-24 に N が原本で再照合し確認。記録の誤りの訂正であり、ID は維持する（doctrine.upgrade_path）。",
+      "by": "N"
+    },
+    {
+      "date": "2026-09-26",
+      "unit_id": "tu_f11_la_mer_par_l_aieul",
+      "field": "face",
+      "before": "f11",
+      "after": "f10",
+      "evidence": "N による Ronat_1980 原本照合（2026-09-26）：f11 に印刷されているのは N’ABOLIRA のみで、celui〜folie の16行は f10 に印刷されている。2026-07-18 の起草時、IMG_6405（実は Cosmopolis 版 p.422 の校合コピー）を f11 の接写と誤認したことに由来する面帰属の誤りと推定される。2026-11-24 に N が原本で再照合し確認。記録の誤りの訂正であり、ID は維持する（doctrine.upgrade_path）。",
+      "by": "N"
+    },
+    {
+      "date": "2026-09-26",
+      "unit_id": "tu_f11_une_chance_oiseuse",
+      "field": "face",
+      "before": "f11",
+      "after": "f10",
+      "evidence": "N による Ronat_1980 原本照合（2026-09-26）：f11 に印刷されているのは N’ABOLIRA のみで、celui〜folie の16行は f10 に印刷されている。2026-07-18 の起草時、IMG_6405（実は Cosmopolis 版 p.422 の校合コピー）を f11 の接写と誤認したことに由来する面帰属の誤りと推定される。2026-11-24 に N が原本で再照合し確認。記録の誤りの訂正であり、ID は維持する（doctrine.upgrade_path）。",
+      "by": "N"
+    },
+    {
+      "date": "2026-09-26",
+      "unit_id": "tu_f11_fiancailles",
+      "field": "face",
+      "before": "f11",
+      "after": "f10",
+      "evidence": "N による Ronat_1980 原本照合（2026-09-26）：f11 に印刷されているのは N’ABOLIRA のみで、celui〜folie の16行は f10 に印刷されている。2026-07-18 の起草時、IMG_6405（実は Cosmopolis 版 p.422 の校合コピー）を f11 の接写と誤認したことに由来する面帰属の誤りと推定される。2026-11-24 に N が原本で再照合し確認。記録の誤りの訂正であり、ID は維持する（doctrine.upgrade_path）。",
+      "by": "N"
+    },
+    {
+      "date": "2026-09-26",
+      "unit_id": "tu_f11_dont",
+      "field": "face",
+      "before": "f11",
+      "after": "f10",
+      "evidence": "N による Ronat_1980 原本照合（2026-09-26）：f11 に印刷されているのは N’ABOLIRA のみで、celui〜folie の16行は f10 に印刷されている。2026-07-18 の起草時、IMG_6405（実は Cosmopolis 版 p.422 の校合コピー）を f11 の接写と誤認したことに由来する面帰属の誤りと推定される。2026-11-24 に N が原本で再照合し確認。記録の誤りの訂正であり、ID は維持する（doctrine.upgrade_path）。",
+      "by": "N"
+    },
+    {
+      "date": "2026-09-26",
+      "unit_id": "tu_f11_le_voile_d_illusion",
+      "field": "face",
+      "before": "f11",
+      "after": "f10",
+      "evidence": "N による Ronat_1980 原本照合（2026-09-26）：f11 に印刷されているのは N’ABOLIRA のみで、celui〜folie の16行は f10 に印刷されている。2026-07-18 の起草時、IMG_6405（実は Cosmopolis 版 p.422 の校合コピー）を f11 の接写と誤認したことに由来する面帰属の誤りと推定される。2026-11-24 に N が原本で再照合し確認。記録の誤りの訂正であり、ID は維持する（doctrine.upgrade_path）。",
+      "by": "N"
+    },
+    {
+      "date": "2026-09-26",
+      "unit_id": "tu_f11_ainsi_que_le_fantome",
+      "field": "face",
+      "before": "f11",
+      "after": "f10",
+      "evidence": "N による Ronat_1980 原本照合（2026-09-26）：f11 に印刷されているのは N’ABOLIRA のみで、celui〜folie の16行は f10 に印刷されている。2026-07-18 の起草時、IMG_6405（実は Cosmopolis 版 p.422 の校合コピー）を f11 の接写と誤認したことに由来する面帰属の誤りと推定される。2026-11-24 に N が原本で再照合し確認。記録の誤りの訂正であり、ID は維持する（doctrine.upgrade_path）。",
+      "by": "N"
+    },
+    {
+      "date": "2026-09-26",
+      "unit_id": "tu_f11_chancellera",
+      "field": "face",
+      "before": "f11",
+      "after": "f10",
+      "evidence": "N による Ronat_1980 原本照合（2026-09-26）：f11 に印刷されているのは N’ABOLIRA のみで、celui〜folie の16行は f10 に印刷されている。2026-07-18 の起草時、IMG_6405（実は Cosmopolis 版 p.422 の校合コピー）を f11 の接写と誤認したことに由来する面帰属の誤りと推定される。2026-11-24 に N が原本で再照合し確認。記録の誤りの訂正であり、ID は維持する（doctrine.upgrade_path）。",
+      "by": "N"
+    },
+    {
+      "date": "2026-09-26",
+      "unit_id": "tu_f11_s_affalera",
+      "field": "face",
+      "before": "f11",
+      "after": "f10",
+      "evidence": "N による Ronat_1980 原本照合（2026-09-26）：f11 に印刷されているのは N’ABOLIRA のみで、celui〜folie の16行は f10 に印刷されている。2026-07-18 の起草時、IMG_6405（実は Cosmopolis 版 p.422 の校合コピー）を f11 の接写と誤認したことに由来する面帰属の誤りと推定される。2026-11-24 に N が原本で再照合し確認。記録の誤りの訂正であり、ID は維持する（doctrine.upgrade_path）。",
+      "by": "N"
+    },
+    {
+      "date": "2026-09-26",
+      "unit_id": "tu_f11_folie",
+      "field": "face",
+      "before": "f11",
+      "after": "f10",
+      "evidence": "N による Ronat_1980 原本照合（2026-09-26）：f11 に印刷されているのは N’ABOLIRA のみで、celui〜folie の16行は f10 に印刷されている。2026-07-18 の起草時、IMG_6405（実は Cosmopolis 版 p.422 の校合コピー）を f11 の接写と誤認したことに由来する面帰属の誤りと推定される。2026-11-24 に N が原本で再照合し確認。記録の誤りの訂正であり、ID は維持する（doctrine.upgrade_path）。",
       "by": "N"
     }
   ],
@@ -136,7 +280,7 @@
     },
     {
       "id": "tu_f11_celui",
-      "face": "f11",
+      "face": "f10",
       "seq": 120,
       "text": "celui",
       "type_class": 3,
@@ -145,7 +289,7 @@
     },
     {
       "id": "tu_f11_son_ombre_puerile",
-      "face": "f11",
+      "face": "f10",
       "seq": 130,
       "text": "son ombre puérile",
       "type_class": 3,
@@ -154,7 +298,7 @@
     },
     {
       "id": "tu_f11_caressee_et_polie",
-      "face": "f11",
+      "face": "f10",
       "seq": 140,
       "text": "caressée et polie et rendue et lavée",
       "type_class": 3,
@@ -163,7 +307,7 @@
     },
     {
       "id": "tu_f11_assouplie_par_la_vague",
-      "face": "f11",
+      "face": "f10",
       "seq": 150,
       "text": "assouplie par la vague et soustraite",
       "type_class": 3,
@@ -172,7 +316,7 @@
     },
     {
       "id": "tu_f11_aux_durs_os_perdus",
-      "face": "f11",
+      "face": "f10",
       "seq": 160,
       "text": "aux durs os perdus entre les ais",
       "type_class": 3,
@@ -181,7 +325,7 @@
     },
     {
       "id": "tu_f11_ne",
-      "face": "f11",
+      "face": "f10",
       "seq": 170,
       "text": "né",
       "type_class": 3,
@@ -190,7 +334,7 @@
     },
     {
       "id": "tu_f11_d_un_ebat",
-      "face": "f11",
+      "face": "f10",
       "seq": 180,
       "text": "d’un ébat",
       "type_class": 3,
@@ -199,7 +343,7 @@
     },
     {
       "id": "tu_f11_la_mer_par_l_aieul",
-      "face": "f11",
+      "face": "f10",
       "seq": 190,
       "text": "la mer par l’aïeul tentant ou l’aïeul contre la mer",
       "type_class": 3,
@@ -208,7 +352,7 @@
     },
     {
       "id": "tu_f11_une_chance_oiseuse",
-      "face": "f11",
+      "face": "f10",
       "seq": 200,
       "text": "une chance oiseuse",
       "type_class": 3,
@@ -217,7 +361,7 @@
     },
     {
       "id": "tu_f11_fiancailles",
-      "face": "f11",
+      "face": "f10",
       "seq": 210,
       "text": "Fiançailles",
       "type_class": 3,
@@ -226,7 +370,7 @@
     },
     {
       "id": "tu_f11_dont",
-      "face": "f11",
+      "face": "f10",
       "seq": 220,
       "text": "dont",
       "type_class": 3,
@@ -235,7 +379,7 @@
     },
     {
       "id": "tu_f11_le_voile_d_illusion",
-      "face": "f11",
+      "face": "f10",
       "seq": 230,
       "text": "le voile d’illusion rejailli leur hantise",
       "type_class": 3,
@@ -244,7 +388,7 @@
     },
     {
       "id": "tu_f11_ainsi_que_le_fantome",
-      "face": "f11",
+      "face": "f10",
       "seq": 240,
       "text": "ainsi que le fantôme d’un geste",
       "type_class": 3,
@@ -253,7 +397,7 @@
     },
     {
       "id": "tu_f11_chancellera",
-      "face": "f11",
+      "face": "f10",
       "seq": 250,
       "text": "chancellera",
       "type_class": 3,
@@ -262,7 +406,7 @@
     },
     {
       "id": "tu_f11_s_affalera",
-      "face": "f11",
+      "face": "f10",
       "seq": 260,
       "text": "s’affalera",
       "type_class": 3,
@@ -271,12 +415,12 @@
     },
     {
       "id": "tu_f11_folie",
-      "face": "f11",
+      "face": "f10",
       "seq": 270,
       "text": "folie",
       "type_class": 3,
       "style": "romain",
-      "note": "頁下部で N’ABOLIRA と同一視覚帯。ベースライン関係の記述は layout 層へ送る（観察のみ）。"
+      "note": "f10 の最下行。f11 の N’ABOLIRA（tu_f11_n_abolira）と頁下部でほぼ同じ高さに並ぶ——面を跨ぐ観察であり、ベースライン関係の記述は layout 層へ送る（観察のみ）。旧 note（2026-07-18）は「頁下部で N’ABOLIRA と同一視覚帯」と、両者を同じ面にあるものとして記していた（face 訂正 2026-09-26 に伴い 2026-11-24 改稿）。"
     },
     {
       "id": "tu_f11_n_abolira",
@@ -296,5 +440,18 @@
       "ja": "全28単位中27単位でタイポグラフィ行と手巻物の区切りが一致。唯一の差異は tu_f10_ancestralement_a_n_ouvrir（手巻物は2分割、当該 unit の note に記録）。手巻物は「le vieillard ... avec la probabilité」を一行として扱い、r1 訂正を裏書きする。",
       "en": "27 of 28 units match the handscroll divisions; the single divergence is tu_f10_ancestralement_a_n_ouvrir (split in two in 1987; recorded in that unit’s note). The handscroll treats “le vieillard ... avec la probabilité” as one line, corroborating r1."
     }
+  },
+  "collation_resolutions": {
+    "resolved_by": "N",
+    "resolved_on": "2026-11-24",
+    "items": [
+      {
+        "id": "oq_l0_f10f11_face_correction",
+        "status": "closed",
+        "ruling": {
+          "ja": "①2026-09-26：面推論の作業中に、旧試作（2026-07-14）では f11 が N’ABOLIRA のみであったのに、正本（2026-07-18）では celui〜folie の16行が f11 に置かれているという食い違いが見つかった（Claude 報告）。N が Ronat 原本を確認し、f11 には N’ABOLIRA しかないと裁定。ID は変えず face のみを訂正する方針を決定。②2026-11-10：旧来の検査（id の面接頭辞＝face）では ID を保ったままの訂正が FAIL することを確認し、検査を訂正の連鎖の検査に改めることを決定。③2026-11-24：N が原本で16行を再照合（全件確認）し、本記録に反映。旧 face は revision_history に、成立経緯は本項に保持する。教訓：ID と face が同じ誤認から作られていれば、両者の整合を検査しても底本との不一致は見つからない。内部整合性と底本に対する正確性は別物である。"
+        }
+      }
+    ]
   }
 }

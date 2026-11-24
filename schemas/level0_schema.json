@@ -1,6 +1,6 @@
 {
   "file": "level0_schema.json",
-  "schema_version": "0.3",
+  "schema_version": "0.4",
   "status": "approved",
   "created": "2026-07-18",
   "approved": "2026-07-18",
@@ -41,6 +41,20 @@
       "type": "descriptive_addition",
       "source": "collation_note の位置・形式の全12本調査（2026-08-24）",
       "ja": "照合証跡の所在に関する記述の追加。設計変更ではなく、正本の変更も伴わない。schema_version は 0.3 据え置き。①optional_fields.fields.collation_resolutions に also_serves_as を追加——本節が裁定記録であると同時に照合日・照合者の構造化された保持先でもあり、f12-f13 ではその唯一の保持先であることを明記 ②optional_fields.fields.collation_note に placements と placement_note を追加——位置が canonical／legacy_nested／legacy_prose の3系統であること、世代A の2本でも照合日・照合者が構造化された形で取得できること、位置統一を目的とした後付けを行わない理由を明記 ③同エントリに correction_types を追加——revision_history が field ∈ {text, face} に限定される帰結として style 訂正はそこに入らず、revision_history が空でも style 訂正が存在しうること、記録先が collation_note と該当ユニットの note であることを明記（実例：f18-f19）。あわせて validation.note にも同旨を追記 ④同エントリに multiple_events_note を、record_generations.cross_generation_notes に gen_note_collation_evidence_placement と gen_note_f14f15_two_dates を追加——f14-f15 の 2026-07-20（裁定日）と 2026-08-24（最終現物照合日）が異なるイベントとして併存することを明記。resolutions.items に oq_schema_collation_note_placement を resolved で追加。field_definitions・record_template・machine_checks・doctrine は変更していない。正本 12 本は変更なし。"
+    },
+    {
+      "date": "2026-11-24",
+      "by": "N（改訂作業は Claude、N の裁定による）",
+      "type": "design_change",
+      "schema_version": "0.3 → 0.4",
+      "source": "f10-f11 面帰属訂正（N 裁定 2026-09-26）、検査規則（2026-11-10）、中溝跨ぎ行の C 案（2026-11-08）、D1〜D4（2026-11-24）",
+      "ja": "①doctrine.upgrade_path に、face 訂正後の id 接頭辞との不一致と、その説明責任（訂正の連鎖）を追記 ②field_definitions.units.face・revision_history・deprecated_ids を改訂——superseded_by に配列（分割時）を許し、面の記録誤りの訂正は退役ではなく revision_history で扱うことを明記（旧文言『分割・統合・面帰属の変更等』の『面帰属の変更』が upgrade_path と食い違っていたため） ③id_assignment_rules 第2項を C 案に置換 ④optional_fields.physical_observations に紙片構造の記録先を追記 ⑤validation.machine_checks 第3項を訂正連鎖の検査に改め、第21項（deprecated_ids の解決）を末尾に追加。checker の LABELS も同時に改訂 ⑥resolutions.items に 2 件追加。",
+      "superseded_text": {
+        "id_assignment_rules.ja[1]": "ユニットが面を跨ぐ場合（行が中溝を越える等）は開始面を ID に採る。face フィールドも開始面とし、跨ぎは note に記す。",
+        "field_definitions.deprecated_ids": "ユニット同一性の変更（分割・統合・面帰属の変更等）により旧 ID を退役させた場合の台帳。トップレベルの配列で、各エントリは {id, superseded_by, date, evidence, by} を必須で含む。旧 ID は superseded_by を辿って永久に解決可能であり続ける。text・face の内容訂正は revision_history に記録し、ここには記録しない（内容の訂正と同一性の変更を混同しないこと）。該当がない場合も空配列で明示する。",
+        "validation.machine_checks[2]": "id の面接頭辞と face が一致"
+      },
+      "level0_version_effect": "MAJOR（level-0 1.1.0 → 2.0.0）。区分の裁定経緯は resolutions.items の oq_l0_cross_gutter_units.version_classification を参照"
     }
   ],
   "depends_on": [
@@ -75,8 +89,8 @@
       "en": "Citations from level-0 records may mark depth with the existing selector @depth=level-0. No frozen selector semantics are altered."
     },
     "upgrade_path": {
-      "ja": "level-0 → full_record への昇格は層の追加のみで行う。id は永久不変（ユニットの同一性変更が不可避な場合は id_immutability_rules に従い deprecated + superseded_by で処理し、旧 ID は永久に解決可能）。text・face は転記ミス等の内容訂正に限り変更可能とするが、根拠と改訂履歴（revision_history）の記録を必須とする。内容の訂正とユニット同一性の変更を混同しないこと（N 裁定、2026-07-18）。seq は ID ではないため昇格時に自由に改訂してよい。",
-      "en": "Upgrading level-0 to full adds layers only. IDs are permanently immutable (identity changes go through deprecated + superseded_by). text and face may be corrected — for transcription errors and the like only — provided the evidence and a revision_history entry are recorded. Content correction must not be conflated with identity change (ruled by N, 2026-07-18). seq is not an ID and may be revised freely on upgrade."
+      "ja": "level-0 → full_record への昇格は層の追加のみで行う。id は永久不変（ユニットの同一性変更が不可避な場合は id_immutability_rules に従い deprecated + superseded_by で処理し、旧 ID は永久に解決可能）。text・face は転記ミス等の内容訂正に限り変更可能とするが、根拠と改訂履歴（revision_history）の記録を必須とする。内容の訂正とユニット同一性の変更を混同しないこと（N 裁定、2026-07-18）。seq は ID ではないため昇格時に自由に改訂してよい。id の面接頭辞は発行時の面を記録したものであり、face が訂正されると現在の face とは一致しなくなる。この不一致は許容されるが、当該ユニットの revision_history に記録された face 訂正の連鎖（始点＝id の面接頭辞、終点＝現在の face）によって説明されなければならない（N 裁定 2026-09-26、検査規則は 2026-11-10 に確定）。",
+      "en": "Upgrading level-0 to full adds layers only. IDs are permanently immutable (identity changes go through deprecated + superseded_by). text and face may be corrected — for transcription errors and the like only — provided the evidence and a revision_history entry are recorded. Content correction must not be conflated with identity change (ruled by N, 2026-07-18). seq is not an ID and may be revised freely on upgrade. The face prefix in an ID records the face at issue; once a face is corrected it no longer matches the current face. That mismatch is allowed, but it must be explained by the chain of face corrections in the unit's revision_history, starting at the ID's face prefix and ending at the current face (ruled by N, 2026-09-26; check rule settled 2026-11-10)."
     }
   },
   "record_template": {
@@ -108,19 +122,19 @@
     "status": "記録の照合段階。enum: ['draft_awaiting_collation', 'awaiting_collation', 'awaiting_verbatim_collation', 'collated_with_original']。N による原本逐語照合が完了した記録のみ 'collated_with_original' を取る。record_depth（記録の深度）とは独立の軸であり、混同しないこと。",
     "unit_count": "units 配列長。整合性チェック用の冗長フィールド。",
     "units.id": "永久不変。命名規則は id_assignment_rules を参照。",
-    "units.face": "ユニットが物理的に位置する面（f10 等）。読解順が中溝を跨ぐため、seq とは独立。",
+    "units.face": "ユニットが物理的に位置する面（f10 等）。常に片面を一つだけ取る。読解順が中溝を跨ぐため、seq とは独立。記録の誤りが判明した場合は revision_history を伴って訂正でき、その場合 id の面接頭辞とは一致しなくなる（id は発行時の面を保持する。doctrine.upgrade_path）。",
     "units.seq": "スプレッド全域（両面通し）の暫定読解順。10 刻みで付与し、挿入余地を残す。ID ではないため後日の改番は自由（seq_doctrine 参照）。",
     "units.text": "逐語テクスト。大文字・小文字は原文どおり保持。アポストロフは U+2019 に正規化。イタリック情報は text に含めず style に置く。",
     "units.type_class": "typography_scale.json の本文 census 4層への参照（1=14mm, 2=5mm, 3=4mm, 4=3mm）。census の対象範囲は詩本文（f3〜f23）であり、本文ユニットでは census_complete のため必須。パラテクスト面（f1 等）のユニットで実測サイズが census のいずれの層とも一致しない場合に限り null を許容し、その際は note に実測値と typography_scale.json の paratext 附属節（paratext_sizes）への参照を記すことを必須とする（N 裁定 2026-07-25、oq_l0_f1_poeme_8mm）。census と同寸のパラテクスト要素には該当 class を付与してよいが、census の錨としては扱わない。",
     "units.style": "書体。enum: ['romain', 'italique', 'mixte']。目視で確定可能な非解釈的事実のため level-0 に含める。'mixte' は単一ユニット内に書体混在がある場合の錨であり、必ず note に概況を記す。文字列範囲レベルの詳細記述は typography／layout 層に送る（N 裁定、2026-07-18）。",
     "units.note": "任意。記録時の観察メモ（解釈注ではない。解釈は layer 側へ）。style='mixte' の場合は必須。",
-    "revision_history": "text・face の内容訂正の台帳。各エントリは {date, unit_id, field, before, after, evidence, by} を必須で含む。空配列で初期化。id の変更はここには記録できない（同一性変更は superseded_by 経由のみ）。",
-    "deprecated_ids": "ユニット同一性の変更（分割・統合・面帰属の変更等）により旧 ID を退役させた場合の台帳。トップレベルの配列で、各エントリは {id, superseded_by, date, evidence, by} を必須で含む。旧 ID は superseded_by を辿って永久に解決可能であり続ける。text・face の内容訂正は revision_history に記録し、ここには記録しない（内容の訂正と同一性の変更を混同しないこと）。該当がない場合も空配列で明示する。"
+    "revision_history": "text・face の内容訂正の台帳。各エントリは {date, unit_id, field, before, after, evidence, by} を必須で含む。空配列で初期化。id の変更はここには記録できない（同一性変更は superseded_by 経由のみ）。同一ユニットに face の訂正が複数ある場合、エントリは記載順に連鎖をなす（各エントリの before が直前のエントリの after と一致する）。",
+    "deprecated_ids": "ユニット同一性の変更（ユニットの範囲を変える分割・統合等）により旧 ID を退役させた場合の台帳。トップレベルの配列で、各エントリは {id, superseded_by, date, evidence, by} を必須で含む。superseded_by は後継 id の文字列、または分割の場合は後継 id の配列（seq 順）。旧 ID は superseded_by を辿って永久に解決可能であり続け、退役した id は units に残さない。face の記録誤りの訂正は範囲を変えないため同一性の変更ではなく、revision_history に記録する（内容の訂正と同一性の変更を混同しないこと）。なお f14-f15（2026-07-20、公開前の照合段階）では面の誤帰属を退役で処理しており、当時の処理としてそのまま保持する。該当がない場合も空配列で明示する。"
   },
   "id_assignment_rules": {
     "ja": [
       "接頭辞 tu_、次に主たる面（tu_f10_...）、次に当該ユニットの顕著語からのスラッグ（小文字 ASCII、ダイアクリティカル除去、空白はアンダースコア）。既存 f1〜f8-f9 の命名慣行と一致させる。",
-      "ユニットが面を跨ぐ場合（行が中溝を越える等）は開始面を ID に採る。face フィールドも開始面とし、跨ぎは note に記す。",
+      "物理行が中溝を越える場合は、紙片が一枚（同一紙面に連続して刷られている）か二枚かを問わず、面ごとに別のユニットとする。各ユニットの face はそのユニットが印刷された面であり、ID の面接頭辞も同じ面を採る。二つのユニットが中溝を挟んで物理的に一行をなすという観察は level-0 に属し、各ユニットの note に相手方の id とともに記す。その二つを統辞的に結びつけるか、どう結びつけるかは syntax 層の判断であり、level-0 は決めない。紙片の構造（同一紙面か否か）は行ではなく見開きの物理観察として physical_observations に記録する（N 裁定 2026-11-08〔C 案〕・2026-11-24。旧規則は revisions の 2026-11-24 エントリに保存）。",
       "スラッグの一意性は全域（全スプレッド）で保証する。衝突時は識別語を追加（tu_f14_si_2 のような連番は最終手段）。",
       "分割単位は full_record 済み f1〜f8-f9 の粒度、および 1987 年修士論文附録・十見開き手巻物統語図の区切りを参照する。両者が食い違う場合は差分を note 等に記録し、resolutions（oq_l0_segmentation_authority）で定めた裁定方針に従う。新たな未決事項が生じた場合のみ open question として追加する。"
     ]
@@ -133,7 +147,7 @@
     "machine_checks": [
       "全 id が一意",
       "id が tu_ 接頭辞・命名規則に適合",
-      "id の面接頭辞と face が一致",
+      "id の面接頭辞が face と一致、または face 訂正の連鎖が接頭辞から現在の face まで途切れない",
       "unit_count == len(units)",
       "seq がスプレッド内で一意",
       "face ∈ spread_id の構成面",
@@ -150,9 +164,10 @@
       "構造上参照する cl_global_* が台帳に実在",
       "台帳から当該スプレッドへの未解決参照なし",
       "open_questions が二区分運用に適合",
-      "status が既定語彙"
+      "status が既定語彙",
+      "deprecated_ids の旧 id が重複せず units に残らず、superseded_by が現存 id に解決する"
     ],
-    "note": "実装は全スプレッド共通の Python チェッカ check_level0.py（2026-08-24 以降。それ以前はスプレッド専用チェッカ check_f1〜check_f8f9 が並存し、f6-f7 版が参照実装であった）。上記の各項目はチェッカの LABELS と一字一句同一であり、`python3 check_level0.py --labels` の出力と照合して同期を機械的に検証できる（verify_sync.py 検査 A）。判定は PASS／FAIL／SKIP の三値：SKIP は『当該記録に適用対象が存在しない』または『照合に必要な依存ファイルが同梱されていない』ことを示し、合否の母数から除外する（任意依存の不在が見かけ上の減点にならないようにするため、2026-07-27）。typography_scale.json を要するのは type_class=null の paratext 照合と錨照合の2項目のみ。錨照合の射程について：typography_scale.json の census 錨は詩本文（f3〜f23）の実測代表点に限られ全ユニットを列挙しないため、『全ユニットの class を census と突き合わせる』完全照合は機械的に保証できない。保証できるのは、錨として登録されているユニットについて記録側の type_class が錨の記述と一致すること、および census 外パラテクストの null が paratext_sizes 附属節に裏づけられていることの2点である。\n\n本 schema に定義のないトップレベルキーの存在は検証エラーではない。level-0 の記録形式は起草時期により三世代に分かれており、その差は record_generations と optional_fields が説明を負う。machine_checks はこれらの任意項目を検査しない——任意項目の検査を追加すると、当該項目を持たない世代のレコードが FAIL するため。\n\nキー名が oq_ を接頭辞とするトップレベルキーは、特定の open question の適用記録として spread_local 相当に扱い、optional_fields への個別登録を要しない（現行の該当例：f18-f19 の oq_l0_f18f19_treatment_application）。\n\nchecker（check_level0.py）は open_questions と open_issues の双方を第19項の検査対象とする。この両対応の根拠は optional_fields の alias_of にある。\n\n訂正の記録先は種類により異なる。machine_checks は revision_history の形式のみを検査し、訂正の網羅性は検査しない。revision_history は field ∈ {text, face} に限定されるため、revision_history が空であることは text・face の訂正がないことのみを意味し、訂正がまったくなかったことを意味しない——照合により生じた style の訂正は collation_note および該当ユニットの note に記録される（現行の実例：f18-f19、style 訂正2件・revision_history は空）。詳細は optional_fields.fields.collation_note.correction_types。"
+    "note": "実装は全スプレッド共通の Python チェッカ check_level0.py（2026-08-24 以降。それ以前はスプレッド専用チェッカ check_f1〜check_f8f9 が並存し、f6-f7 版が参照実装であった）。上記の各項目はチェッカの LABELS と一字一句同一であり、`python3 check_level0.py --labels` の出力と照合して同期を機械的に検証できる（verify_sync.py 検査 A）。判定は PASS／FAIL／SKIP の三値：SKIP は『当該記録に適用対象が存在しない』または『照合に必要な依存ファイルが同梱されていない』ことを示し、合否の母数から除外する（任意依存の不在が見かけ上の減点にならないようにするため、2026-07-27）。typography_scale.json を要するのは type_class=null の paratext 照合と錨照合の2項目のみ。錨照合の射程について：typography_scale.json の census 錨は詩本文（f3〜f23）の実測代表点に限られ全ユニットを列挙しないため、『全ユニットの class を census と突き合わせる』完全照合は機械的に保証できない。保証できるのは、錨として登録されているユニットについて記録側の type_class が錨の記述と一致すること、および census 外パラテクストの null が paratext_sizes 附属節に裏づけられていることの2点である。\n\n本 schema に定義のないトップレベルキーの存在は検証エラーではない。level-0 の記録形式は起草時期により三世代に分かれており、その差は record_generations と optional_fields が説明を負う。machine_checks はこれらの任意項目を検査しない——任意項目の検査を追加すると、当該項目を持たない世代のレコードが FAIL するため。\n\nキー名が oq_ を接頭辞とするトップレベルキーは、特定の open question の適用記録として spread_local 相当に扱い、optional_fields への個別登録を要しない（現行の該当例：f18-f19 の oq_l0_f18f19_treatment_application）。\n\nchecker（check_level0.py）は open_questions と open_issues の双方を第19項の検査対象とする。この両対応の根拠は optional_fields の alias_of にある。\n\n訂正の記録先は種類により異なる。machine_checks は revision_history の形式のみを検査し、訂正の網羅性は検査しない。revision_history は field ∈ {text, face} に限定されるため、revision_history が空であることは text・face の訂正がないことのみを意味し、訂正がまったくなかったことを意味しない——照合により生じた style の訂正は collation_note および該当ユニットの note に記録される（現行の実例：f18-f19、style 訂正2件・revision_history は空）。詳細は optional_fields.fields.collation_note.correction_types。\n\n第3項（2026-11-24 改訂）：face 訂正を持たないユニットは id の面接頭辞と face の一致を、持つユニットはrevision_history の face エントリが記載順に連鎖し、その始点（最初の before）が id の面接頭辞、終点（最後の after）が現在の face と一致することを検査する。訂正記録が一件でもあれば通す、という形にはしない——記録が発行時の面から現在の面までを途切れずに説明している場合だけが通る。\n\n第21項（2026-11-24 追加）：deprecated_ids の各エントリについて、同じ旧 id が重複登録されていないこと（重複すると後の記載が先の記載を上書きするため）、旧 id が units に残っていないこと、superseded_by（文字列または配列）の各後継が、必要なら deprecated_ids を辿って、本記録の現存 id に解決することを検査する。項目は末尾に追加し、既存の第1〜20項の番号は変えていない。"
   },
   "resolutions": {
     "resolved_by": "N",
@@ -223,6 +238,41 @@
           "date": "2026-08-24",
           "by": "N",
           "ja": "collation_note の位置差・形式差について、正本12本を変更せず schema 側の説明追加のみで対応する。全12本の調査により、照合日・照合者・現物照合・訂正の扱い・実測根拠の5点がすべての正本で実質的に確認でき、status と証跡の矛盾（公開前の修正を要する事例）は0件であった。f10-f11・f12-f13 に collation_note を後から生やすことはしない——世代A の記録形式として証跡は成立しており、後世代の形式へ書き換えないという record_generations の方針がまさに守ろうとする事例である。"
+        }
+      },
+      {
+        "id": "oq_l0_face_correction_keeps_id",
+        "status": "resolved",
+        "ruling": {
+          "date": "2026-11-24",
+          "by": "N",
+          "ja": "face の記録誤りの訂正は ID を維持し、revision_history に記録する（2026-09-26 の f10-f11 裁定を、公開文書を含む一般規則として確認。D1）。ID の面接頭辞と現在の face の不一致は、machine_checks 第3項が訂正の連鎖として検査する（検査規則は 2026-11-10 に確定）。観察の訂正（ID 維持）と記録単位の分割（ID 退役）は別種の変容として区別して記録する。"
+        }
+      },
+      {
+        "id": "oq_l0_cross_gutter_units",
+        "status": "resolved",
+        "ruling": {
+          "date": "2026-11-08",
+          "by": "N",
+          "ja": "中溝を越える物理行は、紙片が一枚か二枚かを問わず面ごとに分割する（C 案）。「見開き帰属」案は採らない。物理的に一行をなすという観察は level-0 の note に、統辞的な結合は syntax 層に置く。紙片の構造は見開きの物理観察として記録し、紙片を単位とする独立台帳は将来の検討事項とする（D4、2026-11-24）。"
+        },
+        "version_classification": {
+          "ja": "版の区分の裁定は二段階を経た。①2026-11-24 午前、N は本変更を「物理配置で切る」既存原則の不揃いな適用（f8-f9 の左右分離行は分割、f12-f13・f16-f17 の跨ぎ行は一ユニット）を正すものとして MINOR と裁定した（D3＝①）。②同日午後、schema 改訂の実装中に、跨ぎ行の扱いが id_assignment_rules 第2項として明文化されていたこと（「開始面を ID に採る。face フィールドも開始面とし、跨ぎは note に記す」）が確認された。上位原則は不変でも、それを実現する明文の規則を置き換える以上、docs/05 の定めるユニット範囲の規則の変更にあたるとして、N は MAJOR に再裁定した（level-0 2.0.0／データセット v2.0／リポジトリ 2.0.0。引用方式 v1.0 は不変）。最初の裁定は消さずに経緯として残す。",
+          "history": [
+            {
+              "date": "2026-11-24",
+              "by": "N",
+              "decision": "MINOR（D3=①）",
+              "basis": "既存原則の不揃いな適用の是正という認識"
+            },
+            {
+              "date": "2026-11-24",
+              "by": "N",
+              "decision": "MAJOR（D3=②、再裁定）",
+              "basis": "id_assignment_rules 第2項の明文規則を実装中に確認（Claude 報告）"
+            }
+          ]
         }
       }
     ]
@@ -501,7 +551,7 @@
         "shape_note": {
           "ja": "型が二つある。id 付きリスト形式は後続層から個別の観察を参照できる利点があり新規起草での推奨形だが、これは既存の {ja, en} 型4本を書き換える理由にはならない。両形とも適合とする。"
         },
-        "ja": "紙面構造・中溝位置・ベースライン連続・白紙面など、原本の物理的観察。位置・余白の実測は layout 層に送り、level-0 では位置を確定させない。"
+        "ja": "紙面構造・中溝位置・ベースライン連続・白紙面など、原本の物理的観察。位置・余白の実測は layout 層に送り、level-0 では位置を確定させない。紙片の構造（その見開きが一枚の紙面に連続して刷られているか、別々の紙面の組み合わせか）もここに記録する。将来、紙片を単位とする独立台帳へ移す場合に備え、id 付きリスト形式で記す（N 裁定 2026-11-24）。"
       },
       "variant_notes": {
         "status": "canonical_optional",

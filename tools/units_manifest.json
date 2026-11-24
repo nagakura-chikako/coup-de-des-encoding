@@ -1,25 +1,25 @@
 {
-  "generated": "2026-08-24",
+  "generated": "2026-11-24",
   "records": {
     "f1": {
       "fingerprint": "1f4454d3aa2f508c",
       "unit_count": 4
     },
     "f10-f11": {
-      "fingerprint": "b2e35761ad9514d1",
+      "fingerprint": "d16535572c06c278",
       "unit_count": 28
     },
     "f12-f13": {
-      "fingerprint": "10b6e57e2eb222a7",
-      "unit_count": 13
+      "fingerprint": "e2ec076288e1b84e",
+      "unit_count": 17
     },
     "f14-f15": {
       "fingerprint": "c8a20104d9c11ac4",
       "unit_count": 17
     },
     "f16-f17": {
-      "fingerprint": "de6a92b2f72cd8e0",
-      "unit_count": 21
+      "fingerprint": "02af1938f5e364d2",
+      "unit_count": 24
     },
     "f18-f19": {
       "fingerprint": "1c8fa338534e3511",
@@ -50,7 +50,7 @@
       "unit_count": 37
     }
   },
-  "schema_version": "0.3",
+  "schema_version": "0.4",
   "unit_invariants": [
     "id",
     "face",

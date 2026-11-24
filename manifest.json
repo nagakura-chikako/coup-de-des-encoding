@@ -1,9 +1,9 @@
 {
-  "$comment": "This manifest describes release v1.1. It is not a rewrite of the skeleton manifest of 2026-07-30, which was a design system closed in its own right; what that file established and what still holds is carried forward here, marked by inherited_from.",
+  "$comment": "This manifest describes release v2.0 (it first described v1.1). It is not a rewrite of the skeleton manifest of 2026-07-30, which was a design system closed in its own right; what that file established and what still holds is carried forward here, marked by inherited_from.",
   "project": {
     "id": "UCDD-L0",
     "title": "Un Coup de Dés — Layered Canonical Encoding",
-    "release": "v1.1",
+    "release": "v2.0",
     "release_scheme": {
       "form": "v<major>.<minor>",
       "authority": "data/global/citation_scheme.json > grammar.components.release",
@@ -65,8 +65,8 @@
     ],
     "author": "Chikako Nagakura",
     "repository_url": "https://github.com/nagakura-chikako/coup-de-des-encoding",
-    "repository_release": "1.0.0",
-    "$comment_versions": "Three version numbers are kept distinct: citation scheme v1.0 (frozen 2026-07-17), dataset v1.1, repository release 1.0.0. They are not the same number and must not be merged."
+    "repository_release": "2.0.0",
+    "$comment_versions": "Three version numbers are kept distinct: citation scheme v1.0 (frozen 2026-07-17), dataset v2.0, repository release 2.0.0. They are not the same number and must not be merged. Dataset v1.1 was published as repository releases 1.0.0–1.0.2."
   },
   "entry_points": {
     "human": [
@@ -221,6 +221,18 @@
       "new_in": "v1.1"
     },
     {
+      "path": "docs/migrations/2.0.md",
+      "role": "migration note for level-0 2.0.0 (dataset v2.0)",
+      "stability": "fixed once released",
+      "new_in": "v2.0"
+    },
+    {
+      "path": "docs/migrations/2.0.ja.md",
+      "role": "migration note for level-0 2.0.0, Japanese",
+      "stability": "fixed once released",
+      "new_in": "v2.0"
+    },
+    {
       "path": "data/level0/",
       "role": "canonical record, one file per spread (12 files)",
       "layer": "level-0",
@@ -247,6 +259,9 @@
       "record_generations": {
         "authority": "data/schemas/level0_schema.json > record_generations",
         "ja": "記録形式は起草時期により三世代に分かれる。世代は成立史であって品質の序列ではなく、後続世代の名称へ書き換えない。"
+      },
+      "note_2_0": {
+        "ja": "2.0.0（2026-11-24）で 224 ユニット。退役 ID は各レコードの deprecated_ids から superseded_by で解決する。docs/migrations/2.0.md を参照。"
       }
     },
     {
@@ -329,7 +344,7 @@
       "status": "approved",
       "status_source": "$.status",
       "note": {
-        "ja": "schema_version 0.3、承認 2026-07-18。depends_on: citation_scheme.json (frozen)・typography_scale.json・release_log.json v1.0。"
+        "ja": "schema_version 0.4（0.3 承認 2026-07-18、0.4 改訂 2026-11-24：face 訂正の連鎖、中溝跨ぎ行の面ごとの分割）。depends_on: citation_scheme.json (frozen)・typography_scale.json・release_log.json v1.0。"
       }
     },
     {
@@ -386,7 +401,7 @@
     },
     {
       "path": "tools/units_manifest.json",
-      "role": "fingerprint ledger of the immutable unit fields (12 records, 217 units)",
+      "role": "fingerprint ledger of the immutable unit fields (12 records, 224 units)",
       "stability": "updated only with a deliberate revision",
       "new_in": "v1.1"
     },
@@ -507,8 +522,8 @@
     "authority": "data/global/citation_scheme.json (frozen 2026-07-17)",
     "ja": "本 manifest は独自の引用文法を定義しない。引用アドレスの形式・container・selector はすべて凍結済みの citation_scheme.json を正とする（N 裁定 2026-08-26）。skeleton manifest が定義していた UCDD-L0/<version>#<unit_id> 形式は、凍結された grammar の form と衝突するため踏襲しない。",
     "form": "ucd[:<release>]://<address>[@<selectors>]",
-    "example": "ucd:v1.1://unit/tu_f8_le_maitre@depth=level-0",
-    "project_citation": "Nagakura, Chikako. Un Coup de Dés — Layered Canonical Encoding (UCDD-L0), release v1.1, 2026. DOI: (pending)",
+    "example": "ucd:v2.0://unit/tu_f8_le_maitre@depth=level-0",
+    "project_citation": "Nagakura, Chikako. Un Coup de Dés — Layered Canonical Encoding (UCDD-L0), release 2.0.0 (dataset v2.0), 2026. DOI: 10.5281/zenodo.22153567 (concept DOI)",
     "excluded_from_address": [
       "seq",
       "file path",

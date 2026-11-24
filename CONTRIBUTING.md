@@ -40,7 +40,7 @@ All three arrive as issues.
 - **The evidence** — what you looked at, and how. "The 1914 printing reads otherwise" is a comparison, not evidence about the base object.
 - **The date, and who made it** — a person or a machine. If a language model, a script, or an OCR pass produced the reading, say so plainly. This is not held against the contribution; it is part of what a reader needs in order to weigh it.
 
-Identifier changes additionally go through `deprecated_ids`, naming the successor identifier so that earlier citations continue to resolve.
+Identifier changes additionally go through `deprecated_ids`, naming the successor identifier so that earlier citations continue to resolve. A unit recorded on the wrong face is not an identifier change: the face is corrected in `revision_history` and the identifier stays.
 
 ## Who can certify collation
 

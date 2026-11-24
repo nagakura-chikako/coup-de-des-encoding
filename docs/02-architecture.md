@@ -83,7 +83,7 @@ A layer directory contains a `layer.json` declaring:
 {
   "layer_id": "syntax",
   "version": "0.1.0",
-  "depends_on": { "level0": ">=1.1.0" },
+  "depends_on": { "level0": ">=2.0.0" },
   "authors": [{ "name": "…", "sigla": "N" }],
   "claim_type": "interpretive",
   "attaches_to": "text_unit",

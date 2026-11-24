@@ -17,4 +17,6 @@ The self-explanation of the project. Numbered so that a reader — human or mach
 | 10 | [open-questions](10-open-questions.md) | What is unresolved? |
 | 11 | [afterword](11-afterword.md) · [日本語](11-afterword.ja.md) | What is the structure for? *(first person; non-normative)* |
 
+Migration notes for MAJOR releases: [2.0](migrations/2.0.md) · [日本語](migrations/2.0.ja.md).
+
 Reading 00 and 03 is enough to describe the project accurately. Reading 02 and 04 is enough to build on it. 11 is the author's own voice and binds nothing.

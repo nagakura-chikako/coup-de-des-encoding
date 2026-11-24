@@ -36,11 +36,11 @@ Reading that table is the fastest way to understand what the project is: **level
 
 Level‑0 unit extent is decided by physical layout, not by sense.
 
-The rule was tested on f6–f7. The word `par` sits at the foot of f6 and `avance retombée d'un mal à dresser le vol` at the head of f7, and the two share a single baseline to within about 0.15 mm — but with roughly 67 mm of blank between them, some twenty‑five word‑spaces. Physically: two units, on two faces. Readably: plainly one phrase, and the 1987 hand‑scroll had treated it as one. The decision was to keep two units at level‑0 and to state that `par avance` may be read as a unit in the syntax and readings layers.
+The rule was tested on f6–f7. The word `par` sits at the foot of f6 and `avance retombée d'un mal à dresser le vol` at the head of f7, and the two share a single baseline to within about 0.15 mm — but with 8 cm of blank between them by ruler (4 cm on each side of the gutter), some twenty‑five word‑spaces. Physically: two units, on two faces. Readably: plainly one phrase, and the 1987 hand‑scroll had treated it as one. The decision was to keep two units at level‑0 and to state that `par avance` may be read as a unit in the syntax and readings layers.
 
 That decision looks like pedantry and is in fact the entire design. Had the units been fused, the record would have asserted a reading — a persuasive one, but a reading — and the physical separation would have become unrecoverable. Keeping them apart costs one note and preserves both facts.
 
-The same pattern recurs: `sauf que` across f14–f15, `l'évènement` / `accompli` across f20–f21, `endroit` / `fusionne` across f22–f23. In each case level‑0 splits by face and a layer joins.
+The same pattern recurs: `sauf que` across f14–f15, `l'évènement` / `accompli` across f20–f21, `endroit` / `fusionne` across f22–f23. In each case level‑0 splits by face and a layer joins. Since level‑0 2.0.0 this holds without exception: the lines that cross the gutter at f12–f13, where both faces are one sheet, and at f16–f17, across two sheets, are also recorded one unit per face. That the fragments form one physical line is noted in each unit; that the sheet is single is recorded once for the spread.
 
 ## Observation is not raw
 
