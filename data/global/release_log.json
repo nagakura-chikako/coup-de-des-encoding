@@ -237,6 +237,68 @@
           "ja": "最終 preflight を実施し、全項目通過。①check_level0.py --all：正本 12 本、FAIL 0 ②verify_sync.py --all：schema ⇔ レコード ⇔ checker の相互整合 OK、unit 不変項目の指紋 12 本すべてが tools/units_manifest.json と一致 ③横断参照検査：witness 値の解決、台帳参照、錨 ID、provenance の被参照ファイルの同梱——いずれも未解決ゼロ ④manifest ⇔ 実配置：未記載・未配置ゼロ ⑤manifest の files[].status と各モジュールの status_source が指す実値：5 件すべて一致。2026-08-03 の公開前 preflight が検出した 6 件の阻害要因は、すべて解消済み。"
         }
       }
+    },
+    {
+      "release": "2.0",
+      "date": "2026-11-24",
+      "date_note": {
+        "ja": "最終検査通過日（第5段階）。リポジトリ・リリース 2.0.0 の公開日（CITATION.cff の date-released）とは別の出来事として記録する。v1.1 の date_note と同じ扱い。"
+      },
+      "label": {
+        "ja": "観察の訂正と記録単位の分割を、別種の変容として記録した版",
+        "en": "The release in which a corrected observation and a re-cut unit are recorded as two different kinds of change"
+      },
+      "label_note": {
+        "ja": "f10–f11 の 16 ユニットは面の記録を訂正し、識別子を保った（観察の訂正）。f12–f13・f16–f17 の 7 行は面ごとに分割し、旧識別子を退役させた（記録単位の分割）。記録対象は変わらず、記録の粒度と、その変化の跡が加わった。"
+      },
+      "level0_record": "2.0.0",
+      "repository_release": "2.0.0",
+      "citation_scheme": "frozen",
+      "schema": "level0_schema.json v0.4 (0.3 approved 2026-07-18; 0.4 revised 2026-11-24)",
+      "coverage": {
+        "level_0": [
+          "f1",
+          "f2-f3",
+          "f4-f5",
+          "f6-f7",
+          "f8-f9",
+          "f10-f11",
+          "f12-f13",
+          "f14-f15",
+          "f16-f17",
+          "f18-f19",
+          "f20-f21",
+          "f22-f23"
+        ],
+        "coverage_note": {
+          "ja": "level_0 は全 12 見開き・224 ユニット（v1.1 は 217）。全 12 本が collated_with_original。full_record は v1.1 の記載を引き継ぐ（v1.1 の full_record_semantics を参照）。",
+          "status": "confirmed"
+        }
+      },
+      "changes_since_1_1": {
+        "ja": [
+          "MAJOR：中溝を越える行を、紙片が一枚か二枚かを問わず面ごとに別のユニットとする（id_assignment_rules 第2項の置き換え、C 案 N 裁定 2026-11-08）。f12–f13 の 4 行、f16–f17 の 3 行を分割し、旧 ID 7 件を退役（superseded_by は後継二つ）。分割位置は N が 2026-11-24 に現物照合。",
+          "版の区分は 2026-11-24 午前に MINOR と裁定、同日午後に明文規則の存在を確認して MAJOR に再裁定（level0_schema.json > resolutions > oq_l0_cross_gutter_units > version_classification）。",
+          "f10–f11：16 ユニットの face を f11 → f10 に訂正。ID は維持し revision_history に記録（N 裁定 2026-09-26、現物再照合 2026-11-24）。",
+          "schema 0.4：face 訂正の連鎖、superseded_by の配列、紙片構造の記録先（physical_observations）、machine_checks 第3項の改訂と第21項の追加。",
+          "f6–f7：par｜avance 間の空白を写真換算 ≈67mm から定規実測 8cm に訂正（units 不変）。",
+          "typography_scale.json：class 3 イタリック提案錨を tu_f12_une_insinuation に付け替え。proof_states.json：Fiançailles の face に関する後注。",
+          "公開文書：版番号・ユニット数・引用例（凍結済み ucd: 形式へ）、移行ノート docs/migrations/2.0.md（英日）。"
+        ]
+      },
+      "retired_ids": [
+        "tu_f12_une_insinuation_simple",
+        "tu_f12_au_silence_enroulee",
+        "tu_f12_dans_quelque_proche_tourbillon",
+        "tu_f12_voltige_autour_du_gouffre",
+        "tu_f16_la_lucide_et_seigneuriale_aigrette",
+        "tu_f16_une_stature_mignonne_tenebreuse",
+        "tu_f16_par_d_impatientes_squames_ultimes"
+      ],
+      "verification": {
+        "ja": "check_level0.py：12 本・21 項目、FAIL 0（PASS 193／SKIP 59）。verify_sync.py：相互整合 OK（units_manifest.json は f10-f11・f12-f13・f16-f17 の 3 本を意図した改訂として更新）。",
+        "date": "2026-11-24"
+      }
     }
   ],
   "planned": [
@@ -256,7 +318,12 @@
         "ja": "未確定。候補：①解釈層（layers/）の最初の実装——glyph_ink・インク量計測を ink 層として成立させる ②proof_states.json の現物照合（confidence を verified へ昇格）③layout 層の設計 ④maquette_typography.json の未決 3 件のうち現物確認で解決しうるもの。いずれも v1.1 公開後に裁定する。",
         "en": "To be determined after v1.1."
       },
-      "status": "not_yet_planned"
+      "status": "not_yet_planned",
+      "superseded_note": {
+        "date": "2026-11-24",
+        "by": "N",
+        "ja": "v1.1 の次のリリースは、ここに挙げた候補ではなく、level-0 の訂正と中溝跨ぎ行の分割による MAJOR 改訂となり、番号は v2.0 となった。番号 1.2 は使われない。本項の候補 ①〜④ は v2.0 以後の検討事項として引き継ぐ。本項は書き換えずに残す。"
+      }
     }
   ]
 }

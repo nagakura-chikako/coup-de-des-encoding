@@ -147,7 +147,7 @@
       "text": "par",
       "type_class": 3,
       "style": "romain",
-      "note": "物理1行、f6 の最終行。中溝側にもっとも近く寄る行（右端 x≈1479、中溝 x≈1704 まで余白 225px）。f7 頭行 tu_f7_avance_retombee と同一ベースライン（傾き補正後の差 ≈1px）だが、両者の間には約471px（≈67mm）の空白があり連続組みの行ではない。統語句 par avance retombée… は面境界を跨ぐが、印字行としての中溝跨ぎには当たらない——N 裁定（2026-07-27）により level-0 は物理配置を忠実に記録し面帰属で2分割、par avance を一まとまりとして読みうることは readings／syntax 層で記述する（obs_f6f7_shared_baseline／oq_l0_f6f7_par_gutter 参照）。"
+      "note": "物理1行、f6 の最終行。中溝側にもっとも近く寄る行（右端 x≈1479、中溝 x≈1704 まで余白 225px）。f7 頭行 tu_f7_avance_retombee と同一ベースライン（傾き補正後の差 ≈1px）だが、両者の間には約471px（写真上の値。N の定規実測では 8cm＝中溝の左右各 4cm。当初の ≈67mm は写真からの換算値で、2026-11-24 に訂正）の空白があり連続組みの行ではない。統語句 par avance retombée… は面境界を跨ぐが、印字行としての中溝跨ぎには当たらない——N 裁定（2026-07-27）により level-0 は物理配置を忠実に記録し面帰属で2分割、par avance を一まとまりとして読みうることは readings／syntax 層で記述する（obs_f6f7_shared_baseline／oq_l0_f6f7_par_gutter 参照）。"
     },
     {
       "id": "tu_f7_avance_retombee",
@@ -251,7 +251,7 @@
     },
     {
       "id": "obs_f6f7_shared_baseline",
-      "ja": "tu_f6_par（f6）と tu_f7_avance_retombee（f7）は同一ベースライン。写真の傾き（-0.859°、右頁長行3本のベースライン勾配から推定）を補正したうえで、par のベースライン ≈990px、avance… のベースライン ≈991px——差 ≈1px（≒0.15mm）。ただし par の右端（x≈1479）から avance… の左端（x≈1950）までの空白は約471px（≈67mm、当該行の平均語間の約25倍）であり、中溝を跨いで連続組みされた1行ではない。したがって『同一ベースラインだが中溝跨ぎ行ではない』と記述する——f14-f15 の sauf｜que la rencontre と同型（用語の適用基準は oq_l0_f6f7_par_gutter 参照）。"
+      "ja": "tu_f6_par（f6）と tu_f7_avance_retombee（f7）は同一ベースライン。写真の傾き（-0.859°、右頁長行3本のベースライン勾配から推定）を補正したうえで、par のベースライン ≈990px、avance… のベースライン ≈991px——差 ≈1px（≒0.15mm）。ただし par の右端（x≈1479）から avance… の左端（x≈1950）までの空白は約471px（写真上の値。N の定規実測では 8cm＝中溝の左右各 4cm。当初の ≈67mm は写真からの換算値で、2026-11-24 に訂正）（当該行の平均語間の約25倍）であり、中溝を跨いで連続組みされた1行ではない。したがって『同一ベースラインだが中溝跨ぎ行ではない』と記述する——f14-f15 の sauf｜que la rencontre と同型（用語の適用基準は oq_l0_f6f7_par_gutter 参照）。"
     },
     {
       "id": "obs_f6f7_line_distribution",
@@ -286,7 +286,7 @@
     {
       "id": "oq_l0_f6f7_par_gutter",
       "status": "resolved",
-      "ja": "設計判断：par（f6）｜avance retombée…（f7）の記述用語。測定事実は確定している——同一ベースライン（傾き補正後の差 ≈1px）かつ両者間に約67mm の空白。起草は f14-f15 前例（同一ベースライン・中溝跨ぎ行ではない・面帰属で2分割）を採用した。ただし f16-f17 では『別紙面2枚にまたがる見開きでのベースライン連続』を中溝跨ぎ行と認定した前例があり、両前例の適用基準——ベースライン一致で足りるのか、語間相当の間隔で連続組みされていることを要するのか——が corpus 内で未だ明文化されていない。N 裁定を求める。なお裁定がいずれであっても本記録のユニット分割（2分割）と ID は変わらず、physical_observations の記述と用語のみが変わる。",
+      "ja": "設計判断：par（f6）｜avance retombée…（f7）の記述用語。測定事実は確定している——同一ベースライン（傾き補正後の差 ≈1px）かつ両者間に約67mm の空白〔2026-11-24 注：67mm は写真からの換算値。N の定規実測は 8cm〕。起草は f14-f15 前例（同一ベースライン・中溝跨ぎ行ではない・面帰属で2分割）を採用した。ただし f16-f17 では『別紙面2枚にまたがる見開きでのベースライン連続』を中溝跨ぎ行と認定した前例があり、両前例の適用基準——ベースライン一致で足りるのか、語間相当の間隔で連続組みされていることを要するのか——が corpus 内で未だ明文化されていない。N 裁定を求める。なお裁定がいずれであっても本記録のユニット分割（2分割）と ID は変わらず、physical_observations の記述と用語のみが変わる。",
       "resolution": {
         "date": "2026-07-27",
         "by": "N",
@@ -311,6 +311,13 @@
   "collation_note": {
     "date": "2026-07-27",
     "by": "N",
-    "ja": "原本逐語照合完了・text／face の訂正0件。l’Abîme の大文字 A と î、plane désespérément の é、très／à／béante／bâtiment／penché／retombée／résume の各アクセント、アポストロフ全8箇所、および jusqu’adapter の連続組みを確認。SOIT の N 実測 4mm も再確認し、全21ユニット class 3・romain で確定。revision_history は空のまま確定——f16-f17・f20-f21・f22-f23・f1・f2-f3・f4-f5 に続く転記訂正0件の見開き。"
+    "ja": "原本逐語照合完了・text／face の訂正0件。l’Abîme の大文字 A と î、plane désespérément の é、très／à／béante／bâtiment／penché／retombée／résume の各アクセント、アポストロフ全8箇所、および jusqu’adapter の連続組みを確認。SOIT の N 実測 4mm も再確認し、全21ユニット class 3・romain で確定。revision_history は空のまま確定——f16-f17・f20-f21・f22-f23・f1・f2-f3・f4-f5 に続く転記訂正0件の見開き。",
+    "corrections_after_publication": [
+      {
+        "date": "2026-11-24",
+        "by": "N",
+        "ja": "2026-11-24：tu_f6_par の note、physical_observations、open_questions に記されていた par｜avance 間の空白 ≈67mm は、Claude が写真から傾きを補正して換算した値であり、N の定規実測ではなかった。N の実測（中溝の左右各 4cm、計 8cm）に改め、写真上の px 値は参考として残した。units の不変項目は変わらない。"
+      }
+    ]
   }
 }

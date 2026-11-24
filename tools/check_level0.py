@@ -15,6 +15,10 @@ level0_schema.json > validation.machine_checks に準拠する単一の checker�
   * typography_scale.json を要するのは type_class=null の paratext 照合と
     錨照合の2項目のみ。
   * パスはすべて明示引数か __file__ 基準。open() は with 文・encoding="utf-8"。
+  * 第3項（2026-11-24 改訂）：face 訂正のあるユニットは、revision_history の face
+    エントリが id の面接頭辞から現在の face まで途切れず連鎖することを検査する。
+  * 第21項（2026-11-24 追加）：deprecated_ids の旧 id が units に残らず、
+    superseded_by（文字列または配列）が現存 id に解決することを検査する。
 
 usage:
     python3 check_level0.py --record f14-f15_level0.json [--refs DIR]
@@ -36,7 +40,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 LABELS = [
     "全 id が一意",
     "id が tu_ 接頭辞・命名規則に適合",
-    "id の面接頭辞と face が一致",
+    "id の面接頭辞が face と一致、または face 訂正の連鎖が接頭辞から現在の face まで途切れない",
     "unit_count == len(units)",
     "seq がスプレッド内で一意",
     "face ∈ spread_id の構成面",
@@ -54,6 +58,7 @@ LABELS = [
     "台帳から当該スプレッドへの未解決参照なし",
     "open_questions が二区分運用に適合",
     "status が既定語彙",
+    "deprecated_ids の旧 id が重複せず units に残らず、superseded_by が現存 id に解決する",
 ]
 
 STYLES = {"romain", "italique", "mixte"}
@@ -126,6 +131,58 @@ def load_scale(path):
     return class_anchors, paratext_anchors, recognized
 
 
+def face_chain_problem(unit, rh):
+    """第3項。問題がなければ None、あれば理由の文字列を返す。
+
+    face 訂正なし → id の面接頭辞 == 現在の face。
+    face 訂正あり → 記載順の face エントリが連鎖し、始点 before == 接頭辞、
+                    終点 after == 現在の face。
+    """
+    m = ID_RE.match(str(unit.get("id", "")))
+    prefix = m.group(1) if m else None
+    face = unit.get("face")
+    chain = [e for e in rh if e.get("unit_id") == unit.get("id") and e.get("field") == "face"]
+    if not chain:
+        return None if prefix == face else "接頭辞 %s ≠ face %s（訂正記録なし）" % (prefix, face)
+    if chain[0].get("before") != prefix:
+        return "最初の訂正の before %s ≠ 接頭辞 %s" % (chain[0].get("before"), prefix)
+    for a, b in zip(chain, chain[1:]):
+        if a.get("after") != b.get("before"):
+            return "訂正の連鎖が途切れる（%s の後に %s）" % (a.get("after"), b.get("before"))
+    if chain[-1].get("after") != face:
+        return "最後の訂正の after %s ≠ 現在の face %s" % (chain[-1].get("after"), face)
+    return None
+
+
+def deprecation_problems(dep, ids):
+    """第21項。旧 id が units に残らず、後継が現存 id に解決するか。"""
+    current = set(ids)
+    table = {}
+    problems = []
+    for e in dep:
+        sb = e.get("superseded_by")
+        if e.get("id") in table:
+            # 同じ旧 id の重複登録は後の記載が先の記載を上書きしてしまうため、検出して FAIL とする
+            problems.append("%s が deprecated_ids に重複登録" % e.get("id"))
+        table[e.get("id")] = sb if isinstance(sb, list) else [sb]
+
+    def resolves(tid, seen):
+        if tid in current:
+            return True
+        if tid in table and tid not in seen:
+            return all(resolves(t, seen | {tid}) for t in table[tid])
+        return False
+
+    for old, succ in table.items():
+        if old in current:
+            problems.append("%s が units に残存" % old)
+        if not succ or not all(isinstance(t, str) for t in succ):
+            problems.append("%s の superseded_by が不正" % old)
+        elif not resolves(old, set()):
+            problems.append("%s が現存 id に解決しない（%s）" % (old, succ))
+    return problems
+
+
 def walk_strings(node):
     if isinstance(node, dict):
         for v in node.values():
@@ -189,8 +246,14 @@ def run(record_path, refs_dir):
     check(LABELS[0], not dup, str(dup))
     bad = [i for i in ids if not (isinstance(i, str) and ID_RE.match(i))]
     check(LABELS[1], not bad, str(bad))
-    bad = [u["id"] for u in units if not str(u.get("id", "")).startswith("tu_%s_" % u.get("face"))]
+    rh_all = rec.get("revision_history", [])
+    bad = [(u.get("id"), why) for u in units
+           for why in [face_chain_problem(u, rh_all)] if why]
     check(LABELS[2], not bad, str(bad))
+    corrected = [u["id"] for u in units
+                 if any(e.get("unit_id") == u.get("id") and e.get("field") == "face" for e in rh_all)]
+    if corrected and not bad:
+        notes.append("face 訂正の連鎖で説明された接頭辞の不一致: %d 件" % len(corrected))
 
     # 4-6 数量・面
     check(LABELS[3], rec.get("unit_count") == len(units),
@@ -304,6 +367,13 @@ def run(record_path, refs_dir):
 
     # 20 status
     check(LABELS[19], rec.get("status") in STATUS_VOCAB, repr(rec.get("status")))
+
+    # 21 deprecated_ids の解決
+    if not dep:
+        skip(LABELS[20], "deprecated_ids は空配列")
+    else:
+        bad = deprecation_problems(dep, ids)
+        check(LABELS[20], not bad, "; ".join(bad) if bad else "%d 件すべて解決" % len(dep))
 
     missing = [l for l in LABELS if l not in results]
     assert not missing, "未実行の検査があります: %s" % missing

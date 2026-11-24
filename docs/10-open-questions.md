@@ -27,11 +27,11 @@ Keeping these apart matters: the first is an invitation to argue, the second is 
 
 An open question is resolved by adding a resolution entry — decision, date, evidence, decider — and setting `status: resolved`. **The question is not deleted.** The record of a question that turned out to be a pseudo‑problem is worth as much as the record of a real one; one of this project's early questions dissolved when the photograph showed the disputed feature did not exist, and preserving that is more useful than tidying it away.
 
-## Standing questions at v1.1
+## Standing questions at v2.0
 
 Illustrative rather than exhaustive; the canonical files are authoritative.
 
-- **Corpus‑wide terminology: "gutter‑crossing line".** Two criteria in circulation (continuous setting vs shared baseline). Affects prose only, no field values. See `08-glossary.md`.
+- **Corpus‑wide terminology: "gutter‑crossing line".** Two criteria in circulation (continuous setting vs shared baseline). Since 2.0.0 unit extent no longer depends on the term; it affects prose only. See `08-glossary.md`.
 - **Schema coverage of record‑level keys.** Several keys in active use across all records are not yet defined in the schema's `field_definitions`. They are outside the validator's remit, so the gap is documentation debt rather than a validation gap.
 - **Census anchor verification against the live scale file.** One class of check can run only when the typographic scale file is present; it currently reports SKIP. The extraction path has not been exercised against the real file.
 - **A second global clause registration**, pending the author's adjudication.

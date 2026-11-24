@@ -9,7 +9,7 @@ check_level0.py が「1本のレコードが schema の machine_checks を満た
     A. schema.validation.machine_checks ⇔ checker の LABELS が一字一句同期
     B. schema が参照する内部名（doctrine.upgrade_path 等）の実在
     C. 改訂済みキー（dependency_pending）が構造上に残存しない
-    D. schema_version の据え置き
+    D. schema_version が本スクリプトの想定版（EXPECTED_SCHEMA_VERSION）と一致
 
   レコード層（各正本について実行）
     E. record が record_template の全キーを備える
@@ -39,6 +39,8 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 UNIT_INVARIANTS = ["id", "face", "seq", "text", "type_class", "style"]
+# schema を改版したら同時に更新する（0.3 → 0.4：2026-11-24、face 訂正の連鎖検査と C 案）
+EXPECTED_SCHEMA_VERSION = "0.4"
 
 ok = True
 def line(tag, msg):
@@ -111,8 +113,8 @@ def verify_schema(sch, checker_path):
          % ("dependency_resolution" in ks))
 
     # D. schema_version
-    line("OK" if sch.get("schema_version") == "0.3" else "NG",
-         "schema_version = %s（据え置き）" % sch.get("schema_version"))
+    line("OK" if sch.get("schema_version") == EXPECTED_SCHEMA_VERSION else "NG",
+         "schema_version = %s（想定 %s）" % (sch.get("schema_version"), EXPECTED_SCHEMA_VERSION))
 
 
 def verify_record(rec, sch, manifest, update):

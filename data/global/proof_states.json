@@ -254,7 +254,12 @@
       "resolution_note": {
         "date": "2026-08-25",
         "by": "N",
-        "ja": "TODO を解決。f10-f11 level-0 正本（原本照合済）に tu_f11_fiancailles が実在する（face f11、seq 210、text 'Fiançailles'、class 3、romain）ため、TODO の条件『該当スプレッド記録の作成時に接続』が満たされた。text_unit の併記は行わない——既存の var_abime_capitalization と粒度を揃える（N 裁定）。"
+        "ja": "TODO を解決。f10-f11 level-0 正本（原本照合済）に tu_f11_fiancailles が実在する（face f11、seq 210、text 'Fiançailles'、class 3、romain）ため、TODO の条件『該当スプレッド記録の作成時に接続』が満たされた。text_unit の併記は行わない——既存の var_abime_capitalization と粒度を揃える（N 裁定）。",
+        "later_note": {
+          "date": "2026-11-24",
+          "by": "N",
+          "ja": "上記の「face f11」は 2026-08-25 時点の正本の値。tu_f11_fiancailles の face は 2026-09-26 の N 裁定により f10 に訂正された（ID は維持。f10-f11_level0.json の revision_history 参照）。本解決の結論（Fiançailles の text_unit が実在すること）は変わらない。"
+        }
       }
     }
   ],

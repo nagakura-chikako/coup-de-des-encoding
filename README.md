@@ -108,10 +108,11 @@ Three version numbers govern different things, and are deliberately not merged:
 | | governs | current |
 |---|---|---|
 | citation scheme | how a unit is addressed in a citation | v1.0, frozen 2026-07-17 |
-| dataset | the state of the encoded records | v1.1 |
+| dataset | the state of the encoded records | v2.0 |
 | repository release | what a given published snapshot contains | see the Releases page |
 
-- **level-0 encoding: complete for the whole poem.** Every spread from `f1` to `f22-f23` has a canonical record — 217 text units in all — each collated by the editor against the physical copy of the Ronat–Papp 1980 edition used as the base object.
+- **level-0 encoding: complete for the whole poem.** Every spread from `f1` to `f22-f23` has a canonical record — 224 text units in all — each collated by the editor against the physical copy of the Ronat–Papp 1980 edition used as the base object.
+- **v2.0 (2026-11):** sixteen face assignments in f10–f11 corrected, keeping their identifiers; seven lines that cross the gutter recorded as one unit per face. See [`docs/migrations/2.0.md`](docs/migrations/2.0.md).
 - Planned layers, none of which will modify level-0: layout, syntax, witnesses and variants, readings, sound, animation, proof states, and the typographic maquette.
 
 ## How to cite

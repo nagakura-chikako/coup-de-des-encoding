@@ -1,16 +1,47 @@
 {
   "file": "f16-f17_level0.json",
-  "schema_version": "0.3",
-  "schema_ref": "level0_schema.json (approved 2026-07-18)",
+  "schema_version": "0.4",
+  "schema_ref": "level0_schema.json (approved 2026-07-18; 0.4 revised 2026-11-24)",
   "spread_id": "f16-f17",
   "record_depth": "level-0",
   "base_state": "Ronat_1980",
   "recorded": "2026-07-20",
   "recorded_by": "Claude (draft) / N (collated with original, 2026-07-20)",
   "status": "collated_with_original",
-  "unit_count": 21,
+  "unit_count": 24,
   "revision_history": [],
-  "deprecated_ids": [],
+  "deprecated_ids": [
+    {
+      "id": "tu_f16_la_lucide_et_seigneuriale_aigrette",
+      "superseded_by": [
+        "tu_f16_la_lucide_aigrette",
+        "tu_f17_de_vertige"
+      ],
+      "date": "2026-11-24",
+      "evidence": "N 裁定 2026-11-08（C 案）：中溝を越える物理行は、紙片が一枚か二枚かを問わず面ごとに分割する。分割位置は N が Ronat_1980 現物で照合（2026-11-24）。旧 ID は範囲が変わるため退役させ、後継の二つを superseded_by に示す（id_assignment_rules 第2項、0.4）。",
+      "by": "N"
+    },
+    {
+      "id": "tu_f16_une_stature_mignonne_tenebreuse",
+      "superseded_by": [
+        "tu_f16_une_stature_mignonne",
+        "tu_f17_debout"
+      ],
+      "date": "2026-11-24",
+      "evidence": "N 裁定 2026-11-08（C 案）：中溝を越える物理行は、紙片が一枚か二枚かを問わず面ごとに分割する。分割位置は N が Ronat_1980 現物で照合（2026-11-24）。旧 ID は範囲が変わるため退役させ、後継の二つを superseded_by に示す（id_assignment_rules 第2項、0.4）。",
+      "by": "N"
+    },
+    {
+      "id": "tu_f16_par_d_impatientes_squames_ultimes",
+      "superseded_by": [
+        "tu_f16_par_d_impatientes_squames",
+        "tu_f17_bifurquees"
+      ],
+      "date": "2026-11-24",
+      "evidence": "N 裁定 2026-11-08（C 案）：中溝を越える物理行は、紙片が一枚か二枚かを問わず面ごとに分割する。分割位置は N が Ronat_1980 現物で照合（2026-11-24）。旧 ID は範囲が変わるため退役させ、後継の二つを superseded_by に示す（id_assignment_rules 第2項、0.4）。",
+      "by": "N"
+    }
+  ],
   "transcription_source": {
     "witnesses": [
       {
@@ -97,13 +128,22 @@
       "note": "イタリック大文字。N 実測（2026-07-20）により Ronat・NRF とも 5mm で class 2 確定（写真推定キャップ高比≈1.4倍と整合）。Cos 版は SI 8mm／小文字 2mm（異同層向け記録、深追いせず）。統語的には f18 以降の C’ÉTAIT へ続く条件構造の起点（global_clauses: cl_global_conditionnelle の SI component 候補——syntax 層向け観察）。"
     },
     {
-      "id": "tu_f16_la_lucide_et_seigneuriale_aigrette",
+      "id": "tu_f16_la_lucide_aigrette",
       "face": "f16",
       "seq": 70,
-      "text": "La lucide et seigneuriale aigrette de vertige",
+      "text": "La lucide et seigneuriale aigrette",
       "type_class": 3,
       "style": "italique",
-      "note": "中溝跨ぎ行：de vertige は f17 側に印字。開始面 f16 を face に採る（id_assignment_rules）。f16・f17 は6枚折り構成の別紙面だが、Ronat 写真・NRF コピーともベースライン連続を確認（f12-f13 の単一紙面内跨ぎとは物理条件が異なる）。"
+      "note": "中溝を挟んで f17 の tu_f17_de_vertige と物理的に一行をなす（別々の紙面にまたがり、重ね合わせた状態でベースラインが連続する行）。旧 tu_f16_la_lucide_et_seigneuriale_aigrette（2026-11-24 退役）の左側部分。二つを統辞的にどう結ぶかは syntax 層で扱う。旧 note：中溝跨ぎ行：de vertige は f17 側に印字。開始面 f16 を face に採る（id_assignment_rules）。f16・f17 は6枚折り構成の別紙面だが、Ronat 写真・NRF コピーともベースライン連続を確認（f12-f13 の単一紙面内跨ぎとは物理条件が異なる）。"
+    },
+    {
+      "id": "tu_f17_de_vertige",
+      "face": "f17",
+      "seq": 75,
+      "text": "de vertige",
+      "type_class": 3,
+      "style": "italique",
+      "note": "中溝を挟んで f16 の tu_f16_la_lucide_aigrette と物理的に一行をなす（別々の紙面にまたがり、重ね合わせた状態でベースラインが連続する行）。旧 tu_f16_la_lucide_et_seigneuriale_aigrette（2026-11-24 退役）の右側部分。二つを統辞的にどう結ぶかは syntax 層で扱う。"
     },
     {
       "id": "tu_f16_au_front_invisible",
@@ -133,13 +173,22 @@
       "note": null
     },
     {
-      "id": "tu_f16_une_stature_mignonne_tenebreuse",
+      "id": "tu_f16_une_stature_mignonne",
       "face": "f16",
       "seq": 110,
-      "text": "une stature mignonne ténébreuse debout",
+      "text": "une stature mignonne ténébreuse",
       "type_class": 3,
       "style": "italique",
-      "note": "中溝跨ぎ行：debout は f17 側に印字。開始面 f16 を face に採る。"
+      "note": "中溝を挟んで f17 の tu_f17_debout と物理的に一行をなす（別々の紙面にまたがり、重ね合わせた状態でベースラインが連続する行）。旧 tu_f16_une_stature_mignonne_tenebreuse（2026-11-24 退役）の左側部分。二つを統辞的にどう結ぶかは syntax 層で扱う。旧 note：中溝跨ぎ行：debout は f17 側に印字。開始面 f16 を face に採る。"
+    },
+    {
+      "id": "tu_f17_debout",
+      "face": "f17",
+      "seq": 115,
+      "text": "debout",
+      "type_class": 3,
+      "style": "italique",
+      "note": "中溝を挟んで f16 の tu_f16_une_stature_mignonne と物理的に一行をなす（別々の紙面にまたがり、重ね合わせた状態でベースラインが連続する行）。旧 tu_f16_une_stature_mignonne_tenebreuse（2026-11-24 退役）の右側部分。二つを統辞的にどう結ぶかは syntax 層で扱う。"
     },
     {
       "id": "tu_f16_en_sa_torsion_de_sirene",
@@ -169,13 +218,22 @@
       "note": null
     },
     {
-      "id": "tu_f16_par_d_impatientes_squames_ultimes",
+      "id": "tu_f16_par_d_impatientes_squames",
       "face": "f16",
       "seq": 150,
-      "text": "par d’impatientes squames ultimes bifurquées",
+      "text": "par d’impatientes squames ultimes",
       "type_class": 3,
       "style": "italique",
-      "note": "中溝跨ぎ行：bifurquées は f17 側に印字。開始面 f16 を face に採る。手巻物も同一行として扱う（21/21 一致の一部）。"
+      "note": "中溝を挟んで f17 の tu_f17_bifurquees と物理的に一行をなす（別々の紙面にまたがり、重ね合わせた状態でベースラインが連続する行）。旧 tu_f16_par_d_impatientes_squames_ultimes（2026-11-24 退役）の左側部分。二つを統辞的にどう結ぶかは syntax 層で扱う。旧 note：中溝跨ぎ行：bifurquées は f17 側に印字。開始面 f16 を face に採る。手巻物も同一行として扱う（21/21 一致の一部）。"
+    },
+    {
+      "id": "tu_f17_bifurquees",
+      "face": "f17",
+      "seq": 155,
+      "text": "bifurquées",
+      "type_class": 3,
+      "style": "italique",
+      "note": "中溝を挟んで f16 の tu_f16_par_d_impatientes_squames と物理的に一行をなす（別々の紙面にまたがり、重ね合わせた状態でベースラインが連続する行）。旧 tu_f16_par_d_impatientes_squames_ultimes（2026-11-24 退役）の右側部分。二つを統辞的にどう結ぶかは syntax 層で扱う。"
     },
     {
       "id": "tu_f17_un_roc",
@@ -237,8 +295,8 @@
     "en": "seq follows the doctrine’s baseline order (top→bottom, left face→right face). SI (seq 60) thus precedes the parenthetical insertion (seq 70-210), whereas syntactically rire que SI continues to C’ÉTAIT on f18 across the insertion. The insertion-first linearisation is reserved as a future readings-layer object."
   },
   "physical_observations": {
-    "ja": "中溝は縦エッジ検出で x≈1752（Ronat 写真座標）。跨ぎ行3本（de vertige／debout／bifurquées）はいずれも左断片が x≈1516 で終わり右断片が x≈1962 から再開、同一行帯内でベースライン連続。f14-f15 と同様、本見開きは6枚折り構成の別々の2紙面にまたがるため、跨ぎ行の連続は製本（重ね合わせ）状態に依存する物理事実として記録する。NRF コピーでも同一の跨ぎを確認。",
-    "en": "Gutter located at x≈1752 by vertical-edge detection. The three crossing lines (de vertige / debout / bifurquées) end at x≈1516 and resume at x≈1962 within the same row band, baselines continuous. As with f14-f15, this spread lies across two separate sheets of the six-sheet gathering, so cross-gutter continuity is an assembly-dependent physical fact. The same crossings are confirmed in the NRF copy."
+    "ja": "中溝は縦エッジ検出で x≈1752（Ronat 写真座標）。跨ぎ行3本（de vertige／debout／bifurquées）はいずれも左断片が x≈1516 で終わり右断片が x≈1962 から再開、同一行帯内でベースライン連続。f14-f15 と同様、本見開きは6枚折り構成の別々の2紙面にまたがるため、跨ぎ行の連続は製本（重ね合わせ）状態に依存する物理事実として記録する。NRF コピーでも同一の跨ぎを確認。（2026-11-24 追記）C 案（N 裁定 2026-11-08）により、跨ぎ行3本は面ごとに分割した（21→24 ユニット）。ベースライン連続の観察は変わらず、各ユニットの note に相手方の id とともに記す。",
+    "en": "Gutter located at x≈1752 by vertical-edge detection. The three crossing lines (de vertige / debout / bifurquées) end at x≈1516 and resume at x≈1962 within the same row band, baselines continuous. As with f14-f15, this spread lies across two separate sheets of the six-sheet gathering, so cross-gutter continuity is an assembly-dependent physical fact. The same crossings are confirmed in the NRF copy. (Added 2026-11-24) Under the C plan (ruled by N, 2026-11-08) the three crossing lines are split by face (21 → 24 units); the baseline-continuity observation is unchanged and is carried in each unit’s note."
   },
   "handscroll_collation": {
     "leaf": "骰子一擲７（f16／f17 葉）",
@@ -250,5 +308,18 @@
   "observations_for_other_files": {
     "ja": "① global_clauses.json の cl_global_conditionnelle：component {surface: SI, spread: f12, text_unit: TODO} は本記録により {spread: f17, text_unit: tu_f17_si} へ更新可能となった（f14-f15 セッション以来の N 裁定待ち事項に実証的解答。台帳ファイルは未変更）。② typography_scale.json：tu_f17_si は N 実測（2026-07-20、Ronat・NRF とも 5mm）で class 2 確定。統合案は typography_scale_update_2026-07-20.json を参照（イタリック小文字 f の突き抜け実測を含む）。",
     "en": "① cl_global_conditionnelle in global_clauses.json can now be updated to {spread: f17, text_unit: tu_f17_si} — an empirical answer to the pending ruling; the registry file is left untouched. ② tu_f17_si is confirmed class 2 by N’s measurement (5 mm in both Ronat and NRF, 2026-07-20); see typography_scale_update_2026-07-20.json for the integration, including the italic-f protrusion measurements."
+  },
+  "collation_resolutions": {
+    "resolved_by": "N",
+    "resolved_on": "2026-11-24",
+    "items": [
+      {
+        "id": "oq_l0_f16f17_cross_gutter_split",
+        "status": "closed",
+        "ruling": {
+          "ja": "2026-11-24：C 案（N 裁定 2026-11-08）により、中溝を跨ぐ3行（旧 seq 70・110・150）を面ごとに分割し、21 ユニットから 24 ユニットとした。分割位置は N が Ronat 現物で照合（2026-11-24、全件確認）。旧 ID 3件は deprecated_ids で後継の二つへ解決する。2026-07-20 の照合結果（訂正ゼロ、handscroll 21/21）はその時点の記録として保持する。分割後は、手巻物が一行とする3行がそれぞれ2ユニットに対応する。"
+        }
+      }
+    ]
   }
 }
